@@ -1,0 +1,2 @@
+- Single Leader / Many Followers
+- Many Leaders
