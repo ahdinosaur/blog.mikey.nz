@@ -1,3 +1,8 @@
+layout: post
+title: how to setup ghost with Debian + salt stack + Docker + systemd
+date: null
+updated: 2014-09-15T20:46:07.639Z
+---
 TODO: what is ghost
 
 TODO: what is salt stack

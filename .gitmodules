@@ -1,0 +1,3 @@
+[submodule "themes/again"]
+	path = themes/again
+	url = git@github.com:ahdinosaur/hexo-theme-again.git

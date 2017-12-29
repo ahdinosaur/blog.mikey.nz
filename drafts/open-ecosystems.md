@@ -1,3 +1,8 @@
+layout: post
+title: Open Ecosystems
+date: null
+updated: 2015-10-25T11:31:16.155Z
+---
 ## key
 
 ## links

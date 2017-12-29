@@ -1,3 +1,8 @@
+layout: post
+title: journey of a mindful cyber hobo
+date: null
+updated: 2015-11-13T11:49:26.702Z
+---
 - Enspiral Services "more people working on what matters"
 - @dominictarr's cyberhobo
 - http://www.namaste.org/blog/enspiral-open-source-society

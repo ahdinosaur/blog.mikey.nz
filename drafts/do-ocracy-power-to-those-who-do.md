@@ -1,3 +1,8 @@
+layout: post
+title: Do-ocracy: power to those who do.
+date: null
+updated: 2015-10-25T11:31:53.603Z
+---
 [frome the Noisebridge wiki](https://www.noisebridge.net/wiki/Do-ocracy)
 
 > Do-ocracy: If you want something done, do it, but remember to be excellent to each other when doing so.

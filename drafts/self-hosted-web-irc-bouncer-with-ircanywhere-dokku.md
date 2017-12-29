@@ -1,3 +1,8 @@
+layout: post
+title: self-hosted web IRC bouncer with IRCAnywhere and dokku
+date: null
+updated: 2014-09-17T22:55:17.969Z
+---
 hi friend. :)
 
 

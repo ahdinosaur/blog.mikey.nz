@@ -1,3 +1,8 @@
+layout: post
+title: Mad Science
+date: null
+updated: 2015-10-25T21:57:11.256Z
+---
 link to [local ecosystems post](./open-ecosystems)
 link to [do-ocracy post](do-ocracy-power-to-those-who-do)
 

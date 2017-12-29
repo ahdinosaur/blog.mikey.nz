@@ -1,3 +1,8 @@
+layout: post
+title: Value Networks
+date: null
+updated: 2015-09-29T10:06:25.955Z
+---
 ## Agents
 
 Agents are [holons](/life-as-a-holon).
