@@ -36,13 +36,14 @@ sometimes we aren't charitable. it happens, we're human!
 
 for me, i want to recognize when i'm not being charitable so i can learn from my mistakes.
 
-recently, Greg tapped me on the shoulder for support on something he was working on. after only giving a brief look at his work so far, i say something like "this is sloppy". he calmly responds with "i would appreciate if you could be more charitable". oh, irealize he took some shortcuts because of some tough barriers to climb, the same barriers he was hoping i could help him with! instead here i'm thoughtlessly being mean which is not helping him solve his problem.
+recently, Greg tapped me on the shoulder for support on something he was working on. after only giving a brief look at his work so far, i say something like "this is sloppy". he calmly responds with "i would appreciate if you could be more charitable". oh, i realize he took some shortcuts because of some tough barriers to climb, the same barriers he was hoping i could help him with! instead here i'm thoughtlessly being mean which is not helping him solve his problem.
 
 so, you are probably not being charitable if
 
+- you ignore the context behind what the person is saying
 - you give a quick negative interpretation without much thinking
 - you back up your interpretation with pre-existing tension or conflicts (as in, bringing your baggage with you)
-- you nitpick words or assume you would have a better interpretation with the right words ("if only you had said", )
+- you nitpick words or assume you would have a better interpretation with the right words ("if only you had said")
 
 [![charitable poking](/images/charitable-poking.jpg)](http://victormosquera.tumblr.com/)
 
