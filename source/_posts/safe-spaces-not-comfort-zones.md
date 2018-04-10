@@ -6,6 +6,8 @@ our so-called _safe space_ was really a _comfort zone_!
 
 note: my perspectives on safety and comfort are **privileged**.
 
+[![safe nostalgia](/images/safe-nostalgia.jpg)](https://www.artstation.com/artwork/O6oxv)
+
 ## what is a comfort zone?
 
 a comfort zone is where you are free from any _dis_comfort.
@@ -28,11 +30,15 @@ from [The Prophet](https://en.wikipedia.org/wiki/The_Prophet_(book) (emphasis mi
 > It makes mock of your sound senses, and lays them in thistledown like fragile vessels.  
 > **Verily the lust for comfort murders the passion of the soul, and then walks grinning in the funeral.**  
 
+[![comfort zone](/images/comfort-zone.jpg)](https://www.pinterest.nz/pin/200480620889780005/)
+
 ## what is a safe space?
 
 a [safe space](https://en.wikipedia.org/wiki/Safe-space) is a space where violence, harassment, or hate speech against marginalized groups is not tolerated.
 
 > A place where anyone can relax and be fully self-expressed, without fear of being made to feel uncomfortable, unwelcome or challenged on account of biological sex, race/ethnicity, sexual orientation, gender identity or expression, cultural background, age, or physical or mental ability; a place where the rules guard each person's self-respect, dignity and feelings and strongly encourage everyone to respect others. - [Advocates for Youth](http://www.advocatesforyouth.org/index.php?option=com_content&task=view&id=607&Itemid=177)
+
+[![safe ally](/images/safe-ally.svg)](https://en.wikipedia.org/wiki/Safe-space)
 
 a safe space is where you feel seen, where you feel heard, where you feel loved, as you are.
 
@@ -46,6 +52,8 @@ even in the safest of spaces, people make mistakes, situations may become tense,
 
 a safe space does not guarantee you will be free from unintended discomfort based on real challenges, but you will be free to be yourself to face those challenges!
 
+[![safe growing rites](/images/safe-growing-rites.jpg)](https://www.artstation.com/artwork/g6Bem)
+
 ## safe for who?
 
 i notice that there is a meme floating around regarding safe spaces, with a small baby of truth amongst the dirty bathwater.
@@ -55,6 +63,8 @@ originally, safe spaces were created as a way to protect marginalized groups. th
 however, i notice how sometimes "safe spaces" are now used as a way to punish other groups, often for mistakes due to ignorance not malice.
 
 extrapolated beyond reason into an infectious narrative, this becomes "political correctness gone too far" or "so much for the tolerant left".
+
+![so much for the tolerant left](/images/so-much-for-the-tolerant-left.jpg)
 
 but amongst the unreason, there is a small nugget of truth that people aren't able to be themselves.
 
