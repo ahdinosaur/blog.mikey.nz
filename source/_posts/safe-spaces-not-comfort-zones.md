@@ -4,11 +4,13 @@ some months ago, my work family Root Systems had a cultural problem:
 
 our so-called _safe space_ was really a _comfort zone_!
 
+note: my perspectives on safety and comfort are **privileged**.
+
 ## what is a comfort zone?
 
-a comfort zone is where you avoid FUD (fear, uncertainty, and doubt), stress, or situational anxiety.
+a comfort zone is where you are free from any _dis_comfort.
 
-TODO as a chaotic creature, my comfort zone is probably larger than most.  my comfort zone is...
+a comfort zone is where you can avoid fear, uncertainty, doubt, stress, or situational anxiety.
 
 from [The Prophet](https://en.wikipedia.org/wiki/The_Prophet_(book) (emphasis mine):
 
@@ -28,11 +30,39 @@ from [The Prophet](https://en.wikipedia.org/wiki/The_Prophet_(book) (emphasis mi
 
 ## what is a safe space?
 
-a safe space is where you're safe to be vulnerable, maybe even uncomfortable! ([tweet](TODO))
+a [safe space](https://en.wikipedia.org/wiki/Safe-space) is a space where violence, harassment, or hate speech against marginalized groups is not tolerated.
 
-a safe space is where you are encouraged to be your authentic self amongst others who care about your well-being.
+> A place where anyone can relax and be fully self-expressed, without fear of being made to feel uncomfortable, unwelcome or challenged on account of biological sex, race/ethnicity, sexual orientation, gender identity or expression, cultural background, age, or physical or mental ability; a place where the rules guard each person's self-respect, dignity and feelings and strongly encourage everyone to respect others. - [Advocates for Youth](http://www.advocatesforyouth.org/index.php?option=com_content&task=view&id=607&Itemid=177)
+
+a safe space is where you feel seen, where you feel heard, where you feel loved, as you are.
+
+## safety not comfort
+
+a safe space is where you're safe to be vulnerable, maybe even uncomfortable!
+
+a safe space is where you are encouraged to be your authentic self, where you will be supported for being you.
 
 even in the safest of spaces, people make mistakes, situations may become tense, conflicts may arise, work may be tough, it's okay!
+
+a safe space does not guarantee you will be free from unintended discomfort based on real challenges, but you will be free to be yourself to face those challenges!
+
+## safe for who?
+
+i notice that there is a meme floating around regarding safe spaces, with a small baby of truth amongst the dirty bathwater.
+
+originally, safe spaces were created as a way to protect marginalized groups. this is a great idea!
+
+however, i notice how sometimes "safe spaces" are now used as a way to punish other groups, often for mistakes due to ignorance not malice.
+
+extrapolated beyond reason into an infectious narrative, this becomes "political correctness gone too far" or "so much for the tolerant left".
+
+but amongst the unreason, there is a small nugget of truth that people aren't able to be themselves.
+
+people don't feel safe when they think they will be attacked for being themselves.
+
+yes, this is most important for marginalized groups, where default society is not a safe space for them to be themselves.
+
+this is also important for everyone, we all deserve to be our best authentic selves, even when we make mistakes.
 
 ## how to welcome discomfort
 
@@ -41,5 +71,7 @@ our comfort is a privilege, not an entitlement.
 when we stay within our comfort zone, we enable our weaknesses at the expense of hinder personal growth.
 
 paradoxically, to become a better person we want to choose to be uncomfortable, to face our fears directly.
+
+to face our fears, we should be grounded in a supportive network of strength and care.
 
 we won't find our best self in our comfort zone, it will be found in the (sometimes uncomfortable) safe space!
