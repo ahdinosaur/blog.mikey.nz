@@ -1,10 +1,14 @@
-# safe spaces not comfort zones
+---
+title: safe spaces not comfort zones
+date: 2018-03-26 12:00:00
+tags:
+---
 
 some months ago, my work family Root Systems had a cultural problem:
 
 our so-called _safe space_ was really a _comfort zone_!
 
-note: my perspectives on safety and comfort are **privileged**.
+> caution: my perspectives on safety and comfort are **privileged**.
 
 [![safe nostalgia](/images/safe-nostalgia.jpg)](https://www.artstation.com/artwork/O6oxv)
 
@@ -14,7 +18,7 @@ a comfort zone is where you are free from any _dis_comfort.
 
 a comfort zone is where you can avoid fear, uncertainty, doubt, stress, or situational anxiety.
 
-from [The Prophet](https://en.wikipedia.org/wiki/The_Prophet_(book) (emphasis mine):
+from [The Prophet](https://en.wikipedia.org/wiki/The_Prophet_%28book%29) (emphasis mine):
 
 > And tell me, people of Orphalese, what have you in these houses?  
 > And what is it you guard with fastened doors?  
@@ -23,6 +27,8 @@ from [The Prophet](https://en.wikipedia.org/wiki/The_Prophet_(book) (emphasis mi
 > Have you beauty, that leads the heart from things fashioned of wood and stone to the holy mountain?  
 > Tell me, have you these in your houses?  
 > Or **have you only comfort, and the lust for comfort, that stealthy thing that enters the house a guest, and then becomes a host, and then a master?**  
+>
+> <br />
 >
 > Ay, and it becomes a tamer, and with hook and scourge makes puppets of your larger desires.  
 > Though its hands are silken, its heart is of iron.  
@@ -38,15 +44,19 @@ a [safe space](https://en.wikipedia.org/wiki/Safe-space) is a space where violen
 
 > A place where anyone can relax and be fully self-expressed, without fear of being made to feel uncomfortable, unwelcome or challenged on account of biological sex, race/ethnicity, sexual orientation, gender identity or expression, cultural background, age, or physical or mental ability; a place where the rules guard each person's self-respect, dignity and feelings and strongly encourage everyone to respect others. - [Advocates for Youth](http://www.advocatesforyouth.org/index.php?option=com_content&task=view&id=607&Itemid=177)
 
-[![safe ally](/images/safe-ally.svg)](https://en.wikipedia.org/wiki/Safe-space)
+<div style="text-align: center">
+  <a href="https://en.wikipedia.org/wiki/Safe-space">
+    <img src="/images/safe-ally.svg" alt="safe ally" height="200px" />
+  </a>
+</div>
 
 a safe space is where you feel seen, where you feel heard, where you feel loved, as you are.
 
 ## safety not comfort
 
-a safe space is where you're safe to be vulnerable, maybe even uncomfortable!
+a safe space is not always a comfort zone!
 
-a safe space is where you are encouraged to be your authentic self, where you will be supported for being you.
+a safe space is where you're safe to be vulnerable, you're encouraged to be your authentic self, you are supported for being you.
 
 even in the safest of spaces, people make mistakes, situations may become tense, conflicts may arise, work may be tough, it's okay!
 
