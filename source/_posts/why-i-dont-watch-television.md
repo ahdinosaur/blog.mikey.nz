@@ -68,3 +68,8 @@ the creative content you eat becomes you, the decisions made by the author.
 exercising your creative muscle helps you make your own creative decisions.
 
 interesting people are those who explore and follow new paths.
+
+---
+
+note: something i found after writing this: [Four Arguments For The _Elimination_ of Television](https://www.ratical.org/ratville/AoS/4Args4ElimTV.html), via `%zT/UTPgTkTZhHTPZferhrXt2lU6+8gPygnnsro1FLpY=.sha256`
+
