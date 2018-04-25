@@ -72,9 +72,9 @@ originally, safe spaces were created as a way to protect marginalized groups. th
 
 however, i notice how sometimes "safe spaces" are now used as a way to punish other groups, often for mistakes due to ignorance not malice.
 
-extrapolated beyond reason into an infectious narrative, this becomes "political correctness gone too far" or "so much for the tolerant left".
+extrapolated beyond reason into an infectious narrative, this becomes "political correctness gone too far".
 
-![so much for the tolerant left](/images/so-much-for-the-tolerant-left.jpg)
+![a safe space to make america great again](/images/safe-maga-police.jpg)
 
 but amongst the unreason, there is a small nugget of truth that people aren't able to be themselves.
 
@@ -95,3 +95,10 @@ paradoxically, to become a better person we want to choose to be uncomfortable, 
 to face our fears, we should be grounded in a supportive network of strength and care.
 
 we won't find our best self in our comfort zone, it will be found in the (sometimes uncomfortable) safe space!
+
+---
+
+## notable mentions
+
+- [#3 of "4 Things That Struck Me After Visiting Political Spaces in 14 US Cities"](https://medium.com/enspiral-tales/4-things-that-struck-me-after-visiting-political-spaces-in-14-us-cities-c1dceb1e8cb4)
+- [%KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs=.sha256](https://viewer.scuttlebot.io/%25KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs%3D.sha256))
