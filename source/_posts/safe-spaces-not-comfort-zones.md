@@ -78,7 +78,9 @@ extrapolated beyond reason into an infectious narrative, this becomes "political
 
 but amongst the unreason, there is a small nugget of truth that people aren't able to be themselves.
 
-people don't feel safe when they think they will be attacked for being themselves. ([%KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs=.sha256](https://viewer.scuttlebot.io/%25KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs%3D.sha256))
+people don't feel safe when they think they will be attacked for being themselves.
+
+(see [#3 of this article](https://medium.com/enspiral-tales/4-things-that-struck-me-after-visiting-political-spaces-in-14-us-cities-c1dceb1e8cb4) or [%KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs=.sha256](https://viewer.scuttlebot.io/%25KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs%3D.sha256))
 
 yes, this is most important for marginalized groups, where default society is not a safe space for them to be themselves.
 
