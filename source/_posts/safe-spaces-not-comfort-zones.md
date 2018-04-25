@@ -72,13 +72,13 @@ originally, safe spaces were created as a way to protect marginalized groups. th
 
 however, i notice how sometimes "safe spaces" are now used as a way to punish other groups, often for mistakes due to ignorance not malice.
 
-extrapolated beyond reason into an infectious narrative, this becomes "political correctness gone too far" or "so much for the tolerant left".
+extrapolated beyond reason into an infectious narrative, this becomes "political correctness gone too far".
 
-![so much for the tolerant left](/images/so-much-for-the-tolerant-left.jpg)
+![a safe space to make america great again](/images/safe-maga-police.jpg)
 
 but amongst the unreason, there is a small nugget of truth that people aren't able to be themselves.
 
-people don't feel safe when they think they will be attacked for being themselves.
+people don't feel safe when they think they will be attacked for being themselves. ([%KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs=.sha256](https://viewer.scuttlebot.io/%25KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs%3D.sha256))
 
 yes, this is most important for marginalized groups, where default society is not a safe space for them to be themselves.
 
