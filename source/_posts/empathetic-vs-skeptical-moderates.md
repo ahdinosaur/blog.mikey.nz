@@ -1,5 +1,5 @@
 ---
-title: Moderates: Good and Bad
+title: empathetic vs skeptical moderates
 date: 2018-04-23 22:07:17
 tags:
 ---
@@ -8,7 +8,7 @@ in the last year, i've noticed two seas of (white) moderates: one as a valuable 
 
 for context, i come from the United States of America, where many of my extended family and friends may support Donald Trump and may be on the spectrum of the Alt-Right, it's not possible for me to ignore the new waves of moderate politics.
 
-at some point a distinct difference came to light, i'd like to share what i've learned about moderates, good and bad.
+at some point a distinction came to light, so i'd like to share what i've learned about moderates, good and bad.
 
 [!["Women's March on Washington", Feb 2017](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Women%27s_March_on_Washington_%2832593123745%29.jpg/1280px-Women%27s_March_on_Washington_%2832593123745%29.jpg)](https://upload.wikimedia.org/wikipedia/commons/c/c9/Women%27s_March_on_Washington_%2832593123745%29.jpg)
 
@@ -28,9 +28,15 @@ if you're able to empathize with diverse beliefs from all sides, you're a good m
 
 being empathetic means you are able to share an experience in solidarity with another person or group.
 
-i first noticed this quality in [Dominic Tarr](http://dominictarr.com), author of [Scuttlebutt](https://www.scuttlebutt.nz), when reading [The Atlantic](https://www.theatlantic.com/technology/archive/2017/05/meet-the-counterantidisintermediationists/527553/)
+for example, here's my friend [Dominic Tarr](http://dominictarr.com) working to bridge the gap between extreme sides during [a conflict on Scuttlebutt](https://viewer.scuttlebot.io/%25dRuGqDTklt1VqHOEcdJkwgbUrMyELenSCscSbGz%2B8KQ%3D.sha256):
 
-> In an age awash with venture capitalists and billionaires, anarcho-capitalists and conspiracy theorists, oligarchs and neo-authoritarians, perhaps the most compelling vision of the technological future is also the most modest. Scuttlebutt offers one model of that humility. Diverse groups of people networked in equally diverse, and even mutually-contradictory ways—for profit, for community, for anarchy, for globalism, and for localism, among others. No revolution whatsoever. Just people of all stripes, in places of all kinds, who sometimes use computers together.
+> @marina this isn't just some random dickwad, this dickwad is @mixmix's dad. That is why I think it's worth mediating, for better or worse, he's basically family. @substack is addressing future ssb members, but I'm interesting in addressing the people who are _currently here_. Because one time _you_ told me that one of the challenges facing feminism is that the default response my men is to be skeptical of whatever a woman says, but believe things that other men say. This was surprising at the time, but I soon realized you where right. So you told me that it wasn't enough for women to argue for feminism - men like me had to as well, because other men would actually listen to me. That is what I'm trying to do here.
+> <br />
+> @bob as you can see, my friends are a bit upset by this, and now you are connected to and socialising in the same space with them. I can certainly vouch that they are highly intelligent and there are many reasons they believe what they do. Could you please take that into consideration? they are not "some segments of some societies" they are a segment of _this_ society.  
+> <br />
+> I think it's worth bridging between these viewpoints, because I realized that my own views have changed significantly over the years. If my 18 year old self came on here and what I believed at the time, I'd have gotten blasted by current @substack too, and that would be fair enough, but that probably would have galvanized my views not changed them. So I believe that if my views can change, other's views can change too.
+
+
 
 support diverse movements, not co-opt! (All Lives Matter)
 
