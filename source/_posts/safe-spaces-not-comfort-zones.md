@@ -80,8 +80,6 @@ but amongst the unreason, there is a small nugget of truth that people aren't ab
 
 people don't feel safe when they think they will be attacked for being themselves.
 
-(see [#3 of this article](https://medium.com/enspiral-tales/4-things-that-struck-me-after-visiting-political-spaces-in-14-us-cities-c1dceb1e8cb4) or [%KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs=.sha256](https://viewer.scuttlebot.io/%25KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs%3D.sha256))
-
 yes, this is most important for marginalized groups, where default society is not a safe space for them to be themselves.
 
 this is also important for everyone, we all deserve to be our best authentic selves, even when we make mistakes.
@@ -97,3 +95,10 @@ paradoxically, to become a better person we want to choose to be uncomfortable, 
 to face our fears, we should be grounded in a supportive network of strength and care.
 
 we won't find our best self in our comfort zone, it will be found in the (sometimes uncomfortable) safe space!
+
+---
+
+## notable mentions
+
+- [#3 of "4 Things That Struck Me After Visiting Political Spaces in 14 US Cities"](https://medium.com/enspiral-tales/4-things-that-struck-me-after-visiting-political-spaces-in-14-us-cities-c1dceb1e8cb4)
+- [%KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs=.sha256](https://viewer.scuttlebot.io/%25KfyWqTDLSWu94KtE2buU2eoKnrBajHGqw7zbphVc0Rs%3D.sha256))
