@@ -1,5 +1,5 @@
 ---
-title: gifts of a charitable interpretation
+title: being charitable
 date: 2018-03-13 22:42:19
 tags:
 ---
