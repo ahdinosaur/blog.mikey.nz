@@ -66,7 +66,9 @@ yet, in my extended network i became witness to skepticism, with articles such a
 
 rather than being empathetic with another group's experience, i noticed [gaslighting](https://en.wikipedia.org/wiki/Gaslighting).
 
-TODO summary
+but not all (white) moderates were dismissive:
+
+{% twitter https://twitter.com/Kaepernick7/status/917955545197314048 %}
 
 ## moderate strategy: be a bridge
 
