@@ -20,9 +20,7 @@ often, moderate are those who have the most privilege, who benefit most from the
 
 on the flip side, being a moderate is not a applicable strategy for those who suffer from the status quo, who are part of marginalized communities, and who are actively intolerated.
 
-however, i do believe being a moderate is a useful strategy when used as a bridge to connect diversity. whether i think a moderate is good or bad depends on whether they are connecting or disconnecting other sides.
-
-
+however, i do believe being a moderate is a powerful strategy when used as a bridge to connect diversity. whether i think a moderate is good or bad depends on whether they are connecting or disconnecting other sides.
 
 ## good moderates are empathetic of diverse beliefs
 
@@ -84,92 +82,24 @@ for example, here's my friend [Dominic Tarr](http://dominictarr.com) working to 
 
 to be a good moderate is to listen, to give a voice to those who aren't being heard (or can't be present), to be a connecting link between diverse sides, to support a [diversity of tactics](https://en.wikipedia.org/wiki/Diversity_of_tactics) brought by each participant given their understanding of the local situation.
 
-
 ## moderate strategy: be an ally
 
 there are social justice movements happening around us, _be an ally_!
 
-as a person with privilege, it's easy to join a movement with good intentions, but negative impact. notice how much attention you give or take. check if you are supporting or co-opt-ing. above all, listen!
+as a person with privilege, it's easy to join a movement with good intentions, but have negative impact. notice how much attention you give or take. check if you are supporting or co-opt-ing.
+
+give attention to others! try not to place yourself at the center of attention, unless as a stepping stone to pass the microphone.
+
+listen! a good practice is to notice how much you're listening, versus how much you're talking.
+
+ask how you can help! but [don't expect others to carry your mental load](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/)
 
 [!["As an ally, I'm not going to pretend to be a superhero. I am going to ask you how I can help" - William C. Anderson, community organizer, DREAMer ally](http://dreamersadrift.com/wp-content/uploads/2012/06/allies.jpg)](http://dreamersadrift.com/featured1/the-ally-code-of-conduct)
 
-on the other side, 
+## we're all in this together
 
----
+[be charitable](https://blog.dinosaur.is/being-charitable/) to everyone you come across.
 
-notice how much you're listening, how much you're talking
+try to care for other people, regardless of their background.
 
-don't expect other people to educate you, educate yourself, ask good questions.
-
-### case study: nfl
-
-- http://www.politifact.com/truth-o-meter/article/2017/sep/25/short-history-national-anthem-and-sports/
-
-- https://twitter.com/KevinMKruse/status/770812527429160960
-- https://twitter.com/roywoodjr/status/896540008332410880
-- https://twitter.com/thenoahkinsey/status/912185451066175488
-- https://www.mccain.senate.gov/public/_cache/files/12de6dcb-d8d8-4a58-8795-562297f948c1/tackling-paid-patriotism-oversight-report.pdf
-
-
-- https://twitter.com/Kaepernick7/status/917955545197314048
-- https://twitter.com/NRL/status/914401858386456576
-
-
-### case study: antifa
-
-- https://twitter.com/CleveJones1/status/897880400982188032
-- https://twitter.com/make_ready/status/897899970501541888
-- https://twitter.com/nancaroling/status/896531651957669890
-- https://twitter.com/attn/status/898328098529083394
-
-
-
-### case study: keystone pipeline xl
-
-### case study: black lives matter
-
-- https://twitter.com/AdrianXpression/status/897978833151852544
-- https://twitter.com/spikedonline/status/896798322236805122
-- https://twitter.com/USoulSurvivor/status/896876048901591041
-
-### case study: palestine
-
-## blah
-
-https://twitter.com/jodikantor/status/941308738606174209
-
----
-
-- http://time.com/top-100-photos-of-2017/
-  - https://timedotcom.files.wordpress.com/2017/12/zach-d-roberts-charlottesville-top-100-photos-2017.jpg?quality=85&w=2089
-  - https://timedotcom.files.wordpress.com/2017/12/ryan-kelly-charlottesville-protest-top-100-photos-2017.jpg?quality=85&w=2134
-
----
-
-%mKDjmIN6IHbWzzYP5FdoOrCXCokswjepyVCmpwqxDM8=.sha256
-
-> I tell people to fuck off because I think that without stern social repurcussions, people causing harm will continue to stew in their own ignorance. There are otherwise few consequences for otherwise privledged people to maintain toxic beliefs that hurt people.
-
-[@substack](@9nTgtYmvW4HID6ayt6Icwc8WZxdifx5SlSKKIX/X/1g=.ed25519) i hear you that it's important to have stern social repercussions for privileged behavior that negatively impacts people, especially marginalized populations. i'm reminded of the great conversation in %Z8dJFeoxtOQh1hWfO/1oc1FrICX9rBYieD1djhd/zxg=.sha256.
-
-i share [@mix](@ye+QM09iPcDJD6YvQYjoQc7sLF/IFhmNbEqgdzQo3lQ=.ed25519)'s concern that telling people to "get fucked" often leads them to "other" you, and therefore double down on their ignorance. i've seen this happen across my extended family and childhood friends.
-
-from my experience social pressure only has an effect when the recipient of the pressure respects you. this is why i'm most interested in how to better understand the underlying narratives, assumptions, and mindsets behind why people are becoming ignorant, so that we can speak to them in their own language about why their opinion is not beneficial even for them. personally, i don't think any strategy which excludes the (ignorant) masses is a good strategy for mass coordination.
-
-in a parallel context: as a man speaking to other men, i can speak about how the patriarchy sucks for men. how i was conditioned in society to suppress my emotions, reducing my ability to communicate effectively and be healthy. etc.
-
-in this context, i'm interested in how this [false equivalence](https://en.wikipedia.org/wiki/False_equivalence) between Nazis and Antifa is so easy to swallow and regurgitate on demand. especially since my shallow understanding of how Nazism came to power says it involved a very similar meme against the "violent counter-protesters" of the time. as i understand the problem, the more that people feel Antifa are bad source of violence, the more they feel they have something in common with Nazis who are sharing the same narrative.
-
-this also isn't the first time i've encountered the "violent protester" as "domestic terrorist" meme. i remember some beautiful peaceful protests in Oakland and Berkeley, only to be portrayed on the news as "violent [black bloc](https://en.wikipedia.org/wiki/Black_bloc) destroys city", which my aunt was happy to re-broadcast as an justification for why the protests were bad for the city.
-
-> from the Antifa folks to the Nazi's
-
-[@jer](@uf3kajfhBC2Sd3OysKB5LnBLJ5pwgBhBpXnGEGzgG6A=.ed25519) i appreciate you starting this thread, even though i disagree with your false equivalence between Nazis and Antifa, i understand the position i'm hearing that "all violence is bad no matter what" (which many of my friends in real-life share).
-
-do you think violence is appropriate in the case of self-defense?
-
----
-
-> i share @mix's concern that telling people to "get fucked" 
-
-i should clarify: while i personally engage in an empathetic non-violent strategy, i support [a diversity of tactics](https://en.wikipedia.org/wiki/Diversity_of_tactics).
+understand that sometimes being empathetic means stepping outside your comfort zone.
