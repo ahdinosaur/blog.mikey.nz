@@ -62,11 +62,13 @@ yet, in my extended network i became witness to skepticism, with articles such a
 
 > Sports used to be fun, but these protests are divisive and pointless. Can't we just play ball?
 
-rather than being empathetic with another group's experience, i noticed [gaslighting](https://en.wikipedia.org/wiki/Gaslighting).
+rather than being empathetic with another group's experience, i noticed [gaslighting](https://en.wikipedia.org/wiki/Gaslighting), to the point of [deflecting the message to be about the flag, the anthem, or the military](https://johnpavlovitz.com/2017/09/26/protests-arent-flag-anthem-military-know/).
 
-but not all (white) moderates were dismissive:
+but not all (white) moderates try to silence stories about oppression, some use their own voice to amplify the messages:
 
 {% twitter https://twitter.com/Kaepernick7/status/917955545197314048 %}
+
+{% twitter https://twitter.com/NRL/status/914401858386456576 %}
 
 ## moderate strategy: be a bridge
 
