@@ -4,6 +4,8 @@ date: 2018-04-23 22:07:17
 tags:
 ---
 
+TODO: https://twitter.com/cricketcrocker/status/1008071987078549506
+
 in the last year, i've noticed two seas of (white) moderates: one as a valuable bridge, another as an infection of deception.
 
 for context, i come from the United States of America, where many of my extended family and friends may support Donald Trump and may be on the spectrum of the Alt-Right, it's not possible for me to ignore the new waves of moderate politics.
@@ -105,3 +107,12 @@ ask how you can help! but [don't expect others to carry your mental load](https:
 try to care for other people, regardless of their background.
 
 understand that sometimes being empathetic means stepping outside your comfort zone.
+
+---
+
+TODO
+
+what's missing:
+  - when i'm in the discussion, what's the end goal we want, what's a good result?
+    - to help people (especially those with privilege) to be more empathetic of others (especially those without privilege)
+    - to help people get past labels which are different to them and thinking about others as humans similar to them
