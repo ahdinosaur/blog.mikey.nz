@@ -7,6 +7,8 @@ a television exercises your ability to watch without action for extended periods
 
 i want to exercise my ability to find creative solutions to complex problems.
 
+![leunig cartoons splash](/images/leunig-tv-splash.jpg)
+
 ## [the medium is the message](https://en.wikipedia.org/wiki/The_medium_is_the_message)
 
 humans are composed of instruments that cooperate to sense and action.
