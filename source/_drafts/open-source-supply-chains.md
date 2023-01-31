@@ -1,7 +1,6 @@
-layout: post
 title: Value Networks
-date: null
-updated: 2015-09-29T10:06:25.955Z
+date: 2015-09-29T10:06:25.955Z
+tags:
 ---
 ## Agents
 

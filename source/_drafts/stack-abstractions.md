@@ -1,7 +1,6 @@
-layout: post
 title: Stack Abstractions
-date: null
-updated: 2015-04-26T07:42:40.728Z
+date: 2015-04-26T07:42:40.728Z
+tags:
 ---
 what is an abstraction? what are stacks?
 

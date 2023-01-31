@@ -1,7 +1,6 @@
-layout: post
 title: Open Leadership
-date: null
-updated: 2015-10-25T21:57:13.687Z
+date: 2015-10-25T21:57:13.687Z
+tags:
 ---
 ## levels
 

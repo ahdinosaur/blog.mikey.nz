@@ -1,7 +1,6 @@
-layout: post
 title: My Omega Project
-date: 2015-04-20T05:20:01.545Z
-updated: 2015-10-05T04:27:11.446Z
+date: 2015-10-05T04:27:11.446Z
+tags:
 ---
 _TODO: link to @dominictarr on "What is an Omega Project" once he publishes something_
 

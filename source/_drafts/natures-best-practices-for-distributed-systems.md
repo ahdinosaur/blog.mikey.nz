@@ -1,7 +1,6 @@
-layout: post
-title: nature's best practices for distributed systems
-date: null
-updated: 2016-07-17T09:17:53.710Z
+title: "nature's best practices for distributed systems"
+date: 2016-07-17T09:17:53.710Z
+tags:
 ---
 here's a talk about how
 

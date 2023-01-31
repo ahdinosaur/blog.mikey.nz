@@ -1,7 +1,6 @@
-layout: post
 title: Web Dev 101
-date: 2014-11-07T23:53:16.159Z
-updated: 2014-11-08T00:03:38.939Z
+date: 2014-11-08T00:03:38.939Z
+tags:
 ---
 hi! so you want to learn how to be a web developer? welcome to your first class. :)
 

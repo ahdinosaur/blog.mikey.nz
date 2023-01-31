@@ -1,7 +1,6 @@
-layout: post
 title: dokku Wildcard SSL
-date: null
-updated: 2014-12-25T22:19:35.591Z
+date: 2014-12-25T22:19:35.591Z
+tags:
 ---
 ```
 openssl genrsa -des3 -out server.key.secure 4096

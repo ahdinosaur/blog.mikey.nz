@@ -1,7 +1,6 @@
-layout: post
-title: Do-ocracy: power to those who do.
-date: null
-updated: 2015-10-25T11:31:53.603Z
+title: 'Do-ocracy: power to those who do.'
+date: 2015-10-25T11:31:53.603Z
+tags:
 ---
 [frome the Noisebridge wiki](https://www.noisebridge.net/wiki/Do-ocracy)
 

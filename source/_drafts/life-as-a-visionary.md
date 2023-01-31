@@ -1,7 +1,6 @@
-layout: post
 title: Life As A Visionary
 date: 2015-04-09T08:17:02.022Z
-updated: 2015-12-02T06:51:21.292Z
+tags:
 ---
 ##### TODO: make sense of this rambling
 

@@ -1,5 +1,6 @@
-layout: post
 title: How to transition to working on what matters
+date: 2017-04-23
+tags:
 ---
 
 A fieldguide is one way to view the landscape of a given area, it is an adventurer’s best friend for charting the unknown. Being able to work on what matters can be considered in a similar format, with an easy to follow recipe for how others can cook it in their own laboratories and a person guide to take and remix into their futures.

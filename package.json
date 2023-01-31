@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "hexo server --draft",
     "start": "hexo server",
     "build": "hexo generate",
     "deploy": "hexo deploy"

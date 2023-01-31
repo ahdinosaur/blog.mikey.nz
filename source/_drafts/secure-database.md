@@ -1,7 +1,6 @@
-layout: post
 title: Secure database
-date: null
-updated: 2014-10-24T04:17:51.486Z
+date: 2014-10-24T04:17:51.486Z
+tags:
 ---
 - log file
 - content addressable store

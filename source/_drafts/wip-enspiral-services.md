@@ -1,7 +1,6 @@
-layout: post
-title: WIP: Enspiral Services
-date: null
-updated: 2015-12-02T03:11:07.315Z
+title: Enspiral Services
+date: 2015-12-02T03:11:07.315Z
+tags:
 ---
 **i see Enspiral Services as an economic organizing system for social good.**
 
