@@ -25,7 +25,7 @@ Take bee or ant colonies, for example. These creatures are actually what led my 
 
 As another example, consider the human body. We are each an organism, which is composed of organs, which are composed of tissues, which are composed of cells, which are composed of organelles, which are composed of molecules, which are composed of atoms, which are composed of subatomic particles, and so on.
 
-[![diagram of an organism holon](/images/organism-holon.png)](http://requirebin.com/embed?gist=50c45ad5a70a326912fd)
+[![diagram of an organism holon](./life-as-a-holon/organism-holon.png)](http://requirebin.com/embed?gist=50c45ad5a70a326912fd)
 
 ## Holon Networks: Holarchies
 
@@ -33,7 +33,7 @@ Let's take the human example again, but in the other direction.  Humans are not 
 
 In modern society, we are individuals, which are parts of families, which are parts of communities, which are parts of cities, which are parts of counties, which are parts of states, which are parts of nations, and so on.
 
-[![diagram of a nation holon](/images/nation-holon1.png)](http://requirebin.com/embed?gist=5df5d6b845846c29307c)
+[![diagram of a nation holon](./life-as-a-holon/nation-holon1.png)](http://requirebin.com/embed?gist=5df5d6b845846c29307c)
 
 In this way, holons form the backbone of networks, where parts become wholes become parts of other wholes and so on.
 
@@ -51,11 +51,11 @@ With our region, we form a group.
 
 With our biosphere, we form a group.
 
-[![binary tree](/images/binary-tree.png)](http://requirebin.com/embed?gist=c25cd8ef79da8f35f302&graph=balancedBinTree&n=6)
+[![binary tree](./life-as-a-holon/binary-tree.png)](http://requirebin.com/embed?gist=c25cd8ef79da8f35f302&graph=balancedBinTree&n=6)
 
 Rather than hierarchical structures, holons allow for nested structures that better suit distribution of information, money, and control.
 
-[![small world random graph](/images/Screen-Shot-2014-10-26-at-4-52-07-PM.png)](http://requirebin.com/embed?gist=c25cd8ef79da8f35f302&graph=wattsStrogatz&n=300&m=25&k=0.1)
+[![small world random graph](./life-as-a-holon/Screen-Shot-2014-10-26-at-4-52-07-PM.png)](http://requirebin.com/embed?gist=c25cd8ef79da8f35f302&graph=wattsStrogatz&n=300&m=25&k=0.1)
 
 
 We are holons. We are all as one.

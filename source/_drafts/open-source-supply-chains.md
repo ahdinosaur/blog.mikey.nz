@@ -20,6 +20,6 @@ Planning is our ability to describe process before we do
 >
 > -- http://ipotables.net/
 
-[![drawing of IPO tables](../content/images/2014/Oct/dg-56p.png)](http://ipotables.net/)
+[![drawing of IPO tables](./open-source-supply-chains/dg-56p.png)](http://ipotables.net/)
 
 ## Process

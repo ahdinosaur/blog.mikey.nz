@@ -9,6 +9,7 @@ hexo.extend.filter.register('after_post_render', (data) => {
   const post_image_sizes = post_image_config.sizes
   data.content = data.content.replace(/<img([^>]+)?>/igm, (_, attr) => {
     attr = attr.replace(/src="([^"]+)?"/, (_, src) => {
+      if (src.endsWith('svg')) return `src=${src}`
       const srcset = Object.entries(post_image_sizes)
         .map(([size, { width }]) => `${image_version(src, { prefix: size })} ${width}w`)
         .join(', ')

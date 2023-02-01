@@ -31,7 +31,7 @@ i had found a sun dress and was wearing it for the first time at a party.
 
 i went to the bathroom and looked at myself in the mirror.
 
-![bathroom mirror selfie](/images/bathroom-mirror-selfie.jpg)
+![bathroom mirror selfie](./a-reflection-on-mirrors/bathroom-mirror-selfie.jpg)
 
 the image of me i saw in the mirror did not match the image i had for myself.
 

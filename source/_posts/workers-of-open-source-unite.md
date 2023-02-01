@@ -24,7 +24,7 @@ As a project moves from scratching a personal itch to maintenance for others, a 
 
 This unpaid labor has become expected of the maintainers of popular open source projects, greeted with screens like this each day:
 
-![overwhelming amount of notifications](/images/overwhelming-GitHub-notifications.png)
+![overwhelming amount of notifications](./workers-of-open-source-unite/overwhelming-GitHub-notifications.png)
 
 > Which just makes us want to explode due to the instant feelings of anxiety, guilt, and shame such screens promote. Which then left untreated, results in burnout.
 >
@@ -58,7 +58,7 @@ In 2009,
 
 In 2014, [here's a bunch of MakerBot’s recent patent applications](http://www.freepatentsonline.com/result.html?p=1&edit_alert=&srch=xprtsrch&query_txt=makerbot&uspat=on&usapp=on&depat=on&npl=on&date_range=all&stemming=on&sort=relevance&search=Search). Worse, many of these are based on open source designs on MakerBot's community network: Thingiverse. [\[0\]](http://3dprintingindustry.com/2014/05/28/makerbot-become-takerbot/), [\[1\]](http://www.solidsmack.com/cad-design-news/makerbot-disregards-open-source-community-other-silly-moves-options/)
 
-![Understanding Copyright on Thingiverse with MakerBot](/images/Takerbot_Anthony_Clark.png)
+![Understanding Copyright on Thingiverse with MakerBot](./workers-of-open-source-unite/Takerbot_Anthony_Clark.png)
 
 
 Again, open source is a competitive advantage used by for-profit companies. This means the moment open source is no longer an advantage, these systems will become closed source and locked down. [Another example: the "open source" Android](http://arstechnica.com/gadgets/2013/10/googles-iron-grip-on-android-controlling-open-source-by-any-means-necessary/).

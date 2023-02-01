@@ -8,7 +8,7 @@ my co-worker Greg introduced me to a useful way to reflect on our interpretation
 
 (art by [Victor Mosquera](http://victormosquera.tumblr.com/))
 
-[![charitable opening](/images/charitable-opening.jpg)](http://victormosquera.tumblr.com/)
+[![charitable opening](./being-charitable/charitable-opening.jpg)](http://victormosquera.tumblr.com/)
 
 ## how to be charitable
 
@@ -18,7 +18,7 @@ applying this to a social context: before we give someone negative feedback, we 
 
 we should construct the most favorable opinion of someone until proven otherwise, to regard them as _innocent until proven guilty_, to _give them the benefit of the doubt_.
 
-[![charitable review](/images/charitable-review.jpg)](http://victormosquera.tumblr.com/)
+[![charitable review](./being-charitable/charitable-review.jpg)](http://victormosquera.tumblr.com/)
 
 ### the prime directive
 
@@ -28,7 +28,7 @@ in the context of agile retrospectives, we see this concept as [The Prime Direct
 
 when we assume good faith, we are able to go beyond blaming any person involved and instead focus on the systems we are in.
 
-[![charitable composition](/images/charitable-composition.jpg)](http://victormosquera.tumblr.com/)
+[![charitable composition](./being-charitable/charitable-composition.jpg)](http://victormosquera.tumblr.com/)
 
 ## signs you are not being charitable
 
@@ -45,7 +45,7 @@ so, you are probably not being charitable if
 - you back up your interpretation with pre-existing tension or conflicts (as in, bringing your baggage with you)
 - you nitpick words or assume you would have a better interpretation with the right words ("if only you had said")
 
-[![charitable poking](/images/charitable-poking.jpg)](http://victormosquera.tumblr.com/)
+[![charitable poking](./being-charitable/charitable-poking.jpg)](http://victormosquera.tumblr.com/)
 
 ## charity loops
 
@@ -57,4 +57,4 @@ when we are charitable to ourselves, we will be able to fulfill our own needs, w
 
 together, we can give gifts of a charitable interpretation.
 
-[![charitable sailing](/images/charitable-sailing.jpg)](http://victormosquera.tumblr.com/)
+[![charitable sailing](./being-charitable/charitable-sailing.jpg)](http://victormosquera.tumblr.com/)

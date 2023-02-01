@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -81,10 +81,37 @@ theme: again
 #  repo: git@github.com:ahdinosaur/blog.mikey.nz
 #  branch: gh-pages
 
+markdown:
+  preset: 'default'
+  render:
+    html: true
+    xhtmlOut: false
+    langPrefix: 'language-'
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  enable_rules:
+  disable_rules:
+  plugins:
+  anchors:
+    level: 2
+    collisionSuffix: ''
+    permalink: false
+    permalinkClass: 'header-anchor'
+    permalinkSide: 'left'
+    permalinkSymbol: '¶'
+    case: 0
+    separator: '-'
+  images:
+    lazyload: false
+    prepend_root: false
+    post_asset: true
+
 # Responsive Images
 ## Docs: https://github.com/hexojs/hexo-filter-responsive-images
 responsive_images:
-  - pattern: 'images/**/*.+(png|jpg|jpeg)'
+  - pattern: '**/*.+(png|jpg|jpeg)'
     sizes:
       sm:
         width: 480 # 30em

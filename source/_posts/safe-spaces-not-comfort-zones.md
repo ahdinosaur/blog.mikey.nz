@@ -10,7 +10,7 @@ our so-called _safe space_ was really a _comfort zone_!
 
 > caution: my perspectives on safety and comfort are **privileged**.
 
-[![safe nostalgia](/images/safe-nostalgia.jpg)](https://www.artstation.com/artwork/O6oxv)
+[![safe nostalgia](./safe-spaces-not-comfort-zones/safe-nostalgia.jpg)](https://www.artstation.com/artwork/O6oxv)
 
 ## what is a comfort zone?
 
@@ -36,7 +36,7 @@ from [The Prophet](https://en.wikipedia.org/wiki/The_Prophet_%28book%29) (emphas
 > It makes mock of your sound senses, and lays them in thistledown like fragile vessels.  
 > **Verily the lust for comfort murders the passion of the soul, and then walks grinning in the funeral.**  
 
-[![comfort zone](/images/comfort-zone.jpg)](https://www.pinterest.nz/pin/200480620889780005/)
+[![comfort zone](./safe-spaces-not-comfort-zones/comfort-zone.jpg)](https://www.pinterest.nz/pin/200480620889780005/)
 
 ## what is a safe space?
 
@@ -46,7 +46,7 @@ a [safe space](https://en.wikipedia.org/wiki/Safe-space) is a space where violen
 
 <div style="text-align: center">
   <a href="https://en.wikipedia.org/wiki/Safe-space">
-    <img src="/images/safe-ally.svg" alt="safe ally" height="200px" />
+    <img src="/safe-spaces-not-comfort-zones/safe-ally.svg" alt="safe ally" height="200px" />
   </a>
 </div>
 
@@ -62,7 +62,7 @@ even in the safest of spaces, people make mistakes, situations may become tense,
 
 a safe space does not guarantee you will be free from unintended discomfort based on real challenges, but you will be free to be yourself to face those challenges!
 
-[![safe growing rites](/images/safe-growing-rites.jpg)](https://www.artstation.com/artwork/g6Bem)
+[![safe growing rites](./safe-spaces-not-comfort-zones/safe-growing-rites.jpg)](https://www.artstation.com/artwork/g6Bem)
 
 ## safe for who?
 
@@ -74,7 +74,7 @@ however, i notice how sometimes "safe spaces" are now used as a way to punish ot
 
 extrapolated beyond reason into an infectious narrative, this becomes "political correctness gone too far".
 
-![a safe space to make america great again](/images/safe-maga-police.jpg)
+![a safe space to make america great again](./safe-spaces-not-comfort-zones/safe-maga-police.jpg)
 
 but amongst the unreason, there is a small nugget of truth that people aren't able to be themselves.
 

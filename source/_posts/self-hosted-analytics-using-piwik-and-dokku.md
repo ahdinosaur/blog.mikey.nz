@@ -113,12 +113,12 @@ weee, our app should be up! browse to `http://analytics.<your-dokku-domain.tld>`
 
 you should be presented with a Piwik welcome screen.
 
-![Piwik welcome screen](/images/setup0.png)
+![Piwik welcome screen](./self-hosted-analytics-using-piwik-and-dokku/setup0.png)
 
 Piwik will perform a system check to make sure all is well. here's what i got.
 
-![First half of Piwik system check](/images/setup1.png)
-![Second half of Piwik system check](/images/setup2.png)
+![First half of Piwik system check](./self-hosted-analytics-using-piwik-and-dokku/setup1.png)
+![Second half of Piwik system check](./self-hosted-analytics-using-piwik-and-dokku/setup2.png)
 
 next you will stumble upon a form asking for the database.
 
@@ -135,7 +135,7 @@ after it creates and starts a database container, let's fetch the generated cred
 dokku config analytics
 ```
 
-![output of env](/images/setup3.png)
+![output of env](./self-hosted-analytics-using-piwik-and-dokku/setup3.png)
 
 "Database Host" is `<DB_HOST>:<DB_PORT>`
 
