@@ -1,0 +1,33 @@
+# basic
+#
+
+homepage: https://mikey.nz
+
+favicon: /images/favicon.ico
+avatar: /images/avatar.jpg
+# banner: https://upload.wikimedia.org/wikipedia/commons/1/11/Moai_Stargazing_at_Ahu_Tongariki%2C_Easter_Island.jpg
+#   then cropped to 2:1 ratio
+banner: /images/banner.jpg
+
+# social
+social:
+  github: https://github.com/ahdinosaur
+  mastodon: https://cloudisland.nz/@dinosaur
+  scuttlebutt: https://dinosaur.butt.nz/
+  twitter: https://twitter.com/ahdinosaur
+
+# nav #
+nav:
+  home: .
+  archive: archives
+  rss: atom.xml
+
+# heox-renderre-sass
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
+
+matomo:
+  url: https://analytics.mikey.nz
+  site_id: 11

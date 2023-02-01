@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: $root-font-size;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+body {
+  margin: 0;
+  font-family: $font-body;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+}
+
+/* https://github.com/twitter/twemoji#inline-styles */
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.2em;
+}
