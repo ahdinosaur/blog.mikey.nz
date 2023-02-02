@@ -9,11 +9,14 @@ Setup
 ```shell
 git clone git@github.com:ahinosaur/blog.mikey.nz
 cd blog.mikey.nz
-git submodule update --init --recursive
 ```
 
-Devop
+Develop
 
 ```shell
-npm start
+npm run dev
 ```
+
+### Notes
+
+- [Encoding Video](https://gist.github.com/Vestride/278e13915894821e1d6f)

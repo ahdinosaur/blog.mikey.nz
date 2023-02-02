@@ -16,7 +16,7 @@ hexo.extend.filter.register('after_post_render', (data) => {
   const create_img_srcset = hexo.extend.helper.get('create_img_srcset').bind(hexo)
   data.content = data.content.replace(/<img([^>]+)?>/igm, (_, attr) => {
     attr = attr.replace(/src="([^"]+)?"/, (_, src) => {
-      if (src.endsWith('svg')) return `src=${src}`
+      if (!(src.endsWith('jpg') || src.endsWith('jpeg') || src.endsWith('png'))) return `src=${src}`
       return `srcset="${create_img_srcset(src)}"`
     })
     return `<img${attr}>`
