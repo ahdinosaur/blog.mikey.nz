@@ -94,6 +94,8 @@ markdown:
   enable_rules:
   disable_rules:
   plugins:
+    - markdown-it-attrs
+    - markdown-it-emoji
   anchors:
     level: 1
     collisionSuffix: ''
