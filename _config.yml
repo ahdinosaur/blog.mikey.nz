@@ -95,12 +95,12 @@ markdown:
   disable_rules:
   plugins:
   anchors:
-    level: 2
+    level: 1
     collisionSuffix: ''
-    permalink: false
+    permalink: true
     permalinkClass: 'header-anchor'
-    permalinkSide: 'left'
-    permalinkSymbol: '¶'
+    permalinkSide: 'right'
+    permalinkSymbol: '§'
     case: 0
     separator: '-'
   images:
