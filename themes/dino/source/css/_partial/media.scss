@@ -1,0 +1,21 @@
+.image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  > img {
+    max-height: 50vh;
+  }
+}
+
+.video-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > iframe, video {
+    max-height: 50vh;
+  }
+}

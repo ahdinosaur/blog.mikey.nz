@@ -22,3 +22,24 @@ hexo.extend.filter.register('after_post_render', (data) => {
     return `<img${attr}>`
   })
 })
+
+hexo.extend.filter.register('markdown-it:renderer', function(md) {
+  md.use(markdownitWrapImages, {
+    wrapClass: 'image-wrapper',
+  })
+})
+
+function markdownitWrapImages (md, config) {
+  config = config || {}
+
+  if (md.renderer.rules.image.name !== 'wrapImageRenderer') {
+    var defaultImageRenderer = md.renderer.rules.image
+    md.renderer.rules.image = wrapImageRenderer
+  }
+
+  function wrapImageRenderer(tokens, idx, options, env, self) {
+    const wrapAttrs = `class="${config.wrapClass}"`
+    const img = defaultImageRenderer(tokens, idx, options, env, self)
+    return `<div ${wrapAttrs}>${img}</div>`
+  }
+}
