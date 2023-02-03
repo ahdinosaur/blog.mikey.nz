@@ -2,11 +2,7 @@
 %>
 
 <header class="app-header">
-  <img
-    class="banner"
-    srcset="<%- create_img_srcset('/images/banner.jpg') %>"
-    alt="banner"
-  >
+  <%- create_responsive_img('/images/banner.jpg', { class: 'banner', alt: 'banner' }) %>
 
   <section class="description">
     <a class="avatar" href="<%- theme.homepage %>">

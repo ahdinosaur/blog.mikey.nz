@@ -117,8 +117,10 @@ responsive_images:
     sizes:
       sm:
         width: 480 # 30em
+        withoutEnlargement: true
       md:
         width: 768 # 48em
+        withoutEnlargement: true
       lg:
         width: 992 # 62em
         withoutEnlargement: true
