@@ -8,7 +8,7 @@ playing around with rainbows LEDs i can dance with!  🌈💃⚡️💖
 
 in the classic shape of suspenders and a belt.
 
-<iframe class="video" title="vimeo-player" src="https://player.vimeo.com/video/795074597?h=fa397d5ebc" width="640" height="960" frameborder="0" allowfullscreen></iframe>
+<iframe class="video" src="https://player.vimeo.com/video/795074597?h=fa397d5ebc" width="640" height="960" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="(2018) A Burn Dance: Walkthrough"></iframe>
 
 continuing from [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)
 
@@ -46,6 +46,8 @@ here are the available ways to interface with the controller:
 - hold 1st button until white then turn rotary encoder to change brightness
 - hold 2nd button until white then turn rotary encoder to change color temperature
 
+## showcase
+
 ![](./a-burn-dance/IMG_20180817_141408.jpg)
 ![](./a-burn-dance/IMG_20180817_141417.jpg)
 ![](./a-burn-dance/IMG_20180817_144718.jpg)
@@ -53,10 +55,7 @@ here are the available ways to interface with the controller:
 ![](./a-burn-dance/IMG_20180817_195256.jpg)
 ![](./a-burn-dance/IMG_20180819_152242.jpg)
 
-<video controls>
-  <source src="/a-burn-dance/VID_20180817_195458-web.webm" type="video/webm; codecs=vp9">
-  <source src="/a-burn-dance/VID_20180817_195458-web.mp4" type="video/mp4">
-</video>
+<iframe class="video" src="https://player.vimeo.com/video/795749915?h=768bef89b0" width="480" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="(2018) A Burn Dance: Demo"></iframe>
 
 ## resources
 
