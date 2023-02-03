@@ -38,11 +38,6 @@ main.post {
     > h6:hover .header-anchor {
       display: inline;
     }
-
-    // set picture responsive
-    img {
-      max-width: $main-content-width;
-    }
   }
 
   .article-title {
