@@ -8,9 +8,7 @@ playing around with rainbows LEDs i can dance with!  🌈💃⚡️💖
 
 in the classic shape of suspenders and a belt.
 
-<div class="video-wrapper">
-  <iframe title="vimeo-player" src="https://player.vimeo.com/video/795074597?h=fa397d5ebc" width="640" height="960" frameborder="0" allowfullscreen></iframe>
-</div>
+<iframe class="video" title="vimeo-player" src="https://player.vimeo.com/video/795074597?h=fa397d5ebc" width="640" height="960" frameborder="0" allowfullscreen></iframe>
 
 continuing from [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)
 
@@ -55,12 +53,10 @@ here are the available ways to interface with the controller:
 ![](./a-burn-dance/IMG_20180817_195256.jpg)
 ![](./a-burn-dance/IMG_20180819_152242.jpg)
 
-<div class="video-wrapper">
-  <video controls>
-    <source src="/a-burn-dance/VID_20180817_195458-web.webm" type="video/webm; codecs=vp9">
-    <source src="/a-burn-dance/VID_20180817_195458-web.mp4" type="video/mp4">
-  </video>
-</div>
+<video controls>
+  <source src="/a-burn-dance/VID_20180817_195458-web.webm" type="video/webm; codecs=vp9">
+  <source src="/a-burn-dance/VID_20180817_195458-web.mp4" type="video/mp4">
+</video>
 
 ## resources
 

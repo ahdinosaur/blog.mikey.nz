@@ -8,8 +8,7 @@ updated: 2014-11-11T00:30:22.212Z
 
 > The idea of the "holon" was introduced by Arthur Koestler in *The Ghost in the Machine* (1967) and was presented again at the *Alpbach Symposium* (1968) in a paper titled: *Beyond Atomism and Holism - the concept of the holon*.
 >
-> -- [notes to "Some general properties of
-self-regulating open hierarchic order"](http://www.panarchy.org/koestler/holon.1969.html)
+> -- [notes to "Some general properties of self-regulating open hierarchic order"](http://www.panarchy.org/koestler/holon.1969.html)
 
 Koestler defines holons as something that is simultaneously a whole and a part, thus reconciling popular ideas of the day: atomism (*one-ness*) and holism (*whole-ness)*. He presents holons as building block of self-regulating open hierarchic order as found in biological organisms.
 
@@ -21,7 +20,7 @@ Holons are not theoretical, in fact nature is the composition of layers of inter
 
 Take bee or ant colonies, for example. These creatures are actually what led my thoughts about these sorts of networks, which at the time was a concept I simply called hives. You see, individual bees and ants are incredibly useless on their own. It isn't until they are together as part of a whole colony that they truly come to life and exhibit forms of intelligence.
 
-<iframe width="853" height="480" src="//www.youtube-nocookie.com/embed/K6m40W1s0Wc?rel=0&start=106&end=203" frameborder="0" allowfullscreen></iframe>
+<iframe class="video" width="853" height="480" src="//www.youtube-nocookie.com/embed/K6m40W1s0Wc?rel=0&start=106&end=203" frameborder="0" allowfullscreen></iframe>
 
 As another example, consider the human body. We are each an organism, which is composed of organs, which are composed of tissues, which are composed of cells, which are composed of organelles, which are composed of molecules, which are composed of atoms, which are composed of subatomic particles, and so on.
 

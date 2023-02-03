@@ -1,21 +1,10 @@
-.image-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  > img {
-    max-height: 50vh;
-  }
-}
-
-.video-wrapper {
+.image-wrapper, .video-wrapper, .video-embed-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  > iframe, video {
+  > img, iframe, video {
     max-height: 50vh;
   }
 }

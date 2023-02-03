@@ -13,33 +13,23 @@ hexo.extend.helper.register('create_img_srcset', (src) => {
 })
 
 hexo.extend.filter.register('after_post_render', (data) => {
+  // img
   const create_img_srcset = hexo.extend.helper.get('create_img_srcset').bind(hexo)
-  data.content = data.content.replace(/<img([^>]+)?>/igm, (_, attr) => {
+  data.content = data.content.replace(/<img([^>]+)?>/igms, (_, attr) => {
     attr = attr.replace(/src="([^"]+)?"/, (_, src) => {
       if (!(src.endsWith('jpg') || src.endsWith('jpeg') || src.endsWith('png'))) return `src=${src}`
       return `srcset="${create_img_srcset(src)}"`
     })
-    return `<img${attr}>`
+    return `<div class="image-wrapper"><img${attr} /></div>`
+  })
+
+  // video
+  data.content = data.content.replace(/<video([^>]+)?>(.*)?<\/video>/igms, (_, attr, children) => {
+    return `<div class="video-wrapper"><video${attr}>${children}</video></div>`
+  })
+
+  // iframe video embed
+  data.content = data.content.replace(/<iframe class="video"([^>]+)?><\/iframe>/igms, (_, attr) => {
+    return `<div class="video-embed-wrapper"><iframe class="video-player"${attr}></iframe></div>`
   })
 })
-
-hexo.extend.filter.register('markdown-it:renderer', function(md) {
-  md.use(markdownitWrapImages, {
-    wrapClass: 'image-wrapper',
-  })
-})
-
-function markdownitWrapImages (md, config) {
-  config = config || {}
-
-  if (md.renderer.rules.image.name !== 'wrapImageRenderer') {
-    var defaultImageRenderer = md.renderer.rules.image
-    md.renderer.rules.image = wrapImageRenderer
-  }
-
-  function wrapImageRenderer(tokens, idx, options, env, self) {
-    const wrapAttrs = `class="${config.wrapClass}"`
-    const img = defaultImageRenderer(tokens, idx, options, env, self)
-    return `<div ${wrapAttrs}>${img}</div>`
-  }
-}
