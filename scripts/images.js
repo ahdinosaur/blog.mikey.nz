@@ -44,7 +44,7 @@ hexo.extend.filter.register('after_post_render', (data) => {
   })
 
   // video
-  data.content = data.content.replace(/<video([^>]+)?>(.*)?<\/video>/igms, (_, attrs, children) => {
+  data.content = data.content.replace(/<video([^>]+)?>(.*?)<\/video>/igms, (_, attrs, children) => {
     return `<div class="video-wrapper"><video${attrs}>${children}</video></div>`
   })
 

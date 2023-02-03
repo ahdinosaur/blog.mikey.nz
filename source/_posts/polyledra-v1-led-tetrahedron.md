@@ -129,8 +129,6 @@ then i got my code running on the [Pocket Beagle](https://beagleboard.org/pocket
 
 so this weekend i got the controller rust code running on the Pocket Beagle displaying on some real led hardware, with help from Piet who introduced me to [japaric/cross](https://github.com/japaric/cross), omg so great.
 
-![chandeledra-triangle.webm]()
-
 <video controls data-src="/polyledra-v1-led-tetrahedron/VID_20180602_183803"></video>
 
 now i've prepared 15/18 led strips in aluminium channels, made an easy deploy script from my computer to the Pocket, setup the controller binary to run automatically when the Pocket starts, and fixed the code so it outputs pixel data for 3 "arms" per tetrahedron edge (3 arms per edge * 6 edges = 18 total arms).
