@@ -129,7 +129,7 @@ then i got my code running on the [Pocket Beagle](https://beagleboard.org/pocket
 
 so this weekend i got the controller rust code running on the Pocket Beagle displaying on some real led hardware, with help from Piet who introduced me to [japaric/cross](https://github.com/japaric/cross), omg so great.
 
-<video controls data-src="/polyledra-v1-led-tetrahedron/VID_20180602_183803"></video>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754043?h=d35915c222" data-title="(2018-06-02) Polyledra v1: Work In Progress"></div>
 
 now i've prepared 15/18 led strips in aluminium channels, made an easy deploy script from my computer to the Pocket, setup the controller binary to run automatically when the Pocket starts, and fixed the code so it outputs pixel data for 3 "arms" per tetrahedron edge (3 arms per edge * 6 edges = 18 total arms).
 
@@ -156,7 +156,7 @@ then based on a tip from Piet, i sprayed the strips down with [circuit board lac
 
 then put on the diffusers and connected everything again, organized the "arms" by edge, even though it's not yet in the shape of a tetrahedron. goodness, i've never had a project be this clean and maybe even _legit_!
 
-<video controls data-src="/polyledra-v1-led-tetrahedron/VID_20180604_195712"></video>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754074?h=b4f0cc9d77" data-title="(2018-06-04) Polyledra v1: Work In Progress"></div>
 
 and all powered by this cute linux computer! 🐶
 
@@ -168,13 +168,13 @@ and all powered by this cute linux computer! 🐶
 
 here's my new scene using 4-dimensional noise to determine colors! (`[x, y, z, time]` where time oscillates back and forth on each "beat" (TODO), slowly steps forward), got some help from Jack at [Art~Hack](https://arthack.nz).
 
-<video controls>
-  <source src="/polyledra-v1-led-tetrahedron/chandeledra-glow.webm">
+<video autoplay loop>
+  <source src="/polyledra-v1-led-tetrahedron/chandeledra-glow.webm" />
 </video>
 
 then added a button to change modes, except since i didn't have an actual button i just tap the wires together. 😸
 
-<video controls data-src="/polyledra-v1-led-tetrahedron/VID_20180607_232627"></video>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754109?h=c766eaca31" data-title="(2018-06-07) Polyledra v1: Work In Progress"></div>
 
 yesterday, thanks to the other Jack, got the third print of the vertex structure, third time's a charm! (actually this design needed changes, the 4th print looks good so far.)
 
@@ -196,7 +196,8 @@ i'm still in awe that any of this is working, it's more beautiful than i deserve
 
 ## demo
 
-<iframe class="video" title="vimeo-player" src="https://player.vimeo.com/video/795507373?h=f6ab7523c6" width="3840" height="2160" frameborder="0" allowfullscreen></iframe>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795507373?h=f6ab7523c6" data-title="(2018-06-29) Polyledra v1: Demo"></div>
+
 
 ## another splash of updates
 

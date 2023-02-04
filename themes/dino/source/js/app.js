@@ -2,6 +2,31 @@ addEventListener('DOMContentLoaded', loadVideos)
 addEventListener('resize', loadVideos)
 
 function loadVideos() {
+  loadEmbedVideos()
+  loadLocalVideos()
+}
+
+function loadEmbedVideos() {
+  const videosToLoad = document.querySelectorAll(`.video-embed[data-src]`)
+  for (let video of videosToLoad) {
+    if (video.dataset.loaded) continue // already loaded
+    const { src, title } = video.dataset
+    if (video.dataset.type === 'vimeo') {
+      video.innerHTML = `
+        <iframe
+          src="${src}"
+          title="${title}"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen 
+        >
+        </iframe>
+      `
+    }
+    video.dataset.loaded = true
+  }
+}
+
+function loadLocalVideos() {
   const videoSize = getVideoSize()
   const videosToLoad = document.querySelectorAll(`video[data-src]`)
   for (let video of videosToLoad) {

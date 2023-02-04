@@ -33,6 +33,8 @@ hexo.extend.helper.register('create_responsive_img', (src, attrs) => {
 })
 
 hexo.extend.filter.register('after_post_render', (data) => {
+  console.log('data.content', data.content)
+
   // img
   const create_responsive_img = hexo.extend.helper.get('create_responsive_img').bind(hexo)
   data.content = data.content.replace(/<img([^>]+)?>/igms, (_a, attrs) => {
@@ -49,7 +51,9 @@ hexo.extend.filter.register('after_post_render', (data) => {
   })
 
   // iframe video embed
+  /*
   data.content = data.content.replace(/<iframe class="video"([^>]+)?><\/iframe>/igms, (_, attrs) => {
-    return `<div class="video-embed-wrapper"><iframe class="video-player"${attrs}></iframe></div>`
+    return `<div class="video-embed-wrapper"><iframe class="video"${attrs}></iframe></div>`
   })
+  */
 })
