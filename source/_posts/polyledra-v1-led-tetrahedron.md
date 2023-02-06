@@ -1,6 +1,6 @@
 ---
 title: 'Polyledra V1: LED Tetrahedron'
-date: 2023-02-02 11:17:34
+date: 2019-02-27
 categories:
   - projects
 tags:
