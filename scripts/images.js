@@ -80,6 +80,7 @@ hexo.extend.filter.register('after_post_render', (data) => {
   const create_responsive_img = hexo.extend.helper.get('create_responsive_img').bind(hexo)
   data.content = data.content.replace(/<img([^>]+)?>/igms, (_a, attrs) => {
     const [_b, src] = attrs.match(/src="([^"]+)?"/m)
+    attrs = `${attrs} loading="lazy"`
     const image = (!(src.endsWith('jpg') || src.endsWith('jpeg') || src.endsWith('png')))
       ? `<img${attrs} />`
       : create_responsive_img(src, attrs)
@@ -90,11 +91,4 @@ hexo.extend.filter.register('after_post_render', (data) => {
   data.content = data.content.replace(/<video([^>]+)?>(.*?)<\/video>/igms, (_, attrs, children) => {
     return `<div class="video-wrapper"><video${attrs}>${children}</video></div>`
   })
-
-  // iframe video embed
-  /*
-  data.content = data.content.replace(/<iframe class="video"([^>]+)?><\/iframe>/igms, (_, attrs) => {
-    return `<div class="video-embed-wrapper"><iframe class="video"${attrs}></iframe></div>`
-  })
-  */
 })

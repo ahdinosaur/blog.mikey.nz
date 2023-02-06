@@ -12,6 +12,7 @@ function loadVideos() {
           src="${src}"
           title="${title}"
           frameborder="0"
+          loading="lazy"
           allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen 
         >
@@ -23,6 +24,7 @@ function loadVideos() {
           src="${src}"
           title="${title}"
           frameborder="0"
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         >
