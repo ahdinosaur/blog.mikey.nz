@@ -71,7 +71,7 @@ So, how do we own our value? Well, it's not enough to open source our code, we n
 
 [Tiberius](http://www.sensorica.co/home/about-us/tiberius-brastaviceanu), of [Sensorica](http://www.sensorica.co/), has a vision of [Open Value Networks](http://valuenetwork.referata.com/):
 
-<iframe class="video" width="853" height="480" src="//www.youtube-nocookie.com/embed/CKrScVH0NlY?rel=0&start=180&end=290" frameborder="0" allowfullscreen></iframe>
+<div class="video-embed" data-ratio="16:9" data-type="youtube" data-src="//www.youtube-nocookie.com/embed/CKrScVH0NlY?rel=0&start=180&end=290" data-title="Tiberius Brastaviceanu, Open Value Networks"></div>
 
 ### Unite
 
@@ -118,7 +118,7 @@ Value exchange is the void that many open source projects only dip their toes in
 
 How? By keeping track of the supply chain from value creation to value consumption, we can directly reward everyone along the chain who created value. The specific details may vary from project to project, from worker-owners to worker-owners, but the general principle of value exchange is the same.
 
-<iframe class="video" width="853" height="480" src="//www.youtube-nocookie.com/embed/CKrScVH0NlY?rel=0&start=622&end=825" frameborder="0" allowfullscreen></iframe>
+<div class="video-embed" data-ratio="16:9" data-type="youtube" data-src="//www.youtube-nocookie.com/embed/CKrScVH0NlY?rel=0&start=622&end=825" data-title="Tiberius Brastaviceanu, Open Value Networks"></div>
 
 The internet has revolutionized our communication systems, so it's about time we revolutionized our economic systems. :)
 

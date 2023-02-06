@@ -16,8 +16,20 @@ function loadEmbedVideos() {
         <iframe
           src="${src}"
           title="${title}"
+          frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen 
+        >
+        </iframe>
+      `
+    } else if (video.dataset.type === 'youtube') {
+      video.innerHTML = `
+        <iframe
+          src="${src}"
+          title="${title}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
         >
         </iframe>
       `
