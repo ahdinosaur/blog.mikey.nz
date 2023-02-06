@@ -30,9 +30,7 @@ hexo.extend.helper.register('create_responsive_img', (src, attrs) => {
   }
   img_sizes = img_sizes.join(', ')
 
-  // TODO better image_path
   const PostAsset = hexo.model('PostAsset')
-  // console.log('post asset', PostAsset)
   let asset = PostAsset.findById(join('source/_posts', src))
   if (asset == null) {
     asset = PostAsset.findById(join('source/_drafts', src))
@@ -44,13 +42,37 @@ hexo.extend.helper.register('create_responsive_img', (src, attrs) => {
   } else {
     dimensions = imageSizeOf(asset.source)
   }
-  const { width, height } = dimensions
+  switch (dimensions.orientation) {
+    case undefined:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      break
+    case 5:
+    case 6:
+    case 7:
+    case 8: {
+      let width = dimensions.width
+      dimensions.width = dimensions.height
+      dimensions.height = width
+      break
+    }
+    default: 
+      // https://www.npmjs.com/package/image-size
+      // https://exiftool.org/TagNames/EXIF.html#:~:text=0x0112,8%20=%20Rotate%20270%20CW
+      throw new Error(`Unexpected JPEG orientation: ${dimensions.orientation}`)
+  }
+  const max_image_width = Math.max(...image_widths.map(({ width }) => width))
+  const max_width = Math.min(max_image_width, dimensions.width)
+  const ratio = max_width / dimensions.width
+  const max_height = (dimensions.height * ratio).toFixed(0)
 
   const img_attrs = typeof attrs === 'string' ?
     attrs :
     Object.entries(attrs).map(([key, value]) => `${key}="${value}"`).join(' ')
 
-  return `<img srcset="${img_srcset}" sizes="${img_sizes}" src="${image_version(src, { prefix: 'lg' })}" ${img_attrs} width="${width}" height="${height}" />`
+  return `<img srcset="${img_srcset}" sizes="${img_sizes}" src="${image_version(src, { prefix: 'lg' })}" ${img_attrs} width="${max_width}" height="${max_height}" />`
 })
 
 hexo.extend.filter.register('after_post_render', (data) => {

@@ -5,6 +5,7 @@
   align-items: center;
 
   img, video, iframe {
+    object-fit: contain;
     width: auto;
     max-width: 100%;
     height: auto;

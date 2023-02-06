@@ -93,7 +93,7 @@ had a long battle with the rust borrow checker, ended up on top! 😅
 
 then moved on to the puzzle of how to implement a shape walker. 🌈
 
-![rainbow tetrahedron](./polyledra-v1-led-tetrahedron/rainbow-tetrahedron.gif)
+![rainbow tetrahedron](./polyledra-v1-led-tetrahedron/rainbow-tetrahedron.gif){width=489 height=475}
 
 ### from software to 3d modeling
 
@@ -129,7 +129,7 @@ then i made a new controller scene 🎇
 
 ([rs](https://github.com/ahdinosaur/chandeledra/blob/6d7f562fed9a5393606230402887901394d0b97c/controller-app/src/scene/spark.rs))
 
-![chandeledra-spark-loop.gif](./polyledra-v1-led-tetrahedron/chandeledra-spark-loop.gif)
+![chandeledra-spark-loop.gif](./polyledra-v1-led-tetrahedron/chandeledra-spark-loop.gif){width=450 height=516}
 
 then i got my code running on the [Pocket Beagle](https://beagleboard.org/pocket). i love Rust where i can write code on my laptop (which doesn't have access to an spi interface necessary to control the leds), then once i had it compile on my laptop (without ever running the code) there was only a small configuration change to make it actually work on the Pocket, yay compile-time type and borrow checking!
 
@@ -174,7 +174,7 @@ and all powered by this cute linux computer! 🐶
 
 here's my new scene using 4-dimensional noise to determine colors! (`[x, y, z, time]` where time oscillates back and forth on each "beat" (TODO), slowly steps forward), got some help from Jack at [Art~Hack](https://arthack.nz).
 
-![chandeledra glow](./polyledra-v1-led-tetrahedron/chandeledra-glow.gif)
+![chandeledra glow](./polyledra-v1-led-tetrahedron/chandeledra-glow.gif){width=376 height=424}
 
 then added a button to change modes, except since i didn't have an actual button i just tap the wires together. 😸
 
@@ -364,7 +364,7 @@ so far the next iteration of the tetrahedron is going well! 🌈
 
 ## nowhere
 
-<video autoplay loop>
+<video autoplay loop width="640" height="480">
   <source src="/polyledra-v1-led-tetrahedron/nowhere-renegade.mp4" />
 </video>
 
