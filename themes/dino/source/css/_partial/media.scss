@@ -5,7 +5,9 @@
   align-items: center;
 
   img, video, iframe {
+    width: auto;
     max-width: 100%;
+    height: auto;
     max-height: 66.66vh;
   }
 }

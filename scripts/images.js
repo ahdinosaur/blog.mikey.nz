@@ -1,8 +1,14 @@
 /* global hexo */
 
+const { join, normalize } = require('path')
+const imageSizeOf = require('image-size')
+
 'use strict';
 
 hexo.extend.helper.register('create_responsive_img', (src, attrs) => {
+  src = normalize(src)
+  console.log('src', src)
+
   const image_version = hexo.extend.helper.get('image_version').bind(hexo)
   const images_config = hexo.config.responsive_images
   const image_config = Array.isArray(images_config) ? images_config[0] : images_config
@@ -25,11 +31,27 @@ hexo.extend.helper.register('create_responsive_img', (src, attrs) => {
   }
   img_sizes = img_sizes.join(', ')
 
+  // TODO better image_path
+  const PostAsset = hexo.model('PostAsset')
+  // console.log('post asset', PostAsset)
+  let asset = PostAsset.findById(join('source/_posts', src))
+  if (asset == null) {
+    asset = PostAsset.findById(join('source/_drafts', src))
+  }
+
+  let dimensions
+  if (asset == null) {
+    dimensions = { height: undefined, width: undefined }
+  } else {
+    dimensions = imageSizeOf(asset.source)
+  }
+  const { width, height } = dimensions
+
   const img_attrs = typeof attrs === 'string' ?
     attrs :
     Object.entries(attrs).map(([key, value]) => `${key}="${value}"`).join(' ')
 
-  return `<img srcset="${img_srcset}" sizes="${img_sizes}" src="${image_version(src, { prefix: 'lg' })}" ${img_attrs} />`
+  return `<img srcset="${img_srcset}" sizes="${img_sizes}" src="${image_version(src, { prefix: 'lg' })}" ${img_attrs} width="${width}" height="${height}" />`
 })
 
 hexo.extend.filter.register('after_post_render', (data) => {
