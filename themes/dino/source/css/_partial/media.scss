@@ -24,7 +24,8 @@
     }
   }
 
-  &[data-ratio="9:16"] {
+  &[data-ratio="9:16"],
+  &[data-ratio="2:3"] {
     height: 66.66vh;
   }
 
