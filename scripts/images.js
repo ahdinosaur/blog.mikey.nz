@@ -7,7 +7,6 @@ const imageSizeOf = require('image-size')
 
 hexo.extend.helper.register('create_responsive_img', (src, attrs) => {
   src = normalize(src)
-  console.log('src', src)
 
   const image_version = hexo.extend.helper.get('image_version').bind(hexo)
   const images_config = hexo.config.responsive_images

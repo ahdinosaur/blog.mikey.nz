@@ -174,9 +174,7 @@ and all powered by this cute linux computer! 🐶
 
 here's my new scene using 4-dimensional noise to determine colors! (`[x, y, z, time]` where time oscillates back and forth on each "beat" (TODO), slowly steps forward), got some help from Jack at [Art~Hack](https://arthack.nz).
 
-<video autoplay loop>
-  <source src="/polyledra-v1-led-tetrahedron/chandeledra-glow.webm" />
-</video>
+![chandeledra glow](./polyledra-v1-led-tetrahedron/chandeledra-glow.gif)
 
 then added a button to change modes, except since i didn't have an actual button i just tap the wires together. 😸
 
@@ -366,7 +364,9 @@ so far the next iteration of the tetrahedron is going well! 🌈
 
 ## nowhere
 
-![nowhere renegade](./polyledra-v1-led-tetrahedron/nowhere-renegade.gif)
+<video autoplay loop>
+  <source src="/polyledra-v1-led-tetrahedron/nowhere-renegade.mp4" />
+</video>
 
 ## double trouble
 
