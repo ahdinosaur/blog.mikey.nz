@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "dev": "hexo server --draft",
-    "start": "hexo server"
+    "start": "hexo server",
+    "tool:strip-exif": "exiftool -all:all= -overwrite_original -tagsfromfile @ -Orientation -ColorSpaceTags -r ./source"
   },
   "hexo": {
     "version": "6.3.0"
