@@ -1,5 +1,5 @@
 ---
-title: Solar charging station
+title: Portable solar v1
 date: 2018-01-23
 tags:
 ---
@@ -12,11 +12,11 @@ I got a new portable 120w solar panel and a used 85Ah flooded lead acid battery,
 
 Here's me testing what I have in the sun this morning:
 
-![solar battery beginnings](./solar-charging-station/solar-stairs.jpg)
+![solar battery beginnings](./portable-solar-v1/solar-stairs.jpg)
 
 Worked with Piet last night at [Art~Hack](https://arthack.nz) to understand how to control a battery's discharge.
 
-![battery discharger](./solar-charging-station/solar-battery-discharge.jpg)
+![battery discharger](./portable-solar-v1/solar-battery-discharge.jpg)
 
 Then Ben informed us that solar charge controllers already do this, they will shut off the "load" output when the battery is low.
 
@@ -134,11 +134,11 @@ R2 = R1 * (1 / ((Vin / Vout) - 1))
 
 Piet let me borrow his power supply and multimeter so I could make sense of this.
 
-![battery charge reader](./solar-charging-station/batter-charge-reader-2.jpg)
+![battery charge reader](./portable-solar-v1/batter-charge-reader-2.jpg)
 
 Got it working on a breadboard, then soldered to a protoboard. Threw up some code to run on the Arduino with the screen.
 
-![battery charge reader](./solar-charging-station/batter-charge-reader.jpg)
+![battery charge reader](./portable-solar-v1/batter-charge-reader.jpg)
 
 There’s a problem where the voltage being read by the Arduino is quite a bit off, I hope at least it’s consistent so I can calibrate against it. I learned that this might could be improved by investing in a good reference voltage, oh well for meow.
 
@@ -170,7 +170,7 @@ Then I made a terrible mistake, I increased the voltage, eventually to the point
 
 Here's a picture so I can say, at some point something worked:
 
-![at some point something worked](./solar-charging-station/at-some-point-something-worked.jpg)
+![at some point something worked](./portable-solar-v1/at-some-point-something-worked.jpg)
 
 Remains to be seen if anything will work on the paddock. ☀🔋🌈
 
