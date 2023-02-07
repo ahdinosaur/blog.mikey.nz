@@ -24,6 +24,7 @@
     "hexo-renderer-sass": "github:kmuncie/hexo-renderer-sass",
     "hexo-server": "^3.0.0",
     "hexo-tag-twitter": "^1.0.2",
+    "image-size": "^1.0.2",
     "twemoji": "^14.0.2"
   }
 }

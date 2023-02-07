@@ -1,11 +1,38 @@
-.image-wrapper, .video-wrapper, .video-embed-wrapper {
+.image-wrapper, .video-wrapper, .video-embed {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   img, video, iframe {
+    object-fit: contain;
+    width: auto;
     max-width: 100%;
-    max-height: 50vh;
+    height: auto;
+    max-height: 66.66vh;
+  }
+}
+
+.video-embed {
+  position:relative;
+
+  &[data-ratio="16:9"] {
+    padding: 56.25% 0 0 0;
+
+    iframe {
+      max-height: unset;
+    }
+  }
+
+  &[data-ratio="9:16"] {
+    height: 66.66vh;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
