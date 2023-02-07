@@ -81,6 +81,18 @@ The acrylic tubes are sanded to achieve a diffuser effect.
 
 <div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796544524?h=d556bd9d33&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2020-12-17) Polyledra v2: Diffuser test"></div>
 
+## Double doof sticks
+
+I also made two portable "doof sticks" based on the same strut designs, with further 3d printed sections for: batteries, bi-directional power converter, power switch, power plug, WLED controller, and button interface. All solvent welded together.
+
+![](./polyledra-v2-led-tensegrity/doof-stick-exploded.jpg)
+
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796588810?h=371703bf57&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2020-12-27) Doof stick exploded"></div>
+
+Look amazing, but fragile.
+
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796584955?h=9398e57fc7&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2020-12-28) Double Doof Sticks"></div>
+
 ## Tensegrity design
 
 Bill of materials:
