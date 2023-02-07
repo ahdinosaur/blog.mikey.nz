@@ -6,7 +6,7 @@ tags:
 
 As a break from my other open source projects, have decided to start spending my [Art~Hack](https://arthack.nz) evenings on my next (3rd?) generation of modular LED pixels that beat to music.
 
-![scrolling-rainbow](./pixels-for-the-pixel-god/scrolling-rainbow.gif)
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796536263?h=36d25c00bf&background=1" data-title="(2015) Scrolling Rainbow"></div>
 
 ## First generation
 
@@ -102,7 +102,7 @@ Have a working prototype using the esp32, some rotary encoders, a button, and an
 
 https://github.com/ahdinosaur/aburndance
 
-![rainbow](./pixels-for-the-pixel-god/rainbow-3.gif)
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796509004?h=3253ba78be&background=1" data-title="(2017) PIXELS FOR THE PIXEL GOD"></div>
 
 You click the button to cycle through "modes" (currently have rainbow mode, star field mode, and convergence mode). Each mode can use params from the first 3 rotary encoders, 4th rotary encoder is always used for global brightness.
 

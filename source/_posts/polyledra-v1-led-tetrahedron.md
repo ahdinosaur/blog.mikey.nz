@@ -133,7 +133,7 @@ Then I got my code running on the [Pocket Beagle](https://beagleboard.org/pocket
 
 So this weekend I got the controller rust code running on the Pocket Beagle displaying on some real led hardware, with help from Piet who introduced me to [japaric/cross](https://github.com/japaric/cross), OMG so great.
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754043?h=d35915c222" data-title="(2018-06-02) Polyledra v1: Work In Progress"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754043?h=d35915c222&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2018-06-02) Polyledra v1: Work In Progress"></div>
 
 Now I've prepared 15/18 led strips in aluminium channels, made an easy deploy script from my computer to the Pocket, setup the controller binary to run automatically when the Pocket starts, and fixed the code so it outputs pixel data for 3 "arms" per tetrahedron edge (3 arms per edge * 6 edges = 18 total arms).
 
@@ -160,7 +160,7 @@ Then based on a tip from Piet, I sprayed the strips down with [circuit board lac
 
 Then put on the diffusers and connected everything again, organized the "arms" by edge, even though it's not yet in the shape of a tetrahedron. Goodness, I've never had a project be this clean and maybe even _legit_!
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754074?h=b4f0cc9d77" data-title="(2018-06-04) Polyledra v1: Work In Progress"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754074?h=b4f0cc9d77&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2018-06-04) Polyledra v1: Work In Progress"></div>
 
 And all powered by this cute linux computer! 🐶
 
@@ -176,7 +176,7 @@ Here's my new scene using 4-dimensional noise to determine colors! (`[x, y, z, t
 
 Then added a button to change modes, except since I didn't have an actual button I just tap the wires together. 😸
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754109?h=c766eaca31" data-title="(2018-06-07) Polyledra v1: Work In Progress"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754109?h=c766eaca31&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2018-06-07) Polyledra v1: Work In Progress"></div>
 
 Yesterday, thanks to the other Jack, got the third print of the vertex structure, third time's a charm! (actually this design needed changes, the 4th print looks good so far.)
 
@@ -192,13 +192,13 @@ Then soldered some wires and used the 4th print to assemble a partial tetrahedro
 
 In motion!
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754216?h=0c7296dc2b" data-title="(2018-06-09) Polyledra v1: Work In Progress"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795754216?h=0c7296dc2b&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2018-06-09) Polyledra v1: Work In Progress"></div>
 
 I'm still in awe that any of this is working, it's more beautiful than I deserve. 💖
 
 ## Demo
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795507373?h=f6ab7523c6" data-title="(2018-06-29) Polyledra v1: Demo"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/795507373?h=f6ab7523c6&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2018-06-29) Polyledra v1: Demo"></div>
 
 ## Another splash of updates
 
@@ -236,7 +236,7 @@ and later at the burn, tied to my bike. 🚲
 
 ![chandeledra-bike.jpg](./polyledra-v1-led-tetrahedron/chandeledra-bike.jpg)
 
-<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796157114?h=123cc74709" data-title="(2018-09-02) Polyledra v1: Burning Man"></div>
+<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796157114?h=123cc74709&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2018-09-02) Polyledra v1: Burning Man"></div>
 
 This all landed swimmingly,
 
@@ -250,7 +250,7 @@ This all landed swimmingly,
 
 Yay! 💃
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796157718?h=008898648a" data-title="(2018-10-02) Polyledra v1: Demo"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796157718?h=008898648a&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2018-10-02) Polyledra v1: Demo"></div>
 
 Then dis-assembled to bring back to New Zealand (during which time another two vertex parts broke), got replacements vertex parts printed at [National Library Wellington](https://natlib.govt.nz/visiting/wellington/3d-printing), and re-assembled again for Art~Hack Spring Expo / Maker Faire Wellington.
 
@@ -357,11 +357,11 @@ So far the next iteration of the tetrahedron is going well! 🌈
 
 ![polyledra-twisted.jpg](./polyledra-v1-led-tetrahedron/polyledra-twisted.jpg)
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796156160?h=ebc56605c9" data-title="(2019-01-01) Polyledra v1: Twisted"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796156160?h=ebc56605c9&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2019-01-01) Polyledra v1: Twisted"></div>
 
 ## Nowhere
 
-<video autoplay loop width="640" height="480">
+<video autoplay loop playsinline muted width="640" height="480">
   <source src="/polyledra-v1-led-tetrahedron/nowhere-renegade.mp4" />
 </video>
 
