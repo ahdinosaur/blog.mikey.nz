@@ -4,13 +4,13 @@ date: 2017-12-31
 tags:
 ---
 
-as a break from my other open source projects, have decided to start spending my [Art~Hack](https://arthack.nz) evenings on my next (3rd?) generation of modular LED pixels that beat to music.
+As a break from my other open source projects, have decided to start spending my [Art~Hack](https://arthack.nz) evenings on my next (3rd?) generation of modular LED pixels that beat to music.
 
 ![scrolling-rainbow](./pixels-for-the-pixel-god/scrolling-rainbow.gif)
 
-## first generation
+## First generation
 
-first generation: [beatpixels](https://github.com/ahdinosaur/beatpixels)
+First generation: [beatpixels](https://github.com/ahdinosaur/beatpixels)
 
 - uses WS2801 pixels (pre-soldered to inject power every 2 or 4 meters?)
 - uses an Arduino Uno micro-controller to control the pixels using a custom message protocol over serial
@@ -19,13 +19,13 @@ first generation: [beatpixels](https://github.com/ahdinosaur/beatpixels)
 
 ![Cloyne pixel board](./pixels-for-the-pixel-god/cloyne-pixel-board.jpg)
 
-## second generation
+## Second generation
 
-the second (and maybe second-second) generation: [pixelbeat](https://github.com/ahdinosaur/pixelbeat/tree/reactive) / [mood-light](https://github.com/ahdinosaur/mood-light).
+The second (and maybe second-second) generation: [pixelbeat](https://github.com/ahdinosaur/pixelbeat/tree/reactive) / [mood-light](https://github.com/ahdinosaur/mood-light).
 
 - used a BeagleBone Black / Green computer, later just used my laptop with a usb-to-ftdi-to-spi controller
 - used WS2012 / APA102C pixels, manually split strips to inject power every 2 meters
-  - - friend Gordon ([Fre3formd](https://www.facebook.com/Fre3formD)) made a custom 3d-printed enclosure for power injection connections to reduce failure during setup and teardown
+  - friend Gordon ([Fre3formd](https://www.facebook.com/Fre3formD)) made a custom 3d-printed enclosure for power injection connections to reduce failure during setup and teardown
 - created and used module ecosystems around [ndarray](https://github.com/scijs/ndarray): [ndpixels](https://github.com/livejs/ndpixels), [ndsamples](https://github.com/ahdinosaur/ndsamples)
 - eventually learned to make modules be simple functions, like [pixels-apa102](https://github.com/livejs/pixels-apa102), in order to better collaborate with others like Matt
 - experimented with BeagleBone booting directly to an electron app as the window manager: [boot-to-electron](https://github.com/ahdinosaur/boot-to-electron)
@@ -45,11 +45,11 @@ gigs:
 
 - [inky waves](https://twitter.com/MattMcKegg/status/713915311389421568) (using Matt's [audio-splatter](https://github.com/mmckegg/audio-splatter))
 - [campjs](https://www.youtube.com/watch?v=tehrxPaI4hk) (using Matt's [Loop Drop](http://loopjs.com))
-- ... a few others that i'm too lazy to find.
+- ... a few others that I'm too lazy to find.
 
-## third generation ???
+## Third generation ???
 
-third generation: [pj (pixel jockey)](https://github.com/ahdinosaur/pj) !
+Third generation: [pj (pixel jockey)](https://github.com/ahdinosaur/pj) !
 
 - use WiFi-enabled micro-controller ([ESP32](http://esp32.net/)) to control the pixels using [Open Pixel Control](http://openpixelcontrol.org)
 - create a desktop and mobile app to send messages to the micro-controller over WiFi
@@ -57,11 +57,11 @@ third generation: [pj (pixel jockey)](https://github.com/ahdinosaur/pj) !
 - if at a gig and you want to minimize latency, have an option to connect over Ethernet
 - have clean enclosures and connectors, or don't even bother wasting time
 
-### it begins
+### It begins
 
-as always, it begins with a [scrolling rainbow](https://github.com/ahdinosaur/rainbow-pixels) 🌈
+As always, it begins with a [scrolling rainbow](https://github.com/ahdinosaur/rainbow-pixels) 🌈
 
-(using an electron app to simulate the hardware in JavaScript before i commit to anything.)
+(Using an electron app to simulate the hardware in JavaScript before I commit to anything.)
 
 ![scrolling rainbow](./pixels-for-the-pixel-god/scrolling-rainbow-2.png)
 
@@ -73,7 +73,7 @@ as always, it begins with a [scrolling rainbow](https://github.com/ahdinosaur/ra
 
 ## LED power requirements and connectors
 
-from [Pololu's page on the APA102C LEDS](https://www.pololu.com/product/2554):
+From [Pololu's page on the APA102C LEDS](https://www.pololu.com/product/2554):
 
 > Each RGB LED draws approximately 50 mA when it is set to full brightness and powered at 5 V. This means that for every 30 LEDs you turn on, your LED strip could be drawing as much as 1.5 A.
 >
@@ -81,42 +81,41 @@ from [Pololu's page on the APA102C LEDS](https://www.pololu.com/product/2554):
 >
 > We recommend chains of LEDs powered from a single supply not exceed 180 total RGB LEDs. It is fine to make longer chains with connected data lines, but you should power each 180-LED section separately. If you are powering each section from a different power supply, you should cut the power wires between the sections so you do not short the output of two different power supplies together.
 
-i'm using 60-LED per-meter strips, and due to my own calculations decided to split the strips every 2 meters. now i'd rather do 3 meters (as recommended above) or 4 meters (since i almost never display at full brightness anyways).
+I'm using 60-LED per-meter strips, and due to my own calculations decided to split the strips every 2 meters. Now I'd rather do 3 meters (as recommended above) or 4 meters (since I almost never display at full brightness anyways).
 
-to split the strips, i cut the strips with a wire cutter and soldered on [4-pin JST connectors](http://www.jst-mfg.com/product/pdf/eng/eSM.pdf) at each end, using [Sugru](https://sugru.com/) to re-create a protective cover over the silicon sheath on the LEDs to the wires.
+To split the strips, I cut the strips with a wire cutter and soldered on [4-pin JST connectors](http://www.jst-mfg.com/product/pdf/eng/eSM.pdf) at each end, using [Sugru](https://sugru.com/) to re-create a protective cover over the silicon sheath on the LEDs to the wires.
 
-then i used the [SEEED AllPixel Power Tap Kit](http://www.seeedstudio.com/depot/AllPixel-Power-Tap-Kit-p-2380.html) to connect in between the strips and re-inject the power using a large-ish 5V power supply and some custom soldered wires.
+Then I used the [SEEED AllPixel Power Tap Kit](http://www.seeedstudio.com/depot/AllPixel-Power-Tap-Kit-p-2380.html) to connect in between the strips and re-inject the power using a large-ish 5V power supply and some custom soldered wires.
 
-but this setup would break anytime i transported the LEDs to and from [Art~Hack](https://arthack.nz) or a gig. specifically the wires connecting to the Power Tap between the LED strips.
+But this setup would break anytime I transported the LEDs to and from [Art~Hack](https://arthack.nz) or a gig. Specifically the wires connecting to the Power Tap between the LED strips.
 
-so i received the support from my friend Gordon of [Fre3formD](https://www.facebook.com/Fre3formD/) to design and 3d print a custom enclosure for the Power Tap so that the pressure on the wires wouldn't cause them to break.
-
+So I received the support from my friend Gordon of [Fre3formD](https://www.facebook.com/Fre3formD/) to design and 3d print a custom enclosure for the Power Tap so that the pressure on the wires wouldn't cause them to break.
 
 ![power 1](./pixels-for-the-pixel-god/power-1.jpg)
 ![power 2](./pixels-for-the-pixel-god/power-2.jpg)
 
-since then i've also started using small 5V power supplies per injection, since it's much easier to run normal AC power extensions and it's much more flexible to accommodate any venue. but i also haven't run more than 12 meters of LED strips at a time yet, nor any permanent installations using this recent setup.
+Since then I've also started using small 5V power supplies per injection, since it's much easier to run normal AC power extensions and it's much more flexible to accommodate any venue. But I also haven't run more than 12 meters of LED strips at a time yet, nor any permanent installations using this recent setup.
 
-## a new play with portable rainbows
+## A new play with portable rainbows
 
-have a working prototype using the esp32, some rotary encoders, a button, and an apa102 led strip:
+Have a working prototype using the esp32, some rotary encoders, a button, and an apa102 led strip:
 
 https://github.com/ahdinosaur/aburndance
 
 ![rainbow](./pixels-for-the-pixel-god/rainbow-3.gif)
 
-you click the button to cycle through "modes" (currently have rainbow mode, star field mode, and convergence mode), each mode can use params from the first 3 rotary encoders, 4 rotary encoder is always used for global brightness.
+You click the button to cycle through "modes" (currently have rainbow mode, star field mode, and convergence mode). Each mode can use params from the first 3 rotary encoders, 4th rotary encoder is always used for global brightness.
 
 ![rainbow breadboard](./pixels-for-the-pixel-god/rainbow-breadboard-1.jpg)
 
-today ported my setup from a breadboard to a protoboard, plus found some fancy knobs lying around the space!
+Today ported my setup from a breadboard to a protoboard, plus found some fancy knobs lying around the space!
 
 ![rainbow breadboard](./pixels-for-the-pixel-god/rainbow-breadboard-2.jpg)
 
 🎈
 
-### off-grid new years'
+### Off-grid new years'
 
-portable rainbows and me for off-grid new years' 🎊
+Portable rainbows and me for off-grid new years' 🎊
 
 ![portable rainbows](./pixels-for-the-pixel-god/portable-rainbows.jpg)

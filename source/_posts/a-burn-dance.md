@@ -4,21 +4,21 @@ date: 2018-08-18
 tags:
 ---
 
-playing around with rainbows LEDs i can dance with!  🌈💃⚡️💖
+Playing around with rainbows LEDs i can dance with!  🌈💃⚡️💖
 
-in the classic shape of suspenders and a belt.
+In the classic shape of suspenders and a belt.
 
 <div class="video-embed" data-ratio="2:3" data-type="vimeo" data-src="https://player.vimeo.com/video/795074597?h=fa397d5ebc" data-title="(2018) A Burn Dance: Walkthrough"></div>
 
-continuing from [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)
+Continuing from [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)
 
-source: https://github.com/ahdinosaur/aburndance
+Source: [`ahdinosaur/aburndance`](https://github.com/ahdinosaur/aburndance)
 
 ![](./a-burn-dance/IMG_20180817_202947.jpg)
 
-## bom
+## BOM
 
-bill of materials:
+Bill of materials:
 
 - led strips: [apa102](https://www.adafruit.com/product/2239?length=2)
   - [connector](https://www.amazon.com/gp/product/B0777BQC1P/)
@@ -30,13 +30,13 @@ bill of materials:
 - shoulder straps (suspenders): [etsy](https://www.etsy.com/nz/listing/456446760/handmade-usa-blackbrowntan-leather-clip)
 - waist strap (belt): [etsy](https://www.etsy.com/nz/listing/114576723/handmade-thick-leather-belt-mens-womens)
 
-## user interface design
+## User interface design
 
-controller has a current mode and current param.
+Controller has a current mode and current param.
 
-the current mode is being rendered with all the params for that mode.
+The current mode is being rendered with all the params for that mode.
 
-here are the available ways to interface with the controller:
+Here are the available ways to interface with the controller:
 
 - press 1st button for previous mode
 - press 2nd button for next mode
@@ -46,7 +46,7 @@ here are the available ways to interface with the controller:
 - hold 1st button until white then turn rotary encoder to change brightness
 - hold 2nd button until white then turn rotary encoder to change color temperature
 
-## showcase
+## Showcase
 
 ![](./a-burn-dance/IMG_20180817_141408.jpg)
 ![](./a-burn-dance/IMG_20180817_141417.jpg)
@@ -57,7 +57,7 @@ here are the available ways to interface with the controller:
 
 <div class="video-embed" data-ratio="2:3" data-type="vimeo" data-src="https://player.vimeo.com/video/795749915?h=768bef89b0" data-title="(2018) A Burn Dance: Demo"></div>
 
-## resources
+## Resources
 
 - [Adafruit ESP32 learning resources](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather)
   - [ESP32 pinouts](https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/pinouts)

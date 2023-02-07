@@ -1,10 +1,10 @@
 layout: post
-title: Life as a Holon
+title: Life as a holon
 date: 2014-10-25T09:01:00.000Z
 updated: 2014-11-11T00:30:22.212Z
 ---
 
-## What is a Holon?
+## What is a holon?
 
 > The idea of the "holon" was introduced by Arthur Koestler in *The Ghost in the Machine* (1967) and was presented again at the *Alpbach Symposium* (1968) in a paper titled: *Beyond Atomism and Holism - the concept of the holon*.
 >
@@ -14,7 +14,7 @@ Koestler defines holons as something that is simultaneously a whole and a part, 
 
 My alternative definition of a holon is simple and recursive: a holon is either an atom (non-reducible) or a set of holons.
 
-### Examples of Holons
+### Examples of holons
 
 Holons are not theoretical, in fact nature is the composition of layers of inter-connceted holons, so let's better understand them through nature.
 
@@ -26,7 +26,7 @@ As another example, consider the human body. We are each an organism, which is c
 
 [![diagram of an organism holon](./life-as-a-holon/organism-holon.png)](http://requirebin.com/embed?gist=50c45ad5a70a326912fd)
 
-## Holon Networks: Holarchies
+## Holon networks: holarchies
 
 Let's take the human example again, but in the other direction.  Humans are not only composed of holons, we ourselves are holons and are parts within even larger holons.
 
@@ -36,7 +36,7 @@ In modern society, we are individuals, which are parts of families, which are pa
 
 In this way, holons form the backbone of networks, where parts become wholes become parts of other wholes and so on.
 
-## Human Holarchies
+## Human holarchies
 
 Now let's consider the human example one last time, to understand the core ethos of human networks.
 

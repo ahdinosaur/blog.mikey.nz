@@ -1,8 +1,9 @@
 layout: post
-title: Holonic Systems
+title: Holonic systems
 date: 2015-01-04T00:47:24.135Z
 updated: 2015-04-21T12:46:17.906Z
 ---
+
 [Holons](./life-as-a-holon) are fractal networks of agents, with some beautiful and powerful properties.
 
 ## Definitions
@@ -25,7 +26,7 @@ TODO: need to automate the creation of holon diagrams
 A holon is observed by its environment like any other agent. Only at closer inspection may it turn out that a holon is constructred from a set of agents, which may also consist of subholons. As any head of a holon has a unique identification, it is possible to communicate with each holon by sending messages to their addresses. As long as subholons intend to keep their commitments and as long as subholons do not make conflicting commitments, cycles in holon memberships are possible.
 
 
-### Properties of Holons
+### Properties of holons
 
 - A task holon is a holon that is generated to perform only a single task.  This notion is opposed to organisational holons, which are designed to perform a series of jobs.
 - Delegation of tasks between two subholons h1 and h2 of a holon h as part of working towards the goal of h is called intra-holon delegation.  If two holons delegate tasks and this collaboration is not part of the goal of an encompassing holon, this is called inter-holon delegation.
@@ -36,7 +37,7 @@ A holon is observed by its environment like any other agent. Only at closer insp
 
 ![An example for a holon diagram](./holonic-systems/holon-diagram.png)
 
-## Spectrum of Holons
+## Spectrum of holons
 
 ## Resources
 

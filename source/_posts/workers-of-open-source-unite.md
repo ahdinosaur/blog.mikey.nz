@@ -1,8 +1,9 @@
 layout: post
-title: Workers of Open Source, Unite!
+title: Workers of open source, unite!
 date: 2014-10-10T21:04:44.980Z
 updated: 2015-04-25T06:07:27.322Z
 ---
+
 *this is a living document* <3
 
 ## Laisse Faire
