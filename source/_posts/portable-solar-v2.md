@@ -21,7 +21,7 @@ The goal is to do a solar electric setup the "right way":
 - with appropriate thick wires
 - and so on...
 
-<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796935636?h=167b282882" data-title="(2021-01-12) Portable Solar v2 : Build"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796935636?h=167b282882" data-title="(2021-01-12) Portable Solar v2 : Build"></div>
 
 ![](./portable-solar-v2/mid-assembly.jpg)
 
