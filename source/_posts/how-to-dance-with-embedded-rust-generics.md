@@ -6,6 +6,12 @@ tags:
 
 As part of [my work](https://villagekit.com) on [Grid Bot "Tahi"](https://github.com/villagekit/gridbot-tahi), I _finally_ figured out how to make [the code for my robot re-usable as a library](https://github.com/villagekit/robokit). Since to do this I needed to go on a deep journey into understanding Rust generic types, I thought I might share my learnings.
 
+## Disclaimer ⚠️
+
+As a quick disclaimer: This post is not a basic introduction to embedded Rust. For a basic introduction to embedded Rust, see [the embedded Rust Bookshelf](https://docs.rust-embedded.org/) for resources.
+
+This post is instead about solving a niche problem: how to create a re-usable library where users (developers) can setup their own hardware devices (LEDs, linear axes, spindles, relays, etc) and then use a command language (like [G-Code](https://en.wikipedia.org/wiki/G-code)) to control those devices, all in an Rust-y embedded-y device-agnostic type-safe heap-free way.
+
 ## The embedded Rust world 🗺️
 
 Before we begin, here's a quick recap of [the embedded Rust world](https://github.com/rust-embedded/awesome-embedded-rust):
