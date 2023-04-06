@@ -531,6 +531,8 @@ Woah, okay!
       - If a command is not done, it keeps the command in the list.
       - If there's an error, it returns the error and puts the command back in the list.
 
+> Note: In this code I'm using [`alloc::collections::VecDeque`](https://doc.rust-lang.org/alloc/collections/vec_deque/struct.VecDeque.html), to make things easier. If we want collections without using `alloc`, I recommend the crate [`heapless`](https://github.com/japaric/heapless), so here we'd use [`heapless::Deque`](https://docs.rs/heapless/latest/heapless/struct.Deque.html).
+
 In a nutshell, this code manages a set of LEDs, allowing you to turn them on or off by adding commands to a list, and it checks the progress of these commands. If you run into any issues, it will handle the errors for each LED color.
 
 ## Problem #1: Generic type hell 😈
