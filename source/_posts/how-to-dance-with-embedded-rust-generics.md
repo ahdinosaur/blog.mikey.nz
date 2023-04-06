@@ -148,7 +148,7 @@ An example `fn main()` you can run on a normal PC, using our dummy `GpioA`:
 ```rust
 fn main() {
     let led_pin = GpioA::new();
-    let mut led = LedDevice::new(led_pin);
+    let mut led = Led::new(led_pin);
 
     led.run(&LedAction::Set { is_on: true });
 
