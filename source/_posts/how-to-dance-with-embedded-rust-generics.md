@@ -553,7 +553,7 @@ where
 }
 ```
 
-Now, this looks okay (when you've become accustomed to generic types), but this is only considering our original `Led` struct that only needs a `P: OutputPin`. In our later `Led` struct, we need two more generics: `T: Timer<HZ>` and `const HZ: u32`.
+Now, this looks okay (when you've become accustomed to generic types), but this is only considering our original `Led` struct that only needs a `P: OutputPin`. In our later `Led` struct, we need two more generics: `const TIMER_HZ: u32` and `T: Timer<TIMER_HZ>`.
 
 Imagine we needed more:
 
