@@ -6,7 +6,7 @@ tags:
 
 As part of [my work](https://villagekit.com) on [Grid Bot "Tahi"](https://github.com/villagekit/gridbot-tahi), I _finally_ figured out how to make [the code for my robot re-usable as a library](https://github.com/villagekit/robokit). Since to do this I needed to go on a deep journey into understanding Rust generic types, I thought I might share my learnings.
 
-## The embedded Rust world
+## The embedded Rust world 🗺️
 
 Before we begin, here's a quick recap of [the embedded Rust world](https://github.com/rust-embedded/awesome-embedded-rust):
 
@@ -29,7 +29,7 @@ Before we begin, here's a quick recap of [the embedded Rust world](https://githu
 
 In our quest, we will be building something device-agnostic using the generic HAL (Hardware Abstraction Layer) traits. We won't need to worry much about the lower level details, things just work.
 
-## A device-agnostic `Led` interface
+## A device-agnostic `Led` interface 🟢
 
 So let's say we want to create a device-agnostic (non-blocking) interface for an LED connected to your micro-controller. Here's how we might do this:
 
@@ -95,7 +95,7 @@ For a simple example there's a lot happening, especially if you are new to Rust!
       - This method returns a `Poll` (which can be either `Pending` or `Ready(value)`) of a `Result` (which can be either `Ok(value)` or `Err(error)`) of either a empty value `()` or an error `P::Error` (the associated type `Error`, attached to the `OutputPin` trait).
   - For the types, this receives one generic type `P`, which implements `OutputPin` (provided by the `embedded-hal` library). We also specify that `P::Error` (the associated type `Error`, attached to the `OutputPin` trait) implements `Debug`.
 
-### An dummy `GpioA` struct to `impl OutputPin`
+### An dummy `GpioA` struct to `impl OutputPin` 👤
 
 Now if you're curious, here's what a dummy struct that implements the `OutputPin` trait would look like.
 
@@ -139,7 +139,7 @@ impl OutputPin for GpioA {
 
 In the real-world, these structs affect registers on the hardware and are provided by your device's `xxx-hal` library, almost certainly generated with a macro.
 
-### An example top-level entry
+### An example top-level entry 🔝
 
 To set the stage, let's show how we might call our `Led`.
 
@@ -200,7 +200,7 @@ fn main() -> ! {
 }
 ```
 
-### A more detailed `Led` using a timer
+### A more detailed `Led` using a timer ⏲️
 
 If you're wondering why there's a difference between `run` and `poll`, let's change our LED abstraction so we can also tell an LED to blink for a specific amount of time. Since we can't do a blocking `sleep`, you'll see why `poll` is designed to be non-blocking.
 
@@ -409,7 +409,7 @@ fn main() -> ! {
 
 For the rest of the post, I'll be assuming the original, simpler `Led` struct.
 
-## A `Runner` to control multiple `Led`
+## A `Runner` to control multiple `Led` 🚥
 
 Now say we want to control multiple LEDs together.
 
@@ -533,7 +533,7 @@ Woah, okay!
 
 In a nutshell, this code manages a set of LEDs, allowing you to turn them on or off by adding commands to a list, and it checks the progress of these commands. If you run into any issues, it will handle the errors for each LED color.
 
-## Problem #1: Generic type hell
+## Problem #1: Generic type hell 😈
 
 Now here's the point where I can finally start to explain why I had such a hard time to make the code for my robot re-usable as a library.
 
@@ -598,7 +598,7 @@ pub struct Runner<
 }
 ```
 
-Yuck.
+Yuck. 🤮
 
 The problem with these generic types is that anything that consumes a struct also need to provide their generic types. This becomes a sort of "generic hell", where we can't escape generic types just bubbling up to the consumer's code and beyond.
 
@@ -606,11 +606,11 @@ The solution to generic type hell is traits.
 
 So let's go!
 
-## Solution #1: Traits to the rescue
+## Solution #1: Traits to the rescue 😇
 
 Beyond the generic type hell problem, we want our system to support multiple types of hardware interfaces that affect the real world.
 
-### `trait Actuator`
+### `trait Actuator` 💪
 
 We create an `Actuator` trait to generalize our use of hardware interfaces (while still being device agnostic).
 
@@ -628,7 +628,7 @@ pub trait Actuator {
 
 > As an aside, a Rust expert might say that `run` should return a `Future`, which we can `poll`. I chose this design because such a future would need a mutable reference to the hardware peripherals (and Rust has strict rules about object ownership, references, and mutability) and at the time I wanted to avoid using allocations (`Rc`). If this is an achievable change for my current code base, I'd love to learn how, every day is a school day.
 
-### `impl Actuator for Led`
+### `impl Actuator for Led` 🟢
 
 Now to update `Led`:
 
@@ -689,7 +689,7 @@ where
 
 The code is similar, except now we're implementing the `Actuator` trait instead of implementing those methods directly on the struct.
 
-### Same `Runner`, different generics
+### Same `Runner`, different generics 🚥
 
 And now we can improve the `Runner` struct:
 
@@ -820,7 +820,7 @@ However we still have the problem where the shape of 3 LEDs: green, blue, and re
 
 > Note: If you're wondering why we need to be so specific with our `Command` enum, our `run` match, and our `poll` match: it's because we're avoiding heap allocations and dynamic objects. We can only use static types, so Rust knows the size of every struct at compile time, and objects are created on the stack. This approach, while extra boilerplate-y, is very efficient.
 
-## Problem #2: Pre-defined shapes
+## Problem #2: Pre-defined shapes 😈
 
 If you want to use my `Runner` as written above, sure the use of generic types meant you can use any device, and now the use of traits means generic types don't leak upward. But you better have only 3 LEDs, and you better want them to be named "Green", "Blue", and "Red".
 
@@ -828,13 +828,13 @@ Generic types were helpful to be device-agnostic, but at the same time didn't he
 
 To solve this, I discovered another trick, while still avoiding `alloc`.
 
-## Solution #2: User defined shapes
+## Solution #2: User defined shapes 😇
 
 What if, in all the places that we hard-code `GreenLed`, `BlueLed`, and `RedLed`, we could allow the user to give us something which did those things?
 
 Let's make a new trait for this:
 
-### `trait ActuatorSet`
+### `trait ActuatorSet` ⛶⛶⛶
 
 ```rust
 pub trait ActuatorSet {
@@ -851,7 +851,7 @@ Here we design a way to store a set of actuators for a single type (e.g. LED).
 
 And then the user can defined their own `ActuatorSet` as follows:
 
-### `impl LedSet for ActuatorSet`
+### `impl LedSet for ActuatorSet` 🚥
 
 ```rust
 #[derive(Copy, Clone, Debug)]
@@ -934,7 +934,7 @@ where
 }
 ```
 
-### `Runner<LedSet>`
+### `Runner<LedSet>` 🏃
 
 And now our runner can be re-written to receive this actuator set:
 
@@ -1021,4 +1021,4 @@ Depending on your situation, you could stop here. We solved the problems of gene
 
 But for my next trick, I'll break these guarantees for the sake of a more ergonomic developer experience.
 
-## TODO
+## TODO 💜
