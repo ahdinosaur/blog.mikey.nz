@@ -139,6 +139,67 @@ impl OutputPin for GpioA {
 
 In the real-world, these structs affect registers on the hardware and are provided by your device's `xxx-hal` library, almost certainly generated with a macro.
 
+### An example top-level entry
+
+To set the stage, let's show how we might call our `Led`.
+
+An example `fn main()` you can run on a normal PC, using our dummy `GpioA`:
+
+```rust
+fn main() {
+    let led_pin = GpioA::new();
+    let mut led = LedDevice::new(led_pin);
+
+    led.run(&LedAction::Set { is_on: true });
+
+    loop {
+        match led.poll() {
+            Poll::Pending => continue,
+            Poll::Ready(Ok(())) => break,
+            Poll::Ready(Err(err)) => {
+                println!("Error: {:?}", err);
+                break;
+            }
+        }
+    }
+}
+```
+
+An example embedded entry for a [Nucleo-F767ZI](https://nz.element14.com/stmicroelectronics/nucleo-f767zi/dev-board-nucleo-32-mcu/dp/2546569):
+
+(Assuming [`knurling-rs/app-template`](https://github.com/knurling-rs/app-template) as a starting point.)
+
+```rust
+#![no_main]
+#![no_std]
+
+use my_app as _; // global logger + panicking-behavior + memory layout
+
+use stm32f7xx_hal::{pac, prelude::*};
+
+#[cortex_m_rt::entry]
+fn main() -> ! {
+    let p = pac::Peripherals::take().unwrap();
+    let gpiob = p.GPIOB.split();
+
+    let led_pin = gpiob.pb0.into_push_pull_output();
+    let mut led = Led::new(led_pin);
+
+    led.run(&LedAction::Set { is_on: true });
+
+    loop {
+        match led.poll() {
+            Poll::Pending => continue,
+            Poll::Ready(Ok(())) => break,
+            Poll::Ready(Err(err)) => {
+                defmt::println!("Error: {}", defmt::Debug2Format(&err));
+                break;
+            }
+        }
+    }
+}
+```
+
 ### A more detailed `Led` using a timer
 
 If you're wondering why there's a difference between `run` and `poll`, let's change our LED abstraction so we can also tell an LED to blink for a specific amount of time. Since we can't do a blocking `sleep`, you'll see why `poll` is designed to be non-blocking.
@@ -306,6 +367,45 @@ Oh gosh that's a mouthful!
     - A type `T`, which implements `Timer<TIMER_HZ>` (provided by the `fugit-timer` library). We also specify that `T::Error` implements `Debug`.
 
 I hope that makes some sense.
+
+And for completion, here's an example embedded entry for a [Nucleo-F767ZI](https://nz.element14.com/stmicroelectronics/nucleo-f767zi/dev-board-nucleo-32-mcu/dp/2546569):
+
+(Assuming [`knurling-rs/app-template`](https://github.com/knurling-rs/app-template) as a starting point.)
+
+```rust
+#![no_main]
+#![no_std]
+
+use my_app as _; // global logger + panicking-behavior + memory layout
+
+use stm32f7xx_hal::{pac, prelude::*};
+use fugit::ExtU32;
+
+#[cortex_m_rt::entry]
+fn main() -> ! {
+    let p = pac::Peripherals::take().unwrap();
+    let rcc = p.RCC.constrain();
+    let clocks = rcc.cfgr.sysclk(216.MHz()).freeze();
+    let gpiob = p.GPIOB.split();
+
+    let led_pin = gpiob.pb0.into_push_pull_output();
+    let led_timer = p.TIM5.counter_us(&clocks);
+    let mut led = Led::new(led_pin, led_timer);
+
+    led.run(&LedAction::Blink { duration: 200.millis() });
+
+    loop {
+        match led.poll() {
+            Poll::Pending => continue,
+            Poll::Ready(Ok(())) => break,
+            Poll::Ready(Err(err)) => {
+                defmt::println!("Error: {}", defmt::Debug2Format(&err));
+                break;
+            }
+        }
+    }
+}
+```
 
 For the rest of the post, I'll be assuming the original, simpler `Led` struct.
 
