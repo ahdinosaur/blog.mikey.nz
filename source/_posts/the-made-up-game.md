@@ -14,9 +14,9 @@ So one day, nearly a decade ago, some friends stumbled upon game we called the "
 
 So here's the Made Up Game: a creative [card game](https://en.wikipedia.org/wiki/Card_game) where you make up the rules.
 
-While the game is all about changing the rules, we need a set of bootstrap rules to get the game started:
-
 ## How to start playing the Made Up Game 🏓
+
+While the game is all about changing the rules, we need a set of bootstrap rules to get the game started:
 
 > ### Setup
 >
@@ -35,7 +35,7 @@ While the game is all about changing the rules, we need a set of bootstrap rules
 >
 > ### Lose Condition
 >
-> If the next player can't play the game within the current rules, you lose.
+> If the next player can't play the game within the current rules, everyone loses.
 >
 > ### Win condition
 >
