@@ -1,11 +1,12 @@
 layout: post
-title: Global vs Local Trust Networks
+title: Global vs local trust networks
 date: 2015-04-20T01:59:36.601Z
 updated: 2015-04-20T04:31:04.267Z
 ---
+
 Many moons ago, I made a comment in the [Open App Ecosystem Loomio](https://www.loomio.org/g/exAKrBUp/open-app-ecosystem) about [the difference between global and local trust networks and why I'm most interested in local trust networks](https://www.loomio.org/d/fZs7J9v3/managed-trust#comment-174865). This conversation keeps coming up, so I want to refine what I mean and elaborate further.
 
-## Trust Networks
+## Trust networks
 
 Systems that organize agents (people, groups, or bots) into interacting together create trust networks.
 

@@ -1,0 +1,13 @@
+<article>
+  <h1 class="article-title">
+    <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date"><%- date(post.date, 'MMMM DD YYYY') %></p>
+  </section>
+
+  <section class="article-entry">
+    <%- post.content %>
+  </section>
+</article>

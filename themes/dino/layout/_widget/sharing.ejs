@@ -1,0 +1,14 @@
+<div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="<%- url_for(theme.avatar) %>" alt="avatar" />
+    <div class="grid-item">
+      <p class="title"> <%- theme.title %> </p>
+      <p class="subtitle"> <%- theme.subtitle %> </p>
+    <div>
+  </section>
+
+  <section class="share-btns">
+    <!-- <p> share it if you like it~ </p> -->
+    <%- partial('./twitter') %>
+  </section>
+</div>

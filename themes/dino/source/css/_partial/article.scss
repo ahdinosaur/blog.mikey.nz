@@ -1,0 +1,61 @@
+@use "sass:math";
+
+main.post {
+  max-width: $main-content-width;
+  margin: 0 auto;
+  padding: $gutter;
+
+  article {
+    padding-top: $article-gutter;
+    line-height: $article-line-height;
+  }
+
+  .article-entry {
+    margin-top: 5 * $gutter;
+    
+    > h2, > h3, > h4, > h5, > h6 {
+      margin-bottom: 1rem;
+    }
+    > h2 { margin-top: 3rem; }
+    > h3 { margin-top: 2rem; }
+    > h4 { margin-top: 1.5rem; }
+
+    a {
+      color: $anchor-color;
+    }
+
+    /* * markdown it -> anchors in config.yml */
+    a.header-anchor {
+      margin-left: .5rem;
+      display: none;
+    }
+
+    // show anchor symbol only when hover
+    > h2:hover .header-anchor,
+    > h3:hover .header-anchor,
+    > h4:hover .header-anchor,
+    > h5:hover .header-anchor,
+    > h6:hover .header-anchor {
+      display: inline;
+    }
+  }
+
+  .article-title {
+    margin: 0;
+    // font-size: 1.75rem;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: math.div($article-gutter * 2, 3);
+  }
+
+  .article-date {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $article-date-color;
+  }
+
+  .article-comment {
+    margin-top: 6 * $gutter;
+  }
+}

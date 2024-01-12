@@ -1,0 +1,75 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+
+  //
+  // banner
+  //
+  img.banner {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    opacity: 0;
+    opacity: 1;
+    transition: opacity 2s linear;
+  }
+
+  //
+  // description
+  //
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .description .avatar {
+    margin-top: -$avatar-size * 0.5;
+    display: flex;
+    justify-content: center;
+  }
+
+  .description .avatar img {
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 50%;
+    border: 4px solid $avatar-border-color;
+  }
+
+  .description .title {
+    font-size: $app-title-font-size;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $app-title-color;
+
+    margin: 0;
+    padding: $gutter;
+  }
+
+  .description .subtitle {
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    color: $app-subtitle-color;
+    padding-bottom: $gutter;
+  }
+
+
+  //
+  // social list
+  //
+  .social-list {
+    margin: 0;
+    margin-top: $gutter;
+    padding: 0;
+    list-style: none;
+  }
+
+  .social-list a {
+    color: $anchor-color;
+    padding: 8px 12px;
+  }
+}

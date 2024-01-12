@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: life as a hippie hacker
-subtitle: patterns of consciousness in a sea of matter
-description:
+title: Life as a solarpunk hacker
+subtitle: Patterns of consciousness in a sea of matter
+description: A personal blog exploring life as a solarpunk hacker.
 author: Mikey (@ahdinosaur)
 language: en
-timezone:
+timezone: Pacific/Auckland
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.dinosaur.is
+url: http://blog.mikey.nz
 root: /
-permalink: :title/
+permalink: /:title/
 permalink_defaults:
 
 # Directory
@@ -32,9 +32,9 @@ new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
-filename_case: 0
+filename_case: 1
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -72,11 +72,61 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: again
+theme: dino
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: git@github.com:ahdinosaur/blog.dinosaur.is
-  branch: gh-pages
+#deploy:
+#  type: git
+#  repo: git@github.com:ahdinosaur/blog.mikey.nz
+#  branch: gh-pages
+
+markdown:
+  preset: 'default'
+  render:
+    html: true
+    xhtmlOut: false
+    langPrefix: 'language-'
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  enable_rules:
+  disable_rules:
+  plugins:
+    - markdown-it-attrs
+    - markdown-it-emoji
+  anchors:
+    level: 1
+    collisionSuffix: ''
+    permalink: true
+    permalinkClass: 'header-anchor'
+    permalinkSide: 'right'
+    permalinkSymbol: '§'
+    case: 0
+    separator: '-'
+  images:
+    lazyload: false
+    prepend_root: false
+    post_asset: true
+
+# Responsive Images
+## Docs: https://github.com/hexojs/hexo-filter-responsive-images
+responsive_images:
+  - pattern: '**/*.+(jpg|jpeg|png)'
+    sizes:
+      sm:
+        width: 480 # 30em
+        withoutEnlargement: true
+      md:
+        width: 768 # 48em
+        withoutEnlargement: true
+      lg:
+        width: 992 # 62em
+        withoutEnlargement: true
+      xl:
+        width: 1280 # 80em
+        withoutEnlargement: true
+      2xl:
+        width: 1536 # 96em
+        withoutEnlargement: true
