@@ -36,13 +36,13 @@ But I'm terrible at making things _great_. I only get so far as _good enough_ an
 
 [![The Explorer With a Plan, by Magnus Moon](/openers-closers-and-support/magnus-moon-the-explorer-with-a-plan.jpg)](https://www.reddit.com/r/ImaginaryMindscapes/comments/zkrxyc/the_explorer_with_a_plan_magnus_moon_digital/)
 
-As an opener, I'm often seen as a leader. Our culture usually celebrates openers as the heros: the first to discover something, the first to explore somewhere, the first to X.
+As an opener, I'm often seen as a leader. Our culture usually celebrates openers as the heros: the first to discover something, the first to explore somewhere, the first to whatever.
 
-Look, if everyone was like me, if everyone was an opener, we'd have a bad time. Openers can only achieve great work when they work alongside closers. The world should celebrate closers more!
+Look, if everyone was like me, if everyone was an opener, we'd have a bad time. Openers can only achieve great work when they work alongside closers. In my mind, the world should celebrate closers more, I sure need you!
 
 ## Team Work
 
-With this mindset, it's unfair to expect someone who is a better closer to start a project from scratch. It's also unfair to expect someone who is a better opener to do the long-tail work on delivering a project. etc
+With this mindset, it's unfair to expect someone who is a better closer to start a project from scratch. It's also unfair to expect someone who is a better opener to do the long-tail work on delivering a project. And so on.
 
 To generalize this mindset, everyone has an abundance of skills to offer. How do we match complementary skills together to advance our shared mission? How do we provide the support everyone needs to be their best?
 
