@@ -84,10 +84,6 @@ For example, here's my friend [Dominic Tarr](http://dominictarr.com) working to 
 
 To be a good moderate is to listen, to give a voice to those who aren't being heard (or can't be present), to be a connecting link between diverse sides, to support a [diversity of tactics](https://en.wikipedia.org/wiki/Diversity_of_tactics) brought by each participant given their understanding of the local situation.
 
-Help people (especially those with privilege) to be more empathetic of others (especially those without privilege)
-
-Help people get past labels which are different to them and thinking about others as humans similar to them.
-
 ## Moderate strategy: be an ally
 
 There are social justice movements happening around us, _be an ally_!
@@ -102,12 +98,50 @@ Ask how you can help! But [don't expect others to carry your mental load](https:
 
 [!["As an ally, I'm not going to pretend to be a superhero. I am going to ask you how I can help" - William C. Anderson, community organizer, DREAMer ally](http://dreamersadrift.com/wp-content/uploads/2012/06/allies.jpg)](http://dreamersadrift.com/featured1/the-ally-code-of-conduct)
 
+## Caveat: The paradox of tolerance
+
+There's a caveat with empathy, known as the ["paradox of tolerance"](https://en.wikipedia.org/wiki/Paradox_of_tolerance)
+
+> If tolerance is inclusive of the intolerant, than intolerance will ultimately dominate, eliminating the tolerant and the practice of tolerance with them.
+
+There are small minorities of people who will use your empathy against you: [fascists](https://en.wikipedia.org/wiki/Fascism), racists, and other bigoted people.
+
+Instead of trying to be seem as "reasonable", cultivate beliefs.
+
+> Cultivate believing victims, who you have been enculturated to believe "probably deserved it".
+>
+> Believe Black men--who are not super predators, but humans who are more likely than not to be victims.
+>
+> Believe Native women--who are not costumes or the past, but both most likely to be harmed by any man, and still here, working for justice for EVERYONE.
+>
+> Believe Black women--actually believe them, don't just use them as a hashtag.
+>
+> Believe Native men, who are probably the most likely to be killed by police.
+>
+> Believe trans people. Believe queer people. Believe ace people when they tell you they are queer.
+>
+> Believe disabled people, who are whole entire humans, no matter what we have been socialized to think.
+>
+> Believe children.
+>
+> Believe victims.
+>
+> Stop believing the police. Stop believing men over women, whites over everyone, straight people over queer people, abled people above all.
+>
+> Start tearing down injustice, and do that by tearing down the injustices inside you. Your assumptions.
+>
+> Stop giving power to the warlords of hatred, by believing them that only their good opinion will set the rest of us free.
+
+- [@cricketcrocker](https://archive.is/emblH)
+
 ## We're all in this together
 
-[Be charitable](https://blog.dinosaur.is/being-charitable/) to everyone you come across.
+[Be charitable](https://blog.mikey.nz/being-charitable/) to everyone you come across.
 
-Try to care for other people, regardless of their background.
+Listen and believe the stories of marginalized people.
 
-Understand that sometimes being empathetic means stepping outside your comfort zone.
+Understand that sometimes being empathetic means stepping outside [your comfort zone](https://blog.mikey.nz/safe-spaces-not-comfort-zones/).
 
-TODO: https://archive.is/emblH
+Help people (especially those with privilege) to be more empathetic of others (especially those without privilege).
+
+Help people get past labels which are different to them and thinking about others as humans similar to them.
