@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/gifts-of-a-charitable-interpretation",
+      "destination": "/being-charitable",
+      "permanent": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<nav class="app-nav">
+  <% for (var i in theme.nav){ %>
+    <% if (url_for(theme.nav[i]) == '/' + path.replace('/index.html', '') || (url_for(theme.nav[i]) == '/.' && is_home())) { %>
+      <a class="active" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
+    <% } else { %>
+      <a href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
+    <% } %>
+  <% } %>
+</nav>

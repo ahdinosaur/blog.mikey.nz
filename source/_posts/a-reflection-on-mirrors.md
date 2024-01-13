@@ -1,70 +1,70 @@
 layout: post
-title: a reflection on mirrors
+title: A reflection on mirrors
 date: 2018-02-25T10:29:41.174Z
 ---
 
-a few months ago, my co-worker Juliet planted a seed in my mind:
+A few months ago, my co-worker Juliet planted a seed in my mind:
 
-> the best gift a friend can provide you is a mirror: a reflection of who you really are.
+> The best gift a friend can provide you is a mirror: a reflection of who you really are.
 
-i've been reflecting on who i really am, and the ways i receive more insight into who i really am.
+I've been reflecting on who I really am, and the ways I receive more insight into who I really am.
 
-## what's a mirror?
+## What's a mirror?
 
-a mirror is something that reflects an image of you, so you can see yourself.
+A mirror is something that reflects an image of you, so you can see yourself.
 
-the best mirrors are those that reflect an accurate image, without too much distortion.
+The best mirrors are those that reflect an accurate image, without too much distortion.
 
-but any mirror that allows you to see yourself from a different perspective, even when biased, is useful!
+But any mirror that allows you to see yourself from a different perspective, even when biased, is useful!
 
-## seeing yourself in the mirror
+## Seeing yourself in the mirror
 
-mirrors allow us to see ourselves in a light that is beyond our own perspectives, intuitions, and narratives.
+Mirrors allow us to see ourselves in a light that is beyond our own perspectives, intuitions, and narratives.
 
-in these moments, when we have an open mind and see ourselves in a new light, we are able to transform.
+In these moments, when we have an open mind and see ourselves in a new light, we are able to transform.
 
-## who's that in the mirror?
+## Who's that in the mirror?
 
-some years ago, i had a profound experience while seeing myself in a bathroom mirror.
+Some years ago, I had a profound experience while seeing myself in a bathroom mirror.
 
-i had found a sun dress and was wearing it for the first time at a party.
+I had found a sun dress and was wearing it for the first time at a party.
 
-i went to the bathroom and looked at myself in the mirror.
+I went to the bathroom and looked at myself in the mirror.
 
-![bathroom mirror selfie](/images/bathroom-mirror-selfie.jpg)
+![bathroom mirror selfie](./a-reflection-on-mirrors/bathroom-mirror-selfie.jpg)
 
-the image of me i saw in the mirror did not match the image i had for myself.
+The image of me I saw in the mirror did not match the image I had for myself.
 
-initially i rejected the image i saw, the person i was seeing wasn't me, i'm a _man_!
+Initially I rejected the image I saw, the person I was seeing wasn't me, I'm a _man_!
 
-with time i came to accept my new image of me wearing a dress, which allowed me to construct a more inclusive identity that embodied both masculine and feminine.
+With time I came to accept my new image of me wearing a dress, which allowed me to construct a more inclusive identity that embodied both masculine and feminine.
 
-## using other people as a mirror
+## Using other people as a mirror
 
-your friends are mirrors too!
+Your friends are mirrors too!
 
-your friends each have an image of you, based on their experiences and reflections.
+Your friends each have an image of you, based on their experiences and reflections.
 
-a friend can share direct feedback about their image of you.
+A friend can share direct feedback about their image of you.
 
-by receiving another's mental model of you, you can better understand who you really are and update your mental model accordingly.
+By receiving another's mental model of you, you can better understand who you really are and update your mental model accordingly.
 
-we want our friends to provide an honest mirror, who we really are to them, not who we want to believe we are to them.
+We want our friends to provide an honest mirror, who we really are to them, not who we want to believe we are to them.
 
-this gives us wider range of perspectives than we can have alone.
+This gives us wider range of perspectives than we can have alone.
 
-### inacurrate mirrors
+### Inacurrate mirrors
 
-sometimes an inaccurate mirror is helpful because it can stimulate a gut reaction about who you really are.
+Sometimes an inaccurate mirror is helpful because it can stimulate a gut reaction about who you really are.
 
-even if it's not an accurate picture of you, it can still be useful to see yourself in a different light!
+Even if it's not an accurate picture of you, it can still be useful to see yourself in a different light!
 
-## using interactions as a mirror
+## Using interactions as a mirror
 
-every interaction you have is a mirror!
+Every interaction you have is a mirror!
 
-you might be able to see yourself through a first impression with a stranger.
+You might be able to see yourself through a first impression with a stranger.
 
-or maybe someone asks you something, your initial reaction is a good view into your intuition!
+Or maybe someone asks you something, your initial reaction is a good view into your intuition!
 
-we are surrounded by mirrors... have you seen yourself lately?
+We are surrounded by mirrors... have you seen yourself lately?

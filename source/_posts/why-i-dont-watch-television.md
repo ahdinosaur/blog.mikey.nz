@@ -1,75 +1,76 @@
 layout: post
-title: why i don't watch television
+title: Why I don't watch television
 date: 19 August 2017
 ---
 
-a television exercises your ability to watch without action for extended periods of time.
+A television exercises your ability to watch without action for extended periods of time.
 
-i want to exercise my ability to find creative solutions to complex problems.
+I want to exercise my ability to find creative solutions to complex problems.
 
-## [the medium is the message](https://en.wikipedia.org/wiki/The_medium_is_the_message)
+![leunig cartoons splash](./why-i-dont-watch-television/leunig-tv-splash.jpg)
 
-humans are composed of instruments that cooperate to sense and action.
+## [The medium is the message](https://en.wikipedia.org/wiki/The_medium_is_the_message)
 
-the instruments for how we sense and action is embedded in how the message is perceived.
+Humans are composed of instruments that cooperate to sense and action.
 
-for example: to watch a documentary is about how to sit on the couch and receive information. 
+The instruments for how we sense and action is embedded in how the message is perceived.
 
-## creative muscle
+For example: to watch a documentary is about how to sit on the couch and receive information. 
 
-our ability to be creative is a muscle that we must exercise to be fit.
+## Creative muscle
 
-if you only consume creative content, your muscles with atrophy from lack of exercise.
+Our ability to be creative is a muscle that we must exercise to be fit.
 
-## television
+If you only consume creative content, your muscles with atrophy from lack of exercise.
 
-television is a way to receive sensory perception from a remote source. television leaves little room for sensory imagination.
+## Television
 
-after not watchcing television for some years, now i find it too stimulating, overwhelming without control.
+Television is a way to receive sensory perception from a remote source. Television leaves little room for sensory imagination.
 
-watching a television is like entering a car and going for a ride. 
+After not watchcing television for some years, now I find it too stimulating, overwhelming without control.
 
-## relax
+Watching a television is like entering a car and going for a ride. 
 
-a common reason for watching television is to relax.
+## Relax
 
-here are some other ways to relax:
+A common reason for watching television is to relax.
 
-### listen to your inner mind
+Here are some other ways to relax:
 
-be quiet, hang out in your own self
+### Listen to your inner mind
 
-### write in a journal
+Be quiet, hang out in your own self
 
-create a trail of your thoughts
+### Write in a journal
 
-### read or listen to a book
+Create a trail of your thoughts
 
-an author of a book makes less decisions about sensory perception than television.
+### Read or listen to a book
 
-sense the author's cues, then create the story in your sensory imagination.
+An author of a book makes less decisions about sensory perception than television.
 
-### connect with your friends
+Sense the author's cues, then create the story in your sensory imagination.
 
-share your trails
+### Connect with your friends
 
-talk about what's on your mind
+Share your trails
 
-### be an explorer in new worlds
+Talk about what's on your mind
 
-follow other trails, but don't follow a set path
+### Be an explorer in new worlds
 
-## why does this matter?
+Follow other trails, but don't follow a set path
 
-you are what you eat.
+## Why does this matter?
 
-the creative content you eat becomes you, the decisions made by the author.
+You are what you eat.
 
-exercising your creative muscle helps you make your own creative decisions.
+The creative content you eat becomes you, the decisions made by the author.
 
-interesting people are those who explore and follow new paths.
+Exercising your creative muscle helps you make your own creative decisions.
+
+Interesting people are those who explore and follow new paths.
 
 ---
 
-note: something i found after writing this: [Four Arguments For The _Elimination_ of Television](https://www.ratical.org/ratville/AoS/4Args4ElimTV.html), via `%zT/UTPgTkTZhHTPZferhrXt2lU6+8gPygnnsro1FLpY=.sha256`
-
+Note: something I found after writing this: [Four Arguments For The _Elimination_ of Television](https://www.ratical.org/ratville/AoS/4Args4ElimTV.html), via `%zT/UTPgTkTZhHTPZferhrXt2lU6+8gPygnnsro1FLpY=.sha256`
