@@ -55,6 +55,8 @@ So, when I arrive at a project, I'm most interested in asking the questions:
 - What support do you need to be at your best?
 - How do you want to be held accountable for your work?
 
-Also sometimes, the role someone wants to embody might not be the role they embody best. Team work is an iterative and collaborative process.
+Also sometimes, the role someone wants to embody might not be the role they embody best.
+
+Team work is an iterative and collaborative process.
 
 [![Surreal sunset, by Reddit user alternateartreality](/openers-closers-and-support/alternateartreality-surreal-sunset.jpg)](https://www.reddit.com/r/ImaginaryMindscapes/comments/uro8wt/surreal_sunset/)
