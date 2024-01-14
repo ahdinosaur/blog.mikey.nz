@@ -48,7 +48,7 @@ If you're [waiting for the perfect protest](https://www.nytimes.com/2017/09/01/o
 
 Some time ago, a football player [Colin Kaepernick](https://en.wikipedia.org/wiki/Colin_Kaepernick) started a movement by kneeling, instead of standing, during the national anthem.
 
-[![Buffalo Bills players take a knee prior to a game against the Oakland Raiders in Orchard Park, N.Y., on Oct. 29. (credit Adrian Kraus—AP/Shutterstock)](https://timedotcom.files.wordpress.com/2017/12/adrian-kraus-national-anthem-top-100-photos-2017.jpg?quality=85&w=1000)](http://time.com/top-100-photos-of-2017/)
+[![Buffalo Bills players take a knee prior to a game against the Oakland Raiders in Orchard Park, N.Y., on Oct. 29. (credit Adrian Kraus—AP/Shutterstock)](/empathetic-vs-skeptical-moderates/national-anthem.jpg)](http://time.com/top-100-photos-of-2017/)
 
 In an interview after the game, Kaepernick gave a clear meaning to his unique expression:
 
@@ -67,8 +67,6 @@ Rather than being empathetic with another group's experience, I noticed [gasligh
 But not all (white) moderates try to silence stories about oppression, some use their own voice to amplify the messages:
 
 {% twitter https://twitter.com/Kaepernick7/status/917955545197314048 %}
-
-{% twitter https://twitter.com/NRL/status/914401858386456576 %}
 
 ## Moderate strategy: be a bridge
 
@@ -94,9 +92,9 @@ Give attention to others! Try not to place yourself at the center of attention, 
 
 Listen! A good practice is to notice how much you're listening, versus how much you're talking.
 
-Ask how you can help! But [don't expect others to carry your mental load](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/)
+Ask how you can help! But [don't expect others to carry your mental load](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/).
 
-[!["As an ally, I'm not going to pretend to be a superhero. I am going to ask you how I can help" - William C. Anderson, community organizer, DREAMer ally](http://dreamersadrift.com/wp-content/uploads/2012/06/allies.jpg)](http://dreamersadrift.com/featured1/the-ally-code-of-conduct)
+[!["How to be an Ally" guide](/empathetic-vs-skeptical-moderates/how-to-be-an-ally.jpg)](/empathetic-vs-skeptical-moderates/how-to-be-an-ally.jpg)
 
 ## Caveat: The paradox of tolerance
 
@@ -133,6 +131,8 @@ Instead of trying to be seem as "reasonable", cultivate beliefs.
 > Stop giving power to the warlords of hatred, by believing them that only their good opinion will set the rest of us free.
 
 - [@cricketcrocker](https://archive.is/emblH)
+
+[![A comic with three panels at the top featuring Colin Kaepernick, a Black Lives Matter sign, and a protestor and a cop, and three more panels on the bottom featuring Muhammad Ali, Martin Luther King Jr, and Rosa Parks. It reads, "Where you stand on Kaepernick...is where you would have stood with Ali. Where you stand on BLM...is where you would have stood on MLK. Where you stand on protestors...is where you would have stood on Rosa Parks."](/empathetic-vs-skeptical-moderates/where-you-stand.jpg)](https://www.brasscomics.com/crackers/?comic=where-you-stand)
 
 ## We're all in this together
 
