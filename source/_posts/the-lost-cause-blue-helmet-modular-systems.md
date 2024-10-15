@@ -9,9 +9,9 @@ tags:
 
 I want to share some inspiring science fiction that paints a picture of a future to believe in. A future with realistic challenges and realistic solutions. Fiction to help ground solarpunk into a vision of action.
 
-Cory Doctorow, in a _Globe and Mail_ editorial in 2019, [“Science fiction and the unforeseeable future: In the 2020s, let’s imagine better things](https://archive.is/XkRnA)”, says:
+Cory Doctorow, in [“Science fiction and the unforeseeable future: In the 2020s, let’s imagine better things](https://archive.is/XkRnA)”, says:
 
-The stories we tell about our future affect what we do when the future arrives, so science-fictional tales of weathering the crisis have the makings of a movement that allows us to do so.
+> The stories we tell about our future affect what we do when the future arrives, so science-fictional tales of weathering the crisis have the makings of a movement that allows us to do so.
 
 In this editorial, he goes on to imagine the foundations for a possible future, one where a “Canadian Miracle” occurs:
 
@@ -25,9 +25,9 @@ In this editorial, he goes on to imagine the foundations for a possible future, 
 >
 > The justification for taking such extreme measures is obvious: a 1000 Year Reich is a horror too ghastly to countenance, but rendering our planet incapable of sustaining human life is even worse.
 
-This premise then became a short-story, “The Canadian Miracle”, published in 2023, which you can read in full: [https://reactormag.com/the-canadian-miracle-cory-doctorow/](https://reactormag.com/the-canadian-miracle-cory-doctorow/)
+This premise then became a short-story, “The Canadian Miracle”, published in 2023, which [you can read in full](https://reactormag.com/the-canadian-miracle-cory-doctorow/).
 
-This leads to a book, [“The Lost Cause”](https://en.wikipedia.org/wiki/The\_Lost\_Cause\_(novel)), also published in 2023, about near-future Burbank, California.
+This continues as a book, [“The Lost Cause”](https://en.wikipedia.org/wiki/The\_Lost\_Cause\_(novel)), also published in 2023, about near-future Burbank, California.
 
 I highly recommend reading this editorial, short-story, and book in full. They are without a doubt my favorite contemporary author’s take on science fiction.
 
@@ -37,13 +37,15 @@ In this future, Blue Helmet peacekeeping operations have become climate crisis r
 
 I want to share these Blue Helmet modular systems, as an inspiring view into a practical future.
 
-## Excerpts
+## "The Lost Cause"
+
+The world of "The Lost Cause" is set in the 2050's. The main character, Brooks Palazzo, is in the same generation as those who are born today.
 
 ### Page 146-149:
 
 Let’s start with quotes from page 146 to 149.
 
-The main character, Brooks Palazzo, pulls a job from the Jobs Guarantee: a federally funded, locally administered government program that provides good jobs at inclusive wages that serve community needs proposed by community groups and approved by local governments.
+Brooks pulls a job from the Jobs Guarantee: a federally funded, locally administered government program that provides good jobs at inclusive wages that serve community needs proposed by community groups and approved by local governments.
 
 Here we see what a future construction process might look like, accessible even to those who aren’t professionally trained.
 
@@ -170,13 +172,15 @@ At this point in the story, Brooks wants to follow through on his plan to tear d
 
 ### Page 275
 
-Here we see the participatory aspect of this future building system, anyone can contribute.
+Here we see the participatory aspect of this future building system, anyone can contribute with the skills they have available.
 
 > We’d told Dolores and company what we were thinking of over lunch and asked them what they thought. We made sure they understood that they had a veto over this, because we weren’t about to turn them out into the smoke while we did our weird-ass shit. They were completely cool about it, though, excited once we’d conveyed what we had in mind and wanting to help out. They found friends who talked their host families into letting them double up, and pored over the floor plans for the new building, talking about how they’d furnish their places. Antonio was a finish carpenter and pulled up pictures of some of the kitchen remodels he’d done and we all noodled around with superimposing them on the renders of the interiors.
 >
 > Phuong, meanwhile, had been exchanging disappearing/deniable messages with friends around the DSA, which led her to Tony Yiannopoulos, who found us a mole inside the Department of Public Works —a former shop steward who got promoted to management but never switched sides. After a couple of texts, she jumped on video and did this mind-meld thing with Phuong, ingesting her project manifest and locating available equipment at DPW lots all around the city. There was a lot of idle gear in town, thanks to the double whammy of the fires and the moratorium on emergency house construction—the city had requisitioned a lot of extra equipment from the county when the caravan first started heading our way.
 
 ### Page 277
+
+When building an eightplex is simply a bill of materials.
 
 > I rattled the gate and shouted, “Who brought the bolt cutters?”
 >
@@ -202,11 +206,15 @@ Here we see the participatory aspect of this future building system, anyone can 
 
 ### Page 282
 
+When everything fits into interlocking components.
+
 > Blue Helmet prefab buildings are fast, but word gets around faster.
 >
 > We were able to recycle the foundation slab, which meant that once the pilings were in, one crew could go to work fitting and locking panels while a second crew added structural members for the next stage. Wilmar was in charge of double-checking the building against the plans, making sure that panels with inset plumbing and electrical components were seated correctly and had good interconnects with their adjacent panels.
 
 ### Page 286-287
+
+When these interlocking components can self-validate their correctness.
 
 > Over the course of that day, progress had been amazing, then agonizing, then amazing again. The first two rows of slabs clicked into place quickly, accelerating as the work crews got into the rhythm of the job. There’d been a moment when I stepped back from sealing a slab into place and looked around and realized that there was a brand-new structure there, just like that, a magic trick in three dimensions.
 >
@@ -215,6 +223,8 @@ Here we see the participatory aspect of this future building system, anyone can 
 > Then everything lit green and crews went to work snapping on the joists and locking them in, laying down the floor slabs, and putting in scaffolding for the second story and we were off to the races again, half of the next story racing around the building’s edge even as a crew added exterior and interior doors and other fittings to the first floor. We even got the plumbing working, and the jobsite got a sink and a toilet. With the door closed, the windows fitted, and the first-floor ceiling in place, we got filters running and then we had an indoor space with breathable air, just like that.
 
 ### Page 293
+
+Imagine building the frame of a house in 48 hours.
 
 > “How did you keep this all under wraps while you built it?”
 >
@@ -234,7 +244,19 @@ Here we see the participatory aspect of this future building system, anyone can 
 
 ### Page 320
 
+In this future, building infrastructure become collaboration amongst peers, and the tooling made reflects that.
+
 > There’s a Blue Helmet truism that the last 10 percent of any project takes 90 percent of the time, and that was certainly my experience with the building that had once been Gramps’s house. The early stages had involved standard parts—slabs, infrastructure, glazing, insulation—but now that we were doing fine work, things had to be just right—exactly right modular kitchen cabinets, the right sliding doors for balconies and locks for internal doors. More than half of the work was just hitting the screens, wrangling with other crews nearby to see who had the part you needed and then figuring out how to make rendezvous and acquire it.
 >
 > But over the next four days, things took shape, and a couple of the apartments got real furniture, a mix of prefabs and donated pieces, and it was wild to see the rough structure I’d left a week before with my lungs on fire and my arms so heavy I could barely lift them now looking ready for human habitation. And habitate it we did, as parts of our crew left to work on other buildings that needed more work, until there were fewer than a dozen of us on-site at any moment, many of us couples like Phuong and me, so that we ended up with our own temporary, personal apartments (though people on the third and fourth floors had to borrow facilities from their downstairs neighbors because the city hadn’t been able to upgrade our main
 water service yet).
+
+## Reflections
+
+I want to live in this world.
+
+If you haven't yet read "The Lost Cause", [get yourself a copy](https://craphound.com/) and live in this world for a time.
+
+There's much more in the book than I can reasonably capture on this page, see for yourself and let me know what you see.
+
+I want to make this future world a reality, that's why I'm working on [Village Kit](https://villagekit.com). Join us?
