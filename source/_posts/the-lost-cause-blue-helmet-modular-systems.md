@@ -258,3 +258,5 @@ If you haven't yet read "The Lost Cause", [get yourself a copy](https://craphoun
 There's much more in the book than I can reasonably capture on this page, see for yourself and let me know what you see.
 
 I want to make this future world a reality, that's why I'm working on [Village Kit](https://villagekit.com). Join us?
+
+What do you think? [Discuss this further on the Village Kit forum](https://discuss.villagekit.com/t/the-lost-cause-blue-helmet-modular-systems/84)
