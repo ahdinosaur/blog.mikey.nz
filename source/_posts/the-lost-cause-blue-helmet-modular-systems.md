@@ -31,9 +31,9 @@ This continues as a book, [“The Lost Cause”](https://en.wikipedia.org/wiki/T
 
 I highly recommend reading this editorial, short-story, and book in full. They are without a doubt my favorite contemporary author’s take on science fiction.
 
-I want to share excerpts from this future that are specific to the Village Kit vision: a modular system for building the practical infrastructure we need to live, amidst a climate crisis.
+I want to share excerpts from this future that are specific to the [Village Kit vision](https://villagekit.com/vision): a modular system for building the practical infrastructure we need to live, amidst a climate crisis.
 
-In this future, Blue Helmet peacekeeping operations have become climate crisis responders. When cities flood, sea levels rise, forests burn, and so on, the Blue Helmets are those who respond to support new waves of climate refugees. Except, rather than the temporary refugee camps of today, they developed systems to build new permanent refugee cities.
+In this future, [Blue Helmet](https://en.wikipedia.org/wiki/United_Nations_peacekeeping) peacekeeping operations have become climate crisis responders. When cities flood, sea levels rise, forests burn, and so on, the Blue Helmets are those who respond to support new waves of climate refugees. Except, rather than the temporary refugee camps of today, they developed systems to build new permanent refugee cities.
 
 I want to share these Blue Helmet modular systems, as an inspiring view into a practical future.
 
@@ -115,8 +115,7 @@ Here we see what a future housing design process, turned city planning, might lo
 >
 > I zoomed out and saw that my own crude high-density corridor was being polished by Phuong’s housemates, who abandoned their work on the hypothetical high-rise we were going to build on Gramps’s lot in order to create green roofs, vertical farms, parkettes, a community center added to the main branch library at Buena Vista. I watched with my mouth open as they worked together, like musicians improvising a jam session, except they were improvising a whole neighborhood, and I could tab over to the spreadsheets where there were build plans, bills of materials, critical path and building-code variances we’d have to file for.
 >
-> Jacob shoulder-surfed me. “It’s cool, isn’t it? It’s just Blue Helmet stuff, though; kind of thing we used to do in-country, helping people think through what their neighborhoods could be. We’d do a couple training sessions, turn ’em loose for a week to come up with designs, get into revert-wars, and then we workshop ’em and do it again. A month later, you’ve got some incredible designs, and all that stuff gets trained back into the model so it hints the next group who try it. That’s why it’s going so fast—it’s hella
-> Trained.”
+> Jacob shoulder-surfed me. “It’s cool, isn’t it? It’s just Blue Helmet stuff, though; kind of thing we used to do in-country, helping people think through what their neighborhoods could be. We’d do a couple training sessions, turn ’em loose for a week to come up with designs, get into revert-wars, and then we workshop ’em and do it again. A month later, you’ve got some incredible designs, and all that stuff gets trained back into the model so it hints the next group who try it. That’s why it’s going so fast—it’s hella trained.”
 >
 > “Don’t say ‘hella,’” Arina said. “It makes you sound stupid.”
 >
@@ -134,7 +133,7 @@ Here we see what a future housing design process, turned city planning, might lo
 
 ### Page 243-247
 
-At this point in the story, the characters take the city plan that was started in the above scene, and present it to the city as a pop-up festival
+At this point in the story, the characters take the city plan that was started in the above scene, and present it to the city as a pop-up festival.
 
 Here again, we see the possibility of future city planning, how we could re-imagine civic engagement and community consultation. We also see the importance of future social media moderation strategies.
 
@@ -142,8 +141,7 @@ Here again, we see the possibility of future city planning, how we could re-imag
 >
 > …
 >
-> Every booth displayed a different aspect of the New Burbank. One group had done transit, another had done libraries, another had done schools. The big action was in the neighborhoods, displayed as big-screen flythroughs that you could view or modify, either from your own screen or by just dragging stuff around on the big screens. The kids did a lot of the latter, while their grown-ups were more interested in the former. I eavesdropped on a lot of conversations, hopping from booth to booth, and I started to see
-> a pattern:
+> Every booth displayed a different aspect of the New Burbank. One group had done transit, another had done libraries, another had done schools. The big action was in the neighborhoods, displayed as big-screen flythroughs that you could view or modify, either from your own screen or by just dragging stuff around on the big screens. The kids did a lot of the latter, while their grown-ups were more interested in the former. I eavesdropped on a lot of conversations, hopping from booth to booth, and I started to see a pattern:
 >
 > Rando: “Come on, you’ve gotta be kidding me. This is crazy, it’s not what the city is about.”
 > Guerrilla planner: “Did you see this park?” (or stadium, or rink, or subway station, or library, or business strip)
