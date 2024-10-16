@@ -9,7 +9,7 @@ tags:
 
 I want to share some inspiring science fiction that paints a picture of a future to believe in. A future with realistic challenges and realistic solutions. Fiction to help ground solarpunk into a vision of action.
 
-Cory Doctorow, in [“Science fiction and the unforeseeable future: In the 2020s, let’s imagine better things](https://archive.is/XkRnA)”, says:
+[Cory Doctorow](https://en.wikipedia.org/wiki/Cory_Doctorow), in [“Science fiction and the unforeseeable future: In the 2020s, let’s imagine better things](https://archive.is/XkRnA)”, says:
 
 > The stories we tell about our future affect what we do when the future arrives, so science-fictional tales of weathering the crisis have the makings of a movement that allows us to do so.
 
