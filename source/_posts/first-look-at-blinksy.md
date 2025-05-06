@@ -85,26 +85,34 @@ What if we animated the pixels using a 3D-native approach?
 
 Blinksy is my LED control library for 1D, 2D, and especially 3D layouts.
 
-How does Blinksy work?
+### Examples
+
+#### 1d
+
+#### 2d
+
+#### 3d
+
+## How to get started with Blinksy
 
 1. [Setup your LED layout](#setup-your-led-layout)
-2. [Setup your LED driver](#setup-your-led-driver)
-3. [Choose a pattern from the library, or create your own](#choose-a-pattern-from-the-library-or-create-your-own)
+2. [Setup your visual pattern](#setup-your-visual-pattern)
+3. [Setup your LED driver](#setup-your-led-driver)
 
 ### Setup your LED layout
 
-First you define the arrangement of your LEDs in space, using either the `layout1d`, `layout2d`, or `layout3d` macros.
+First you define the arrangement of your LEDs in space, with a struct that implements either the [`Layout1d`](https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout1d.html), [`Layout2d`](https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout2d.html), or [`Layout3d`](https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout13d.html) traits. To make this easy, we use either the [`layout1d`](https://docs.rs/blinksy/0.1.0/blinksy/macro.layout1d.html), [`layout2d`](https://docs.rs/blinksy/0.1.0/blinksy/macro.layout2d.html), or [`layout3d`](https://docs.rs/blinksy/0.1.0/blinksy/macro.layout3d.html) macro, respectively.
 
-This will define each LED pixel in a 1D, 2D, or 3D space between -1.0 and 1.0.
+These traits provide a `PIXEL_COUNT` constant, which is the number of LEDs, and a `.points()` method, which maps each LED pixel into a 1D, 2D, or 3D space between -1.0 and 1.0.
 
 #### 1D layouts
 
 For a 1D layout, this is very simple, as a 1D shape only has a length.
 
-Here is a layout for an LED strip with 30 pixels.
+Here is a layout for an LED strip with 60 pixels.
 
 ```rust
-layout1d!(Layout, 30);
+layout1d!(Layout, 60);
 ```
 
 For our 1D space, the first LED pixel will be at -1.0 and the last LED pixel will be at 1.0.
@@ -120,7 +128,7 @@ For our 2D space, we can think of:
 - `(-1.0, 1.0)` as the top left
 - `(1.0, 1.0)` as the top right
 
-Here is a layout for a basic LED grid panel to span our 2D space:
+Here is a layout for a basic 16x16 LED grid panel to span our 2D space:
 
 ```rust
 layout2d!(
@@ -142,24 +150,111 @@ For a 3D layout, you need to define your 3D shapes: points, lines, grids, arcs, 
 
 TODO
 
+### Setup your visual pattern
+
+Finally, we define the visual pattern we want to display, using the [`Pattern`](https://docs.rs/blinksy/0.1.0/blinksy/pattern/index.html) trait.
+
+```rust
+pub trait Pattern<Dim, Layout>
+where
+    Layout: LayoutForDim<Dim>,
+{
+    type Params;
+    type Color;
+
+    // Required methods
+    fn new(params: Self::Params) -> Self;
+    fn tick(&self, time_in_ms: u64) -> impl Iterator<Item = Self::Color>;
+}
+```
+
+While there is one `Pattern` trait, it may be implemented for any dimension, using a [dimension marker](https://docs.rs/blinksy/0.1.0/blinksy/dimension/index.html): `Dim1d`, `Dim2d`, or `Dim3d`. The dimension marker will then contrain the `Layout` generic provided, to implement either `Layout1d`, `Layout2d`, or `Layout3d`, respectively.
+
+On initialization, the pattern is given configuration parameters.
+
+On every update, the pattern is given the current time in milliseconds, and must return an iterator that provides a color for every LED in the layout.
+
+The [color types](https://docs.rs/blinksy/0.1.0/blinksy/color/index.html) are expected to be from the [`palette`](https://docs.rs/palette/latest/palette/) crate, where they implement [`FromColor`](https://docs.rs/blinksy/0.1.0/blinksy/color/trait.FromColor.html) and [`IntoColor`](https://docs.rs/blinksy/0.1.0/blinksy/color/trait.IntoColor.html). A good color type is [`Hsv`](https://docs.rs/blinksy/0.1.0/blinksy/color/struct.Hsv.html).
+
+To use a pattern, we can either choose from the built-in library or we create our own.
+
+We have two visual patterns to start, each implementing `Pattern` for 1d, 2d, and 3d dimensions.
+
+- Rainbow: A basic scrolling rainbow.
+- Noise: A flow through random noise functions.
+
+Or feel free to make your own. Better yet, help contribute to our library!
+
 ### Setup your LED driver
 
-Next we setup our LED driver.
+Finally we setup our LED driver.
 
-This means
+The LED driver is what interfaces with the LED chipset over some protocol.
 
-### Choose a pattern from the library, or create your own
+To define an LED driver, we must implement the [`LedDriver`](https://docs.rs/blinksy/0.1.0/blinksy/driver/trait.LedDriver.html) trait:
 
+```rust
+pub trait LedDriver {
+    type Error;
+    type Color;
 
+    // Required method
+    fn write<I, C>(
+        &mut self,
+        pixels: I,
+        brightness: f32,
+    ) -> Result<(), Self::Error>
+       where I: IntoIterator<Item = C>,
+             Self::Color: FromColor<C>;
+}
+```
 
-## But what about 3d?
+The LED driver will be given colors from the visual pattern, then converting them into a new color type more suitable to what the LED hardware understands.
 
-Yeah I haven't actually implemented 3D, because I wanted to ship Blinksy.
+To make implementing `LedDriver` easier for the various LED chipsets, we have generic support for the two main types of LED protocols:
 
-The architecture is ready, stay tuned.
+- [`clocked`](https://docs.rs/blinksy/0.1.0/blinksy/driver/clocked/index.html): Protocols that are based on [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface), where chipsets have a data line and a clock line.
+  - To defined a clocked LED chipset, you define the [`ClockedLed`](https://docs.rs/blinksy/0.1.0/blinksy/driver/clocked/trait.ClockedLed.html) trait.
+- [`clockless`](https://docs.rs/blinksy/0.1.0/blinksy/driver/clockless/index.html): Protocols based on specific timing periods, where chipsets have only a single data line.
+  - To defined a clocked LED chipset, you define the [`ClocklessLed`](https://docs.rs/blinksy/0.1.0/blinksy/driver/clocked/trait.ClocklessLed.html) trait.
 
-If you want to support the project, please:
+For each generic LED protocol type, we have specific protocols to drive those types of LEDs:
+
+- By bit-banging over GPIO pins, using a delay timer.
+- Or by using an SPI peripheral.
+
+For clockless protocols on ESP devices, we can also use the RMT peripheral.
+
+Then, we have specific implementations for each LED chipset.
+
+So adding this together, for APA102 LEDs, aka DotStar, we have:
+
+- [Apa102Led](https://docs.rs/blinksy/0.1.0/blinksy/drivers/struct.Apa102Led.html), which implements the [`ClockedLed`](https://docs.rs/blinksy/0.1.0/blinksy/driver/clocked/trait.ClockedLed.html) trait to describe the specific details of the APA102 chipset as a clocked LED.
+- [Apa102Delay](https://docs.rs/blinksy/0.1.0/blinksy/drivers/type.Apa102Delay.html), which drives APA102 LEDs using GPIO bit-banging with delay timing.
+- [Apa102Spi](https://docs.rs/blinksy/0.1.0/blinksy/drivers/type.Apa102Spi.html), which drives APA102 LEDs using an SPI peripheral.
+
+And for WS2812 LEDs, aka NeoPixel, we have:
+
+- [Ws2812Led](https://docs.rs/blinksy/0.1.0/blinksy/drivers/struct.Ws2812Led.html), which implements the [`ClocklessLed`](https://docs.rs/blinksy/0.1.0/blinksy/driver/clocked/trait.Clockless.html) trait to describe the specific details of the WS2812 chipset as a clockless LED.
+- [Ws2812Delay](https://docs.rs/blinksy/0.1.0/blinksy/drivers/type.Ws2812Delay.html), which drives WS2812 LEDs using GPIO bit-banging with delay timing. Note: This will not work unless your delay timer is able to handle microsecond precision, which, as far as I understand, most microcontrollers cannot do.
+- [Ws2812Spi](https://docs.rs/blinksy/0.1.0/blinksy/drivers/type.Ws2812Spi.html), which drives WS2812 LEDs using an SPI peripheral.
+
+And for WS2812 LEDs on ESP boards, we have [`Ws2812Rmt`](https://docs.rs/blinksy-esp/0.1.0/blinksy-esp/drivers/type.Ws2812Rmt.html)
+
+## Contributing
+
+If you want to help, the best thing to do is use Blinksy for your own LED project, and share about your adventures.
+
+If you want to contribute code, please:
+
+- Help port a visual pattern from FastLED or WLED to Blinksy
+- Write your own visual pattern
+- Help support a new LED chipset
+
+If you want to otherwise support the project, please:
 
 - Star the project on GitHub: [ahdinosaur/blinksy](https://github.com/ahdinosaur/blinksy)
-- Subscribe to me on YouTube, where I'll start sharing me live-coding the future of Blinksy
+- Subscribe to me on YouTube, where I want to start live-coding the future of Blinksy
 - Sponsor me on GitHub: [@ahdinosaur]()
+
+Thanks for giving me your attention. Have a good one.
