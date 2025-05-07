@@ -95,11 +95,11 @@ Blinksy is my LED control library for 1D, 2D, and especially 3D layouts.
 
 ## How to get started with Blinksy
 
-1. [Setup your LED layout](#setup-your-led-layout)
-2. [Setup your visual pattern](#setup-your-visual-pattern)
+1. [Define your LED layout](#define-your-led-layout)
+2. [Create your visual pattern](#create-your-visual-pattern)
 3. [Setup your LED driver](#setup-your-led-driver)
 
-### Setup your LED layout
+### Define your LED layout
 
 First you define the arrangement of your LEDs in space, with a struct that implements either the [`Layout1d`](https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout1d.html), [`Layout2d`](https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout2d.html), or [`Layout3d`](https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout13d.html) traits. To make this easy, we use either the [`layout1d`](https://docs.rs/blinksy/0.1.0/blinksy/macro.layout1d.html), [`layout2d`](https://docs.rs/blinksy/0.1.0/blinksy/macro.layout2d.html), or [`layout3d`](https://docs.rs/blinksy/0.1.0/blinksy/macro.layout3d.html) macro, respectively.
 
@@ -150,7 +150,7 @@ For a 3D layout, you need to define your 3D shapes: points, lines, grids, arcs, 
 
 TODO
 
-### Setup your visual pattern
+### Create your visual pattern
 
 Finally, we define the visual pattern we want to display, using the [`Pattern`](https://docs.rs/blinksy/0.1.0/blinksy/pattern/index.html) trait.
 
