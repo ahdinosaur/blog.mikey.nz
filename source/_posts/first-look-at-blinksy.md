@@ -241,6 +241,13 @@ And for WS2812 LEDs, aka NeoPixel, we have:
 
 And for WS2812 LEDs on ESP boards, we have [`Ws2812Rmt`](https://docs.rs/blinksy-esp/0.1.0/blinksy-esp/drivers/type.Ws2812Rmt.html)
 
+## Other topics:
+
+- HSI
+- How to convert a color from sRGB to linear RGB to LED RGB.
+    - Gamma correction
+    - Color correction
+
 ## Contributing
 
 If you want to help, the best thing to do is use Blinksy for your own LED project, and share about your adventures.
