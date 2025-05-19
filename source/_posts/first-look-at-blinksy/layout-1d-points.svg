@@ -2,20 +2,111 @@
 <svg
   width="100%"
   height="100%"
-  viewBox="-5 -5 105 105"
+  viewBox="0 0 620 150"
   preserveAspectRatio="xMidYMid meet"
   xmlns="http://www.w3.org/2000/svg"
-  >
-  <text
-    x="0"
-    y="0"
-    font-family="-apple-system, system-ui, BlinkMacSystemFont, Roboto"
-    dominant-baseline="middle"
-    text-anchor="middle"
-    font-size="18"
-    fill="#74838f"
-    font-weight="700"
-    >
-     0.0
-  </text>
+>
+  <style>
+    .axis-line { stroke: black; stroke-width: 2; }
+    .tick-line { stroke: black; stroke-width: 1; }
+    .label-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial;
+      sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+      fill: #333;
+    }
+    .axis-name-text { font-family: Arial, sans-serif; font-size: 14px; text-anchor: start; font-style: italic; fill: #333; }
+    .pixel { fill: dodgerblue; stroke: #222; stroke-width: 0.5; }
+    .title-text { font-family: Arial, sans-serif; font-size: 16px; text-anchor: middle; font-weight: bold; fill: #111; }
+  </style>
+
+  <title>1D LED Strip Layout</title>
+
+  <text x="310" y="25" class="title-text">1D LED Strip Layout (60 Pixels)</text>
+
+  <!-- X-Axis -->
+  <g id="x-axis">
+    <line x1="50" y1="75" x2="570" y2="75" class="axis-line" />
+
+    <!-- Ticks and Labels -->
+    <!-- -1.0 Tick -->
+    <line x1="50" y1="70" x2="50" y2="80" class="tick-line" />
+    <text x="50" y="95" class="label-text">-1.0</text>
+
+    <!-- 0.0 Tick -->
+    <line x1="310" y1="70" x2="310" y2="80" class="tick-line" />
+    <text x="310" y="95" class="label-text">0.0</text>
+
+    <!-- 1.0 Tick -->
+    <line x1="570" y1="70" x2="570" y2="80" class="tick-line" />
+    <text x="570" y="95" class="label-text">1.0</text>
+
+    <!-- Axis Name -->
+    <text x="575" y="80" class="axis-name-text">x</text>
+  </g>
+
+  <!-- LED Pixels -->
+  <g id="led-pixels">
+    <circle cx="50.00" cy="75" r="3" class="pixel" />
+    <circle cx="58.81" cy="75" r="3" class="pixel" />
+    <circle cx="67.63" cy="75" r="3" class="pixel" />
+    <circle cx="76.44" cy="75" r="3" class="pixel" />
+    <circle cx="85.25" cy="75" r="3" class="pixel" />
+    <circle cx="94.07" cy="75" r="3" class="pixel" />
+    <circle cx="102.88" cy="75" r="3" class="pixel" />
+    <circle cx="111.69" cy="75" r="3" class="pixel" />
+    <circle cx="120.51" cy="75" r="3" class="pixel" />
+    <circle cx="129.32" cy="75" r="3" class="pixel" />
+    <circle cx="138.14" cy="75" r="3" class="pixel" />
+    <circle cx="146.95" cy="75" r="3" class="pixel" />
+    <circle cx="155.76" cy="75" r="3" class="pixel" />
+    <circle cx="164.58" cy="75" r="3" class="pixel" />
+    <circle cx="173.39" cy="75" r="3" class="pixel" />
+    <circle cx="182.20" cy="75" r="3" class="pixel" />
+    <circle cx="191.02" cy="75" r="3" class="pixel" />
+    <circle cx="199.83" cy="75" r="3" class="pixel" />
+    <circle cx="208.64" cy="75" r="3" class="pixel" />
+    <circle cx="217.46" cy="75" r="3" class="pixel" />
+    <circle cx="226.27" cy="75" r="3" class="pixel" />
+    <circle cx="235.08" cy="75" r="3" class="pixel" />
+    <circle cx="243.90" cy="75" r="3" class="pixel" />
+    <circle cx="252.71" cy="75" r="3" class="pixel" />
+    <circle cx="261.53" cy="75" r="3" class="pixel" />
+    <circle cx="270.34" cy="75" r="3" class="pixel" />
+    <circle cx="279.15" cy="75" r="3" class="pixel" />
+    <circle cx="287.97" cy="75" r="3" class="pixel" />
+    <circle cx="296.78" cy="75" r="3" class="pixel" />
+    <circle cx="305.59" cy="75" r="3" class="pixel" />
+    <circle cx="314.41" cy="75" r="3" class="pixel" />
+    <circle cx="323.22" cy="75" r="3" class="pixel" />
+    <circle cx="332.03" cy="75" r="3" class="pixel" />
+    <circle cx="340.85" cy="75" r="3" class="pixel" />
+    <circle cx="349.66" cy="75" r="3" class="pixel" />
+    <circle cx="358.47" cy="75" r="3" class="pixel" />
+    <circle cx="367.29" cy="75" r="3" class="pixel" />
+    <circle cx="376.10" cy="75" r="3" class="pixel" />
+    <circle cx="384.92" cy="75" r="3" class="pixel" />
+    <circle cx="393.73" cy="75" r="3" class="pixel" />
+    <circle cx="402.54" cy="75" r="3" class="pixel" />
+    <circle cx="411.36" cy="75" r="3" class="pixel" />
+    <circle cx="420.17" cy="75" r="3" class="pixel" />
+    <circle cx="428.98" cy="75" r="3" class="pixel" />
+    <circle cx="437.80" cy="75" r="3" class="pixel" />
+    <circle cx="446.61" cy="75" r="3" class="pixel" />
+    <circle cx="455.42" cy="75" r="3" class="pixel" />
+    <circle cx="464.24" cy="75" r="3" class="pixel" />
+    <circle cx="473.05" cy="75" r="3" class="pixel" />
+    <circle cx="481.86" cy="75" r="3" class="pixel" />
+    <circle cx="490.68" cy="75" r="3" class="pixel" />
+    <circle cx="499.49" cy="75" r="3" class="pixel" />
+    <circle cx="508.31" cy="75" r="3" class="pixel" />
+    <circle cx="517.12" cy="75" r="3" class="pixel" />
+    <circle cx="525.93" cy="75" r="3" class="pixel" />
+    <circle cx="534.75" cy="75" r="3" class="pixel" />
+    <circle cx="543.56" cy="75" r="3" class="pixel" />
+    <circle cx="552.37" cy="75" r="3" class="pixel" />
+    <circle cx="561.19" cy="75" r="3" class="pixel" />
+    <circle cx="570.00" cy="75" r="3" class="pixel" />
+  </g>
 </svg>

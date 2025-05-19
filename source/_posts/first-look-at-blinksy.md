@@ -31,7 +31,7 @@ I wanted to make a LED control library that could do the following:
 
 Blinksy is a new LED control library for 1D, 2D, and soon 3D layouts\*.
 
-_\* 3D layouts are coming soon, because I want native 3D LED animations!_
+_\* 3D layouts are coming soon, because I want an LED cube like [this](https://makerworld.com/en/models/1085530-16x16-ws2812-wled-cube) with native 3D animations!_
 
 ### Examples
 
@@ -220,6 +220,10 @@ layout1d!(Layout, 60);
 ```
 
 For our 1D space, the first LED pixel will be at -1.0 and the last LED pixel will be at 1.0.
+
+<div style="text-align: center">
+  <img src="/first-look-at-blinksy/layout-1d-points.svg" alt="Layout 1d points" width="100%" />
+</div>
 
 #### 2D layouts
 
