@@ -4,20 +4,22 @@ date: 2025-05-02 09:49:15
 tags:
 ---
 
-As a continuation of my LED pixels journey, I made [Blinksy](https://github.com/ahdinosaur/blinksy):
+As a continuation of my LED pixels journey, I made [Blinksy](https://github.com/ahdinosaur/blinksy) 🟥🟩🟦 :
 
 > A Rust no-std no-alloc LED control library for 1D, 2D, and 3D layouts
+
+<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561394?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
 
 ## Backstory
 
 Using my learnings from personal journey with LED pixels:
 
-- [PIXELS FOR THE PIXEL GOD](https://blog.mikey.nz/pixels-for-the-pixel-god/)
-- [A Burn Dance](https://blog.mikey.nz/a-burn-dance/)
-- [Polyledra V1: LED Tetrahedron](https://blog.mikey.nz/polyledra-v1-led-tetrahedron/)
-- [Polyledra V2: LED Tensegrity](https://blog.mikey.nz/polyledra-v2-led-tensegrity/)
+- [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)
+- [A Burn Dance](/a-burn-dance/)
+- [Polyledra V1: LED Tetrahedron](/polyledra-v1-led-tetrahedron/)
+- [Polyledra V2: LED Tensegrity](/polyledra-v2-led-tensegrity/)
 
-And new learnings with [advanced generics for no-std no-alloc embedded Rust](https://blog.mikey.nz/how-to-dance-with-embedded-rust-generics/),
+And new learnings with [advanced generics for no-std no-alloc embedded Rust](/how-to-dance-with-embedded-rust-generics/),
 
 I wanted to make a LED control library that could do the following:
 
@@ -25,85 +27,187 @@ I wanted to make a LED control library that could do the following:
 - Like [WLED](https://kno.wled.ge), have a library of beautiful visual patterns.
 - Unlike anything before, support not just strips and grids, but any 1D, 2D, or even 3D layout.
 
-### 3D Tetrahedron
-
-To understand what I mean about 3D layouts, look back at my [LED tetrahedron](https://blog.mikey.nz/polyledra-v1-led-tetrahedron/):
-
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796157718?h=008898648a&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2018-10-02) Polyledra v1: Demo"></div>
-
-Each pixel has a position in 3D space. Unlike most 2D or 3D projection mappings, which take a 2D raster (pixels from an image or video) and project onto a 2D or 3D surface, the LED tetrahedron is more like a graphics shader, where for each pixel (which has a 3D position), and given the current time, you calculate the color. So we aren't mapping 2D pixels onto a 3D surface, we're directly calculating the animation for each pixel in 3D space.
-
-### 1D to 3D Tensegrity
-
-As a comparison, we can look at my next project, an [LED tensegrity](https://blog.mikey.nz/polyledra-v2-led-tensegrity/).
-
-In this case, I used [WLED](https://kno.wled.ge), which at the time only supported multiple 1D segments of 1D strips, now supports 2D grids. I made a 1D segment for every strut of the tensegrity.
-
-<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796544673?h=de776782f6&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2021-01-31) Polyledra v2: Kiwiburn"></div>
-
-While this still looks good, it's missing the same spatial feel, each strut more or less looks the same.
-
-### 2D to 3D Cube
-
-In another example, we can see people who are using [WLED](https://kno.wled.ge) to make 3D cubes.
-
-<blockquote class="reddit-embed-bq" style="height:500px" data-embed-height="546"><a href="https://www.reddit.com/r/WLED/comments/1e5fji2/wled_16x16_cube/">WLED 16x16 Cube</a><br> by<a href="https://www.reddit.com/user/SkirtPuzzleheaded586/">u/SkirtPuzzleheaded586</a> in<a href="https://www.reddit.com/r/WLED/">WLED</a></blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
-
-By mapping the faces of the cube onto 2D grids, like so:
-
-<a href="https://www.reddit.com/r/WLED/comments/1e5fji2/comment/ldmyza8/">
-  <img src="/first-look-at-blinksy/wled-cube-mapping.webp" alt="WLED cube mapping" style="max-height: min(400px, 66.66dvh);" />
-</a>
-
-It's possible to approximate a 3D cube. However, we can see from the faces of the cube in 2D, this means the 3D mapping will have discontinuous seams.
-
-Again, no question this looks good, but can it be better?
-
-### 2D to 3D Sphere
-
-As a final example, we see someone building a replica of the Las Vegas MSG Sphere.
-
-<iframe width="853" height="480" src="//www.youtube-nocookie.com/embed/_ZtewjbFXoA?start=416" frameborder="0" allowfullscreen></iframe>
-
-Without a doubt, this is incredible.
-
-Earlier in the video, a "problem" with spherical displays:
-
-> If we just fold a matrix around a ball, we'd have a bunch of pixels bunched together at the top and bottom.
->
-> But at the equator, the pixels would be too spread out.
-
-<iframe width="853" height="480" src="//www.youtube-nocookie.com/embed/_ZtewjbFXoA?start=42" frameborder="0" allowfullscreen></iframe>
-
-While this is true that in the naive sphere design, the spacing between pixels will be variable, this is only an issue because their goal is to map a 2d matrix onto a 3d surface.
-
-So even in the best mappings, these are still 2D screens wrapped around a 3D surface, which means limitations.
-
-What if we animated the pixels using a 3D-native approach?
-
 ## Blinksy
 
-Blinksy is my LED control library for 1D, 2D, and especially 3D layouts.
+Blinksy is a new LED control library for 1D, 2D, and soon 3D layouts\*.
+
+_\* 3D layouts are coming soon, because I want native 3D LED animations!_
 
 ### Examples
 
-#### 1d
+#### Desktop Simulation: 2D Grid with Noise Pattern
 
-#### 2d
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085562226?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
 
-#### 3d
+<details>
+<summary>
+    Click to see code
+</summary>
+
+```rust
+use blinksy::{
+    layout::{Shape2d, Vec2},
+    layout2d,
+    patterns::noise::{noise_fns, Noise2d, NoiseParams},
+    ControlBuilder,
+};
+use blinksy_desktop::{
+    driver::{Desktop, DesktopError},
+    time::elapsed_in_ms,
+};
+use std::{thread::sleep, time::Duration};
+
+fn main() {
+    layout2d!(
+        Layout,
+        [Shape2d::Grid {
+            start: Vec2::new(-1., -1.),
+            row_end: Vec2::new(-1., 1.),
+            col_end: Vec2::new(1., -1.),
+            row_pixel_count: 16,
+            col_pixel_count: 16,
+            serpentine: true,
+        }]
+    );
+    let mut control = ControlBuilder::new_2d()
+        .with_layout::<Layout>()
+        .with_pattern::<Noise2d<noise_fns::Perlin>>(NoiseParams {
+            ..Default::default()
+        })
+        .with_driver(Desktop::new_2d::<Layout>())
+        .build();
+
+    loop {
+        if let Err(DesktopError::WindowClosed) = control.tick(elapsed_in_ms()) {
+            break;
+        }
+
+        sleep(Duration::from_millis(16));
+    }
+}
+```
+</details>
+
+### Embedded: 2D APA102 Grid with Noise Pattern
+
+<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561112?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+
+<details>
+<summary>
+    Click to see code
+</summary>
+
+```rust
+#![no_std]
+#![no_main]
+
+use blinksy::{
+    layout::{Shape2d, Vec2},
+    layout2d,
+    patterns::noise::{noise_fns, Noise2d, NoiseParams},
+    ControlBuilder,
+};
+use gledopto::{apa102, board, elapsed, main};
+
+#[main]
+fn main() -> ! {
+    let p = board!();
+
+    layout2d!(
+        Layout,
+        [Shape2d::Grid {
+            start: Vec2::new(-1., -1.),
+            row_end: Vec2::new(1., -1.),
+            col_end: Vec2::new(-1., 1.),
+            row_pixel_count: 16,
+            col_pixel_count: 16,
+            serpentine: true,
+        }]
+    );
+    let mut control = ControlBuilder::new_2d()
+        .with_layout::<Layout>()
+        .with_pattern::<Noise2d<noise_fns::Perlin>>(NoiseParams {
+            ..Default::default()
+        })
+        .with_driver(apa102!(p))
+        .build();
+
+    control.set_brightness(0.1);
+
+    loop {
+        let elapsed_in_ms = elapsed().as_millis();
+        control.tick(elapsed_in_ms).unwrap();
+    }
+}
+```
+
+</details>
+
+#### Embedded: 1D WS2812 Strip with Rainbow Pattern
+
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561502?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+
+<details>
+<summary>
+    Click to see code
+</summary>
+
+```rust
+#![no_std]
+#![no_main]
+
+use blinksy::{
+    layout::Layout1d,
+    layout1d,
+    patterns::rainbow::{Rainbow, RainbowParams},
+    ControlBuilder,
+};
+use gledopto::{board, elapsed, main, ws2812};
+
+#[main]
+fn main() -> ! {
+    let p = board!();
+
+    layout1d!(Layout, 60 * 5);
+
+    let mut control = ControlBuilder::new_1d()
+        .with_layout::<Layout>()
+        .with_pattern::<Rainbow>(RainbowParams {
+            ..Default::default()
+        })
+        .with_driver(ws2812!(p, Layout::PIXEL_COUNT))
+        .build();
+
+    control.set_brightness(0.2);
+
+    loop {
+        let elapsed_in_ms = elapsed().as_millis();
+        control.tick(elapsed_in_ms).unwrap();
+    }
+}
+```
+
+</details>
 
 ## How to get started with Blinksy
 
-1. [Define your LED layout](#define-your-led-layout)
-2. [Create your visual pattern](#create-your-visual-pattern)
-3. [Setup your LED driver](#setup-your-led-driver)
+1. [Define your LED layout](#Define-your-LED-layout)
+2. [Create your visual pattern](#Create-your-visual-pattern)
+3. [Setup your LED driver](#Setup-your-LED-driver)
 
 ### Define your LED layout
 
-First you define the arrangement of your LEDs in space, with a struct that implements either the [`Layout1d`](https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout1d.html), [`Layout2d`](https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout2d.html), or [`Layout3d`](https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout13d.html) traits. To make this easy, we use either the [`layout1d`](https://docs.rs/blinksy/0.1.0/blinksy/macro.layout1d.html), [`layout2d`](https://docs.rs/blinksy/0.1.0/blinksy/macro.layout2d.html), or [`layout3d`](https://docs.rs/blinksy/0.1.0/blinksy/macro.layout3d.html) macro, respectively.
+First you define the [layout][layout] of your LEDs in space, with a struct that implements either the [`Layout1d`][Layout1d], [`Layout2d`][Layout2d], and soon `Layout3d` traits.
+
+To make this easy, we use either the [`layout1d`][layout1d], [`layout2d`][layout2d], or soon `layout3d` macro, respectively.
 
 These traits provide a `PIXEL_COUNT` constant, which is the number of LEDs, and a `.points()` method, which maps each LED pixel into a 1D, 2D, or 3D space between -1.0 and 1.0.
+
+[layout]: https://docs.rs/blinksy/0.1.0/blinksy/layout/index.html
+[Layout1d]: https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout1d.html
+[Layout2d]: https://docs.rs/blinksy/0.1.0/blinksy/layout/trait.Layout2d.html
+[layout1d]: https://docs.rs/blinksy/0.1.0/blinksy/macro.layout1d.html
+[layout2d]: https://docs.rs/blinksy/0.1.0/blinksy/macro.layout2d.html
 
 #### 1D layouts
 
@@ -144,15 +248,11 @@ layout2d!(
 );
 ```
 
-#### 3D layouts
-
-For a 3D layout, you need to define your 3D shapes: points, lines, grids, arcs, splines, etc.
-
-TODO
-
 ### Create your visual pattern
 
-Finally, we define the visual pattern we want to display, using the [`Pattern`](https://docs.rs/blinksy/0.1.0/blinksy/pattern/index.html) trait.
+Finally, we define the visual pattern we want to display, using the [`Pattern`][Pattern] trait.
+
+[Pattern]: https://docs.rs/blinksy/0.1.0/blinksy/pattern/index.html
 
 ```rust
 pub trait Pattern<Dim, Layout>
