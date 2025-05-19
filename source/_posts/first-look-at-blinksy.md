@@ -252,6 +252,10 @@ layout2d!(
 );
 ```
 
+<div style="text-align: center">
+  <img src="/first-look-at-blinksy/layout-2d-points.svg" alt="Layout 2d points" width="100%" />
+</div>
+
 ### Create your visual pattern
 
 Finally, we define the visual pattern we want to display, using the [`Pattern`][Pattern] trait.

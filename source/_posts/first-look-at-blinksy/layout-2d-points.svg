@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 620 620"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    .title-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 16px;
+      text-anchor: middle;
+      font-weight: bold;
+      fill: #111;
+    }
+    .tick-line {
+      stroke: black;
+      stroke-width: 1.5;
+    }
+    .tick-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      fill: #333;
+    }
+    .axis-line {
+      stroke: black;
+      stroke-width: 2;
+    }
+    .axis-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 24px;
+      text-anchor: middle;
+      font-weight: bold;
+      dominant-baseline: middle;
+      fill: #333;
+    }
+    .pixel {
+      stroke: #222;
+      stroke-width: 0.5;
+    }
+  </style>
+  <defs>
+    <marker
+      id="seqArrow"
+      viewBox="0 0 10 10"
+      refX="10"
+      refY="5"
+      markerWidth="8"
+      markerHeight="6"
+      orient="auto-start-reverse"
+    >
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4A90E2" />
+    </marker>
+  </defs>
+
+  <title>2D LED Grid Layout (16x16 Pixels)</title>
+
+  <text x="310" y="30" class="title-text">
+    2D LED Grid Layout (16x16 Pixels)
+  </text>
+
+  <!-- Constants for manual calculation reference
+    gridSvgXStart = 70
+    gridSvgYStart = 70
+    gridSvgWidth = 480 (maps to logical width of 2.0)
+    gridSvgHeight = 480 (maps to logical height of 2.0)
+    gridSvgXEnd = 550
+    gridSvgYEnd = 550
+    pixelRadius = 12
+    mapLogicalToSvgX(lx) = 70 + (lx + 1.0) * 240
+    mapLogicalToSvgY(ly) = 70 + (1.0 - ly) * 240 (SVG Y is inverted)
+  -->
+
+  <!-- X-Axis -->
+  <g id="x-axis">
+    <line x1="70" y1="580" x2="550" y2="580" class="axis-line" />
+
+    <!-- Ticks and Labels -->
+    <!-- -1.0 Tick -->
+    <line x1="70" y1="570" x2="70" y2="590" class="tick-line" />
+    <text x="70" y="605" class="tick-text">−1.0</text>
+    <!-- -0.5 Tick -->
+    <line x1="190" y1="574" x2="190" y2="586" class="tick-line" />
+    <text x="190" y="605" class="tick-text">−0.5</text>
+    <!-- 0.0 Tick -->
+    <line x1="310" y1="570" x2="310" y2="590" class="tick-line" />
+    <text x="310" y="605" class="tick-text">0.0</text>
+    <!-- 0.5 Tick -->
+    <line x1="430" y1="574" x2="430" y2="586" class="tick-line" />
+    <text x="430" y="605" class="tick-text">0.5</text>
+    <!-- 1.0 Tick -->
+    <line x1="550" y1="570" x2="550" y2="590" class="tick-line" />
+    <text x="550" y="605" class="tick-text">1.0</text>
+
+    <!-- Axis Labels -->
+    <text x="50" y="580" class="axis-text" text-anchor="middle">-x</text>
+    <text x="570" y="580" class="axis-text" text-anchor="middle">x</text>
+  </g>
+
+  <!-- Y-Axis -->
+  <g id="y-axis">
+    <line x1="40" y1="70" x2="40" y2="550" class="axis-line" />
+
+    <!-- Ticks and Labels -->
+    <!-- 1.0 Tick (Top) -->
+    <line x1="30" y1="70" x2="50" y2="70" class="tick-line" />
+    <text x="15" y="70" class="tick-text" text-anchor="end">1.0</text>
+    <!-- 0.5 Tick -->
+    <line x1="34" y1="190" x2="46" y2="190" class="tick-line" />
+    <text x="15" y="190" class="tick-text" text-anchor="end">0.5</text>
+    <!-- 0.0 Tick -->
+    <line x1="30" y1="310" x2="50" y2="310" class="tick-line" />
+    <text x="15" y="310" class="tick-text" text-anchor="end">0.0</text>
+    <!-- -0.5 Tick -->
+    <line x1="34" y1="430" x2="46" y2="430" class="tick-line" />
+    <text x="15" y="430" class="tick-text" text-anchor="end">−0.5</text>
+    <!-- -1.0 Tick (Bottom) -->
+    <line x1="30" y1="550" x2="50" y2="550" class="tick-line" />
+    <text x="15" y="550" class="tick-text" text-anchor="end">−1.0</text>
+
+    <!-- Axis Labels -->
+    <text x="40" y="50" class="axis-text" text-anchor="middle">y</text>
+    <text x="35" y="565" class="axis-text" text-anchor="middle">-y</text>
+  </g>
+
+  <!-- LED Pixels -->
+  <g id="led-pixels">
+    <circle cx="70.00" cy="550.00" r="8" class="pixel" style="fill: hsl(0.00, 100%, 50%);" />
+    <circle cx="102.00" cy="550.00" r="8" class="pixel" style="fill: hsl(1.41, 100%, 50%);" />
+    <circle cx="134.00" cy="550.00" r="8" class="pixel" style="fill: hsl(2.82, 100%, 50%);" />
+    <circle cx="166.00" cy="550.00" r="8" class="pixel" style="fill: hsl(4.24, 100%, 50%);" />
+    <circle cx="198.00" cy="550.00" r="8" class="pixel" style="fill: hsl(5.65, 100%, 50%);" />
+    <circle cx="230.00" cy="550.00" r="8" class="pixel" style="fill: hsl(7.06, 100%, 50%);" />
+    <circle cx="262.00" cy="550.00" r="8" class="pixel" style="fill: hsl(8.47, 100%, 50%);" />
+    <circle cx="294.00" cy="550.00" r="8" class="pixel" style="fill: hsl(9.88, 100%, 50%);" />
+    <circle cx="326.00" cy="550.00" r="8" class="pixel" style="fill: hsl(11.29, 100%, 50%);" />
+    <circle cx="358.00" cy="550.00" r="8" class="pixel" style="fill: hsl(12.71, 100%, 50%);" />
+    <circle cx="390.00" cy="550.00" r="8" class="pixel" style="fill: hsl(14.12, 100%, 50%);" />
+    <circle cx="422.00" cy="550.00" r="8" class="pixel" style="fill: hsl(15.53, 100%, 50%);" />
+    <circle cx="454.00" cy="550.00" r="8" class="pixel" style="fill: hsl(16.94, 100%, 50%);" />
+    <circle cx="486.00" cy="550.00" r="8" class="pixel" style="fill: hsl(18.35, 100%, 50%);" />
+    <circle cx="518.00" cy="550.00" r="8" class="pixel" style="fill: hsl(19.76, 100%, 50%);" />
+    <circle cx="550.00" cy="550.00" r="8" class="pixel" style="fill: hsl(21.18, 100%, 50%);" />
+    <circle cx="550.00" cy="518.00" r="8" class="pixel" style="fill: hsl(22.59, 100%, 50%);" />
+    <circle cx="518.00" cy="518.00" r="8" class="pixel" style="fill: hsl(24.00, 100%, 50%);" />
+    <circle cx="486.00" cy="518.00" r="8" class="pixel" style="fill: hsl(25.41, 100%, 50%);" />
+    <circle cx="454.00" cy="518.00" r="8" class="pixel" style="fill: hsl(26.82, 100%, 50%);" />
+    <circle cx="422.00" cy="518.00" r="8" class="pixel" style="fill: hsl(28.24, 100%, 50%);" />
+    <circle cx="390.00" cy="518.00" r="8" class="pixel" style="fill: hsl(29.65, 100%, 50%);" />
+    <circle cx="358.00" cy="518.00" r="8" class="pixel" style="fill: hsl(31.06, 100%, 50%);" />
+    <circle cx="326.00" cy="518.00" r="8" class="pixel" style="fill: hsl(32.47, 100%, 50%);" />
+    <circle cx="294.00" cy="518.00" r="8" class="pixel" style="fill: hsl(33.88, 100%, 50%);" />
+    <circle cx="262.00" cy="518.00" r="8" class="pixel" style="fill: hsl(35.29, 100%, 50%);" />
+    <circle cx="230.00" cy="518.00" r="8" class="pixel" style="fill: hsl(36.71, 100%, 50%);" />
+    <circle cx="198.00" cy="518.00" r="8" class="pixel" style="fill: hsl(38.12, 100%, 50%);" />
+    <circle cx="166.00" cy="518.00" r="8" class="pixel" style="fill: hsl(39.53, 100%, 50%);" />
+    <circle cx="134.00" cy="518.00" r="8" class="pixel" style="fill: hsl(40.94, 100%, 50%);" />
+    <circle cx="102.00" cy="518.00" r="8" class="pixel" style="fill: hsl(42.35, 100%, 50%);" />
+    <circle cx="70.00" cy="518.00" r="8" class="pixel" style="fill: hsl(43.76, 100%, 50%);" />
+    <circle cx="70.00" cy="486.00" r="8" class="pixel" style="fill: hsl(45.18, 100%, 50%);" />
+    <circle cx="102.00" cy="486.00" r="8" class="pixel" style="fill: hsl(46.59, 100%, 50%);" />
+    <circle cx="134.00" cy="486.00" r="8" class="pixel" style="fill: hsl(48.00, 100%, 50%);" />
+    <circle cx="166.00" cy="486.00" r="8" class="pixel" style="fill: hsl(49.41, 100%, 50%);" />
+    <circle cx="198.00" cy="486.00" r="8" class="pixel" style="fill: hsl(50.82, 100%, 50%);" />
+    <circle cx="230.00" cy="486.00" r="8" class="pixel" style="fill: hsl(52.24, 100%, 50%);" />
+    <circle cx="262.00" cy="486.00" r="8" class="pixel" style="fill: hsl(53.65, 100%, 50%);" />
+    <circle cx="294.00" cy="486.00" r="8" class="pixel" style="fill: hsl(55.06, 100%, 50%);" />
+    <circle cx="326.00" cy="486.00" r="8" class="pixel" style="fill: hsl(56.47, 100%, 50%);" />
+    <circle cx="358.00" cy="486.00" r="8" class="pixel" style="fill: hsl(57.88, 100%, 50%);" />
+    <circle cx="390.00" cy="486.00" r="8" class="pixel" style="fill: hsl(59.29, 100%, 50%);" />
+    <circle cx="422.00" cy="486.00" r="8" class="pixel" style="fill: hsl(60.71, 100%, 50%);" />
+    <circle cx="454.00" cy="486.00" r="8" class="pixel" style="fill: hsl(62.12, 100%, 50%);" />
+    <circle cx="486.00" cy="486.00" r="8" class="pixel" style="fill: hsl(63.53, 100%, 50%);" />
+    <circle cx="518.00" cy="486.00" r="8" class="pixel" style="fill: hsl(64.94, 100%, 50%);" />
+    <circle cx="550.00" cy="486.00" r="8" class="pixel" style="fill: hsl(66.35, 100%, 50%);" />
+    <circle cx="550.00" cy="454.00" r="8" class="pixel" style="fill: hsl(67.76, 100%, 50%);" />
+    <circle cx="518.00" cy="454.00" r="8" class="pixel" style="fill: hsl(69.18, 100%, 50%);" />
+    <circle cx="486.00" cy="454.00" r="8" class="pixel" style="fill: hsl(70.59, 100%, 50%);" />
+    <circle cx="454.00" cy="454.00" r="8" class="pixel" style="fill: hsl(72.00, 100%, 50%);" />
+    <circle cx="422.00" cy="454.00" r="8" class="pixel" style="fill: hsl(73.41, 100%, 50%);" />
+    <circle cx="390.00" cy="454.00" r="8" class="pixel" style="fill: hsl(74.82, 100%, 50%);" />
+    <circle cx="358.00" cy="454.00" r="8" class="pixel" style="fill: hsl(76.24, 100%, 50%);" />
+    <circle cx="326.00" cy="454.00" r="8" class="pixel" style="fill: hsl(77.65, 100%, 50%);" />
+    <circle cx="294.00" cy="454.00" r="8" class="pixel" style="fill: hsl(79.06, 100%, 50%);" />
+    <circle cx="262.00" cy="454.00" r="8" class="pixel" style="fill: hsl(80.47, 100%, 50%);" />
+    <circle cx="230.00" cy="454.00" r="8" class="pixel" style="fill: hsl(81.88, 100%, 50%);" />
+    <circle cx="198.00" cy="454.00" r="8" class="pixel" style="fill: hsl(83.29, 100%, 50%);" />
+    <circle cx="166.00" cy="454.00" r="8" class="pixel" style="fill: hsl(84.71, 100%, 50%);" />
+    <circle cx="134.00" cy="454.00" r="8" class="pixel" style="fill: hsl(86.12, 100%, 50%);" />
+    <circle cx="102.00" cy="454.00" r="8" class="pixel" style="fill: hsl(87.53, 100%, 50%);" />
+    <circle cx="70.00" cy="454.00" r="8" class="pixel" style="fill: hsl(88.94, 100%, 50%);" />
+    <circle cx="70.00" cy="422.00" r="8" class="pixel" style="fill: hsl(90.35, 100%, 50%);" />
+    <circle cx="102.00" cy="422.00" r="8" class="pixel" style="fill: hsl(91.76, 100%, 50%);" />
+    <circle cx="134.00" cy="422.00" r="8" class="pixel" style="fill: hsl(93.18, 100%, 50%);" />
+    <circle cx="166.00" cy="422.00" r="8" class="pixel" style="fill: hsl(94.59, 100%, 50%);" />
+    <circle cx="198.00" cy="422.00" r="8" class="pixel" style="fill: hsl(96.00, 100%, 50%);" />
+    <circle cx="230.00" cy="422.00" r="8" class="pixel" style="fill: hsl(97.41, 100%, 50%);" />
+    <circle cx="262.00" cy="422.00" r="8" class="pixel" style="fill: hsl(98.82, 100%, 50%);" />
+    <circle cx="294.00" cy="422.00" r="8" class="pixel" style="fill: hsl(100.24, 100%, 50%);" />
+    <circle cx="326.00" cy="422.00" r="8" class="pixel" style="fill: hsl(101.65, 100%, 50%);" />
+    <circle cx="358.00" cy="422.00" r="8" class="pixel" style="fill: hsl(103.06, 100%, 50%);" />
+    <circle cx="390.00" cy="422.00" r="8" class="pixel" style="fill: hsl(104.47, 100%, 50%);" />
+    <circle cx="422.00" cy="422.00" r="8" class="pixel" style="fill: hsl(105.88, 100%, 50%);" />
+    <circle cx="454.00" cy="422.00" r="8" class="pixel" style="fill: hsl(107.29, 100%, 50%);" />
+    <circle cx="486.00" cy="422.00" r="8" class="pixel" style="fill: hsl(108.71, 100%, 50%);" />
+    <circle cx="518.00" cy="422.00" r="8" class="pixel" style="fill: hsl(110.12, 100%, 50%);" />
+    <circle cx="550.00" cy="422.00" r="8" class="pixel" style="fill: hsl(111.53, 100%, 50%);" />
+    <circle cx="550.00" cy="390.00" r="8" class="pixel" style="fill: hsl(112.94, 100%, 50%);" />
+    <circle cx="518.00" cy="390.00" r="8" class="pixel" style="fill: hsl(114.35, 100%, 50%);" />
+    <circle cx="486.00" cy="390.00" r="8" class="pixel" style="fill: hsl(115.76, 100%, 50%);" />
+    <circle cx="454.00" cy="390.00" r="8" class="pixel" style="fill: hsl(117.18, 100%, 50%);" />
+    <circle cx="422.00" cy="390.00" r="8" class="pixel" style="fill: hsl(118.59, 100%, 50%);" />
+    <circle cx="390.00" cy="390.00" r="8" class="pixel" style="fill: hsl(120.00, 100%, 50%);" />
+    <circle cx="358.00" cy="390.00" r="8" class="pixel" style="fill: hsl(121.41, 100%, 50%);" />
+    <circle cx="326.00" cy="390.00" r="8" class="pixel" style="fill: hsl(122.82, 100%, 50%);" />
+    <circle cx="294.00" cy="390.00" r="8" class="pixel" style="fill: hsl(124.24, 100%, 50%);" />
+    <circle cx="262.00" cy="390.00" r="8" class="pixel" style="fill: hsl(125.65, 100%, 50%);" />
+    <circle cx="230.00" cy="390.00" r="8" class="pixel" style="fill: hsl(127.06, 100%, 50%);" />
+    <circle cx="198.00" cy="390.00" r="8" class="pixel" style="fill: hsl(128.47, 100%, 50%);" />
+    <circle cx="166.00" cy="390.00" r="8" class="pixel" style="fill: hsl(129.88, 100%, 50%);" />
+    <circle cx="134.00" cy="390.00" r="8" class="pixel" style="fill: hsl(131.29, 100%, 50%);" />
+    <circle cx="102.00" cy="390.00" r="8" class="pixel" style="fill: hsl(132.71, 100%, 50%);" />
+    <circle cx="70.00" cy="390.00" r="8" class="pixel" style="fill: hsl(134.12, 100%, 50%);" />
+    <circle cx="70.00" cy="358.00" r="8" class="pixel" style="fill: hsl(135.53, 100%, 50%);" />
+    <circle cx="102.00" cy="358.00" r="8" class="pixel" style="fill: hsl(136.94, 100%, 50%);" />
+    <circle cx="134.00" cy="358.00" r="8" class="pixel" style="fill: hsl(138.35, 100%, 50%);" />
+    <circle cx="166.00" cy="358.00" r="8" class="pixel" style="fill: hsl(139.76, 100%, 50%);" />
+    <circle cx="198.00" cy="358.00" r="8" class="pixel" style="fill: hsl(141.18, 100%, 50%);" />
+    <circle cx="230.00" cy="358.00" r="8" class="pixel" style="fill: hsl(142.59, 100%, 50%);" />
+    <circle cx="262.00" cy="358.00" r="8" class="pixel" style="fill: hsl(144.00, 100%, 50%);" />
+    <circle cx="294.00" cy="358.00" r="8" class="pixel" style="fill: hsl(145.41, 100%, 50%);" />
+    <circle cx="326.00" cy="358.00" r="8" class="pixel" style="fill: hsl(146.82, 100%, 50%);" />
+    <circle cx="358.00" cy="358.00" r="8" class="pixel" style="fill: hsl(148.24, 100%, 50%);" />
+    <circle cx="390.00" cy="358.00" r="8" class="pixel" style="fill: hsl(149.65, 100%, 50%);" />
+    <circle cx="422.00" cy="358.00" r="8" class="pixel" style="fill: hsl(151.06, 100%, 50%);" />
+    <circle cx="454.00" cy="358.00" r="8" class="pixel" style="fill: hsl(152.47, 100%, 50%);" />
+    <circle cx="486.00" cy="358.00" r="8" class="pixel" style="fill: hsl(153.88, 100%, 50%);" />
+    <circle cx="518.00" cy="358.00" r="8" class="pixel" style="fill: hsl(155.29, 100%, 50%);" />
+    <circle cx="550.00" cy="358.00" r="8" class="pixel" style="fill: hsl(156.71, 100%, 50%);" />
+    <circle cx="550.00" cy="326.00" r="8" class="pixel" style="fill: hsl(158.12, 100%, 50%);" />
+    <circle cx="518.00" cy="326.00" r="8" class="pixel" style="fill: hsl(159.53, 100%, 50%);" />
+    <circle cx="486.00" cy="326.00" r="8" class="pixel" style="fill: hsl(160.94, 100%, 50%);" />
+    <circle cx="454.00" cy="326.00" r="8" class="pixel" style="fill: hsl(162.35, 100%, 50%);" />
+    <circle cx="422.00" cy="326.00" r="8" class="pixel" style="fill: hsl(163.76, 100%, 50%);" />
+    <circle cx="390.00" cy="326.00" r="8" class="pixel" style="fill: hsl(165.18, 100%, 50%);" />
+    <circle cx="358.00" cy="326.00" r="8" class="pixel" style="fill: hsl(166.59, 100%, 50%);" />
+    <circle cx="326.00" cy="326.00" r="8" class="pixel" style="fill: hsl(168.00, 100%, 50%);" />
+    <circle cx="294.00" cy="326.00" r="8" class="pixel" style="fill: hsl(169.41, 100%, 50%);" />
+    <circle cx="262.00" cy="326.00" r="8" class="pixel" style="fill: hsl(170.82, 100%, 50%);" />
+    <circle cx="230.00" cy="326.00" r="8" class="pixel" style="fill: hsl(172.24, 100%, 50%);" />
+    <circle cx="198.00" cy="326.00" r="8" class="pixel" style="fill: hsl(173.65, 100%, 50%);" />
+    <circle cx="166.00" cy="326.00" r="8" class="pixel" style="fill: hsl(175.06, 100%, 50%);" />
+    <circle cx="134.00" cy="326.00" r="8" class="pixel" style="fill: hsl(176.47, 100%, 50%);" />
+    <circle cx="102.00" cy="326.00" r="8" class="pixel" style="fill: hsl(177.88, 100%, 50%);" />
+    <circle cx="70.00" cy="326.00" r="8" class="pixel" style="fill: hsl(179.29, 100%, 50%);" />
+    <circle cx="70.00" cy="294.00" r="8" class="pixel" style="fill: hsl(180.71, 100%, 50%);" />
+    <circle cx="102.00" cy="294.00" r="8" class="pixel" style="fill: hsl(182.12, 100%, 50%);" />
+    <circle cx="134.00" cy="294.00" r="8" class="pixel" style="fill: hsl(183.53, 100%, 50%);" />
+    <circle cx="166.00" cy="294.00" r="8" class="pixel" style="fill: hsl(184.94, 100%, 50%);" />
+    <circle cx="198.00" cy="294.00" r="8" class="pixel" style="fill: hsl(186.35, 100%, 50%);" />
+    <circle cx="230.00" cy="294.00" r="8" class="pixel" style="fill: hsl(187.76, 100%, 50%);" />
+    <circle cx="262.00" cy="294.00" r="8" class="pixel" style="fill: hsl(189.18, 100%, 50%);" />
+    <circle cx="294.00" cy="294.00" r="8" class="pixel" style="fill: hsl(190.59, 100%, 50%);" />
+    <circle cx="326.00" cy="294.00" r="8" class="pixel" style="fill: hsl(192.00, 100%, 50%);" />
+    <circle cx="358.00" cy="294.00" r="8" class="pixel" style="fill: hsl(193.41, 100%, 50%);" />
+    <circle cx="390.00" cy="294.00" r="8" class="pixel" style="fill: hsl(194.82, 100%, 50%);" />
+    <circle cx="422.00" cy="294.00" r="8" class="pixel" style="fill: hsl(196.24, 100%, 50%);" />
+    <circle cx="454.00" cy="294.00" r="8" class="pixel" style="fill: hsl(197.65, 100%, 50%);" />
+    <circle cx="486.00" cy="294.00" r="8" class="pixel" style="fill: hsl(199.06, 100%, 50%);" />
+    <circle cx="518.00" cy="294.00" r="8" class="pixel" style="fill: hsl(200.47, 100%, 50%);" />
+    <circle cx="550.00" cy="294.00" r="8" class="pixel" style="fill: hsl(201.88, 100%, 50%);" />
+    <circle cx="550.00" cy="262.00" r="8" class="pixel" style="fill: hsl(203.29, 100%, 50%);" />
+    <circle cx="518.00" cy="262.00" r="8" class="pixel" style="fill: hsl(204.71, 100%, 50%);" />
+    <circle cx="486.00" cy="262.00" r="8" class="pixel" style="fill: hsl(206.12, 100%, 50%);" />
+    <circle cx="454.00" cy="262.00" r="8" class="pixel" style="fill: hsl(207.53, 100%, 50%);" />
+    <circle cx="422.00" cy="262.00" r="8" class="pixel" style="fill: hsl(208.94, 100%, 50%);" />
+    <circle cx="390.00" cy="262.00" r="8" class="pixel" style="fill: hsl(210.35, 100%, 50%);" />
+    <circle cx="358.00" cy="262.00" r="8" class="pixel" style="fill: hsl(211.76, 100%, 50%);" />
+    <circle cx="326.00" cy="262.00" r="8" class="pixel" style="fill: hsl(213.18, 100%, 50%);" />
+    <circle cx="294.00" cy="262.00" r="8" class="pixel" style="fill: hsl(214.59, 100%, 50%);" />
+    <circle cx="262.00" cy="262.00" r="8" class="pixel" style="fill: hsl(216.00, 100%, 50%);" />
+    <circle cx="230.00" cy="262.00" r="8" class="pixel" style="fill: hsl(217.41, 100%, 50%);" />
+    <circle cx="198.00" cy="262.00" r="8" class="pixel" style="fill: hsl(218.82, 100%, 50%);" />
+    <circle cx="166.00" cy="262.00" r="8" class="pixel" style="fill: hsl(220.24, 100%, 50%);" />
+    <circle cx="134.00" cy="262.00" r="8" class="pixel" style="fill: hsl(221.65, 100%, 50%);" />
+    <circle cx="102.00" cy="262.00" r="8" class="pixel" style="fill: hsl(223.06, 100%, 50%);" />
+    <circle cx="70.00" cy="262.00" r="8" class="pixel" style="fill: hsl(224.47, 100%, 50%);" />
+    <circle cx="70.00" cy="230.00" r="8" class="pixel" style="fill: hsl(225.88, 100%, 50%);" />
+    <circle cx="102.00" cy="230.00" r="8" class="pixel" style="fill: hsl(227.29, 100%, 50%);" />
+    <circle cx="134.00" cy="230.00" r="8" class="pixel" style="fill: hsl(228.71, 100%, 50%);" />
+    <circle cx="166.00" cy="230.00" r="8" class="pixel" style="fill: hsl(230.12, 100%, 50%);" />
+    <circle cx="198.00" cy="230.00" r="8" class="pixel" style="fill: hsl(231.53, 100%, 50%);" />
+    <circle cx="230.00" cy="230.00" r="8" class="pixel" style="fill: hsl(232.94, 100%, 50%);" />
+    <circle cx="262.00" cy="230.00" r="8" class="pixel" style="fill: hsl(234.35, 100%, 50%);" />
+    <circle cx="294.00" cy="230.00" r="8" class="pixel" style="fill: hsl(235.76, 100%, 50%);" />
+    <circle cx="326.00" cy="230.00" r="8" class="pixel" style="fill: hsl(237.18, 100%, 50%);" />
+    <circle cx="358.00" cy="230.00" r="8" class="pixel" style="fill: hsl(238.59, 100%, 50%);" />
+    <circle cx="390.00" cy="230.00" r="8" class="pixel" style="fill: hsl(240.00, 100%, 50%);" />
+    <circle cx="422.00" cy="230.00" r="8" class="pixel" style="fill: hsl(241.41, 100%, 50%);" />
+    <circle cx="454.00" cy="230.00" r="8" class="pixel" style="fill: hsl(242.82, 100%, 50%);" />
+    <circle cx="486.00" cy="230.00" r="8" class="pixel" style="fill: hsl(244.24, 100%, 50%);" />
+    <circle cx="518.00" cy="230.00" r="8" class="pixel" style="fill: hsl(245.65, 100%, 50%);" />
+    <circle cx="550.00" cy="230.00" r="8" class="pixel" style="fill: hsl(247.06, 100%, 50%);" />
+    <circle cx="550.00" cy="198.00" r="8" class="pixel" style="fill: hsl(248.47, 100%, 50%);" />
+    <circle cx="518.00" cy="198.00" r="8" class="pixel" style="fill: hsl(249.88, 100%, 50%);" />
+    <circle cx="486.00" cy="198.00" r="8" class="pixel" style="fill: hsl(251.29, 100%, 50%);" />
+    <circle cx="454.00" cy="198.00" r="8" class="pixel" style="fill: hsl(252.71, 100%, 50%);" />
+    <circle cx="422.00" cy="198.00" r="8" class="pixel" style="fill: hsl(254.12, 100%, 50%);" />
+    <circle cx="390.00" cy="198.00" r="8" class="pixel" style="fill: hsl(255.53, 100%, 50%);" />
+    <circle cx="358.00" cy="198.00" r="8" class="pixel" style="fill: hsl(256.94, 100%, 50%);" />
+    <circle cx="326.00" cy="198.00" r="8" class="pixel" style="fill: hsl(258.35, 100%, 50%);" />
+    <circle cx="294.00" cy="198.00" r="8" class="pixel" style="fill: hsl(259.76, 100%, 50%);" />
+    <circle cx="262.00" cy="198.00" r="8" class="pixel" style="fill: hsl(261.18, 100%, 50%);" />
+    <circle cx="230.00" cy="198.00" r="8" class="pixel" style="fill: hsl(262.59, 100%, 50%);" />
+    <circle cx="198.00" cy="198.00" r="8" class="pixel" style="fill: hsl(264.00, 100%, 50%);" />
+    <circle cx="166.00" cy="198.00" r="8" class="pixel" style="fill: hsl(265.41, 100%, 50%);" />
+    <circle cx="134.00" cy="198.00" r="8" class="pixel" style="fill: hsl(266.82, 100%, 50%);" />
+    <circle cx="102.00" cy="198.00" r="8" class="pixel" style="fill: hsl(268.24, 100%, 50%);" />
+    <circle cx="70.00" cy="198.00" r="8" class="pixel" style="fill: hsl(269.65, 100%, 50%);" />
+    <circle cx="70.00" cy="166.00" r="8" class="pixel" style="fill: hsl(271.06, 100%, 50%);" />
+    <circle cx="102.00" cy="166.00" r="8" class="pixel" style="fill: hsl(272.47, 100%, 50%);" />
+    <circle cx="134.00" cy="166.00" r="8" class="pixel" style="fill: hsl(273.88, 100%, 50%);" />
+    <circle cx="166.00" cy="166.00" r="8" class="pixel" style="fill: hsl(275.29, 100%, 50%);" />
+    <circle cx="198.00" cy="166.00" r="8" class="pixel" style="fill: hsl(276.71, 100%, 50%);" />
+    <circle cx="230.00" cy="166.00" r="8" class="pixel" style="fill: hsl(278.12, 100%, 50%);" />
+    <circle cx="262.00" cy="166.00" r="8" class="pixel" style="fill: hsl(279.53, 100%, 50%);" />
+    <circle cx="294.00" cy="166.00" r="8" class="pixel" style="fill: hsl(280.94, 100%, 50%);" />
+    <circle cx="326.00" cy="166.00" r="8" class="pixel" style="fill: hsl(282.35, 100%, 50%);" />
+    <circle cx="358.00" cy="166.00" r="8" class="pixel" style="fill: hsl(283.76, 100%, 50%);" />
+    <circle cx="390.00" cy="166.00" r="8" class="pixel" style="fill: hsl(285.18, 100%, 50%);" />
+    <circle cx="422.00" cy="166.00" r="8" class="pixel" style="fill: hsl(286.59, 100%, 50%);" />
+    <circle cx="454.00" cy="166.00" r="8" class="pixel" style="fill: hsl(288.00, 100%, 50%);" />
+    <circle cx="486.00" cy="166.00" r="8" class="pixel" style="fill: hsl(289.41, 100%, 50%);" />
+    <circle cx="518.00" cy="166.00" r="8" class="pixel" style="fill: hsl(290.82, 100%, 50%);" />
+    <circle cx="550.00" cy="166.00" r="8" class="pixel" style="fill: hsl(292.24, 100%, 50%);" />
+    <circle cx="550.00" cy="134.00" r="8" class="pixel" style="fill: hsl(293.65, 100%, 50%);" />
+    <circle cx="518.00" cy="134.00" r="8" class="pixel" style="fill: hsl(295.06, 100%, 50%);" />
+    <circle cx="486.00" cy="134.00" r="8" class="pixel" style="fill: hsl(296.47, 100%, 50%);" />
+    <circle cx="454.00" cy="134.00" r="8" class="pixel" style="fill: hsl(297.88, 100%, 50%);" />
+    <circle cx="422.00" cy="134.00" r="8" class="pixel" style="fill: hsl(299.29, 100%, 50%);" />
+    <circle cx="390.00" cy="134.00" r="8" class="pixel" style="fill: hsl(300.71, 100%, 50%);" />
+    <circle cx="358.00" cy="134.00" r="8" class="pixel" style="fill: hsl(302.12, 100%, 50%);" />
+    <circle cx="326.00" cy="134.00" r="8" class="pixel" style="fill: hsl(303.53, 100%, 50%);" />
+    <circle cx="294.00" cy="134.00" r="8" class="pixel" style="fill: hsl(304.94, 100%, 50%);" />
+    <circle cx="262.00" cy="134.00" r="8" class="pixel" style="fill: hsl(306.35, 100%, 50%);" />
+    <circle cx="230.00" cy="134.00" r="8" class="pixel" style="fill: hsl(307.76, 100%, 50%);" />
+    <circle cx="198.00" cy="134.00" r="8" class="pixel" style="fill: hsl(309.18, 100%, 50%);" />
+    <circle cx="166.00" cy="134.00" r="8" class="pixel" style="fill: hsl(310.59, 100%, 50%);" />
+    <circle cx="134.00" cy="134.00" r="8" class="pixel" style="fill: hsl(312.00, 100%, 50%);" />
+    <circle cx="102.00" cy="134.00" r="8" class="pixel" style="fill: hsl(313.41, 100%, 50%);" />
+    <circle cx="70.00" cy="134.00" r="8" class="pixel" style="fill: hsl(314.82, 100%, 50%);" />
+    <circle cx="70.00" cy="102.00" r="8" class="pixel" style="fill: hsl(316.24, 100%, 50%);" />
+    <circle cx="102.00" cy="102.00" r="8" class="pixel" style="fill: hsl(317.65, 100%, 50%);" />
+    <circle cx="134.00" cy="102.00" r="8" class="pixel" style="fill: hsl(319.06, 100%, 50%);" />
+    <circle cx="166.00" cy="102.00" r="8" class="pixel" style="fill: hsl(320.47, 100%, 50%);" />
+    <circle cx="198.00" cy="102.00" r="8" class="pixel" style="fill: hsl(321.88, 100%, 50%);" />
+    <circle cx="230.00" cy="102.00" r="8" class="pixel" style="fill: hsl(323.29, 100%, 50%);" />
+    <circle cx="262.00" cy="102.00" r="8" class="pixel" style="fill: hsl(324.71, 100%, 50%);" />
+    <circle cx="294.00" cy="102.00" r="8" class="pixel" style="fill: hsl(326.12, 100%, 50%);" />
+    <circle cx="326.00" cy="102.00" r="8" class="pixel" style="fill: hsl(327.53, 100%, 50%);" />
+    <circle cx="358.00" cy="102.00" r="8" class="pixel" style="fill: hsl(328.94, 100%, 50%);" />
+    <circle cx="390.00" cy="102.00" r="8" class="pixel" style="fill: hsl(330.35, 100%, 50%);" />
+    <circle cx="422.00" cy="102.00" r="8" class="pixel" style="fill: hsl(331.76, 100%, 50%);" />
+    <circle cx="454.00" cy="102.00" r="8" class="pixel" style="fill: hsl(333.18, 100%, 50%);" />
+    <circle cx="486.00" cy="102.00" r="8" class="pixel" style="fill: hsl(334.59, 100%, 50%);" />
+    <circle cx="518.00" cy="102.00" r="8" class="pixel" style="fill: hsl(336.00, 100%, 50%);" />
+    <circle cx="550.00" cy="102.00" r="8" class="pixel" style="fill: hsl(337.41, 100%, 50%);" />
+    <circle cx="550.00" cy="70.00" r="8" class="pixel" style="fill: hsl(338.82, 100%, 50%);" />
+    <circle cx="518.00" cy="70.00" r="8" class="pixel" style="fill: hsl(340.24, 100%, 50%);" />
+    <circle cx="486.00" cy="70.00" r="8" class="pixel" style="fill: hsl(341.65, 100%, 50%);" />
+    <circle cx="454.00" cy="70.00" r="8" class="pixel" style="fill: hsl(343.06, 100%, 50%);" />
+    <circle cx="422.00" cy="70.00" r="8" class="pixel" style="fill: hsl(344.47, 100%, 50%);" />
+    <circle cx="390.00" cy="70.00" r="8" class="pixel" style="fill: hsl(345.88, 100%, 50%);" />
+    <circle cx="358.00" cy="70.00" r="8" class="pixel" style="fill: hsl(347.29, 100%, 50%);" />
+    <circle cx="326.00" cy="70.00" r="8" class="pixel" style="fill: hsl(348.71, 100%, 50%);" />
+    <circle cx="294.00" cy="70.00" r="8" class="pixel" style="fill: hsl(350.12, 100%, 50%);" />
+    <circle cx="262.00" cy="70.00" r="8" class="pixel" style="fill: hsl(351.53, 100%, 50%);" />
+    <circle cx="230.00" cy="70.00" r="8" class="pixel" style="fill: hsl(352.94, 100%, 50%);" />
+    <circle cx="198.00" cy="70.00" r="8" class="pixel" style="fill: hsl(354.35, 100%, 50%);" />
+    <circle cx="166.00" cy="70.00" r="8" class="pixel" style="fill: hsl(355.76, 100%, 50%);" />
+    <circle cx="134.00" cy="70.00" r="8" class="pixel" style="fill: hsl(357.18, 100%, 50%);" />
+    <circle cx="102.00" cy="70.00" r="8" class="pixel" style="fill: hsl(358.59, 100%, 50%);" />
+    <circle cx="70.00" cy="70.00" r="8" class="pixel" style="fill: hsl(360.00, 100%, 50%);" />
+  </g>
+
+  <!-- Sequence Path -->
+  <g id="sequence-path">
+    <polyline
+      points="70.00,550.00 102.00,550.00 134.00,550.00 166.00,550.00 198.00,550.00 230.00,550.00 262.00,550.00 294.00,550.00 326.00,550.00 358.00,550.00 390.00,550.00 422.00,550.00 454.00,550.00 486.00,550.00 518.00,550.00 550.00,550.00 550.00,518.00 518.00,518.00 486.00,518.00 454.00,518.00 422.00,518.00 390.00,518.00 358.00,518.00 326.00,518.00 294.00,518.00 262.00,518.00 230.00,518.00 198.00,518.00 166.00,518.00 134.00,518.00 102.00,518.00 70.00,518.00 70.00,486.00 102.00,486.00 134.00,486.00 166.00,486.00 198.00,486.00 230.00,486.00 262.00,486.00 294.00,486.00 326.00,486.00 358.00,486.00 390.00,486.00 422.00,486.00 454.00,486.00 486.00,486.00 518.00,486.00 550.00,486.00 550.00,454.00 518.00,454.00 486.00,454.00 454.00,454.00 422.00,454.00 390.00,454.00 358.00,454.00 326.00,454.00 294.00,454.00 262.00,454.00 230.00,454.00 198.00,454.00 166.00,454.00 134.00,454.00 102.00,454.00 70.00,454.00 70.00,422.00 102.00,422.00 134.00,422.00 166.00,422.00 198.00,422.00 230.00,422.00 262.00,422.00 294.00,422.00 326.00,422.00 358.00,422.00 390.00,422.00 422.00,422.00 454.00,422.00 486.00,422.00 518.00,422.00 550.00,422.00 550.00,390.00 518.00,390.00 486.00,390.00 454.00,390.00 422.00,390.00 390.00,390.00 358.00,390.00 326.00,390.00 294.00,390.00 262.00,390.00 230.00,390.00 198.00,390.00 166.00,390.00 134.00,390.00 102.00,390.00 70.00,390.00 70.00,358.00 102.00,358.00 134.00,358.00 166.00,358.00 198.00,358.00 230.00,358.00 262.00,358.00 294.00,358.00 326.00,358.00 358.00,358.00 390.00,358.00 422.00,358.00 454.00,358.00 486.00,358.00 518.00,358.00 550.00,358.00 550.00,326.00 518.00,326.00 486.00,326.00 454.00,326.00 422.00,326.00 390.00,326.00 358.00,326.00 326.00,326.00 294.00,326.00 262.00,326.00 230.00,326.00 198.00,326.00 166.00,326.00 134.00,326.00 102.00,326.00 70.00,326.00 70.00,294.00 102.00,294.00 134.00,294.00 166.00,294.00 198.00,294.00 230.00,294.00 262.00,294.00 294.00,294.00 326.00,294.00 358.00,294.00 390.00,294.00 422.00,294.00 454.00,294.00 486.00,294.00 518.00,294.00 550.00,294.00 550.00,262.00 518.00,262.00 486.00,262.00 454.00,262.00 422.00,262.00 390.00,262.00 358.00,262.00 326.00,262.00 294.00,262.00 262.00,262.00 230.00,262.00 198.00,262.00 166.00,262.00 134.00,262.00 102.00,262.00 70.00,262.00 70.00,230.00 102.00,230.00 134.00,230.00 166.00,230.00 198.00,230.00 230.00,230.00 262.00,230.00 294.00,230.00 326.00,230.00 358.00,230.00 390.00,230.00 422.00,230.00 454.00,230.00 486.00,230.00 518.00,230.00 550.00,230.00 550.00,198.00 518.00,198.00 486.00,198.00 454.00,198.00 422.00,198.00 390.00,198.00 358.00,198.00 326.00,198.00 294.00,198.00 262.00,198.00 230.00,198.00 198.00,198.00 166.00,198.00 134.00,198.00 102.00,198.00 70.00,198.00 70.00,166.00 102.00,166.00 134.00,166.00 166.00,166.00 198.00,166.00 230.00,166.00 262.00,166.00 294.00,166.00 326.00,166.00 358.00,166.00 390.00,166.00 422.00,166.00 454.00,166.00 486.00,166.00 518.00,166.00 550.00,166.00 550.00,134.00 518.00,134.00 486.00,134.00 454.00,134.00 422.00,134.00 390.00,134.00 358.00,134.00 326.00,134.00 294.00,134.00 262.00,134.00 230.00,134.00 198.00,134.00 166.00,134.00 134.00,134.00 102.00,134.00 70.00,134.00 70.00,102.00 102.00,102.00 134.00,102.00 166.00,102.00 198.00,102.00 230.00,102.00 262.00,102.00 294.00,102.00 326.00,102.00 358.00,102.00 390.00,102.00 422.00,102.00 454.00,102.00 486.00,102.00 518.00,102.00 550.00,102.00 550.00,70.00 518.00,70.00 486.00,70.00 454.00,70.00 422.00,70.00 390.00,70.00 358.00,70.00 326.00,70.00 294.00,70.00 262.00,70.00 230.00,70.00 198.00,70.00 166.00,70.00 134.00,70.00 102.00,70.00 70.00,70.00"
+      fill="none"
+      stroke="#666"
+      stroke-width="1.5"
+      marker-start="url(#seqArrow)"
+      marker-mid="url(#seqArrow)"
+      marker-end="url(#seqArrow)"
+    />
+  </g>
+</svg>
