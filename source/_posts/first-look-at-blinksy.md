@@ -4,7 +4,7 @@ date: 2025-05-02 09:49:15
 tags:
 ---
 
-So I made [Blinksy](https://github.com/ahdinosaur/blinksy) 🟥🟩🟦 :
+Oops I went down a rabbit hole and discovered this: [Blinksy](https://github.com/ahdinosaur/blinksy) 🟥🟩🟦
 
 > A **Rust** _no-std_ _no-alloc_ LED control library for 1D, 2D, and soon 3D layouts
 
