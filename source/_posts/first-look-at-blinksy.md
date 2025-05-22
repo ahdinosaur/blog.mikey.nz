@@ -397,11 +397,19 @@ LEDs are generally 3 smaller LEDs, red + green + blue, each controlled via [puls
 
 Therefore, we use [`LinearSrgb`][LinearSrgb] when thinking about LEDs, since linear color values correspond to the intensity of light, i.e. how many photons should be emitted. However, what we actually perceive in a linear change in photons is not linear. For our evolutionary survival, we are much more sensitive to changes in dim light than we are to changes in bright light. If you double the amount of photons, we don't see double the brightness.
 
-This mismatch between physics and perception is why we generally think in other color systems. The "RGB" you think you know is actually [gamma-encoded `sRGB`][sRGB].
+![LED PWM](/first-look-at-blinksy/linear-vs-gamma-perception.svg)
+
+This mismatch between physics and perception is why the "RGB" you think you know is actually [gamma-encoded `sRGB`][sRGB]. But also, if you start mixing RGB's, make sure to do so in the linear space.
+
+So anyways, why red, green, and blue? These correspond to the 3 light receptors in our eyes. What we perceive as color is some combination of these receptors being trigged. As in, we don't see color as we might think.
+
+But there's more. We say RGB, but what red, what green, what blue? Is the color in our color system the same as the color being output by our LEDs?
+
+I could go on, but to do so I need another blog post.
 
 [PWM]: https://en.wikipedia.org/wiki/Pulse-width_modulation#Duty_cycle
 [LinearSrgb]: https://docs.rs/blinksy/0.3/blinksy/color/struct.LinearSrgb.html
-[sRGB]: https://docs.rs/blinksy/0.3/blinksy/color/struct.Srgb.html
+[sRGB]: https://en.wikipedia.org/wiki/SRGB
 
 #### What protocols do an LED understand?
 
