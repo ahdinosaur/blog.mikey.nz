@@ -717,19 +717,23 @@ fn main() {
 
 ### Quickstart a project
 
-So wanna jump in and start your own project?
+So wanna jump in now and start your own project?
 
 **I made a quickstart project template: [`blinksy-quickstart-gledopto`][blinksy-quickstart-gledopto]**
 
 [blinksy-quickstart-gledopto]: https://github.com/ahdinosaur/blinksy-quickstart-gledopto
 
+You can even simulate on the desktop while your controller and LEDs arrive.
+
 ## Thanks
 
-If you want to help, the best thing to do is use Blinksy for your own LED project, and share about your adventures.
+If you want to help, the best thing to do is use [Blinksy][blinksy] for your own LED project, and share about your adventures.
 
 If you want to say something about this post, discuss this [on GitHub](https://github.com/ahdinosaur/meta/issues/3).
 
-If you want to contribute code, please:
+If you want to [contribute code][blinksy], please:
+
+[blinksy]: https://github.com/ahdinosaur/blinksy
 
 - Help port a visual pattern from FastLED or WLED to Blinksy
 - Write your own visual pattern
