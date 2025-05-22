@@ -4,9 +4,9 @@ date: 2025-05-02 09:49:15
 tags:
 ---
 
-As a continuation of my LED pixels journey, I made [Blinksy](https://github.com/ahdinosaur/blinksy) 🟥🟩🟦 :
+So I made [Blinksy](https://github.com/ahdinosaur/blinksy) 🟥🟩🟦 :
 
-> A Rust no-std no-alloc LED control library for 1D, 2D, and 3D layouts
+> A **Rust** _no-std_ _no-alloc_ LED control library for 1D, 2D, and soon 3D layouts
 
 <div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561394?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
 
@@ -431,34 +431,273 @@ And for WS2812 LEDs, aka NeoPixel, we have:
 [ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.Clockless.html
 [Ws2812Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/type.Ws2812Delay.html
 
-And for WS2812 LEDs on ESP boards, we have [Ws2812Rmt].
+And for WS2812 LEDs on ESP boards, we have [Ws2812Rmt], which drives WS2812 LEDs using the [RMT peripheral][RMT peripheral].
 
+[RMT peripheral]: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/rmt.html
 [Ws2812Rmt]: https://docs.rs/blinksy-esp/0.3/blinksy-esp/drivers/type.Ws2812Rmt.html
 
 (Note: We will later implement a way to drive clockless LEDs using an SPI peripheral. For now I'm happy with my ESP32's RMT peripheral. If you want this, maybe you can help?)
 
-## Get started with a Gledopto
+By the way, props to [`smart-leds`][smart-leds] for paving the way on addressable LEDs in Rust.
 
-Okay, so now you want to get started?
+[smart-leds]: https://github.com/smart-leds-rs/smart-leds
 
-I found a great LED controller available on AliExpress: [Gledopto GL-C-016WL-D][gl-c-016wl-d].
+## Get started
+
+### Put everything together
+
+Okay, now that we've learned about [layout][layout], a [pattern][pattern], and [driver][driver] – let's put them together.
+
+[layout]: #Define-your-LED-layout
+[pattern]: #Create-your-visual-pattern
+[driver]: #Setup-your-LED-driver
+
+We use a [`ControlBuilder`][ControlBuilder] to build a [`Control`][Control].
+
+For 1D:
+
+```rust
+let mut control = ControlBuilder::new_1d()
+    .with_layout::< /* layout type */ >()
+    .with_pattern::< /* pattern type */ >(/* pattern params */)
+    .with_driver(/* driver */)
+    .build();
+```
+
+For 2D:
+
+```rust
+let mut control = ControlBuilder::new_2d()
+    .with_layout::< /* layout type */ >()
+    .with_pattern::< /* pattern type */ >(/* pattern params */)
+    .with_driver(/* driver */)
+    .build();
+```
+
+[`ControlBuilder`][ControlBuilder] means we don't have to think about all generic types involved in a [`Control`][Control], we can add each part one at a time.
+
+From here we can set a global brightness or color correction.
+
+Then we run our main loop, calling [`.tick()`][Control.tick] with the current time in milliseconds.
+
+```rust
+loop {
+    control.tick(/* current time in milliseconds */).unwrap();
+}
+```
+
+[ControlBuilder]: https://docs.rs/blinksy/0.3/blinksy/control/struct.ControlBuilder.html
+[Control]: https://docs.rs/blinksy/0.3/blinksy/control/struct.Control.html
+[Control.tick]: https://docs.rs/blinksy/0.3/blinksy/control/struct.Control.html#method.tick
+
+### Get running on a microcontroller
+
+While you can plug LEDs directly into microcontroller pins, I do recommend using an LED controller that does things properly.
+
+I found a decent LED controller available on AliExpress: [Gledopto GL-C-016WL-D][gl-c-016wl-d].
 
 [![Gledopto GL-C-016WL-D](/first-look-at-blinksy/gledopto-gl-c-016wl-d.jpg)][gl-c-016wl-d]
 
-I made a board support crate: [`gledopto`][gledopto].
+For this, I made a board support crate: [`gledopto`][gledopto].
 
-Now you just need to add LEDs, and away you go.
+The board support crate provides a few macros to make your life easy, such as a `board!` macro to setup your board, or a `ws2812!` macro that sets up a WS2812 driver using the specific pins for that controller.
 
-If you need a LED supplier recommendation, I've only had success with "BTF-Lighting", found both on AliExpress, Amazon, and on their own website.
+As the Gledopto controller is an ESP32, if you want to get started here are some resources to help:
 
-If you need more help, look at [QuinLED's helpful guides][quinled-guides]
-
-(Note: I will later add support for [QuinLED][quinled] boards, since they are the best. Unfortunately, shipping to New Zealand was too expensive, so am using a friend to deliver when they visit.)
+- [The Rust on ESP Book](https://docs.esp-rs.org/book/introduction.html): An overall guide on ESP32 on Rust
+- [esp-hal](https://docs.espressif.com/projects/rust/esp-hal/1.0.0-beta.0/esp32/esp_hal/index.html): The Hardware Abstraction Layer for an ESP32 on Rust
+- [espup](https://docs.esp-rs.org/book/installation/riscv-and-xtensa.html): How to install the Xtensa target for Rust, required for ESP32
+- [esp-generate](https://docs.esp-rs.org/book/writing-your-own-application/generate-project/esp-generate.html): A template to help you kickstart your project
 
 [gl-c-016wl-d]: https://www.aliexpress.com/item/1005008707989546.html
 [gledopto]: https://docs.rs/gledopto/0.3/gledopto/index.html
+[board!]:
+[ws2812!]
+
+### LEDs
+
+Now you just need to add LEDs, and away you go.
+
+If you need a LED supplier recommendation, I've only had success with "BTF-Lighting". You can find them on [AliExpress](https://btf-lighting.aliexpress.com/), [Amazon](https://www.amazon.com/stores/BTF-LIGHTING/BTF-LIGHTING/page/0FF60378-45DE-44E7-B0D7-8F5CD6478971), or on [their own website](https://www.btf-lighting.com/).
+
+If you need more help, look at [QuinLED's helpful guides][quinled-guides].
+
+(Note: I will later add support for [QuinLED][quinled] boards, since they are the best and want to support them. Unfortunately, shipping to New Zealand was too expensive, so I will receive once a friend travels over the Pacific.)
+
 [quinled-guides]: https://quinled.info/addressable-digital-leds/
 [quinled]: https://quinled.info
+
+### Hello LEDs
+
+Now, here is our hello world of LEDs:
+
+A strip of WS2812 LEDs with a scrolling rainbow.
+
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561502?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+
+<details>
+<summary>
+    Click to see code
+</summary>
+
+```rust
+#![no_std]
+#![no_main]
+
+use blinksy::{
+    layout::Layout1d,
+    layout1d,
+    patterns::rainbow::{Rainbow, RainbowParams},
+    ControlBuilder,
+};
+use gledopto::{board, elapsed, main, ws2812};
+
+#[main]
+fn main() -> ! {
+    let p = board!();
+
+    layout1d!(Layout, 60 * 5);
+
+    let mut control = ControlBuilder::new_1d()
+        .with_layout::<Layout>()
+        .with_pattern::<Rainbow>(RainbowParams {
+            ..Default::default()
+        })
+        .with_driver(ws2812!(p, Layout::PIXEL_COUNT))
+        .build();
+
+    control.set_brightness(0.2);
+
+    loop {
+        let elapsed_in_ms = elapsed().as_millis();
+        control.tick(elapsed_in_ms).unwrap();
+    }
+}
+```
+
+</details>
+
+Or, to show some more:
+
+A grid of APA102 LEDs with a noise function.
+
+<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561112?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+
+<details>
+<summary>
+    Click to see code
+</summary>
+
+```rust
+#![no_std]
+#![no_main]
+
+use blinksy::{
+    layout::{Shape2d, Vec2},
+    layout2d,
+    patterns::noise::{noise_fns, Noise2d, NoiseParams},
+    ControlBuilder,
+};
+use gledopto::{apa102, board, elapsed, main};
+
+#[main]
+fn main() -> ! {
+    let p = board!();
+
+    layout2d!(
+        Layout,
+        [Shape2d::Grid {
+            start: Vec2::new(-1., -1.),
+            row_end: Vec2::new(1., -1.),
+            col_end: Vec2::new(-1., 1.),
+            row_pixel_count: 16,
+            col_pixel_count: 16,
+            serpentine: true,
+        }]
+    );
+    let mut control = ControlBuilder::new_2d()
+        .with_layout::<Layout>()
+        .with_pattern::<Noise2d<noise_fns::Perlin>>(NoiseParams {
+            ..Default::default()
+        })
+        .with_driver(apa102!(p))
+        .build();
+
+    control.set_brightness(0.1);
+
+    loop {
+        let elapsed_in_ms = elapsed().as_millis();
+        control.tick(elapsed_in_ms).unwrap();
+    }
+}
+```
+
+</details>
+
+
+### Simulate on your desktop
+
+Okay, but let's say you just want to start now, without a microcontroller, without any LEDs.
+
+Blinksy also has a way to simulate on your desktop: [`blinksy-desktop`][blinksy-desktop].
+
+This provides [a driver][blinksy-desktop-driver] (using [miniquad][miniquad]) and [an elapsed time function][blinksy-desktop-time].
+
+[blinksy-desktop]: https://docs.rs/blinksy-desktop/0.3/blinksy_desktop/
+[blinksy-desktop-driver]: https://docs.rs/blinksy-desktop/0.3/blinksy_desktop/driver/index.html
+[miniquad]: https://github.com/not-fl3/miniquad
+[blinksy-desktop-time]: https://docs.rs/blinksy-desktop/0.3/blinksy_desktop/time/index.html
+
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085562226?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+
+<details>
+<summary>
+    Click to see code
+</summary>
+
+```rust
+use blinksy::{
+    layout::{Shape2d, Vec2},
+    layout2d,
+    patterns::noise::{noise_fns, Noise2d, NoiseParams},
+    ControlBuilder,
+};
+use blinksy_desktop::{
+    driver::{Desktop, DesktopError},
+    time::elapsed_in_ms,
+};
+use std::{thread::sleep, time::Duration};
+
+fn main() {
+    layout2d!(
+        Layout,
+        [Shape2d::Grid {
+            start: Vec2::new(-1., -1.),
+            row_end: Vec2::new(-1., 1.),
+            col_end: Vec2::new(1., -1.),
+            row_pixel_count: 16,
+            col_pixel_count: 16,
+            serpentine: true,
+        }]
+    );
+    let mut control = ControlBuilder::new_2d()
+        .with_layout::<Layout>()
+        .with_pattern::<Noise2d<noise_fns::Perlin>>(NoiseParams {
+            ..Default::default()
+        })
+        .with_driver(Desktop::new_2d::<Layout>())
+        .build();
+
+    loop {
+        if let Err(DesktopError::WindowClosed) = control.tick(elapsed_in_ms()) {
+            break;
+        }
+
+        sleep(Duration::from_millis(16));
+    }
+}
+```
+</details>
 
 ## Thanks
 
@@ -469,11 +708,12 @@ If you want to contribute code, please:
 - Help port a visual pattern from FastLED or WLED to Blinksy
 - Write your own visual pattern
 - Help support a new LED chipset
+- Help support a new LED controller
 
 If you want to otherwise support the project, please:
 
 - Star the project on GitHub: [ahdinosaur/blinksy](https://github.com/ahdinosaur/blinksy)
-- Subscribe to me on YouTube, where I want to start live-coding the future of Blinksy
 - Sponsor me on GitHub: [@ahdinosaur](https://github.com/sponsors/ahdinosaur)
+- Subscribe to me on YouTube, to encourage me to live-code Blinksy: [@Make_with_Mikey](https://www.youtube.com/channel/UCRNri_xZGzROcxGcAYkOhpA)
 
-Thanks for giving me your attention. Have a good one.
+Thanks for giving me your attention. Have a good one. 💜
