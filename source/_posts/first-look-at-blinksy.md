@@ -189,15 +189,26 @@ fn main() -> ! {
 
 </details>
 
-## How to get started with Blinksy
+## How Blinksy works
 
-1. [Define your LED layout](#Define-your-LED-layout)
-2. [Create your visual pattern](#Create-your-visual-pattern)
-3. [Setup your LED driver](#Setup-your-LED-driver)
+- Define your LED [`layout`][layout] in 1D, 2D, or soon 3D space
+- Create your visual [`pattern`][pattern] (effect), or choose from our built-in [`patterns`][patterns] library
+  - The pattern will compute colors for each LED based on its position
+- Setup a [`driver`][driver] to send each frame of colors to your LEDs, using our built-in [`drivers`][drivers] library.
+
+[layout]: https://docs.rs/blinksy/0.3/blinksy/layout/index.html
+[pattern]: https://docs.rs/blinksy/0.3/blinksy/pattern/index.html
+[patterns]: https://docs.rs/blinksy/0.3/blinksy/patterns/index.html
+[driver]: https://docs.rs/blinksy/0.3/blinksy/driver/index.html
+[drivers]: https://docs.rs/blinksy/0.3/blinksy/drivers/index.html
 
 ### Define your LED layout
 
-First you define the [layout][layout] of your LEDs in space, with a struct that implements either the [`Layout1d`][Layout1d], [`Layout2d`][Layout2d], and soon `Layout3d` traits.
+A [layout][layout] defines the physical or logical positions of the LEDs in your setup, as arrangements in 1D, 2D, and 3D space.
+
+[layout]: https://docs.rs/blinksy/0.3/blinksy/layout/index.html
+
+To define a layout, we must define a struct that implement either the [`Layout1d`][Layout1d], [`Layout2d`][Layout2d], or soon `Layout3d` traits.
 
 To make this easy, we use either the [`layout1d`][layout1d], [`layout2d`][layout2d], or soon `layout3d` macro, respectively.
 
@@ -258,7 +269,12 @@ layout2d!(
 
 ### Create your visual pattern
 
-Finally, we define the visual pattern we want to display, using the [`Pattern`][Pattern] trait.
+A [pattern][pattern], most similar to [a WLED effect][a WLED effect], generates colors for LEDs based on time and position.
+
+[pattern]: https://docs.rs/blinksy/0.3/blinksy/pattern/index.html
+[a WLED effect]: https://kno.wled.ge/features/effects/
+
+We define this as a struct that implements the [`Pattern`][Pattern] trait.
 
 ```rust
 /// # Type Parameters
@@ -314,9 +330,9 @@ The [color types][color types] in Blinksy are inspired by the [`palette`][palett
 [more modern]: https://bottosson.github.io/posts/colorpicker/
 [Okhsv]: https://docs.rs/blinksy/0.3/blinksy/color/struct.Okhsv.html
 
-To use a pattern, we can either choose from the built-in library or we create our own.
+To use a pattern, we can either choose from the [built-in library][patterns] or create our own.
 
-We have two visual [patterns][patterns] to start, each implementing [`Pattern`][Pattern] for 1D, 2D, and soon 3D dimensions.
+We have two visual [patterns][patterns] to start, each implementing [`Pattern`][Pattern] for 1D, 2D, and soon 3D.
 
 - [Rainbow][rainbow]: A basic scrolling rainbow.
 - [Noise][noise]: A flow through random noise functions.
@@ -330,11 +346,11 @@ Or feel free to make your own. Better yet, help contribute to our library!
 
 ### Setup your LED driver
 
-Finally we setup our LED driver.
+Now for the final step.
 
 The driver is what tells the LED hardware how to be the colors you want.
 
-To define an LED driver, we must implement the [`Driver`][Driver] trait:
+To define an driver, we must implement the [`Driver`][Driver] trait:
 
 ```rust
 pub trait Driver {
@@ -367,13 +383,17 @@ pub trait Driver {
 }
 ```
 
+The driver says what type of error it might return and what type of color it wants to receive.
+
+When you write to a driver, you provide an iterator of colors (in your own color type), plus a global brightness and color correction.
+
 #### What colors do an LED understand?
 
 The LED driver will be given colors from the visual pattern, then convert them into a new color type more suitable to what the LED hardware understands.
 
 LEDs are generally 3 smaller LEDs, red + green + blue, each controlled via [pulse-width modulation (PWM)][PWM]. If you tell an LED to be 100% bright, it will be on for 100% of the time. If you tell an LED to be 50% bright, it will be on for 50% of the time. And so on. Our eyes don't notice the flicker on and off.
 
-Therefore, we use [`LinearSrgb`][LinearSrgb] when thinking about LEDs, since linear color values correspond to the intensity of light, i.e. how many photons should be emitted. However, what we actually perceive in a linear change in photons is not linear. Per evolution, we are much more sensitive to changes in dim light than we are to changes in bright light. If you double the amount of photons, we don't see double the brightness.
+Therefore, we use [`LinearSrgb`][LinearSrgb] when thinking about LEDs, since linear color values correspond to the intensity of light, i.e. how many photons should be emitted. However, what we actually perceive in a linear change in photons is not linear. For our evolutionary survival, we are much more sensitive to changes in dim light than we are to changes in bright light. If you double the amount of photons, we don't see double the brightness.
 
 This mismatch between physics and perception is why we generally think in other color systems. The "RGB" you think you know is actually [gamma-encoded `sRGB`][sRGB].
 
@@ -381,7 +401,7 @@ This mismatch between physics and perception is why we generally think in other 
 [LinearSrgb]: https://docs.rs/blinksy/0.3/blinksy/color/struct.LinearSrgb.html
 [sRGB]: https://docs.rs/blinksy/0.3/blinksy/color/struct.Srgb.html
 
-#### How do we talk to LEDs?
+#### What protocols do an LED understand?
 
 To make implementing [`Driver`][Driver] easier for the various LED chipsets, we have generic support for the two main types of LED protocols:
 
@@ -502,17 +522,13 @@ For this, I made a board support crate: [`gledopto`][gledopto].
 
 The board support crate provides a few macros to make your life easy, such as a `board!` macro to setup your board, or a `ws2812!` macro that sets up a WS2812 driver using the specific pins for that controller.
 
-As the Gledopto controller is an ESP32, if you want to get started here are some resources to help:
-
-- [The Rust on ESP Book](https://docs.esp-rs.org/book/introduction.html): An overall guide on ESP32 on Rust
-- [esp-hal](https://docs.espressif.com/projects/rust/esp-hal/1.0.0-beta.0/esp32/esp_hal/index.html): The Hardware Abstraction Layer for an ESP32 on Rust
-- [espup](https://docs.esp-rs.org/book/installation/riscv-and-xtensa.html): How to install the Xtensa target for Rust, required for ESP32
-- [esp-generate](https://docs.esp-rs.org/book/writing-your-own-application/generate-project/esp-generate.html): A template to help you kickstart your project
+**To make even easier, I made a quickstart project template: [`blinksy-quickstart-gledopto`][blinksy-quickstart-gledopto]**
 
 [gl-c-016wl-d]: https://www.aliexpress.com/item/1005008707989546.html
 [gledopto]: https://docs.rs/gledopto/0.3/gledopto/index.html
-[board!]:
-[ws2812!]
+[board!]: https://docs.rs/gledopto/0.3/gledopto/macro.board.html
+[ws2812!]: https://docs.rs/gledopto/0.3/gledopto/macro.ws2812.html
+[blinksy-quickstart-gledopto]: https://github.com/ahdinosaur/blinksy-quickstart-gledopto
 
 ### LEDs
 
@@ -699,9 +715,19 @@ fn main() {
 ```
 </details>
 
+### Quickstart a project
+
+So wanna jump in and start your own project?
+
+**I made a quickstart project template: [`blinksy-quickstart-gledopto`][blinksy-quickstart-gledopto]**
+
+[blinksy-quickstart-gledopto]: https://github.com/ahdinosaur/blinksy-quickstart-gledopto
+
 ## Thanks
 
 If you want to help, the best thing to do is use Blinksy for your own LED project, and share about your adventures.
+
+If you want to say something about this post, discuss this [on GitHub](https://github.com/ahdinosaur/meta/issues/3).
 
 If you want to contribute code, please:
 
@@ -716,4 +742,4 @@ If you want to otherwise support the project, please:
 - Sponsor me on GitHub: [@ahdinosaur](https://github.com/sponsors/ahdinosaur)
 - Subscribe to me on YouTube, to encourage me to live-code Blinksy: [@Make_with_Mikey](https://www.youtube.com/channel/UCRNri_xZGzROcxGcAYkOhpA)
 
-Thanks for giving me your attention. Have a good one. 💜
+Thanks for sharing your attention with me. Have a good one. 💜
