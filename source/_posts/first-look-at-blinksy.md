@@ -437,24 +437,24 @@ So adding this together, for APA102 LEDs, aka DotStar, we have:
 - [Apa102Delay], which drives APA102 LEDs using GPIO bit-banging with delay timing.
 - [Apa102Spi], which drives APA102 LEDs using an SPI peripheral.
 
-[Apa102Led]: https://docs.rs/blinksy/0.3/blinksy/drivers/struct.Apa102Led.html
+[Apa102Led]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/struct.Apa102Led.html
 [ClockedLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClockedLed.html
-[Apa102Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/type.Apa102Delay.html
-[Apa102Spi]: https://docs.rs/blinksy/0.3/blinksy/drivers/type.Apa102Spi.html
+[Apa102Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/type.Apa102Delay.html
+[Apa102Spi]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/type.Apa102Spi.html
 
 And for WS2812 LEDs, aka NeoPixel, we have:
 
 - [Ws2812Led], which implements the [ClocklessLed] trait to describe the specific details of the WS2812 chipset as a clockless LED.
 - [Ws2812Delay], which drives WS2812 LEDs using GPIO bit-banging with delay timing. Note: This will not work unless your delay timer is able to handle microsecond precision, which, as far as I understand, most microcontrollers cannot do.
 
-[Ws2812Led]: https://docs.rs/blinksy/0.3/blinksy/drivers/struct.Ws2812Led.html
+[Ws2812Led]: https://docs.rs/blinksy/0.3/blinksy/drivers/ws2812/struct.Ws2812Led.html
 [ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.Clockless.html
-[Ws2812Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/type.Ws2812Delay.html
+[Ws2812Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/ws2812/type.Ws2812Delay.html
 
 And for WS2812 LEDs on ESP boards, we have [Ws2812Rmt], which drives WS2812 LEDs using the [RMT peripheral][RMT peripheral].
 
 [RMT peripheral]: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/rmt.html
-[Ws2812Rmt]: https://docs.rs/blinksy-esp/0.3/blinksy-esp/drivers/type.Ws2812Rmt.html
+[Ws2812Rmt]: https://docs.rs/blinksy-esp/0.3/blinksy_esp/type.Ws2812Rmt.html
 
 (Note: We will later implement a way to drive clockless LEDs using an SPI peripheral. For now I'm happy with my ESP32's RMT peripheral. If you want this, maybe you can help?)
 
