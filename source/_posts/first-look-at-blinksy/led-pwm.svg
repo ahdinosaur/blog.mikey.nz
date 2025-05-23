@@ -49,14 +49,7 @@
       stroke: #ff0000;
       stroke-width: 3;
     }
-
-    .background {
-      fill: white;
-    }
   </style>
-
-  <!-- Background -->
-  <rect width="600" height="360" class="background" />
 
   <!-- Grid -->
   <g>
