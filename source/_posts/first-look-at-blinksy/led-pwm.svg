@@ -8,26 +8,26 @@
 >
   <style>
     .title {
-      font-family: Arial;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
       font-size: 16px;
       font-weight: bold;
       text-anchor: middle;
     }
     .brightness-text {
-      font-family: Arial;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
       font-size: 14px;
       text-anchor: end;
       font-weight: bold;
     }
     .axis-text {
-      font-family: Arial;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
       font-size: 14px;
       text-anchor: middle;
     }
 
     .state-indicator {
-      font-family: Arial;
-      font-size: 10px;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 9px;
       text-anchor: end;
     }
 
@@ -62,7 +62,10 @@
   </g>
 
   <!-- Title -->
-  <text x="300" y="30" class="title">LED PWM</text>
+  <text x="300" y="30" class="title">LED PWM (Pulse-Width Modulation)</text>
+
+
+  <text x="35" y="40" class="axis-text">Duty cycle</text>
 
   <!-- 100% Brightness -->
   <g class="brightness-level">

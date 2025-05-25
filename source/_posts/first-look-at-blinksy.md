@@ -391,13 +391,25 @@ When you write to a driver, you provide an iterator of colors (in your own color
 
 The LED driver will be given colors from the visual pattern, then convert them into a new color type more suitable to what the LED hardware understands.
 
-LEDs are generally 3 smaller LEDs, red + green + blue, each controlled via [pulse-width modulation (PWM)][PWM]. If you tell an LED to be 100% bright, it will be on for 100% of the time. If you tell an LED to be 50% bright, it will be on for 50% of the time. And so on. Our eyes don't notice the flicker on and off.
+LEDs are generally 3 smaller LEDs, red + green + blue, each controlled via [pulse-width modulation (PWM)][PWM]. If you tell an LED to be 100% bright, it will be on for 100% of the time (a 100% duty cycle). If you tell an LED to be 50% bright, it will be on for 50% of the time (a 50% duty cycle). And so on. Our eyes don't notice the flicker on and off.
 
-![LED PWM](/first-look-at-blinksy/led-pwm.svg)
+<div style="text-align: center">
+  <img
+    src="/first-look-at-blinksy/led-pwm.svg"
+    alt="LED PWM (Pulse-Width Modulation)"
+    style="max-width: 80%;"
+  >
+</div>
 
 Therefore, we use [`LinearSrgb`][LinearSrgb] when thinking about LEDs, since linear color values correspond to the intensity of light, i.e. how many photons should be emitted. However, what we actually perceive in a linear change in photons is not linear. For our evolutionary survival, we are much more sensitive to changes in dim light than we are to changes in bright light. If you double the amount of photons, we don't see double the brightness.
 
-![LED PWM](/first-look-at-blinksy/linear-vs-gamma-perception.svg)
+<div style="text-align: center">
+  <img
+    src="/first-look-at-blinksy/gamma-correction.svg"
+    alt="Gamma Correction"
+    style="max-width: 80%;"
+  >
+</div>
 
 This mismatch between physics and perception is why the "RGB" you think you know is actually [gamma-encoded `sRGB`][sRGB]. But also, if you start mixing RGB's, make sure to do so in the linear space.
 
