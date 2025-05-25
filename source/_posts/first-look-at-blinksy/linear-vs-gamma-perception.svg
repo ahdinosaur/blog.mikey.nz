@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 700 400"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    .title { font: bold 20px sans-serif; }
+    .subtitle { font: italic 14px sans-serif; }
+    .axis-label { font: 14px sans-serif; }
+    .line-label { font: 14px sans-serif; }
+    .marker-label { font: 12px sans-serif; text-anchor: middle; }
+    .grid-line { stroke: #ddd; stroke-width: 1; }
+    .photon-line { stroke: #3498db; stroke-width: 2.5; }
+    .perception-line { stroke: #e74c3c; stroke-width: 2.5; }
+    .marker-photon { fill: #3498db; stroke: #2980b9; stroke-width: 1; }
+    .marker-perception { fill: #e74c3c; stroke: #c0392b; stroke-width: 1; }
+    .marker-text { font: 11px sans-serif; }
+    .legend-box { fill: white; stroke: #999; stroke-width: 1; }
+  </style>
+
+  <!-- Title -->
+  <text x="350" y="30" class="title" text-anchor="middle">
+    Actual Photons vs. Perceived Brightness
+  </text>
+  <text x="350" y="50" class="subtitle" text-anchor="middle">
+    sRGB Gamma Correction (γ ≈ 2.2)
+  </text>
+
+  <!-- Coordinate system -->
+  <g transform="translate(80, 320)">
+    <!-- X-axis -->
+    <line x1="0" y1="0" x2="560" y2="0" stroke="black" stroke-width="2" />
+    <text x="280" y="40" class="axis-label" text-anchor="middle">Relative Number of Photons (%)</text>
+
+    <!-- Y-axis -->
+    <line x1="0" y1="0" x2="0" y2="-280" stroke="black" stroke-width="2" />
+    <text x="-40" y="-140" class="axis-label" text-anchor="middle" transform="rotate(-90, -40, -140)">Brightness (%)</text>
+
+    <!-- Grid lines -->
+    <line x1="0" y1="-70" x2="560" y2="-70" class="grid-line" />
+    <line x1="0" y1="-140" x2="560" y2="-140" class="grid-line" />
+    <line x1="0" y1="-210" x2="560" y2="-210" class="grid-line" />
+    <line x1="0" y1="-280" x2="560" y2="-280" class="grid-line" />
+
+    <line x1="140" y1="0" x2="140" y2="-280" class="grid-line" />
+    <line x1="280" y1="0" x2="280" y2="-280" class="grid-line" />
+    <line x1="420" y1="0" x2="420" y2="-280" class="grid-line" />
+    <line x1="560" y1="0" x2="560" y2="-280" class="grid-line" />
+
+    <!-- Axis labels -->
+    <text x="0" y="20" class="marker-label">0%</text>
+    <text x="140" y="20" class="marker-label">25%</text>
+    <text x="280" y="20" class="marker-label">50%</text>
+    <text x="420" y="20" class="marker-label">75%</text>
+    <text x="560" y="20" class="marker-label">100%</text>
+
+    <text x="-10" y="0" class="marker-label" text-anchor="end">0%</text>
+    <text x="-10" y="-70" class="marker-label" text-anchor="end">25%</text>
+    <text x="-10" y="-140" class="marker-label" text-anchor="end">50%</text>
+    <text x="-10" y="-210" class="marker-label" text-anchor="end">75%</text>
+    <text x="-10" y="-280" class="marker-label" text-anchor="end">100%</text>
+
+    <!-- Linear photon line (y = x) -->
+    <path d="M0,0 L560,-280" class="photon-line" fill="none" />
+
+    <!-- Perceived brightness curve (sRGB gamma) -->
+    <!-- Using formula: perceived = linear^(1/2.2) -->
+    <path d="
+      M0,0
+      C50,-50 100,-90 140,-118
+      S200,-155 280,-204
+      S380,-240 420,-252
+      S500,-270 560,-280
+    " class="perception-line" fill="none" />
+
+    <!-- Markers for actual photons (linear) -->
+    <circle cx="140" cy="-70" r="6" class="marker-photon" />
+    <circle cx="280" cy="-140" r="6" class="marker-photon" />
+    <circle cx="420" cy="-210" r="6" class="marker-photon" />
+    <circle cx="560" cy="-280" r="6" class="marker-photon" />
+
+    <!-- Markers for perceived brightness (sRGB) -->
+    <!-- At 25% photons: 0.25^(1/2.2) ≈ 0.537 or 53.7% perceived brightness -->
+    <!-- At 50% photons: 0.50^(1/2.2) ≈ 0.729 or 72.9% perceived brightness -->
+    <!-- At 75% photons: 0.75^(1/2.2) ≈ 0.859 or 85.9% perceived brightness -->
+    <circle cx="140" cy="-150" r="6" class="marker-perception" />
+    <circle cx="280" cy="-204" r="6" class="marker-perception" />
+    <circle cx="420" cy="-240" r="6" class="marker-perception" />
+    <circle cx="560" cy="-280" r="6" class="marker-perception" />
+
+    <!-- Vertical connector lines at key percentages -->
+    <line x1="140" y1="-70" x2="140" y2="-150" stroke="#999" stroke-width="1" stroke-dasharray="4,2" />
+    <line x1="280" y1="-140" x2="280" y2="-204" stroke="#999" stroke-width="1" stroke-dasharray="4,2" />
+    <line x1="420" y1="-210" x2="420" y2="-240" stroke="#999" stroke-width="1" stroke-dasharray="4,2" />
+
+    <!-- Marker values -->
+    <text x="155" y="-150" class="marker-text" fill="#e74c3c">53.7%</text>
+    <text x="295" y="-204" class="marker-text" fill="#e74c3c">72.9%</text>
+    <text x="435" y="-240" class="marker-text" fill="#e74c3c">85.9%</text>
+
+    <!-- Legend -->
+    <rect x="320" y="-90" width="220" height="60" rx="5" class="legend-box" />
+    <line x1="335" y1="-70" x2="375" y2="-70" class="photon-line" />
+    <circle cx="355" cy="-70" r="5" class="marker-photon" />
+    <text x="385" y="-65" class="line-label" fill="#3498db">Actual Photons (Linear)</text>
+
+    <line x1="335" y1="-40" x2="375" y2="-40" class="perception-line" />
+    <circle cx="355" cy="-40" r="5" class="marker-perception" />
+    <text x="385" y="-35" class="line-label" fill="#e74c3c">Perceived Brightness (sRGB)</text>
+  </g>
+</svg>
