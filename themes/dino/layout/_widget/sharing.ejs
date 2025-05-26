@@ -1,14 +1,17 @@
 <div class="sharing grid">
   <section class="profile grid-item grid">
-    <img class="avatar" src="<%- url_for(theme.avatar) %>" alt="avatar" />
+    <a href="<%- config.root %>">
+      <img class="avatar" src="<%- url_for(theme.avatar) %>" alt="avatar" />
+    </a>
     <div class="grid-item">
-      <p class="title"> <%- theme.title %> </p>
-      <p class="subtitle"> <%- theme.subtitle %> </p>
+      <a href="<%- config.root %>">
+        <p class="title"> <%- config.title %> </p>
+      </a>
+      <p class="subtitle"> <%- config.subtitle %> </p>
     <div>
   </section>
 
   <section class="share-btns">
-    <!-- <p> share it if you like it~ </p> -->
-    <%- partial('./twitter') %>
+    <p> share if you like~ </p>
   </section>
 </div>
