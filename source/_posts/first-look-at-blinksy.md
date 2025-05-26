@@ -487,8 +487,8 @@ For every bit we want to send from the controller to the LEDs:
 <div style="text-align: center">
   <img
     src="/first-look-at-blinksy/clocked-protocol.svg"
-    alt="Gamma Correction"
-    style="max-width: 80%;"
+    alt="Clocked LED protocol"
+    style="max-width: 100%;"
   >
 </div>
 
@@ -502,6 +502,25 @@ To define a clocked LED chipset, you define the [`ClockedLed`][ClockedLed] trait
 
 A [`clockless`][clockless] protocol is based on specific timing periods, where chipsets have only a single data line.
 
+Without a clock, the protocol depends on specific timings to represent each bit.
+
+<div style="text-align: center">
+  <img
+    src="/first-look-at-blinksy/clockless-timing.svg"
+    alt="Clockless LED protocol: data timings"
+    style="max-width: 100%;"
+  >
+</div>
+
+Then to send some bits:
+
+<div style="text-align: center">
+  <img
+    src="/first-look-at-blinksy/clockless-transmission.svg"
+    alt="Clockless LED protocol: data transmission"
+    style="max-width: 100%;"
+  >
+</div>
 
 To define a clockless LED chipset, you define the [`ClocklessLed`][ClocklessLed] trait.
 

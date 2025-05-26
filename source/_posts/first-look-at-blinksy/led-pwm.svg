@@ -46,7 +46,7 @@
 
     .wave {
       fill: none;
-      stroke: #ff0000;
+      stroke: #cc0000;
       stroke-width: 3;
     }
   </style>
