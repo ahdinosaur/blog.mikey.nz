@@ -236,6 +236,11 @@ A [layout][layout] defines the physical or logical positions of the LEDs in your
 
 To define a layout, we must define a struct that implement either the [`Layout1d`][Layout1d], [`Layout2d`][Layout2d], or soon `Layout3d` traits.
 
+(For any Rust beginners, a [struct][struct] is a definition of a type of object, like a class in other languages, and a [trait][trait] is a definition of an abstract behavior that an object might implement, like an interface in other languages.)
+
+[struct]: https://doc.rust-lang.org/book/ch05-01-defining-structs.html
+[trait]: https://doc.rust-lang.org/book/ch10-02-traits.html
+
 To make this easy, we use either the [`layout1d`][layout1d], [`layout2d`][layout2d], or soon `layout3d` macro, respectively.
 
 These traits provide a `PIXEL_COUNT` constant, which is the number of LEDs, and a `.points()` method, which maps each LED pixel into a 1D, 2D, or 3D space between -1.0 and 1.0.
