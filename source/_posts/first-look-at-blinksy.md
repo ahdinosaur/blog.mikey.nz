@@ -473,18 +473,44 @@ To make implementing [`Driver`][Driver] easier for the various LED chipsets, we 
 
 [Driver]: https://docs.rs/blinksy/0.3/blinksy/driver/trait.Driver.html
 
-- [`clocked`][clocked]: Protocols that are based on [SPI][spi], where chipsets have a data line and a clock line.
-  - To define a clocked LED chipset, you define the [`ClockedLed`][ClockedLed] trait.
-- [`clockless`][clockless]: Protocols based on specific timing periods, where chipsets have only a single data line.
-  - To define a clockless LED chipset, you define the [`ClocklessLed`][ClocklessLed] trait.
+##### Clocked LEDs ([SPI][spi])
+
+A [`clocked`][clocked] protocol is based on [SPI][spi], where chipsets have a data line and a clock line.
+
+For every bit we want to send from the controller to the LEDs:
+
+- First the controller sets the data line (MOSI) to HIGH for a 1 or LOW for a 0.
+- Then the controller "ticks" the clock line (SCLK), by going from LOW to HIGH.
+- On the rising edge of the clock line, the LED will read the data line.
+- Halfway through the clock cycle, the controller will reset the clock line to LOW.
+
+<div style="text-align: center">
+  <img
+    src="/first-look-at-blinksy/clocked-protocol.svg"
+    alt="Gamma Correction"
+    style="max-width: 80%;"
+  >
+</div>
+
+To define a clocked LED chipset, you define the [`ClockedLed`][ClockedLed] trait.
 
 [clocked]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/index.html
 [spi]: https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
 [ClockedLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClockedLed.html
+
+##### Clockless LEDs
+
+A [`clockless`][clockless] protocol is based on specific timing periods, where chipsets have only a single data line.
+
+
+To define a clockless LED chipset, you define the [`ClocklessLed`][ClocklessLed] trait.
+
 [clockless]: https://docs.rs/blinksy/0.3/blinksy/driver/clockless/index.html
 [ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clockless/trait.ClocklessLed.html
 
-For each generic LED protocol type, we have specific protocols to drive those types of LEDs:
+##### Protocol drivers
+
+For each generic LED protocol type, we have specific protocol drivers for those types of LEDs:
 
 - By bit-banging over GPIO pins, using a delay timer.
 - Or by using an SPI peripheral.
@@ -511,15 +537,15 @@ At the moment, Blinksy supports:
 With the above protocol abstractions, adding a new LED chipset is as easy as implementing [ClockedLed] or [ClocklessLed].
 
 [Apa102 LEDs]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/index.html
-[ClockedLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClockedLed.html
 [Apa102Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/type.Apa102Delay.html
 [Apa102Spi]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/type.Apa102Spi.html
 [Ws2812 LEDs]: https://docs.rs/blinksy/0.3/blinksy/drivers/ws2812/index.html
-[ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.Clockless.html
 [Ws2812Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/ws2812/type.Ws2812Delay.html
 [Ws2812Rmt]: https://docs.rs/blinksy-esp/0.3/blinksy_esp/type.Ws2812Rmt.html
+[ClockedLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClockedLed.html
+[ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.Clockless.html
 
-By the way, props to [`smart-leds`][smart-leds] for paving the way on addressable LEDs in Rust.
+By the way, props to [`smart-leds`][smart-leds] for paving the way on addressable LED drivers in Rust.
 
 [smart-leds]: https://github.com/smart-leds-rs/smart-leds
 
