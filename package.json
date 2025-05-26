@@ -19,7 +19,6 @@
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^3.0.0",
-    "hexo-generator-opengraph-image": "^0.0.1",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-markdown-it": "github:hexojs/hexo-renderer-markdown-it#ca32ac824d94923ffee498c8d675331a0f7df322",
     "hexo-renderer-sass": "github:kmuncie/hexo-renderer-sass",

@@ -42,7 +42,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-
+  
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -51,7 +51,7 @@ index_generator:
   path: ''
   per_page: 0
   order_by: -date
-
+  
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -130,12 +130,3 @@ responsive_images:
       2xl:
         width: 1536 # 96em
         withoutEnlargement: true
-
-opengraph_image:
-  enable: true
-  main_color: '#fff'
-  secondary_color: "#000"
-  font_color: "#000"
-  title_font: "Bold 70pt Arial"
-  date_font: "Regular 30pt Arial"
-  date_style: "YYYY/MM/DD"
