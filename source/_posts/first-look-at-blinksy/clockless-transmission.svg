@@ -14,15 +14,15 @@
       font-weight: bold;
       fill: #111;
     }
-    .signal-line {
-      stroke: #0066cc;
-      stroke-width: 3;
-      fill: none;
-    }
     .axis-line {
       stroke: #999;
       stroke-width: 1;
       stroke-dasharray: 4 4;
+    }
+    .signal-line {
+      stroke: #0066cc;
+      stroke-width: 3;
+      fill: none;
     }
     .signal-text {
       font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
@@ -45,10 +45,6 @@
       font-weight: bold;
       fill: #333;
     }
-    .sample-point {
-      fill: green;
-      stroke: none;
-    }
     .sample-line {
       stroke: green;
       stroke-width: 1;
@@ -56,39 +52,49 @@
     }
   </style>
 
-  <title>Clockless LED Protocol</title>
+  <title>Clockless Byte Example</title>
 
-  <text x="310" y="25" class="title-text">Clockless LED Protocol</text>
+  <text x="310" y="25" class="title-text">Clockless Byte Example</text>
 
   <!-- Data Signal Label -->
   <text x="40" y="75" class="signal-text" text-anchor="end">DATA</text>
 
   <!-- Logic level labels -->
-  <text x="40" y="50" class="level-text" text-anchor="end">H</text>
-  <text x="40" y="100" class="level-text" text-anchor="end">L</text>
+  <text x="30" y="50" class="level-text" text-anchor="end">H</text>
+  <text x="30" y="100" class="level-text" text-anchor="end">L</text>
 
-  <g transform="translate(50, 50)">
+  <g transform="translate(45, 50)">
     <!-- Horizontal reference lines -->
     <line x1="0" y1="0" x2="570" y2="0" class="axis-line" />
     <line x1="0" y1="50" x2="570" y2="50" class="axis-line" />
 
     <!-- Data Signal -->
     <!--
-    [1, 0, 1, 0, 1, 0, 1, 0].map(bit => {
-      if bit {
-
+    [1, 0, 1, 0, 1, 0, 1, 0].map((bit, i) => {
+      let cycleWidth = (570 / 8)
+      let x = i * cycleWidth
+      if (bit) {
+        let t1H = (80/125) * cycleWidth
+        return `V 0 H ${x + t1H} V 50 H ${x + cycleWidth} V 0`
       } else {
+        let t0H = (40/125) * cycleWidth
+        return `V 0 H ${x + t0H} V 50 H ${x + cycleWidth} V 0`
       }
     })
     -->
     <path
       d="
-        M 50,50
-        H
-
-             H 85 V 100 H 150 V 50 H 215 V 100 H 280 V 50 H 345 V 100 H 410 V 50 H 475 V 100 H 540 V 50 H 570"
-          class="signal-line" />
-    </path>
+        M 0,50
+  V 0 H 45.6 V 50 H 71.25 V 0
+  V 0 H 94.05 V 50 H 142.5 V 0
+  V 0 H 188.1 V 50 H 213.75 V 0
+  V 0 H 236.55 V 50 H 285 V 0
+  V 0 H 330.6 V 50 H 356.25 V 0
+  V 0 H 379.05 V 50 H 427.5 V 0
+  V 0 H 473.1 V 50 H 498.75 V 0
+  V 0 H 521.55 V 50 H 570 V 0
+      "
+      class="signal-line" />
 
 
     <!-- Bit labels for data -->

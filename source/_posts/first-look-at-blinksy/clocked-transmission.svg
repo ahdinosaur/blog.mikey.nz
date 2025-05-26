@@ -62,9 +62,9 @@
     }
   </style>
 
-  <title>Clocked LED Protocol</title>
+  <title>Clocked Byte Example</title>
 
-  <text x="310" y="25" class="title-text">Clocked LED Protocol</text>
+  <text x="310" y="25" class="title-text">Clocked Byte Example</text>
 
   <!-- Data Signal Label -->
   <text x="50" y="75" class="signal-text">DATA</text>

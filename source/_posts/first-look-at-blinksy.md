@@ -486,8 +486,8 @@ For every bit we want to send from the controller to the LEDs:
 
 <div style="text-align: center">
   <img
-    src="/first-look-at-blinksy/clocked-protocol.svg"
-    alt="Clocked LED protocol"
+    src="/first-look-at-blinksy/clocked-transmission.svg"
+    alt="Clocked byte example"
     style="max-width: 100%;"
   >
 </div>
@@ -504,20 +504,24 @@ A [`clockless`][clockless] protocol is based on specific timing periods, where c
 
 Without a clock, the protocol depends on specific timings to represent each bit.
 
+For example with [WS2812B LEDs], to represent a 0 bit the data line must be HIGH for 0.4 microseconds, then LOW for 0.85 microseconds. These timings must be accurate to within 150 nanoseconds. That's tiny!
+
+[WS2812B LEDs]: https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf
+
 <div style="text-align: center">
   <img
     src="/first-look-at-blinksy/clockless-timing.svg"
-    alt="Clockless LED protocol: data timings"
-    style="max-width: 100%;"
+    alt="Clockless bit timing"
+    style="max-width: 360px"
   >
 </div>
 
-Then to send some bits:
+With these timings in mind, we can send some bits without a clock.
 
 <div style="text-align: center">
   <img
     src="/first-look-at-blinksy/clockless-transmission.svg"
-    alt="Clockless LED protocol: data transmission"
+    alt="Clockless byte example"
     style="max-width: 100%;"
   >
 </div>
