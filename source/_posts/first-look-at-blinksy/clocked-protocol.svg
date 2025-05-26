@@ -29,23 +29,26 @@
       stroke-width: 1;
       stroke-dasharray: 4 4;
     }
-    .label-text {
+    .signal-text {
       font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
       font-size: 14px;
       font-weight: bold;
+      dominant-baseline: middle;
+      fill: #333;
+    }
+    .level-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+      dominant-baseline: middle;
       fill: #333;
     }
     .bit-text {
       font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
       font-size: 12px;
       text-anchor: middle;
+      font-weight: bold;
       fill: #333;
-    }
-    .annotation-text {
-      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
-      font-size: 11px;
-      text-anchor: middle;
-      fill: #555;
     }
     .sample-point {
       fill: green;
@@ -56,21 +59,17 @@
       stroke-width: 1;
       stroke-dasharray: 2 2;
     }
-    .arrow {
-      fill: green;
-      stroke: none;
-    }
   </style>
 
-  <title>SPI Protocol for APA102 LED Driver</title>
+  <title>Clocked LED Protocol</title>
 
-  <text x="310" y="25" class="title-text">SPI Protocol for APA102 LED Driver</text>
-
-  <!-- Clock Signal Label -->
-  <text x="40" y="75" class="label-text" text-anchor="end">SCLK</text>
+  <text x="310" y="25" class="title-text">Clocked LED Protocol</text>
 
   <!-- Data Signal Label -->
-  <text x="40" y="175" class="label-text" text-anchor="end">MOSI</text>
+  <text x="40" y="75" class="signal-text" text-anchor="end">MOSI</text>
+
+  <!-- Clock Signal Label -->
+  <text x="40" y="175" class="signal-text" text-anchor="end">SCLK</text>
 
   <!-- Horizontal reference lines -->
   <line x1="50" y1="50" x2="570" y2="50" class="axis-line" />
@@ -79,56 +78,50 @@
   <line x1="50" y1="200" x2="570" y2="200" class="axis-line" />
 
   <!-- Logic level labels -->
-  <text x="45" y="50" class="bit-text" text-anchor="end">1</text>
-  <text x="45" y="100" class="bit-text" text-anchor="end">0</text>
-  <text x="45" y="150" class="bit-text" text-anchor="end">1</text>
-  <text x="45" y="200" class="bit-text" text-anchor="end">0</text>
-
-  <!-- Clock Signal -->
-  <path d="M 50,100
-           H 70 V 50 H 110 V 100 H 150 V 50 H 190 V 100 H 230 V 50 H 270 V 100
-           H 310 V 50 H 350 V 100 H 390 V 50 H 430 V 100 H 470 V 50 H 510 V 100 H 550 V 50 H 570"
-        class="clock-line" />
+  <text x="40" y="50" class="level-text" text-anchor="end">1</text>
+  <text x="40" y="100" class="level-text" text-anchor="end">0</text>
+  <text x="40" y="150" class="level-text" text-anchor="end">1</text>
+  <text x="40" y="200" class="level-text" text-anchor="end">0</text>
 
   <!-- Data Signal -->
-  <path d="M 50,150
-           H 90 V 200 H 170 V 150 H 250 V 200 H 330 V 150 H 410 V 200 H 490 V 150 H 570"
+  <path d="M 50,50
+           H 85 V 100 H 150 V 50 H 215 V 100 H 280 V 50 H 345 V 100 H 410 V 50 H 475 V 100 H 540 V 50 H 570"
         class="signal-line" />
 
-  <!-- Bit labels for data -->
-  <text x="70" y="225" class="bit-text">1</text>
-  <text x="130" y="225" class="bit-text">0</text>
-  <text x="210" y="225" class="bit-text">1</text>
-  <text x="290" y="225" class="bit-text">0</text>
-  <text x="370" y="225" class="bit-text">1</text>
-  <text x="450" y="225" class="bit-text">0</text>
-  <text x="530" y="225" class="bit-text">1</text>
+  <!-- Clock Signal -->
+  <path d="M 50,200
+           H 65 V 150 H 100 V 200 H 130 V 150 H 165 V 200 H 195 V 150 H 230 V 200
+           H 260 V 150 H 295 V 200 H 325 V 150 H 360 V 200 H 390 V 150 H 425 V 200
+           H 455 V 150 H 490 V 200 H 520 V 150 H 555 V 200 H 570"
+        class="clock-line" />
 
-  <!-- Sample points (on rising clock edge) -->
-  <circle cx="90" cy="175" r="4" class="sample-point" />
-  <circle cx="170" cy="175" r="4" class="sample-point" />
-  <circle cx="250" cy="175" r="4" class="sample-point" />
-  <circle cx="330" cy="175" r="4" class="sample-point" />
-  <circle cx="410" cy="175" r="4" class="sample-point" />
-  <circle cx="490" cy="175" r="4" class="sample-point" />
+  <!-- Bit labels for data -->
+  <text x="65" y="250" class="bit-text">1</text>
+  <text x="130" y="250" class="bit-text">0</text>
+  <text x="195" y="250" class="bit-text">1</text>
+  <text x="260" y="250" class="bit-text">0</text>
+  <text x="325" y="250" class="bit-text">1</text>
+  <text x="390" y="250" class="bit-text">0</text>
+  <text x="455" y="250" class="bit-text">1</text>
+  <text x="520" y="250" class="bit-text">0</text>
+
+  <!-- Sample points on the data line at rising clock edges -->
+  <circle cx="65" cy="50" r="4" class="sample-point" />
+  <circle cx="130" cy="100" r="4" class="sample-point" />
+  <circle cx="195" cy="50" r="4" class="sample-point" />
+  <circle cx="260" cy="100" r="4" class="sample-point" />
+  <circle cx="325" cy="50" r="4" class="sample-point" />
+  <circle cx="390" cy="100" r="4" class="sample-point" />
+  <circle cx="455" cy="50" r="4" class="sample-point" />
+  <circle cx="520" cy="100" r="4" class="sample-point" />
 
   <!-- Sample point connections -->
-  <line x1="90" y1="50" x2="90" y2="175" class="sample-line" />
-  <line x1="170" y1="50" x2="170" y2="175" class="sample-line" />
-  <line x1="250" y1="50" x2="250" y2="175" class="sample-line" />
-  <line x1="330" y1="50" x2="330" y2="175" class="sample-line" />
-  <line x1="410" y1="50" x2="410" y2="175" class="sample-line" />
-  <line x1="490" y1="50" x2="490" y2="175" class="sample-line" />
-
-  <!-- Explanatory labels -->
-  <text x="90" y="250" class="annotation-text">Data sampled on</text>
-  <text x="90" y="265" class="annotation-text">rising clock edge</text>
-
-  <text x="310" y="250" class="annotation-text">Each bit is shifted out serially</text>
-  <text x="310" y="265" class="annotation-text">MSB first</text>
-
-  <!-- General SPI explanation -->
-  <text x="310" y="300" class="annotation-text" text-anchor="middle">
-    APA102 uses a simplified SPI interface with SCLK (clock) and MOSI (data) lines
-  </text>
+  <line x1="65" y1="50" x2="65" y2="220" class="sample-line" />
+  <line x1="130" y1="100" x2="130" y2="220" class="sample-line" />
+  <line x1="195" y1="50" x2="195" y2="220" class="sample-line" />
+  <line x1="260" y1="100" x2="260" y2="220" class="sample-line" />
+  <line x1="325" y1="50" x2="325" y2="220" class="sample-line" />
+  <line x1="390" y1="100" x2="390" y2="220" class="sample-line" />
+  <line x1="455" y1="50" x2="455" y2="220" class="sample-line" />
+  <line x1="520" y1="100" x2="520" y2="220" class="sample-line" />
 </svg>
