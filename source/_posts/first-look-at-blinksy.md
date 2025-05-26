@@ -63,7 +63,7 @@ _\* 3D layouts are coming soon, because I want an LED cube like [this](https://m
 
 #### Desktop Simulation: 2D Grid with Noise Pattern
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085562226?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085562226?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy Desktop: 2D Grid with Noise Pattern"></div>
 
 <details>
 <summary>
@@ -116,7 +116,7 @@ fn main() {
 
 ### Embedded: 2D APA102 Grid with Noise Pattern
 
-<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561112?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561112?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy Embedded: 2D APA102 Grid with Noise Pattern"></div>
 
 <details>
 <summary>
@@ -171,7 +171,7 @@ fn main() -> ! {
 
 #### Embedded: 1D WS2812 Strip with Rainbow Pattern
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561502?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561502?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy Embedded: 1D WS2812 Strip with Rainbow Pattern"></div>
 
 <details>
 <summary>
@@ -446,7 +446,7 @@ This mismatch between physics and perception is why the "RGB" you think you know
 
 By the way, if you start mixing RGB's, make sure to do so in the linear space.
 
-So anyways, why red, green, and blue? These correspond to the 3 light receptors in our eyes. What we perceive as color is some combination of these receptors being trigged. As in, we don't see color as we might think. For example,  Not to mention, we see green as being inherently brighter than the other colors.
+So anyways, why red, green, and blue? These correspond to the 3 light receptors in our eyes. What we perceive as color is some combination of these receptors being trigged. Our brain doesn't know the difference between seeing the yellow wavelength as seeing a combination of the green and red wavelengths at the same time. We don't see color as we might think. There's no such wavelength for purple (not to be confused with violet), yet our brain makes up a color that we see.
 
 <a href="https://commons.wikimedia.org/w/index.php?curid=10514373">
   <div style="text-align: center">
@@ -460,7 +460,7 @@ So anyways, why red, green, and blue? These correspond to the 3 light receptors 
 
 There's more. We say RGB, but what red, what green, what blue? To solve this, the sRGB color space defines an exact red, an exact green, an exact blue. But is the color in our color system the same as the color being output by our LEDs?
 
-I could go on about colors, but that's enough for now.
+I could go on about colors, there's more to say, more future work to be done in Blinksy, but that's enough for now.
 
 [PWM]: https://en.wikipedia.org/wiki/Pulse-width_modulation#Duty_cycle
 [LinearSrgb]: https://docs.rs/blinksy/0.3/blinksy/color/struct.LinearSrgb.html
@@ -476,13 +476,13 @@ To make implementing [`Driver`][Driver] easier for the various LED chipsets, we 
 - [`clocked`][clocked]: Protocols that are based on [SPI][spi], where chipsets have a data line and a clock line.
   - To defined a clocked LED chipset, you define the [`ClockedLed`][ClockedLed] trait.
 - [`clockless`][clockless]: Protocols based on specific timing periods, where chipsets have only a single data line.
-  - To defined a clocked LED chipset, you define the [`ClocklessLed`][ClocklessLed] trait.
+  - To defined a clockless LED chipset, you define the [`ClocklessLed`][ClocklessLed] trait.
 
 [clocked]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/index.html
 [spi]: https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
 [ClockedLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClockedLed.html
 [clockless]: https://docs.rs/blinksy/0.3/blinksy/driver/clockless/index.html
-[ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClocklessLed.html
+[ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clockless/trait.ClocklessLed.html
 
 For each generic LED protocol type, we have specific protocols to drive those types of LEDs:
 
@@ -508,7 +508,7 @@ At the moment, Blinksy supports:
   - [Ws2812Delay]
   - [Ws2812Rmt]
 
-With the protocol abstractions, implementing a new LED chipset is as easy as implementing [ClockedLed] or [ClocklessLed].
+With the above protocol abstractions, adding a new LED chipset is as easy as implementing [ClockedLed] or [ClocklessLed].
 
 [Apa102 LEDs]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/index.html
 [ClockedLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClockedLed.html
@@ -610,7 +610,7 @@ Now, here is our hello world of LEDs:
 
 A strip of WS2812 LEDs with a scrolling rainbow.
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561502?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561502?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy Embedded: 1D WS2812 Strip with Rainbow Pattern"></div>
 
 <details>
 <summary>
@@ -658,7 +658,7 @@ Or, to show some more:
 
 A grid of APA102 LEDs with a noise function.
 
-<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561112?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+<div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561112?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy Embedded: 2D APA102 Grid with Noise Pattern"></div>
 
 <details>
 <summary>
@@ -725,7 +725,7 @@ This provides [a driver][blinksy-desktop-driver] (using [miniquad][miniquad]) an
 [miniquad]: https://github.com/not-fl3/miniquad
 [blinksy-desktop-time]: https://docs.rs/blinksy-desktop/0.3/blinksy_desktop/time/index.html
 
-<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085562226?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
+<div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085562226?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy Desktop: 2D Grid with Noise Pattern"></div>
 
 <details>
 <summary>
