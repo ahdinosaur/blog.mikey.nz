@@ -10,6 +10,32 @@ Oops I went down a rabbit hole and discovered this: [Blinksy](https://github.com
 
 <div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561394?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
 
+## What's in this post?
+
+- [Backstory](#Backstory)
+- [Announcing: Blinksy](#Announcing-Blinksy)
+  - [Examples](#Examples)
+    - [Desktop Simulation: 2D Grid with Noise Pattern](#Desktop-Simulation-2D-Grid-with-Noise-Pattern)
+    - [Embedded: 2D APA102 Grid with Noise Pattern](#Embedded-2D-APA102-Grid-with-Noise-Pattern)
+    - [Embedded: 1D WS2812 Strip with Rainbow Pattern](#Embedded-1D-WS2812-Strip-with-Rainbow-Pattern)
+- [How Blinksy works](#How-Blinksy-works)
+  - [Define your LED layout](#Define-your-LED-layout)
+    - [1D layouts](#1D-layouts)
+    - [2D layouts](#2D-layouts)
+  - [Create your visual pattern](#Create-your-visual-pattern)
+  - [Setup your LED driver](#Setup-your-LED-driver)
+    - [What colors do an LED understand?](#What-colors-do-an-LED-understand)
+    - [What protocols do an LED understand?](#What-protocols-do-an-LED-understand)
+    - [What LEDs can we talk to?](#What-LEDs-can-we-talk-to)
+- [Get started](#Get-started)
+  - [Put everything together](#Put-everything-together)
+  - [Get running on a microcontroller](#Get-running-on-a-microcontroller)
+  - [Add some LEDs](#Add-some-LEDs)
+  - [Hello LEDs](#Hello-LEDs)
+  - [Simulate on your desktop](#Simulate-on-your-desktop)
+  - [Quickstart a project](#Quickstart-a-project)
+- [Thanks](#Thanks)
+
 ## Backstory
 
 Using my learnings from personal journey with LED pixels:
@@ -27,7 +53,7 @@ I wanted to make a LED control library that could do the following:
 - Like [WLED](https://kno.wled.ge), have a library of beautiful visual patterns.
 - Unlike anything before, support not just strips and grids, but any 1D, 2D, or even 3D layout.
 
-## Blinksy
+## Announcing: Blinksy
 
 Blinksy is a new LED control library for 1D, 2D, and soon 3D layouts\*.
 
@@ -565,7 +591,7 @@ The board support crate provides a few macros to make your life easy, such as a 
 [ws2812!]: https://docs.rs/gledopto/0.3/gledopto/macro.ws2812.html
 [blinksy-quickstart-gledopto]: https://github.com/ahdinosaur/blinksy-quickstart-gledopto
 
-### LEDs
+### Add some LEDs
 
 Now you just need to add LEDs, and away you go.
 
