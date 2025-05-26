@@ -13,6 +13,7 @@
   </section>
 
   <ul class="social-list">
+    <% if (theme.homepage){ %><a href="<%- theme.homepage %>">Website</a><% } %>
     <% if (theme.social.github){ %><a href="<%- theme.social.github %>">GitHub</a><% } %>
     <% if (theme.social.mastodon){ %><a href="<%- theme.social.mastodon %>">Mastodon</a><% } %>
     <% if (theme.social.bluesky){ %><a href="<%- theme.social.bluesky %>">Bluesky</a><% } %>
