@@ -401,7 +401,9 @@ LEDs are generally 3 smaller LEDs, red + green + blue, each controlled via [puls
   >
 </div>
 
-Therefore, we use [`LinearSrgb`][LinearSrgb] when thinking about LEDs, since linear color values correspond to the intensity of light, i.e. how many photons should be emitted. However, what we actually perceive in a linear change in photons is not linear. For our evolutionary survival, we are much more sensitive to changes in dim light than we are to changes in bright light. If you double the amount of photons, we don't see double the brightness.
+Therefore, we use [`LinearSrgb`][LinearSrgb] when thinking about LEDs, since linear color values correspond to the [luminous intensity][luminous-intensity] of light, i.e. how many photons should be emitted. However, what we actually perceive in a linear change in photons is not linear. For our evolutionary survival, we are much more sensitive to changes in dim light than we are to changes in bright light. If you double the amount of photons, we don't see double the brightness.
+
+This mismatch between physics and perception is why the "RGB" you think you know is actually [gamma-encoded `sRGB`][sRGB]. sRGB allows us to think in terms of perception, where double the red value means double the perceived brightness of red. Then for LEDs, we convert the gamma-encoded sRGB to linear, to use as a gamma-corrected duty cycle.
 
 <div style="text-align: center">
   <img
@@ -411,16 +413,27 @@ Therefore, we use [`LinearSrgb`][LinearSrgb] when thinking about LEDs, since lin
   >
 </div>
 
-This mismatch between physics and perception is why the "RGB" you think you know is actually [gamma-encoded `sRGB`][sRGB]. But also, if you start mixing RGB's, make sure to do so in the linear space.
+By the way, if you start mixing RGB's, make sure to do so in the linear space.
 
-So anyways, why red, green, and blue? These correspond to the 3 light receptors in our eyes. What we perceive as color is some combination of these receptors being trigged. As in, we don't see color as we might think.
+So anyways, why red, green, and blue? These correspond to the 3 light receptors in our eyes. What we perceive as color is some combination of these receptors being trigged. As in, we don't see color as we might think. For example,  Not to mention, we see green as being inherently brighter than the other colors.
 
-But there's more. We say RGB, but what red, what green, what blue? Is the color in our color system the same as the color being output by our LEDs?
+<a href="https://commons.wikimedia.org/w/index.php?curid=10514373">
+  <div style="text-align: center">
+    <img
+      src="/first-look-at-blinksy/human-eye-cones.svg"
+      alt="Normalized responsivity spectra of human cone cells, S, M, and L types (SMJ data based on Stiles and Burch RGB color-matching, linear scale, weighted for equal energy)"
+      style="max-width: 70%; width: 100%;"
+    >
+  </div>
+</a>
 
-I could go on, but to do so I need another blog post.
+There's more. We say RGB, but what red, what green, what blue? To solve this, the sRGB color space defines an exact red, an exact green, an exact blue. But is the color in our color system the same as the color being output by our LEDs?
+
+I could go on about colors, but that's enough for now.
 
 [PWM]: https://en.wikipedia.org/wiki/Pulse-width_modulation#Duty_cycle
 [LinearSrgb]: https://docs.rs/blinksy/0.3/blinksy/color/struct.LinearSrgb.html
+[luminous-intensity]: https://en.wikipedia.org/wiki/Luminous_intensity
 [sRGB]: https://en.wikipedia.org/wiki/SRGB
 
 #### What protocols do an LED understand?
