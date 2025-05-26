@@ -61,7 +61,7 @@
   <text x="310" y="25" class="title-text">Clockless LED Protocol</text>
 
   <!-- Data Signal Label -->
-  <text x="40" y="75" class="signal-text" text-anchor="end">MOSI</text>
+  <text x="40" y="75" class="signal-text" text-anchor="end">DATA</text>
 
   <!-- Logic level labels -->
   <text x="40" y="50" class="level-text" text-anchor="end">H</text>
@@ -74,37 +74,34 @@
 
   <g transform="translate(50, 50)">
     <!-- Horizontal reference lines -->
-    <line x1="0" y1="0" x2="520" y2="50" class="axis-line" />
-    <line x1="0" y1="50" x2="520" y2="100" class="axis-line" />
+    <line x1="0" y1="0" x2="570" y2="0" class="axis-line" />
+    <line x1="0" y1="50" x2="570" y2="50" class="axis-line" />
+
+    <!-- Bit labels for data -->
+    <text x="35.625" y="70" class="bit-text">1</text>
+    <text x="106.875" y="70" class="bit-text">0</text>
+    <text x="178.125" y="70" class="bit-text">1</text>
+    <text x="249.375" y="70" class="bit-text">0</text>
+    <text x="320.625" y="70" class="bit-text">1</text>
+    <text x="391.875" y="70" class="bit-text">0</text>
+    <text x="463.125" y="70" class="bit-text">1</text>
+    <text x="534.375" y="70" class="bit-text">0</text>
+
+    <!-- Sample point boundaries -->
+    <!--
+    [...new Array(8).keys()].map(i => {
+      let x = i * (570/8)
+      return `<line x1="${x}" y1="0" x2="${x}" y2="70" class="sample-line" />`
+    })
+    -->
+    <line x1="0" y1="0" x2="0" y2="70" class="sample-line" />
+    <line x1="71.25" y1="0" x2="71.25" y2="70" class="sample-line" />
+    <line x1="142.5" y1="0" x2="142.5" y2="70" class="sample-line" />
+    <line x1="213.75" y1="0" x2="213.75" y2="70" class="sample-line" />
+    <line x1="285" y1="0" x2="285" y2="70" class="sample-line" />
+    <line x1="356.25" y1="0" x2="356.25" y2="70" class="sample-line" />
+    <line x1="427.5" y1="0" x2="427.5" y2="70" class="sample-line" />
+    <line x1="498.75" y1="0" x2="498.75" y2="70" class="sample-line" />
+    <line x1="570" y1="0" x2="570" y2="70" class="sample-line" />
   </g>
-
-  <!-- Bit labels for data -->
-  <text x="65" y="250" class="bit-text">1</text>
-  <text x="130" y="250" class="bit-text">0</text>
-  <text x="195" y="250" class="bit-text">1</text>
-  <text x="260" y="250" class="bit-text">0</text>
-  <text x="325" y="250" class="bit-text">1</text>
-  <text x="390" y="250" class="bit-text">0</text>
-  <text x="455" y="250" class="bit-text">1</text>
-  <text x="520" y="250" class="bit-text">0</text>
-
-  <!-- Sample points on the data line at rising clock edges -->
-  <circle cx="65" cy="50" r="4" class="sample-point" />
-  <circle cx="130" cy="100" r="4" class="sample-point" />
-  <circle cx="195" cy="50" r="4" class="sample-point" />
-  <circle cx="260" cy="100" r="4" class="sample-point" />
-  <circle cx="325" cy="50" r="4" class="sample-point" />
-  <circle cx="390" cy="100" r="4" class="sample-point" />
-  <circle cx="455" cy="50" r="4" class="sample-point" />
-  <circle cx="520" cy="100" r="4" class="sample-point" />
-
-  <!-- Sample point connections -->
-  <line x1="65" y1="50" x2="65" y2="220" class="sample-line" />
-  <line x1="130" y1="100" x2="130" y2="220" class="sample-line" />
-  <line x1="195" y1="50" x2="195" y2="220" class="sample-line" />
-  <line x1="260" y1="100" x2="260" y2="220" class="sample-line" />
-  <line x1="325" y1="50" x2="325" y2="220" class="sample-line" />
-  <line x1="390" y1="100" x2="390" y2="220" class="sample-line" />
-  <line x1="455" y1="50" x2="455" y2="220" class="sample-line" />
-  <line x1="520" y1="100" x2="520" y2="220" class="sample-line" />
 </svg>

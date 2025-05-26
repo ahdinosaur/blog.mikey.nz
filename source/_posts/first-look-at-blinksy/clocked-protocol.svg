@@ -33,6 +33,7 @@
       font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
       font-size: 14px;
       font-weight: bold;
+      text-anchor: end;
       dominant-baseline: middle;
       fill: #333;
     }
@@ -66,10 +67,10 @@
   <text x="310" y="25" class="title-text">Clocked LED Protocol</text>
 
   <!-- Data Signal Label -->
-  <text x="40" y="75" class="signal-text" text-anchor="end">MOSI</text>
+  <text x="50" y="75" class="signal-text">DATA</text>
 
   <!-- Clock Signal Label -->
-  <text x="40" y="175" class="signal-text" text-anchor="end">SCLK</text>
+  <text x="50" y="175" class="signal-text">CLOCK</text>
 
   <!-- Horizontal reference lines -->
   <line x1="50" y1="50" x2="570" y2="50" class="axis-line" />
