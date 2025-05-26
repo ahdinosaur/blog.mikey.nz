@@ -2,7 +2,7 @@
 <svg
   width="100%"
   height="100%"
-  viewBox="0 0 620 280"
+  viewBox="0 0 620 130"
   preserveAspectRatio="xMidYMid meet"
   xmlns="http://www.w3.org/2000/svg"
 >
@@ -67,15 +67,29 @@
   <text x="40" y="50" class="level-text" text-anchor="end">H</text>
   <text x="40" y="100" class="level-text" text-anchor="end">L</text>
 
-  <!-- Data Signal -->
-  <path d="M 50,50
-           H 85 V 100 H 150 V 50 H 215 V 100 H 280 V 50 H 345 V 100 H 410 V 50 H 475 V 100 H 540 V 50 H 570"
-        class="signal-line" />
-
   <g transform="translate(50, 50)">
     <!-- Horizontal reference lines -->
     <line x1="0" y1="0" x2="570" y2="0" class="axis-line" />
     <line x1="0" y1="50" x2="570" y2="50" class="axis-line" />
+
+    <!-- Data Signal -->
+    <!--
+    [1, 0, 1, 0, 1, 0, 1, 0].map(bit => {
+      if bit {
+
+      } else {
+      }
+    })
+    -->
+    <path
+      d="
+        M 50,50
+        H
+
+             H 85 V 100 H 150 V 50 H 215 V 100 H 280 V 50 H 345 V 100 H 410 V 50 H 475 V 100 H 540 V 50 H 570"
+          class="signal-line" />
+    </path>
+
 
     <!-- Bit labels for data -->
     <text x="35.625" y="70" class="bit-text">1</text>
@@ -87,7 +101,7 @@
     <text x="463.125" y="70" class="bit-text">1</text>
     <text x="534.375" y="70" class="bit-text">0</text>
 
-    <!-- Sample point boundaries -->
+    <!-- Sample boundaries -->
     <!--
     [...new Array(8).keys()].map(i => {
       let x = i * (570/8)
