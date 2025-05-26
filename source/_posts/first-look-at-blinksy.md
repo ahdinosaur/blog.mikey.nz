@@ -474,9 +474,9 @@ To make implementing [`Driver`][Driver] easier for the various LED chipsets, we 
 [Driver]: https://docs.rs/blinksy/0.3/blinksy/driver/trait.Driver.html
 
 - [`clocked`][clocked]: Protocols that are based on [SPI][spi], where chipsets have a data line and a clock line.
-  - To defined a clocked LED chipset, you define the [`ClockedLed`][ClockedLed] trait.
+  - To define a clocked LED chipset, you define the [`ClockedLed`][ClockedLed] trait.
 - [`clockless`][clockless]: Protocols based on specific timing periods, where chipsets have only a single data line.
-  - To defined a clockless LED chipset, you define the [`ClocklessLed`][ClocklessLed] trait.
+  - To define a clockless LED chipset, you define the [`ClocklessLed`][ClocklessLed] trait.
 
 [clocked]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/index.html
 [spi]: https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
