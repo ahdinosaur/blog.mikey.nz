@@ -2,6 +2,7 @@
 title: A burn dance
 date: 2018-08-18
 tags:
+image: /a-burn-dance/IMG_20180817_202947.jpg
 ---
 
 Playing around with rainbows LEDs i can dance with!  🌈💃⚡️💖
@@ -16,7 +17,7 @@ Continuing from [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)
 
 Source: [`ahdinosaur/aburndance`](https://github.com/ahdinosaur/aburndance)
 
-![](./a-burn-dance/IMG_20180817_202947.jpg)
+![](/a-burn-dance/IMG_20180817_202947.jpg)
 
 ## BOM
 
