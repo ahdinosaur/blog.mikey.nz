@@ -1,7 +1,13 @@
 ---
 title: First look at Blinksy
 date: 2025-05-02 09:49:15
+excerpt: A Rust no-std no-alloc LED control library for 1D, 2D, and soon 3D layouts.
+image: /first-look-at-blinksy/thumbnail.jpg
+categories:
+  - projects
 tags:
+  - project
+  - led
 ---
 
 Oops I went down a rabbit hole and discovered this: [Blinksy](https://github.com/ahdinosaur/blinksy) 🟥🟩🟦
