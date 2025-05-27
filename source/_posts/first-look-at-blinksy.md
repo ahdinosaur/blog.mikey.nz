@@ -1,6 +1,6 @@
 ---
 title: First look at Blinksy
-date: 2025-05-02 09:49:15
+date: 2025-05-27 20:00:00
 excerpt: A Rust no-std no-alloc LED control library for 1D, 2D, and soon 3D layouts.
 image: /first-look-at-blinksy/thumbnail.jpg
 categories:
@@ -572,7 +572,7 @@ With the above protocol abstractions, adding a new LED chipset is as easy as imp
 [Ws2812Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/ws2812/type.Ws2812Delay.html
 [Ws2812Rmt]: https://docs.rs/blinksy-esp/0.3/blinksy_esp/type.Ws2812Rmt.html
 [ClockedLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClockedLed.html
-[ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.Clockless.html
+[ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clockless/trait.Clockless.html
 
 By the way, props to [`smart-leds`][smart-leds] for paving the way on addressable LED drivers in Rust.
 
