@@ -10,11 +10,11 @@ hexo.extend.filter.register('after_post_render', (data) => {
   if (!data.description && data.excerpt) {
     // Coz data.excerpt is HTML. But we only need pure text.
     var excerpt = data.excerpt
-    var description = htmlToText(excerpt, {
+    var description = htmlToText.convert(excerpt, {
       wordwrap: false,
       ignoreHref: true,
       selectors: [
-        { selector: 'a', options: { noAnchorUrl: true } },
+        { selector: 'a', options: { ignoreHref: true } },
         { selector: 'img', options: { format: 'skip' } },
       ]
     })

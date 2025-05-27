@@ -2,6 +2,7 @@
 title: Being charitable
 date: 2018-03-13 22:42:19
 tags:
+image: /being-charitable/charitable-opening.jpg
 ---
 
 My co-worker Greg introduced me to a useful way to reflect on our interpretations: whether or not we are _being charitable_.
@@ -10,7 +11,7 @@ My co-worker Greg introduced me to a useful way to reflect on our interpretation
 
 (Art by [Victor Mosquera](http://victormosquera.tumblr.com/))
 
-[![charitable opening](./being-charitable/charitable-opening.jpg)](http://victormosquera.tumblr.com/)
+[![charitable opening](/being-charitable/charitable-opening.jpg)](http://victormosquera.tumblr.com/)
 
 ## How to be charitable
 
@@ -20,7 +21,7 @@ Applying this to a social context: before we give someone negative feedback, we 
 
 We should construct the most favorable opinion of someone until proven otherwise, to regard them as _innocent until proven guilty_, to _give them the benefit of the doubt_.
 
-[![charitable review](./being-charitable/charitable-review.jpg)](http://victormosquera.tumblr.com/)
+[![charitable review](/being-charitable/charitable-review.jpg)](http://victormosquera.tumblr.com/)
 
 ### The prime directive
 
@@ -30,7 +31,7 @@ In the context of agile retrospectives, we see this concept as [The Prime Direct
 
 When we assume good faith, we are able to go beyond blaming any person involved and instead focus on the systems we are in.
 
-[![charitable composition](./being-charitable/charitable-composition.jpg)](http://victormosquera.tumblr.com/)
+[![charitable composition](/being-charitable/charitable-composition.jpg)](http://victormosquera.tumblr.com/)
 
 ## Signs you are not being charitable
 
@@ -47,7 +48,7 @@ So, you are probably not being charitable if
 - you back up your interpretation with pre-existing tension or conflicts (as in, bringing your baggage with you)
 - you nitpick words or assume you would have a better interpretation with the right words ("if only you had said")
 
-[![charitable poking](./being-charitable/charitable-poking.jpg)](http://victormosquera.tumblr.com/)
+[![charitable poking](/being-charitable/charitable-poking.jpg)](http://victormosquera.tumblr.com/)
 
 ## Charity loops
 
@@ -59,4 +60,4 @@ When we are charitable to ourselves, we will be able to fulfill our own needs, w
 
 Together, we can give gifts of a charitable interpretation.
 
-[![charitable sailing](./being-charitable/charitable-sailing.jpg)](http://victormosquera.tumblr.com/)
+[![charitable sailing](/being-charitable/charitable-sailing.jpg)](http://victormosquera.tumblr.com/)

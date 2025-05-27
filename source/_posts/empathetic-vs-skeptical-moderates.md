@@ -2,6 +2,7 @@
 title: Empathetic vs Skeptical Moderates
 date: 2018-04-23 22:07:17
 tags:
+image: /empathetic-vs-skeptical-moderates/national-anthem.jpg
 ---
 
 In the last year, I've noticed two seas of (white) moderates: one as a valuable bridge, another as an infection of deception.

@@ -1,6 +1,7 @@
 ---
 title: 'Polyledra v2: LED tensegrity'
 date: 2021-01-31
+image: /polyledra-v2-led-tensegrity/kiwiburn-1.jpg
 categories:
   - projects
 tags:
@@ -21,17 +22,17 @@ excerpt: An LED installation made from magic physics
 >
 > - [Tensegrity @ Wikipedia](https://en.wikipedia.org/wiki/Tensegrity)
 
-![](./polyledra-v2-led-tensegrity/tensegrity010.jpg)
+![](/polyledra-v2-led-tensegrity/tensegrity010.jpg)
 
-![](./polyledra-v2-led-tensegrity/tensegrity001.jpg)
+![](/polyledra-v2-led-tensegrity/tensegrity001.jpg)
 
-![](./polyledra-v2-led-tensegrity/tensegrity016.jpg)
+![](/polyledra-v2-led-tensegrity/tensegrity016.jpg)
 
 ## Tensegrity prototype
 
-![](./polyledra-v2-led-tensegrity/tensegrity-prototype-1.jpg)
+![](/polyledra-v2-led-tensegrity/tensegrity-prototype-1.jpg)
 
-![](./polyledra-v2-led-tensegrity/tensegrity-prototype-2.jpg)
+![](/polyledra-v2-led-tensegrity/tensegrity-prototype-2.jpg)
 
 <div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796544440?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2020-10-04) Polyledra v2: Tensegrity prototype"></div>
 
@@ -68,7 +69,7 @@ Since I couldn't find acrylic tubes long enough, I "welded" multiple tubes toget
 
 <div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796544501?h=f2a3973a72&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2020-12-13) Polyledra v2: 3D printing spacers"></div>
 
-![](./polyledra-v2-led-tensegrity/printing-spacers.jpg)
+![](/polyledra-v2-led-tensegrity/printing-spacers.jpg)
 
 <div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796544455?h=675491f3ca&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2020-12-11) Polyledra v2: LED prototype"></div>
 
@@ -76,9 +77,9 @@ Since I couldn't find acrylic tubes long enough, I "welded" multiple tubes toget
 
 The acrylic tubes are sanded to achieve a diffuser effect.
 
-![](./polyledra-v2-led-tensegrity/sanding-acrylic-tubes.jpg)
+![](/polyledra-v2-led-tensegrity/sanding-acrylic-tubes.jpg)
 
-![](./polyledra-v2-led-tensegrity/diffuser-test.jpg)
+![](/polyledra-v2-led-tensegrity/diffuser-test.jpg)
 
 <div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796544524?h=d556bd9d33&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2020-12-17) Polyledra v2: Diffuser test"></div>
 
@@ -86,7 +87,7 @@ The acrylic tubes are sanded to achieve a diffuser effect.
 
 I also made two portable "doof sticks" based on the same strut designs, with further 3d printed sections for: batteries, bi-directional power converter, power switch, power plug, WLED controller, and button interface. All solvent welded together.
 
-![](./polyledra-v2-led-tensegrity/doof-stick-exploded.jpg)
+![](/polyledra-v2-led-tensegrity/doof-stick-exploded.jpg)
 
 <div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796588810?h=371703bf57&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2020-12-27) Doof stick exploded"></div>
 
@@ -109,29 +110,29 @@ Each strut connects with:
 - The neighbor struts at the bottom
 - The neighbor struts from top to bottom
 
-![tensegrity.gif](./polyledra-v2-led-tensegrity/tensegrity.gif)
+![tensegrity.gif](/polyledra-v2-led-tensegrity/tensegrity.gif)
 
 ## Tensegrity assembly
 
-![](./polyledra-v2-led-tensegrity/soldered-edge.jpg)
+![](/polyledra-v2-led-tensegrity/soldered-edge.jpg)
 
-![](./polyledra-v2-led-tensegrity/assembly-test-1.jpg)
+![](/polyledra-v2-led-tensegrity/assembly-test-1.jpg)
 
-![](./polyledra-v2-led-tensegrity/assembly-test-2.jpg)
+![](/polyledra-v2-led-tensegrity/assembly-test-2.jpg)
 
-![](./polyledra-v2-led-tensegrity/assembly-test-3.jpg)
+![](/polyledra-v2-led-tensegrity/assembly-test-3.jpg)
 
 <div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796544568?h=5507016050&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2021-01-12) Polyledra v2: Tensegrity test"></div>
 
 ## Ignition
 
-![](./polyledra-v2-led-tensegrity/ignition.jpg)
+![](/polyledra-v2-led-tensegrity/ignition.jpg)
 
 ## Kiwiburn
 
-![](./polyledra-v2-led-tensegrity/kiwiburn-1.jpg)
+![](/polyledra-v2-led-tensegrity/kiwiburn-1.jpg)
 
-![](./polyledra-v2-led-tensegrity/kiwiburn-2.jpg)
+![](/polyledra-v2-led-tensegrity/kiwiburn-2.jpg)
 
 <div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796544606?h=e36ece3c4e&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2021-01-29) Polyledra v2: Kiwiburn"></div>
 

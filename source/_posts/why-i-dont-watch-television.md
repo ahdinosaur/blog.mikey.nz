@@ -1,6 +1,7 @@
 layout: post
 title: Why I don't watch television
 date: 19 August 2017
+image: /why-i-dont-watch-television/leunig-tv-splash.jpg
 ---
 
 A television exercises your ability to watch without action for extended periods of time.
@@ -9,7 +10,7 @@ I want to exercise my ability to find creative solutions to complex problems.
 
 <!-- more -->
 
-![leunig cartoons splash](./why-i-dont-watch-television/leunig-tv-splash.jpg)
+![leunig cartoons splash](/why-i-dont-watch-television/leunig-tv-splash.jpg)
 
 ## [The medium is the message](https://en.wikipedia.org/wiki/The_medium_is_the_message)
 

@@ -2,6 +2,7 @@
 title: The Made Up Game
 date: 2023-04-23 12:46:51
 tags:
+image: /the-made-up-game/calvinball-1990-may-05.jpg
 excerpt: 'One day, nearly a decade ago, some friends stumbled upon game we called the "Made Up Game", and I discovered my favorite genre of game: games where you play with changing the rules of the game.'
 ---
 
@@ -11,7 +12,7 @@ For some reason, I don't like playing [tabletop games](https://en.wikipedia.org/
 
 So one day, nearly a decade ago, some friends stumbled upon game we called the "Made Up Game", and I discovered my favorite genre of game: games where you play with changing the rules of the game.
 
-![Calvin and Hobbes - 1990 May 05](./the-made-up-game/calvinball-1990-may-05.gif)
+![Calvin and Hobbes - 1990 May 05](/the-made-up-game/calvinball-1990-may-05.gif)
 
 So here's the Made Up Game: a creative [card game](https://en.wikipedia.org/wiki/Card_game) where you make up the rules.
 
@@ -61,7 +62,7 @@ How? Well that's up to you!
 
 Having played the Made Up Game a few times, every game is unique, no game is ever the same.
 
-![Calvin and Hobbes - 1990 May 27](./the-made-up-game/calvinball-1990-may-27.jpg)
+![Calvin and Hobbes - 1990 May 27](/the-made-up-game/calvinball-1990-may-27.jpg)
 
 Here are some example styles of rules I've seen:
 
@@ -120,7 +121,7 @@ How might you introduce a rule from another game into the Made Up Game?
 
 ## More rule-changing games 📚
 
-![Calvin and Hobbes - 1990 August 26](./the-made-up-game/calvinball-1990-august-26.jpg)
+![Calvin and Hobbes - 1990 August 26](/the-made-up-game/calvinball-1990-august-26.jpg)
 
 ### Nomic ⚖️
 

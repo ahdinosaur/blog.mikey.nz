@@ -1,12 +1,13 @@
 ---
 title: Portable solar v2
 date: 2021-01-24
+image: /portable-solar-v2/solar-panels.jpg
+excerpt: A new portable solar setup, the "right way"
 categories:
   - projects
 tags:
   - project
   - solar
-excerpt: A new portable solar setup, the "right way"
 ---
 
 I made a new portable solar setup, with help from ["Mobile Solar Power - Made Easy" by William Errol Prowse IV](https://www.mobile-solarpower.com/the-book.html).
@@ -24,10 +25,10 @@ The goal is to do a solar electric setup the "right way":
 
 <div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796935636?h=167b282882" data-title="(2021-01-12) Portable Solar v2 : Build"></div>
 
-![](./portable-solar-v2/mid-assembly.jpg)
+![](/portable-solar-v2/mid-assembly.jpg)
 
-![](./portable-solar-v2/assembled-inner.jpg)
+![](/portable-solar-v2/assembled-inner.jpg)
 
-![](./portable-solar-v2/solar-panels.jpg)
+![](/portable-solar-v2/solar-panels.jpg)
 
 TODO more detail
