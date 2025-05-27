@@ -11,13 +11,17 @@
   <meta property="og:title" content="<%= page.title %>" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_US" />
-  <%  if (page.excerpt) { %>
+  <%  if (page.description) { %>
   <meta property="og:description" content="<%= page.description %>" />
   <% } %>
   <% if (page.image) { %>
   <meta property="og:image" content="<%= config.url %><%= page.image %>" />
   <% } %>
   <meta property="og:url" content="<%= page.permalink %>" />
+  <% } else { %>
+  <meta property="og:title" content="<%= config.title %>" />
+  <meta property="og:description" content="<%= config.description %>" />
+  <meta property="og:image" content="<%= config.url %>/images/banner.jpg" />
   <% } %>
 
   <%- css('css/app') %>
