@@ -1,6 +1,7 @@
 ---
 title: 'Polyledra v1: LED tetrahedron'
 date: 2019-02-27
+image: /polyledra-v1-led-tetrahedron/polyledra-tetrahedron-3.jpg
 categories:
   - projects
 tags:
@@ -9,6 +10,8 @@ tags:
 ---
 
 A [light-emitting](https://en.wikipedia.org/wiki/Light-emitting_diode) [polyhedron](https://en.wikipedia.org/wiki/Polyhedron) [chandelier](https://en.wikipedia.org/wiki/Chandelier)
+
+<!-- more -->
 
 Source: [`ahdinosaur/polyledra-v1`](https://github.com/ahdinosaur/polyledra-v1)
 
@@ -44,15 +47,15 @@ An icosahedron is a 20-sided shape which regular angle patterns and uniform leng
 
 It's also a gyroelgonated pentagonal dipryamid (my original understanding of the shape): on the top and bottom is a [pentagonal pyramid](http://mathworld.wolfram.com/PentagonalPyramid.html), in the middle is an [pentagonal antiprism](https://en.wikipedia.org/wiki/Pentagonal_antiprism)
 
-![icosahedron.png](./polyledra-v1-led-tetrahedron/shape-icosahedron.png)
+![icosahedron.png](/polyledra-v1-led-tetrahedron/shape-icosahedron.png)
 
 ### [Octahedron](https://en.wikipedia.org/wiki/Octahedron)
 
-![octahedron.png](./polyledra-v1-led-tetrahedron/shape-octahedron.png)
+![octahedron.png](/polyledra-v1-led-tetrahedron/shape-octahedron.png)
 
 ### [Tetrahedron](https://en.wikipedia.org/wiki/Tetrahedron)
 
-![tetrahedron.png](./polyledra-v1-led-tetrahedron/shape-tetrahedron.png)
+![tetrahedron.png](/polyledra-v1-led-tetrahedron/shape-tetrahedron.png)
 
 ## Initial controller dive
 
@@ -64,7 +67,7 @@ Really enjoying how the compiler is so helpful.
 
 Had my first fight with the borrow checker, still am on easy mode though. Had my first “spend hours writing a heap of rust code, finally compiles, and omg what it works!?”
 
-![rusty tetrahedron](./polyledra-v1-led-tetrahedron/rusty-tetrahedron.png)
+![rusty tetrahedron](/polyledra-v1-led-tetrahedron/rusty-tetrahedron.png)
 
 I setup a basic multi-threaded message-passing architecture based on a conversation with Matt, thanks!
 
@@ -76,7 +79,7 @@ I think the hard part of this project for me will be the graphics part, I find g
 
 Been making heaps of progress, yay learning Rust!
 
-![rusty tetrahedron](./polyledra-v1-led-tetrahedron/chandeledra-02-19-18.png)
+![rusty tetrahedron](/polyledra-v1-led-tetrahedron/chandeledra-02-19-18.png)
 
 - in the simulator, render points instead of cubes for performance (until [I do my own gl](https://github.com/ahdinosaur/chandeledra/issues/1))
 - play with simple animated rgb scene
@@ -93,7 +96,7 @@ Had a long battle with the Rust borrow checker, ended up on top! 😅
 
 Then moved on to the puzzle of how to implement a shape walker. 🌈
 
-![rainbow tetrahedron](./polyledra-v1-led-tetrahedron/rainbow-tetrahedron.gif){width=489 height=475}
+![rainbow tetrahedron](/polyledra-v1-led-tetrahedron/rainbow-tetrahedron.gif){width=489 height=475}
 
 ### From software to 3D modeling
 
@@ -103,31 +106,31 @@ First going to build a [tetrahedron](https://en.wikipedia.org/wiki/Tetrahedron),
 
 Here are the dimensions of each aluminum channel (except 500mm long):
 
-![aluminium-channel.jpg](./polyledra-v1-led-tetrahedron/aluminium-channel.jpg)
+![aluminium-channel.jpg](/polyledra-v1-led-tetrahedron/aluminium-channel.jpg)
 
 The idea is to have 3 led strip channels per edge of the tetrahedron so the edges will be lit from all angles. I had this idea before but was going to start with a single channel per edge, until I talked to my friend: she noticed that since the shapes will be regular, the best effects will come from seeing the other side of the shape _through_ the shape!
 
-With help from Jack, I made a 3d model of the tetrahedron connectors! 
+With help from Jack, I made a 3d model of the tetrahedron connectors!
 
-![Screenshot_20180303_154737.png](./polyledra-v1-led-tetrahedron/Screenshot_20180303_154737.png) 
+![Screenshot_20180303_154737.png](/polyledra-v1-led-tetrahedron/Screenshot_20180303_154737.png)
 
 ## Getting ready for Winter Expo
 
 Mix helped me with the tetrahedron angles math, my last edge connector was so wrong 📐
 
-![chandeledra-vertex-structure-math.jpg](./polyledra-v1-led-tetrahedron/chandeledra-vertex-structure-math.jpg)
+![chandeledra-vertex-structure-math.jpg](/polyledra-v1-led-tetrahedron/chandeledra-vertex-structure-math.jpg)
 
 Then I completely re-structured the vertex structure, so can fit wires inside and round the back
 
 ([scad](https://github.com/ahdinosaur/polyledra-v1/blob/6d7f562fed9a5393606230402887901394d0b97c/vertex-structure/cad/tetrahedron.scad), [viewable stl](https://github.com/ahdinosaur/polyledra-v1/blob/6d7f562fed9a5393606230402887901394d0b97c/vertex-structure/stl/tetrahedron.stl))
 
-![chandeledra-vertex-structure-scad.png](./polyledra-v1-led-tetrahedron/chandeledra-vertex-structure-scad.png)
+![chandeledra-vertex-structure-scad.png](/polyledra-v1-led-tetrahedron/chandeledra-vertex-structure-scad.png)
 
 Then I made a new controller scene 🎇
 
 ([rs](https://github.com/ahdinosaur/chandeledra/blob/6d7f562fed9a5393606230402887901394d0b97c/controller-app/src/scene/spark.rs))
 
-![chandeledra-spark-loop.gif](./polyledra-v1-led-tetrahedron/chandeledra-spark-loop.gif){width=450 height=516}
+![chandeledra-spark-loop.gif](/polyledra-v1-led-tetrahedron/chandeledra-spark-loop.gif){width=450 height=516}
 
 Then I got my code running on the [Pocket Beagle](https://beagleboard.org/pocket). I love Rust where I can write code on my laptop (which doesn't have access to an spi interface necessary to control the leds), then once I had it compile on my laptop (without ever running the code) there was only a small configuration change to make it actually work on the Pocket, yay compile-time type and borrow checking!
 
@@ -137,7 +140,7 @@ So this weekend I got the controller rust code running on the Pocket Beagle disp
 
 Now I've prepared 15/18 led strips in aluminium channels, made an easy deploy script from my computer to the Pocket, setup the controller binary to run automatically when the Pocket starts, and fixed the code so it outputs pixel data for 3 "arms" per tetrahedron edge (3 arms per edge * 6 edges = 18 total arms).
 
-![chandeledra arms](./polyledra-v1-led-tetrahedron/chandeledra-arms.jpg)
+![chandeledra arms](/polyledra-v1-led-tetrahedron/chandeledra-arms.jpg)
 
 Next up:
 
@@ -154,7 +157,7 @@ Yesterday fixed up the edge connector model based on feedback from my friend Jac
 
 Today soldered up the [power injectors](https://www.seeedstudio.com/AllPixel-Power-Tap-Kit-p-2380.html) (had these leftover from a previous project, they connect perfectly here!) and powered up all the leds, but turns out I had an off-by-one error! Notice the center point is no longer in the center. The reason was float math, `0.999996` when expecting `1`, solution was to round by a decimal place.
 
-![chandeledra off by one](./polyledra-v1-led-tetrahedron/chandeledra-off-by-one.jpg)
+![chandeledra off by one](/polyledra-v1-led-tetrahedron/chandeledra-off-by-one.jpg)
 
 Then based on a tip from Piet, I sprayed the strips down with [circuit board lacquer](https://www.jaycar.co.nz/circuit-board-lacquer-spray-can/p/NA1002) so they will be less likely to short (the aluminum is anodized, but scratch under the surface and you have a conductive metal touching the copper on the strips).
 
@@ -166,13 +169,13 @@ And all powered by this cute linux computer! 🐶
 
 (And some other things, see [complete bill of materials](https://github.com/ahdinosaur/chandeledra/blob/de8ad2b9137e729acb819ddc46ce12246a832355/BOM.md))
 
-![chandeledra cute pocket beagle](./polyledra-v1-led-tetrahedron/chandeledra-cute-pocket-beagle.jpg)
+![chandeledra cute pocket beagle](/polyledra-v1-led-tetrahedron/chandeledra-cute-pocket-beagle.jpg)
 
 ## More updates!
 
 Here's my new scene using 4-dimensional noise to determine colors! (`[x, y, z, time]` where time oscillates back and forth on each "beat" (TODO), slowly steps forward), got some help from Jack at [Art~Hack](https://arthack.nz).
 
-![chandeledra glow](./polyledra-v1-led-tetrahedron/chandeledra-glow.gif){width=376 height=424}
+![chandeledra glow](/polyledra-v1-led-tetrahedron/chandeledra-glow.gif){width=376 height=424}
 
 Then added a button to change modes, except since I didn't have an actual button I just tap the wires together. 😸
 
@@ -180,15 +183,15 @@ Then added a button to change modes, except since I didn't have an actual button
 
 Yesterday, thanks to the other Jack, got the third print of the vertex structure, third time's a charm! (actually this design needed changes, the 4th print looks good so far.)
 
-![chandeledra vertex structure print 3](./polyledra-v1-led-tetrahedron/chandeledra-vertex-structure-print-3.jpg)
+![chandeledra vertex structure print 3](/polyledra-v1-led-tetrahedron/chandeledra-vertex-structure-print-3.jpg)
 
 Mix helped me shape out the tetrahedron:
 
-![chandeledra mix structure](./polyledra-v1-led-tetrahedron/chandeledra-mix-structure.jpg)
+![chandeledra mix structure](/polyledra-v1-led-tetrahedron/chandeledra-mix-structure.jpg)
 
 Then soldered some wires and used the 4th print to assemble a partial tetrahedron, it's almost a thing!
 
-![chandeledra bright in progress](./polyledra-v1-led-tetrahedron/chandeledra-bright-in-progress.jpg)
+![chandeledra bright in progress](/polyledra-v1-led-tetrahedron/chandeledra-bright-in-progress.jpg)
 
 In motion!
 
@@ -208,33 +211,33 @@ I disassembled the tetrahedron and brought it with me to California. ☀ a bunch
 
 Here's my first plug and socket design:
 
-![chandeledra edge plug v1](./polyledra-v1-led-tetrahedron/chandeledra-edge-plug-v1.png)
-![chandeledra vertex socket v1](./polyledra-v1-led-tetrahedron/chandeledra-vertex-socket-v1.png)
+![chandeledra edge plug v1](/polyledra-v1-led-tetrahedron/chandeledra-edge-plug-v1.png)
+![chandeledra vertex socket v1](/polyledra-v1-led-tetrahedron/chandeledra-vertex-socket-v1.png)
 
 The "plug" design here was especially bad because a 3d printed part gets strength from horizontal, not vertical. So while I could connected the "plug" into the "socket", given the lack of tolerance I pushed them tightly together and *snap* the "plug" broke off.
 
 And then I realized, this is what threaded bolts 🔩 are for:
 
-![chandeledra edge plug v2](./polyledra-v1-led-tetrahedron/chandeledra-edge-plug-v2.png)
-![chandeledra vertex socket v2](./polyledra-v1-led-tetrahedron/chandeledra-vertex-socket-v2.png)
+![chandeledra edge plug v2](/polyledra-v1-led-tetrahedron/chandeledra-edge-plug-v2.png)
+![chandeledra vertex socket v2](/polyledra-v1-led-tetrahedron/chandeledra-vertex-socket-v2.png)
 
 With this design, the edges are meant to be portable as units, so I discovered hot glue on both sides to prevent the wire connection from breaking and to keep out dust. 🌈
 
-![chandeledra reassembly](./polyledra-v1-led-tetrahedron/chandeledra-reassembly.jpg)
+![chandeledra reassembly](/polyledra-v1-led-tetrahedron/chandeledra-reassembly.jpg)
 
 Then to bring to Burning Man, I found a bag and added 2 portable usb power packs, 🔋
 
-![chandeledra usb battery pack](./polyledra-v1-led-tetrahedron/chandeledra-usb-battery-pack.jpg)
+![chandeledra usb battery pack](/polyledra-v1-led-tetrahedron/chandeledra-usb-battery-pack.jpg)
 
 Added copious amounts of tape, to robustify the setup in danger of my lack of repair tooling,
 
 and hung the polyledra as a chandelier from rope 🐍
 
-![chandeledra-hanging.jpg](./polyledra-v1-led-tetrahedron/chandeledra-hanging.jpg)
+![chandeledra-hanging.jpg](/polyledra-v1-led-tetrahedron/chandeledra-hanging.jpg)
 
 and later at the burn, tied to my bike. 🚲
 
-![chandeledra-bike.jpg](./polyledra-v1-led-tetrahedron/chandeledra-bike.jpg)
+![chandeledra-bike.jpg](/polyledra-v1-led-tetrahedron/chandeledra-bike.jpg)
 
 <div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/796157114?h=123cc74709&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2018-09-02) Polyledra v1: Burning Man"></div>
 
@@ -254,7 +257,7 @@ Yay! 💃
 
 Then dis-assembled to bring back to New Zealand (during which time another two vertex parts broke), got replacements vertex parts printed at [National Library Wellington](https://natlib.govt.nz/visiting/wellington/3d-printing), and re-assembled again for Art~Hack Spring Expo / Maker Faire Wellington.
 
-![Art~Hack Spring Expo / Maker Faire Wellington](./polyledra-v1-led-tetrahedron/arthack-spring-expo-maker-faire.jpg)
+![Art~Hack Spring Expo / Maker Faire Wellington](/polyledra-v1-led-tetrahedron/arthack-spring-expo-maker-faire.jpg)
 
 Now to get ready for "I-Can't-Believe-It's-Not-Kiwiburn":
 
@@ -277,25 +280,25 @@ So yeah: I made [`jseda`](https://github.com/ahdinosaur/jseda) & [`sexprs`](http
 
 And made my first circuit with code:
 
-![first-jseda-polyledra-edge-a.png](./polyledra-v1-led-tetrahedron/first-jseda-polyledra-edge-a.png)
+![first-jseda-polyledra-edge-a.png](/polyledra-v1-led-tetrahedron/first-jseda-polyledra-edge-a.png)
 
 Which later became refined to the 4 circuits I need:
 
 _Edge, side a_:
 
-![polyledra-jseda-circuit-edge-a.png](./polyledra-v1-led-tetrahedron/polyledra-jseda-circuit-edge-a.png)
+![polyledra-jseda-circuit-edge-a.png](/polyledra-v1-led-tetrahedron/polyledra-jseda-circuit-edge-a.png)
 
 _Edge, side b_:
 
-![polyledra-jseda-circuit-edge-b.png](./polyledra-v1-led-tetrahedron/polyledra-jseda-circuit-edge-b.png)
+![polyledra-jseda-circuit-edge-b.png](/polyledra-v1-led-tetrahedron/polyledra-jseda-circuit-edge-b.png)
 
 _Tetrahedron vertex_:
 
-![polyledra-jseda-circuit-tetrahedron-vertex.png](./polyledra-v1-led-tetrahedron/polyledra-jseda-circuit-tetrahedron-vertex.png)
+![polyledra-jseda-circuit-tetrahedron-vertex.png](/polyledra-v1-led-tetrahedron/polyledra-jseda-circuit-tetrahedron-vertex.png)
 
 _Octahedron vertex_:
 
-![polyledra-jseda-circuit-octahedron-vertex.png](./polyledra-v1-led-tetrahedron/polyledra-jseda-circuit-octahedron-vertex.png)
+![polyledra-jseda-circuit-octahedron-vertex.png](/polyledra-v1-led-tetrahedron/polyledra-jseda-circuit-octahedron-vertex.png)
 
 In this time I discovered that my whole time in Wellington (~4 years), during which time I lamented the lack of a local hackerspace, there has been a publicly-available Fab Lab: [Fab Lab Wgtn](https://fablabwgtn.co.nz/), complete with 3D printers, laser cutters, multiple CNC machines, a PCB mill, and more. 😋
 
@@ -303,7 +306,7 @@ So I was hoping to prototype my circuits on the mill, even got help from Craig t
 
 Today the circuits arrived, along with 3D prints I outsourced to be printed with PETG (stronger and more weatherproof than PLA)!
 
-![polyledra-circuits.jpg](./polyledra-v1-led-tetrahedron/polyledra-circuits.jpg)
+![polyledra-circuits.jpg](/polyledra-v1-led-tetrahedron/polyledra-circuits.jpg)
 
 So far everything looks sweet as, I'm very excited. 😊 if everything checks out, I'll be able to make a few more tetrahedrons, maybe an octahedron, with far better structural and electrical reliability than my current prototype, yay! 💃
 
@@ -311,7 +314,7 @@ So far everything looks sweet as, I'm very excited. 😊 if everything checks ou
 
 Before I learned about Fab Lab Wgtn, I bought a 3D printer, which took a few months to arrive but finally did, it's amaze. Back in the day I built a [Prusa Mendel](https://reprap.org/wiki/Prusa_Mendel) from a kit, which at the time I knew meant that my time and energy would be focused on the 3D printer itself. These days I wanted to focus on 3D printing, and Josef Prusa made a company selling their printers, so I bought a pre-assembled [Prusa i3 MK3](https://shop.prusa3d.com/en/17-3d-printers), I couldn't be happier. 🔩
 
-![dinosaur-prusa-i3-mk3-3d-printer.jpg](./polyledra-v1-led-tetrahedron/dinosaur-prusa-i3-mk3-3d-printer.jpg)
+![dinosaur-prusa-i3-mk3-3d-printer.jpg](/polyledra-v1-led-tetrahedron/dinosaur-prusa-i3-mk3-3d-printer.jpg)
 
 Meanwhile, I had a new idea to fix the vertex part, again keeping in the mind that the strength in a 3d printed part is printed layer by layer:
 
@@ -319,21 +322,21 @@ https://youtu.be/SyXvFngkf1Q
 
 Instead of printing the angles of the vertex part as one, I made a separate part with the angle, to be printed on the side, maximizing strength. 💪
 
-![polyledra-structure-vertex-angle.png](./polyledra-v1-led-tetrahedron/polyledra-structure-vertex-angle.png)
+![polyledra-structure-vertex-angle.png](/polyledra-v1-led-tetrahedron/polyledra-structure-vertex-angle.png)
 
 It worked, but meant I'd have another 3 sets of connectors to keep everything together. After some time exploring this new approach, I went back to the old approach and while not perfect I think it's stronger than my last design and good enough for my purposes.
 
-![polyledra-structure-vertex-angle-2.png](./polyledra-v1-led-tetrahedron/polyledra-structure-vertex-angle-2.png)
+![polyledra-structure-vertex-angle-2.png](/polyledra-v1-led-tetrahedron/polyledra-structure-vertex-angle-2.png)
 
 While I've been printing away, I ended up with PLA prototypes, wondering what to do with them. PLA is technically compostable and recyclable, but in practice you need a industrial composter (which is not available here in Wellington) and most recycling systems don't accept PLA. Despite this reality, PLA is commonly used by your eco-friendly cafes as "compostable" coffee lids. Anyways, I've started re-using my PLA prototypes to make party jewelry, which has been working really well because my 3D designs are very symmetric and have appealing features (like the edge connector can look like a few faces, depending on how you angle it).
 
 During this time, I also discovered an [OpenSCAD library for polyhedra](https://github.com/benjamin-edward-morgan/openscad-polyhedra), which let me visualize the entire tetrahedron, with all the parts put together:
- 
-![polyledra-tetrahedron-2.png](./polyledra-v1-led-tetrahedron/polyledra-tetrahedron-2.png)
+
+![polyledra-tetrahedron-2.png](/polyledra-v1-led-tetrahedron/polyledra-tetrahedron-2.png)
 
 Oh, also I went down a side quest in the search for waterproofing, discovered the magic of o-rings and how they are used everywhere, I had no idea! I played around with making custom o-rings from making 3d models of molds to fill with rubber, Haven't given this a hoon yet though.
 
-![polyledra-o-gon.png](./polyledra-v1-led-tetrahedron/polyledra-o-gon.png)
+![polyledra-o-gon.png](/polyledra-v1-led-tetrahedron/polyledra-o-gon.png)
 
 ## Next iteration
 
@@ -341,21 +344,21 @@ So far the next iteration of the tetrahedron is going well! 🌈
 
 (Not pictured: all the time spent making a mess in the empty office while assembling and listening to drum & bass, or when I soldered things backwards and had to unsolder everything, or when twice I plugged the power plugs backwards (+5V into GND and vise versa) causing the wires to rapidly melt and burn))
 
-![polyledra-two-edges.jpg](./polyledra-v1-led-tetrahedron/polyledra-two-edges.jpg)
+![polyledra-two-edges.jpg](/polyledra-v1-led-tetrahedron/polyledra-two-edges.jpg)
 
-![polyledra-tetrahedron-circuits.jpg](./polyledra-v1-led-tetrahedron/polyledra-tetrahedron-circuits.jpg)
+![polyledra-tetrahedron-circuits.jpg](/polyledra-v1-led-tetrahedron/polyledra-tetrahedron-circuits.jpg)
 
-![polyledra-edges.jpg](./polyledra-v1-led-tetrahedron/polyledra-edges.jpg)
+![polyledra-edges.jpg](/polyledra-v1-led-tetrahedron/polyledra-edges.jpg)
 
-![polyledra-partial-tetrahedron.jpg](./polyledra-v1-led-tetrahedron/polyledra-partial-tetrahedron.jpg)
+![polyledra-partial-tetrahedron.jpg](/polyledra-v1-led-tetrahedron/polyledra-partial-tetrahedron.jpg)
 
-![polyledra-tetrahedron-3.jpg](./polyledra-v1-led-tetrahedron/polyledra-tetrahedron-3.jpg)
+![polyledra-tetrahedron-3.jpg](/polyledra-v1-led-tetrahedron/polyledra-tetrahedron-3.jpg)
 
-![polyledra-tetrahedron-4.jpg](./polyledra-v1-led-tetrahedron/polyledra-tetrahedron-4.jpg)
+![polyledra-tetrahedron-4.jpg](/polyledra-v1-led-tetrahedron/polyledra-tetrahedron-4.jpg)
 
 ## Twisted
 
-![polyledra-twisted.jpg](./polyledra-v1-led-tetrahedron/polyledra-twisted.jpg)
+![polyledra-twisted.jpg](/polyledra-v1-led-tetrahedron/polyledra-twisted.jpg)
 
 <div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796156160?h=ebc56605c9&&autoplay=1&loop=1&autopause=0&muted=1" data-title="(2019-01-01) Polyledra v1: Twisted"></div>
 
@@ -367,18 +370,18 @@ So far the next iteration of the tetrahedron is going well! 🌈
 
 ## Double trouble
 
-![polyledra all the pcbs](./polyledra-v1-led-tetrahedron/polyledra-all-the-pcbs-1.jpg)
+![polyledra all the pcbs](/polyledra-v1-led-tetrahedron/polyledra-all-the-pcbs-1.jpg)
 
-![polyledra all the pcbs](./polyledra-v1-led-tetrahedron/polyledra-all-the-pcbs-2.jpg)
+![polyledra all the pcbs](/polyledra-v1-led-tetrahedron/polyledra-all-the-pcbs-2.jpg)
 
-![polyledra double trouble](./polyledra-v1-led-tetrahedron/polyledra-double-trouble.jpg)
+![polyledra double trouble](/polyledra-v1-led-tetrahedron/polyledra-double-trouble.jpg)
 
 ## "I-Can't-Believe-It's-Not-Kiwiburn"
 
-![ignition abundance](./polyledra-v1-led-tetrahedron/ignition-abundance.jpg)
+![ignition abundance](/polyledra-v1-led-tetrahedron/ignition-abundance.jpg)
 
-![ignition night](./polyledra-v1-led-tetrahedron/ignition-night.jpg)
+![ignition night](/polyledra-v1-led-tetrahedron/ignition-night.jpg)
 
 ## Scuttle camp
 
-![scuttle camp](./polyledra-v1-led-tetrahedron/scuttle-camp.jpg)
+![scuttle camp](/polyledra-v1-led-tetrahedron/scuttle-camp.jpg)

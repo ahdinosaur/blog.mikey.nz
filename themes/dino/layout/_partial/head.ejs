@@ -7,6 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>">
 
+  <% if (page.title) { %>
+  <meta property="og:title" content="<%= page.title %>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_US" />
+  <%  if (page.excerpt) { %>
+  <meta property="og:description" content="<%= page.description %>" />
+  <% } %>
+  <% if (page.image) { %>
+  <meta property="og:image" content="<%= config.url %><%= page.image %>" />
+  <% } %>
+  <meta property="og:url" content="<%= page.permalink %>" />
+  <% } %>
+
   <%- css('css/app') %>
 
   <% if (theme.matomo) { %>
@@ -25,6 +38,4 @@
   </script>
   <!-- End Matomo Code -->
   <% } %>
-
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>

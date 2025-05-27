@@ -3,6 +3,7 @@
 title: "The Lost Cause: Blue Helmet Modular Systems"
 date: 2024-10-15 12:00:00
 tags:
+excerpt: I want to share some inspiring science fiction that paints a picture of a future to believe in. A future with realistic challenges and realistic solutions. Fiction to help ground solarpunk into a vision of action.
 ---
 
 ## Context

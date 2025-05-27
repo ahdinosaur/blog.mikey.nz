@@ -2,9 +2,12 @@
 title: Empathetic vs Skeptical Moderates
 date: 2018-04-23 22:07:17
 tags:
+image: /empathetic-vs-skeptical-moderates/national-anthem.jpg
 ---
 
 In the last year, I've noticed two seas of (white) moderates: one as a valuable bridge, another as an infection of deception.
+
+<!-- more -->
 
 For context, I come from the United States of America, where many of my extended family and friends may support Donald Trump and may be on the spectrum of the Alt-Right, it's not possible for me to ignore the new waves of moderate politics.
 

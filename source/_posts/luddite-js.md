@@ -12,6 +12,8 @@ and
 
 **simple patterns based on function signatures**.
 
+<!-- more -->
+
 <div
   class="video-embed"
   data-ratio="16:9"

@@ -2,11 +2,14 @@
 title: A burn dance
 date: 2018-08-18
 tags:
+image: /a-burn-dance/IMG_20180817_202947.jpg
 ---
 
 Playing around with rainbows LEDs i can dance with!  🌈💃⚡️💖
 
 In the classic shape of suspenders and a belt.
+
+<!-- more -->
 
 <div class="video-embed" data-ratio="2:3" data-type="vimeo" data-src="https://player.vimeo.com/video/795074597?h=fa397d5ebc" data-title="(2018) A Burn Dance: Walkthrough"></div>
 
@@ -14,7 +17,7 @@ Continuing from [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)
 
 Source: [`ahdinosaur/aburndance`](https://github.com/ahdinosaur/aburndance)
 
-![](./a-burn-dance/IMG_20180817_202947.jpg)
+![](/a-burn-dance/IMG_20180817_202947.jpg)
 
 ## BOM
 
