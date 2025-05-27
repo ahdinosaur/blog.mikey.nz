@@ -1,7 +1,7 @@
 ---
 title: First look at Blinksy
 date: 2025-05-27 20:00:00
-excerpt: A Rust no-std no-alloc LED control library for 1D, 2D, and soon 3D spatial layouts. 🟥🟩🟦
+excerpt: A Rust no-std no-alloc LED control library for spatial layouts. 🟥🟩🟦
 image: /first-look-at-blinksy/thumbnail.jpg
 categories:
   - projects
@@ -12,7 +12,7 @@ tags:
 
 Oops I went down a rabbit hole and discovered this: [Blinksy](https://github.com/ahdinosaur/blinksy) 🟥🟩🟦
 
-> A **Rust** _no-std_ _no-alloc_ LED control library for 1D, 2D, and soon 3D layouts
+> A **Rust** _no-std_ _no-alloc_ LED control library for spatial layouts
 
 <div class="video-embed" data-ratio="9:16" data-type="vimeo" data-src="https://player.vimeo.com/video/1085561394?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy: 2D APA102 Grid with Noise Pattern"></div>
 
@@ -62,7 +62,7 @@ And learnings with [advanced generics for no-std no-alloc embedded Rust](/how-to
 
 ## Announcing: Blinksy
 
-Blinksy is a new LED control library for 1D, 2D, and soon 3D layouts\*.
+Blinksy is a new LED control library for 1D, 2D, and soon 3D spatial layouts\*.
 
 _\* 3D layouts are coming soon, because I want an LED cube like [this](https://makerworld.com/en/models/1085530-16x16-ws2812-wled-cube) with native 3D animations!_
 
