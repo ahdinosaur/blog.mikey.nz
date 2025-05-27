@@ -1,7 +1,7 @@
 ---
 title: First look at Blinksy
 date: 2025-05-27 20:00:00
-excerpt: A Rust no-std no-alloc LED control library for 1D, 2D, and soon 3D layouts.
+excerpt: A Rust no-std no-alloc LED control library for 1D, 2D, and soon 3D spatial layouts. 🟥🟩🟦
 image: /first-look-at-blinksy/thumbnail.jpg
 categories:
   - projects
