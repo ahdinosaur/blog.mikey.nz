@@ -2,9 +2,12 @@
 title: Openers, Closers, and Support
 date: 2018-04-10 18:19:30
 tags:
+image: /openers-closers-and-support/now-how-do-i-get-down-by-huleeb.jpg
 ---
 
 Once upon a team, we had a reflection: it's unfair to expect everyone to do the same work equally (homogeneity), instead the total work is spread across many complementary roles (heterogeneity).
+
+<!-- more -->
 
 To help us towards this understanding, Greg shared the typical formation of a Counter Strike team:
 

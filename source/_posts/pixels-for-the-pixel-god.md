@@ -1,10 +1,17 @@
 ---
 title: PIXELS FOR THE PIXEL GOD
 date: 2017-12-31
+image: /pixels-for-the-pixel-god/portable-rainbows.jpg
+categories:
+  - projects
 tags:
+  - project
+  - led
 ---
 
 As a break from my other open source projects, have decided to start spending my [Art~Hack](https://arthack.nz) evenings on my next (3rd?) generation of modular LED pixels that beat to music.
+
+<!-- more -->
 
 <div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796536263?h=36d25c00bf&background=1" data-title="(2015) Scrolling Rainbow"></div>
 
@@ -17,7 +24,7 @@ First generation: [beatpixels](https://github.com/ahdinosaur/beatpixels)
 - uses an laptop running Pure Data to send messages to the Arduino
 - learning: it's difficult to be expressive in the C language
 
-![Cloyne pixel board](./pixels-for-the-pixel-god/cloyne-pixel-board.jpg)
+![Cloyne pixel board](/pixels-for-the-pixel-god/cloyne-pixel-board.jpg)
 
 ## Second generation
 
@@ -35,11 +42,11 @@ The second (and maybe second-second) generation: [pixelbeat](https://github.com/
   - BeagleBones don't have enough juice to power a smooth audio-reactive visual set
   - manually injecting power into strips takes too much time to setup
 
-![pixel beat at Art~Hack](./pixels-for-the-pixel-god/art-hack-pixelbeat.jpg)
+![pixel beat at Art~Hack](/pixels-for-the-pixel-god/art-hack-pixelbeat.jpg)
 
-![pixel beat at Art~Hack](./pixels-for-the-pixel-god/art-hack-pixelbeat-2.jpg)
+![pixel beat at Art~Hack](/pixels-for-the-pixel-god/art-hack-pixelbeat-2.jpg)
 
-![mood light](./pixels-for-the-pixel-god/mood-light.jpg)
+![mood light](/pixels-for-the-pixel-god/mood-light.jpg)
 
 gigs:
 
@@ -63,7 +70,7 @@ As always, it begins with a [scrolling rainbow](https://github.com/ahdinosaur/ra
 
 (Using an electron app to simulate the hardware in JavaScript before I commit to anything.)
 
-![scrolling rainbow](./pixels-for-the-pixel-god/scrolling-rainbow-2.png)
+![scrolling rainbow](/pixels-for-the-pixel-god/scrolling-rainbow-2.png)
 
 - published [pull-opc@1](https://github.com/ahdinosaur/pull-opc) to send and receive Open Pixel Control messages using pull streams
 - published [pixels-opc@4](https://github.com/livejs/pixels-opc) to send [ndpixels](https://github.com/livejs/ndpixels)
@@ -91,8 +98,8 @@ But this setup would break anytime I transported the LEDs to and from [Art~Hack]
 
 So I received the support from my friend Gordon of [Fre3formD](https://www.facebook.com/Fre3formD/) to design and 3d print a custom enclosure for the Power Tap so that the pressure on the wires wouldn't cause them to break.
 
-![power 1](./pixels-for-the-pixel-god/power-1.jpg)
-![power 2](./pixels-for-the-pixel-god/power-2.jpg)
+![power 1](/pixels-for-the-pixel-god/power-1.jpg)
+![power 2](/pixels-for-the-pixel-god/power-2.jpg)
 
 Since then I've also started using small 5V power supplies per injection, since it's much easier to run normal AC power extensions and it's much more flexible to accommodate any venue. But I also haven't run more than 12 meters of LED strips at a time yet, nor any permanent installations using this recent setup.
 
@@ -106,11 +113,11 @@ https://github.com/ahdinosaur/aburndance
 
 You click the button to cycle through "modes" (currently have rainbow mode, star field mode, and convergence mode). Each mode can use params from the first 3 rotary encoders, 4th rotary encoder is always used for global brightness.
 
-![rainbow breadboard](./pixels-for-the-pixel-god/rainbow-breadboard-1.jpg)
+![rainbow breadboard](/pixels-for-the-pixel-god/rainbow-breadboard-1.jpg)
 
 Today ported my setup from a breadboard to a protoboard, plus found some fancy knobs lying around the space!
 
-![rainbow breadboard](./pixels-for-the-pixel-god/rainbow-breadboard-2.jpg)
+![rainbow breadboard](/pixels-for-the-pixel-god/rainbow-breadboard-2.jpg)
 
 🎈
 
@@ -118,4 +125,4 @@ Today ported my setup from a breadboard to a protoboard, plus found some fancy k
 
 Portable rainbows and me for off-grid new years' 🎊
 
-![portable rainbows](./pixels-for-the-pixel-god/portable-rainbows.jpg)
+![portable rainbows](/pixels-for-the-pixel-god/portable-rainbows.jpg)

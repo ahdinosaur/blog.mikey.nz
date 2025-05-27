@@ -75,7 +75,7 @@ function getAssetDimensions(src, { image_widths }) {
       dimensions.height = width
       break
     }
-    default: 
+    default:
       // https://www.npmjs.com/package/image-size
       // https://exiftool.org/TagNames/EXIF.html#:~:text=0x0112,8%20=%20Rotate%20270%20CW
       throw new Error(`Unexpected JPEG orientation: ${dimensions.orientation}`)

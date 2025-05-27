@@ -2,9 +2,11 @@
 title: EVERYTHING IS DEEPLY INTERTWINGLED
 date: 2023-06-01
 tags:
+excerpt: I made a collection of videos to showcase the magic alchemy of computation. ✨
+image: /everything-is-deeply-intertwingled/douglas-engelbart-keyboard.jpg
 ---
 
-![Douglas Engelbart using the NLS’s 5-button chord keyset, a standard QWERTY keyboard, and 3-button mouse, around 1968. NMAH Catalog #2015.3073.11, gift of SRI International](everything-is-deeply-intertwingled/douglas-engelbart-keyboard.jpg)
+![Douglas Engelbart using the NLS’s 5-button chord keyset, a standard QWERTY keyboard, and 3-button mouse, around 1968. NMAH Catalog #2015.3073.11, gift of SRI International](/everything-is-deeply-intertwingled/douglas-engelbart-keyboard.jpg)
 
 I made a collection of videos to showcase the magic alchemy of computation. ✨
 

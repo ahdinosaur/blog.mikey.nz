@@ -6,6 +6,8 @@ tags:
 
 As part of [my work](https://villagekit.com) on [Grid Bot "Tahi"](https://github.com/villagekit/gridbot-tahi), I _finally_ figured out how to make [the code for my robot re-usable as a library](https://github.com/villagekit/robokit). Since to do this I needed to go on a deep journey into understanding Rust generic types, I thought I might share my learnings.
 
+<!-- more -->
+
 ## Disclaimer ⚠️
 
 As a quick disclaimer: This post is not a basic introduction to embedded Rust. For a basic introduction to embedded Rust, see [the embedded Rust Bookshelf](https://docs.rust-embedded.org/) for resources.

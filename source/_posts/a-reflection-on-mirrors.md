@@ -1,6 +1,7 @@
 layout: post
 title: A reflection on mirrors
 date: 2018-02-25T10:29:41.174Z
+image: /a-reflection-on-mirrors/bathroom-mirror-selfie.jpg
 ---
 
 A few months ago, my co-worker Juliet planted a seed in my mind:
@@ -8,6 +9,8 @@ A few months ago, my co-worker Juliet planted a seed in my mind:
 > The best gift a friend can provide you is a mirror: a reflection of who you really are.
 
 I've been reflecting on who I really am, and the ways I receive more insight into who I really am.
+
+<!-- more -->
 
 ## What's a mirror?
 
@@ -31,7 +34,7 @@ I had found a sun dress and was wearing it for the first time at a party.
 
 I went to the bathroom and looked at myself in the mirror.
 
-![bathroom mirror selfie](./a-reflection-on-mirrors/bathroom-mirror-selfie.jpg)
+![bathroom mirror selfie](/a-reflection-on-mirrors/bathroom-mirror-selfie.jpg)
 
 The image of me I saw in the mirror did not match the image I had for myself.
 

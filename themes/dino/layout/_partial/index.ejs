@@ -6,8 +6,14 @@
       </h1>
 
       <div class="article-entry">
-        <%- post.foreword %>
+        <%- post.excerpt %>
       </div>
+
+      <% if (post.image) { %>
+      <div class="thumbnail image-wrapper">
+        <%- create_responsive_img(post.image, {}) %>
+      </div>
+      <% } %>
 
       <div class="article-meta">
         <span class="article-date"><%- date(post.date, 'MMM DD YYYY') %></span>
