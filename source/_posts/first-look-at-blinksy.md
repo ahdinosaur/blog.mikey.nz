@@ -44,7 +44,7 @@ Oops I went down a rabbit hole and discovered this: [Blinksy](https://github.com
 
 ## Backstory
 
-Using my learnings from personal journey with LED pixels:
+Using learnings from my personal journey with LED pixels:
 
 - [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)
 - [A Burn Dance](/a-burn-dance/)
@@ -55,7 +55,7 @@ And new learnings with [advanced generics for no-std no-alloc embedded Rust](/ho
 
 I wanted to make a LED control library that could do the following:
 
-- Like [FastLED](https://fastled.io/), support all the most common LED pixel chipsets such as WS2812, APA1012, and more.
+- Like [FastLED](https://fastled.io/), support all the most common LED pixel chipsets such as WS2812, APA102, and more.
 - Like [WLED](https://kno.wled.ge), have a library of beautiful visual patterns.
 - Unlike anything before, support not just strips and grids, but any 1D, 2D, or even 3D layout.
 
@@ -94,10 +94,10 @@ fn main() {
         Layout,
         [Shape2d::Grid {
             start: Vec2::new(-1., -1.),
-            row_end: Vec2::new(-1., 1.),
-            col_end: Vec2::new(1., -1.),
-            row_pixel_count: 16,
-            col_pixel_count: 16,
+            horizontal_end: Vec2::new(1., -1.),
+            vertical_end: Vec2::new(-1., 1.),
+            horizontal_pixel_count: 16,
+            vertical_pixel_count: 16,
             serpentine: true,
         }]
     );
@@ -149,10 +149,10 @@ fn main() -> ! {
         Layout,
         [Shape2d::Grid {
             start: Vec2::new(-1., -1.),
-            row_end: Vec2::new(1., -1.),
-            col_end: Vec2::new(-1., 1.),
-            row_pixel_count: 16,
-            col_pixel_count: 16,
+            horizontal_end: Vec2::new(1., -1.),
+            vertical_end: Vec2::new(-1., 1.),
+            horizontal_pixel_count: 16,
+            vertical_pixel_count: 16,
             serpentine: true,
         }]
     );
@@ -228,17 +228,19 @@ fn main() -> ! {
   - The pattern will compute colors for each LED based on its position
 - Setup a [`driver`][driver] to send each frame of colors to your LEDs, using our built-in [`drivers`][drivers] library.
 
-[layout]: https://docs.rs/blinksy/0.3/blinksy/layout/index.html
-[pattern]: https://docs.rs/blinksy/0.3/blinksy/pattern/index.html
-[patterns]: https://docs.rs/blinksy/0.3/blinksy/patterns/index.html
-[driver]: https://docs.rs/blinksy/0.3/blinksy/driver/index.html
-[drivers]: https://docs.rs/blinksy/0.3/blinksy/drivers/index.html
+This is possible without the Rust standard library (_no-std_) and without any memory allocations to the heap (_no-alloc_), so we can play with LEDs on embedded devices.
+
+[layout]: https://docs.rs/blinksy/0.4/blinksy/layout/index.html
+[pattern]: https://docs.rs/blinksy/0.4/blinksy/pattern/index.html
+[patterns]: https://docs.rs/blinksy/0.4/blinksy/patterns/index.html
+[driver]: https://docs.rs/blinksy/0.4/blinksy/driver/index.html
+[drivers]: https://docs.rs/blinksy/0.4/blinksy/drivers/index.html
 
 ### Define your LED layout
 
 A [layout][layout] defines the physical or logical positions of the LEDs in your setup, as arrangements in 1D, 2D, and 3D space.
 
-[layout]: https://docs.rs/blinksy/0.3/blinksy/layout/index.html
+[layout]: https://docs.rs/blinksy/0.4/blinksy/layout/index.html
 
 To define a layout, we must define a struct that implement either the [`Layout1d`][Layout1d], [`Layout2d`][Layout2d], or soon `Layout3d` traits.
 
@@ -251,11 +253,11 @@ To make this easy, we use either the [`layout1d`][layout1d], [`layout2d`][layout
 
 These traits provide a `PIXEL_COUNT` constant, which is the number of LEDs, and a `.points()` method, which maps each LED pixel into a 1D, 2D, or 3D space between -1.0 and 1.0.
 
-[layout]: https://docs.rs/blinksy/0.3/blinksy/layout/index.html
-[Layout1d]: https://docs.rs/blinksy/0.3/blinksy/layout/trait.Layout1d.html
-[Layout2d]: https://docs.rs/blinksy/0.3/blinksy/layout/trait.Layout2d.html
-[layout1d]: https://docs.rs/blinksy/0.3/blinksy/macro.layout1d.html
-[layout2d]: https://docs.rs/blinksy/0.3/blinksy/macro.layout2d.html
+[layout]: https://docs.rs/blinksy/0.4/blinksy/layout/index.html
+[Layout1d]: https://docs.rs/blinksy/0.4/blinksy/layout/trait.Layout1d.html
+[Layout2d]: https://docs.rs/blinksy/0.4/blinksy/layout/trait.Layout2d.html
+[layout1d]: https://docs.rs/blinksy/0.4/blinksy/macro.layout1d.html
+[layout2d]: https://docs.rs/blinksy/0.4/blinksy/macro.layout2d.html
 
 #### 1D layouts
 
@@ -291,10 +293,10 @@ layout2d!(
     Layout,
     [Shape2d::Grid {
         start: Vec2::new(-1., -1.),
-        row_end: Vec2::new(1., -1.),
-        col_end: Vec2::new(-1., 1.),
-        row_pixel_count: 16,
-        col_pixel_count: 16,
+        horizontal_end: Vec2::new(1., -1.),
+        vertical_end: Vec2::new(-1., 1.),
+        horizontal_pixel_count: 16,
+        vertical_pixel_count: 16,
         serpentine: true,
     }]
 );
@@ -308,7 +310,7 @@ layout2d!(
 
 A [pattern][pattern], most similar to [a WLED effect][a WLED effect], generates colors for LEDs based on time and position.
 
-[pattern]: https://docs.rs/blinksy/0.3/blinksy/pattern/index.html
+[pattern]: https://docs.rs/blinksy/0.4/blinksy/pattern/index.html
 [a WLED effect]: https://kno.wled.ge/features/effects/
 
 We define this as a struct that implements the [`Pattern`][Pattern] trait.
@@ -344,13 +346,13 @@ where
 }
 ```
 
-While there is one [`Pattern`][Pattern] trait, it may be implemented for any dimension, using a [dimension marker](https://docs.rs/blinksy/0.3/blinksy/dimension/index.html): [`Dim1d`][Dim1d], [`Dim2d`][Dim2d], or soon `Dim3d`. The dimension marker will then constrain the `Layout` generic provided, to implement either [`Layout1d`][Layout1d], [`Layout2d`][Layout2d], or soon `Layout3d`, respectively.
+While there is one [`Pattern`][Pattern] trait, it may be implemented for any dimension, using a [dimension marker](https://docs.rs/blinksy/0.4/blinksy/dimension/index.html): [`Dim1d`][Dim1d], [`Dim2d`][Dim2d], or soon `Dim3d`. The dimension marker will then constrain the `Layout` generic provided, to implement either [`Layout1d`][Layout1d], [`Layout2d`][Layout2d], or soon `Layout3d`, respectively.
 
-[Pattern]: https://docs.rs/blinksy/0.3/blinksy/pattern/trait.Pattern.html
-[Dim1d]: https://docs.rs/blinksy/0.3/blinksy/dimension/struct.Dim1d.html
-[Dim2d]: https://docs.rs/blinksy/0.3/blinksy/dimension/struct.Dim2d.html
-[Layout1d]: https://docs.rs/blinksy/0.3/blinksy/layout/trait.Layout1d.html
-[Layout2d]: https://docs.rs/blinksy/0.3/blinksy/layout/trait.Layout2d.html
+[Pattern]: https://docs.rs/blinksy/0.4/blinksy/pattern/trait.Pattern.html
+[Dim1d]: https://docs.rs/blinksy/0.4/blinksy/dimension/struct.Dim1d.html
+[Dim2d]: https://docs.rs/blinksy/0.4/blinksy/dimension/struct.Dim2d.html
+[Layout1d]: https://docs.rs/blinksy/0.4/blinksy/layout/trait.Layout1d.html
+[Layout2d]: https://docs.rs/blinksy/0.4/blinksy/layout/trait.Layout2d.html
 
 On initialization, the pattern is given configuration parameters.
 
@@ -358,14 +360,14 @@ On every update, the pattern is given the current time in milliseconds, and must
 
 The [color types][color types] in Blinksy are inspired by the [`palette`][palette] crate, where they implement [`FromColor`][FromColor] and [`IntoColor`][IntoColor]. Like FastLED we have [`Hsv`][Hsv] (which uses [FastLED's rainbow hues][FastLED HSV]), or for a [more modern][more modern] color space we have [`Okhsv`][Okhsv].
 
-[color types]: https://docs.rs/blinksy/0.3/blinksy/color/index.html
+[color types]: https://docs.rs/blinksy/0.4/blinksy/color/index.html
 [palette]: https://docs.rs/palette/0.7/palette/
-[FromColor]: https://docs.rs/blinksy/0.3/blinksy/color/trait.FromColor.html
-[IntoColor]: https://docs.rs/blinksy/0.3/blinksy/color/trait.IntoColor.html
-[Hsv]: https://docs.rs/blinksy/0.3/blinksy/color/struct.Hsv.html
+[FromColor]: https://docs.rs/blinksy/0.4/blinksy/color/trait.FromColor.html
+[IntoColor]: https://docs.rs/blinksy/0.4/blinksy/color/trait.IntoColor.html
+[Hsv]: https://docs.rs/blinksy/0.4/blinksy/color/struct.Hsv.html
 [FastLED HSV]: https://github.com/FastLED/FastLED/wiki/FastLED-HSV-Colors
 [more modern]: https://bottosson.github.io/posts/colorpicker/
-[Okhsv]: https://docs.rs/blinksy/0.3/blinksy/color/struct.Okhsv.html
+[Okhsv]: https://docs.rs/blinksy/0.4/blinksy/color/struct.Okhsv.html
 
 To use a pattern, we can either choose from the [built-in library][patterns] or create our own.
 
@@ -374,10 +376,10 @@ We have two visual [patterns][patterns] to start, each implementing [`Pattern`][
 - [Rainbow][rainbow]: A basic scrolling rainbow.
 - [Noise][noise]: A flow through random noise functions.
 
-[patterns]: https://docs.rs/blinksy/0.3/blinksy/patterns/index.html
-[Pattern]: https://docs.rs/blinksy/0.3/blinksy/pattern/trait.Pattern.html
-[rainbow]: https://docs.rs/blinksy/0.3/blinksy/patterns/rainbow/index.html
-[noise]: https://docs.rs/blinksy/0.3/blinksy/patterns/noise/index.html
+[patterns]: https://docs.rs/blinksy/0.4/blinksy/patterns/index.html
+[Pattern]: https://docs.rs/blinksy/0.4/blinksy/pattern/trait.Pattern.html
+[rainbow]: https://docs.rs/blinksy/0.4/blinksy/patterns/rainbow/index.html
+[noise]: https://docs.rs/blinksy/0.4/blinksy/patterns/noise/index.html
 
 Or feel free to make your own. Better yet, help contribute to our library!
 
@@ -387,7 +389,7 @@ Now for the final step.
 
 The driver is what tells the LED hardware how to be the colors you want.
 
-To define an driver, we must implement the [`Driver`][Driver] trait:
+To define a driver, we must implement the [`Driver`][Driver] trait:
 
 ```rust
 pub trait Driver {
@@ -469,7 +471,7 @@ There's more. We say RGB, but what red, what green, what blue? To solve this, th
 I could go on about colors, there's more to say, more future work to be done in Blinksy, but that's enough for now.
 
 [PWM]: https://en.wikipedia.org/wiki/Pulse-width_modulation#Duty_cycle
-[LinearSrgb]: https://docs.rs/blinksy/0.3/blinksy/color/struct.LinearSrgb.html
+[LinearSrgb]: https://docs.rs/blinksy/0.4/blinksy/color/struct.LinearSrgb.html
 [luminous-intensity]: https://en.wikipedia.org/wiki/Luminous_intensity
 [sRGB]: https://en.wikipedia.org/wiki/SRGB
 
@@ -477,7 +479,7 @@ I could go on about colors, there's more to say, more future work to be done in 
 
 To make implementing [`Driver`][Driver] easier for the various LED chipsets, we have generic support for the two main types of LED protocols:
 
-[Driver]: https://docs.rs/blinksy/0.3/blinksy/driver/trait.Driver.html
+[Driver]: https://docs.rs/blinksy/0.4/blinksy/driver/trait.Driver.html
 
 ##### Clocked LEDs ([SPI][spi])
 
@@ -500,9 +502,9 @@ For every bit we want to send from the controller to the LEDs:
 
 To define a clocked LED chipset, you define the [`ClockedLed`][ClockedLed] trait.
 
-[clocked]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/index.html
+[clocked]: https://docs.rs/blinksy/0.4/blinksy/driver/clocked/index.html
 [spi]: https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
-[ClockedLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClockedLed.html
+[ClockedLed]: https://docs.rs/blinksy/0.4/blinksy/driver/clocked/trait.ClockedLed.html
 
 ##### Clockless LEDs
 
@@ -534,8 +536,8 @@ With these timings in mind, we can send some bits without a clock.
 
 To define a clockless LED chipset, you define the [`ClocklessLed`][ClocklessLed] trait.
 
-[clockless]: https://docs.rs/blinksy/0.3/blinksy/driver/clockless/index.html
-[ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clockless/trait.ClocklessLed.html
+[clockless]: https://docs.rs/blinksy/0.4/blinksy/driver/clockless/index.html
+[ClocklessLed]: https://docs.rs/blinksy/0.4/blinksy/driver/clockless/trait.ClocklessLed.html
 
 ##### Protocol drivers
 
@@ -565,14 +567,14 @@ At the moment, Blinksy supports:
 
 With the above protocol abstractions, adding a new LED chipset is as easy as implementing [ClockedLed] or [ClocklessLed].
 
-[Apa102 LEDs]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/index.html
-[Apa102Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/type.Apa102Delay.html
-[Apa102Spi]: https://docs.rs/blinksy/0.3/blinksy/drivers/apa102/type.Apa102Spi.html
-[Ws2812 LEDs]: https://docs.rs/blinksy/0.3/blinksy/drivers/ws2812/index.html
-[Ws2812Delay]: https://docs.rs/blinksy/0.3/blinksy/drivers/ws2812/type.Ws2812Delay.html
-[Ws2812Rmt]: https://docs.rs/blinksy-esp/0.3/blinksy_esp/type.Ws2812Rmt.html
-[ClockedLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clocked/trait.ClockedLed.html
-[ClocklessLed]: https://docs.rs/blinksy/0.3/blinksy/driver/clockless/trait.Clockless.html
+[Apa102 LEDs]: https://docs.rs/blinksy/0.4/blinksy/drivers/apa102/index.html
+[Apa102Delay]: https://docs.rs/blinksy/0.4/blinksy/drivers/apa102/type.Apa102Delay.html
+[Apa102Spi]: https://docs.rs/blinksy/0.4/blinksy/drivers/apa102/type.Apa102Spi.html
+[Ws2812 LEDs]: https://docs.rs/blinksy/0.4/blinksy/drivers/ws2812/index.html
+[Ws2812Delay]: https://docs.rs/blinksy/0.4/blinksy/drivers/ws2812/type.Ws2812Delay.html
+[Ws2812Rmt]: https://docs.rs/blinksy-esp/0.4/blinksy_esp/type.Ws2812Rmt.html
+[ClockedLed]: https://docs.rs/blinksy/0.4/blinksy/driver/clocked/trait.ClockedLed.html
+[ClocklessLed]: https://docs.rs/blinksy/0.4/blinksy/driver/clockless/trait.ClocklessLed.html
 
 By the way, props to [`smart-leds`][smart-leds] for paving the way on addressable LED drivers in Rust.
 
@@ -622,9 +624,9 @@ loop {
 }
 ```
 
-[ControlBuilder]: https://docs.rs/blinksy/0.3/blinksy/control/struct.ControlBuilder.html
-[Control]: https://docs.rs/blinksy/0.3/blinksy/control/struct.Control.html
-[Control.tick]: https://docs.rs/blinksy/0.3/blinksy/control/struct.Control.html#method.tick
+[ControlBuilder]: https://docs.rs/blinksy/0.4/blinksy/control/struct.ControlBuilder.html
+[Control]: https://docs.rs/blinksy/0.4/blinksy/control/struct.Control.html
+[Control.tick]: https://docs.rs/blinksy/0.4/blinksy/control/struct.Control.html#method.tick
 
 ### Get running on a microcontroller
 
@@ -641,16 +643,16 @@ The board support crate provides a few macros to make your life easy, such as a 
 **To make even easier, I made a quickstart project template: [`blinksy-quickstart-gledopto`][blinksy-quickstart-gledopto]**
 
 [gl-c-016wl-d]: https://www.aliexpress.com/item/1005008707989546.html
-[gledopto]: https://docs.rs/gledopto/0.3/gledopto/index.html
-[board!]: https://docs.rs/gledopto/0.3/gledopto/macro.board.html
-[ws2812!]: https://docs.rs/gledopto/0.3/gledopto/macro.ws2812.html
+[gledopto]: https://docs.rs/gledopto/0.4/gledopto/index.html
+[board!]: https://docs.rs/gledopto/0.4/gledopto/macro.board.html
+[ws2812!]: https://docs.rs/gledopto/0.4/gledopto/macro.ws2812.html
 [blinksy-quickstart-gledopto]: https://github.com/ahdinosaur/blinksy-quickstart-gledopto
 
 ### Add some LEDs
 
 Now you just need to add LEDs, and away you go.
 
-If you need a LED supplier recommendation, I've only had success with "BTF-Lighting". You can find them on [AliExpress](https://btf-lighting.aliexpress.com/), [Amazon](https://www.amazon.com/stores/BTF-LIGHTING/BTF-LIGHTING/page/0FF60378-45DE-44E7-B0D7-8F5CD6478971), or on [their own website](https://www.btf-lighting.com/).
+If you need an LED supplier recommendation, I've only had success with "BTF-Lighting". You can find them on [AliExpress](https://btf-lighting.aliexpress.com/), [Amazon](https://www.amazon.com/stores/BTF-LIGHTING/BTF-LIGHTING/page/0FF60378-45DE-44E7-B0D7-8F5CD6478971), or on [their own website](https://www.btf-lighting.com/).
 
 If you need more help, look at [QuinLED's helpful guides][quinled-guides].
 
@@ -740,10 +742,10 @@ fn main() -> ! {
         Layout,
         [Shape2d::Grid {
             start: Vec2::new(-1., -1.),
-            row_end: Vec2::new(1., -1.),
-            col_end: Vec2::new(-1., 1.),
-            row_pixel_count: 16,
-            col_pixel_count: 16,
+            horizontal_end: Vec2::new(1., -1.),
+            vertical_end: Vec2::new(-1., 1.),
+            horizontal_pixel_count: 16,
+            vertical_pixel_count: 16,
             serpentine: true,
         }]
     );
@@ -775,10 +777,10 @@ Blinksy also has a way to simulate on your desktop: [`blinksy-desktop`][blinksy-
 
 This provides [a driver][blinksy-desktop-driver] (using [miniquad][miniquad]) and [an elapsed time function][blinksy-desktop-time].
 
-[blinksy-desktop]: https://docs.rs/blinksy-desktop/0.3/blinksy_desktop/
-[blinksy-desktop-driver]: https://docs.rs/blinksy-desktop/0.3/blinksy_desktop/driver/index.html
+[blinksy-desktop]: https://docs.rs/blinksy-desktop/0.4/blinksy_desktop/
+[blinksy-desktop-driver]: https://docs.rs/blinksy-desktop/0.4/blinksy_desktop/driver/index.html
 [miniquad]: https://github.com/not-fl3/miniquad
-[blinksy-desktop-time]: https://docs.rs/blinksy-desktop/0.3/blinksy_desktop/time/index.html
+[blinksy-desktop-time]: https://docs.rs/blinksy-desktop/0.4/blinksy_desktop/time/index.html
 
 <div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/1085562226?h=dc7b29a099&autoplay=1&loop=1&autopause=0&muted=1" data-title="Blinksy Desktop: 2D Grid with Noise Pattern"></div>
 
@@ -805,10 +807,10 @@ fn main() {
         Layout,
         [Shape2d::Grid {
             start: Vec2::new(-1., -1.),
-            row_end: Vec2::new(-1., 1.),
-            col_end: Vec2::new(1., -1.),
-            row_pixel_count: 16,
-            col_pixel_count: 16,
+            horizontal_end: Vec2::new(1., -1.),
+            vertical_end: Vec2::new(-1., 1.),
+            horizontal_pixel_count: 16,
+            vertical_pixel_count: 16,
             serpentine: true,
         }]
     );
