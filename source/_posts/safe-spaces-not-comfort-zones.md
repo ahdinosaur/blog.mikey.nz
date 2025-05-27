@@ -8,6 +8,8 @@ Some months ago, my work family Root Systems had a cultural problem:
 
 Our so-called _safe space_ was really a _comfort zone_!
 
+<!-- more -->
+
 > caution: my perspectives on safety and comfort are **privileged**.
 
 [![safe nostalgia](./safe-spaces-not-comfort-zones/safe-nostalgia.jpg)](https://www.artstation.com/artwork/O6oxv)
@@ -20,21 +22,21 @@ A comfort zone is where you can avoid fear, uncertainty, doubt, stress, or situa
 
 From [The Prophet](https://en.wikipedia.org/wiki/The_Prophet_%28book%29) (emphasis mine):
 
-> And tell me, people of Orphalese, what have you in these houses?  
-> And what is it you guard with fastened doors?  
-> Have you peace, the quiet urge that reveals your power?  
-> Have you remembrances, the glimmering arches that span the summits of the mind?  
-> Have you beauty, that leads the heart from things fashioned of wood and stone to the holy mountain?  
-> Tell me, have you these in your houses?  
-> Or **have you only comfort, and the lust for comfort, that stealthy thing that enters the house a guest, and then becomes a host, and then a master?**  
+> And tell me, people of Orphalese, what have you in these houses?
+> And what is it you guard with fastened doors?
+> Have you peace, the quiet urge that reveals your power?
+> Have you remembrances, the glimmering arches that span the summits of the mind?
+> Have you beauty, that leads the heart from things fashioned of wood and stone to the holy mountain?
+> Tell me, have you these in your houses?
+> Or **have you only comfort, and the lust for comfort, that stealthy thing that enters the house a guest, and then becomes a host, and then a master?**
 >
 > <br />
 >
-> Ay, and it becomes a tamer, and with hook and scourge makes puppets of your larger desires.  
-> Though its hands are silken, its heart is of iron.  
-> It lulls you to sleep only to stand by your bed and jeer at the dignity of the flesh.  
-> It makes mock of your sound senses, and lays them in thistledown like fragile vessels.  
-> **Verily the lust for comfort murders the passion of the soul, and then walks grinning in the funeral.**  
+> Ay, and it becomes a tamer, and with hook and scourge makes puppets of your larger desires.
+> Though its hands are silken, its heart is of iron.
+> It lulls you to sleep only to stand by your bed and jeer at the dignity of the flesh.
+> It makes mock of your sound senses, and lays them in thistledown like fragile vessels.
+> **Verily the lust for comfort murders the passion of the soul, and then walks grinning in the funeral.**
 
 [![comfort zone](./safe-spaces-not-comfort-zones/comfort-zone.jpg)](https://www.pinterest.nz/pin/200480620889780005/)
 

@@ -2,6 +2,7 @@
 title: Portable solar v1
 date: 2018-01-23
 tags:
+excerpt: A portable solar discharge controller
 ---
 
 ## Beginnings

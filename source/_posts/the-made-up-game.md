@@ -2,6 +2,7 @@
 title: The Made Up Game
 date: 2023-04-23 12:46:51
 tags:
+excerpt: 'One day, nearly a decade ago, some friends stumbled upon game we called the "Made Up Game", and I discovered my favorite genre of game: games where you play with changing the rules of the game.'
 ---
 
 ## Role-playing a computer 🤖

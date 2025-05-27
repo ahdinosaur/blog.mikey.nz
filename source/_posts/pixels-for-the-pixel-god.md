@@ -6,6 +6,8 @@ tags:
 
 As a break from my other open source projects, have decided to start spending my [Art~Hack](https://arthack.nz) evenings on my next (3rd?) generation of modular LED pixels that beat to music.
 
+<!-- more -->
+
 <div class="video-embed" data-ratio="16:9" data-type="vimeo" data-src="https://player.vimeo.com/video/796536263?h=36d25c00bf&background=1" data-title="(2015) Scrolling Rainbow"></div>
 
 ## First generation

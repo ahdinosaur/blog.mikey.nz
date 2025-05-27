@@ -12,6 +12,8 @@ are better than
 
 **flat global objective** worlds.
 
+<!-- more -->
+
 <iframe
   width="560"
   height="315"

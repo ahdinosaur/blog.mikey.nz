@@ -40,3 +40,9 @@
     height: 100%;
   }
 }
+
+.thumbnail {
+  img, video, iframe {
+    max-height: 33.33vh;
+  }
+}

@@ -11,8 +11,8 @@
   <meta property="og:title" content="<%= page.title %>" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_US" />
-  <% if (page.description) { %>
-  <meta property="og:description" content="<%= page.description %>" />
+  <% if (page.excerpt) { %>
+  <meta property="og:description" content="<%= page.excerpt %>" />
   <% } %>
   <% if (page.image) { %>
   <meta property="og:image" content="<%= config.url %><%= page.image %>" />

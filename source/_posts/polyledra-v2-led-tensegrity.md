@@ -6,6 +6,7 @@ categories:
 tags:
   - project
   - led
+excerpt: An LED installation made from magic physics
 ---
 
 (For v1, see [Polyledra v1: LED tetrahedron](/polyledra-v1-led-tetrahedron/))

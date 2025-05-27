@@ -8,6 +8,8 @@ Playing around with rainbows LEDs i can dance with!  🌈💃⚡️💖
 
 In the classic shape of suspenders and a belt.
 
+<!-- more -->
+
 <div class="video-embed" data-ratio="2:3" data-type="vimeo" data-src="https://player.vimeo.com/video/795074597?h=fa397d5ebc" data-title="(2018) A Burn Dance: Walkthrough"></div>
 
 Continuing from [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)

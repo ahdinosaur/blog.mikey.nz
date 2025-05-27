@@ -10,6 +10,8 @@ tags:
 
 A [light-emitting](https://en.wikipedia.org/wiki/Light-emitting_diode) [polyhedron](https://en.wikipedia.org/wiki/Polyhedron) [chandelier](https://en.wikipedia.org/wiki/Chandelier)
 
+<!-- more -->
+
 Source: [`ahdinosaur/polyledra-v1`](https://github.com/ahdinosaur/polyledra-v1)
 
 ## Background
@@ -107,9 +109,9 @@ Here are the dimensions of each aluminum channel (except 500mm long):
 
 The idea is to have 3 led strip channels per edge of the tetrahedron so the edges will be lit from all angles. I had this idea before but was going to start with a single channel per edge, until I talked to my friend: she noticed that since the shapes will be regular, the best effects will come from seeing the other side of the shape _through_ the shape!
 
-With help from Jack, I made a 3d model of the tetrahedron connectors! 
+With help from Jack, I made a 3d model of the tetrahedron connectors!
 
-![Screenshot_20180303_154737.png](./polyledra-v1-led-tetrahedron/Screenshot_20180303_154737.png) 
+![Screenshot_20180303_154737.png](./polyledra-v1-led-tetrahedron/Screenshot_20180303_154737.png)
 
 ## Getting ready for Winter Expo
 
@@ -328,7 +330,7 @@ It worked, but meant I'd have another 3 sets of connectors to keep everything to
 While I've been printing away, I ended up with PLA prototypes, wondering what to do with them. PLA is technically compostable and recyclable, but in practice you need a industrial composter (which is not available here in Wellington) and most recycling systems don't accept PLA. Despite this reality, PLA is commonly used by your eco-friendly cafes as "compostable" coffee lids. Anyways, I've started re-using my PLA prototypes to make party jewelry, which has been working really well because my 3D designs are very symmetric and have appealing features (like the edge connector can look like a few faces, depending on how you angle it).
 
 During this time, I also discovered an [OpenSCAD library for polyhedra](https://github.com/benjamin-edward-morgan/openscad-polyhedra), which let me visualize the entire tetrahedron, with all the parts put together:
- 
+
 ![polyledra-tetrahedron-2.png](./polyledra-v1-led-tetrahedron/polyledra-tetrahedron-2.png)
 
 Oh, also I went down a side quest in the search for waterproofing, discovered the magic of o-rings and how they are used everywhere, I had no idea! I played around with making custom o-rings from making 3d models of molds to fill with rubber, Haven't given this a hoon yet though.

@@ -6,6 +6,8 @@ tags:
 
 In the last year, I've noticed two seas of (white) moderates: one as a valuable bridge, another as an infection of deception.
 
+<!-- more -->
+
 For context, I come from the United States of America, where many of my extended family and friends may support Donald Trump and may be on the spectrum of the Alt-Right, it's not possible for me to ignore the new waves of moderate politics.
 
 At some point a distinction came to light, so I'd like to share what I've learned about moderates, good and bad.

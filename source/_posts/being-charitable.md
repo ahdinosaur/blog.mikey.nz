@@ -6,6 +6,8 @@ tags:
 
 My co-worker Greg introduced me to a useful way to reflect on our interpretations: whether or not we are _being charitable_.
 
+<!-- more -->
+
 (Art by [Victor Mosquera](http://victormosquera.tumblr.com/))
 
 [![charitable opening](./being-charitable/charitable-opening.jpg)](http://victormosquera.tumblr.com/)

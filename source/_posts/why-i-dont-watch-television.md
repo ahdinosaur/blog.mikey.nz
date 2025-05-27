@@ -7,6 +7,8 @@ A television exercises your ability to watch without action for extended periods
 
 I want to exercise my ability to find creative solutions to complex problems.
 
+<!-- more -->
+
 ![leunig cartoons splash](./why-i-dont-watch-television/leunig-tv-splash.jpg)
 
 ## [The medium is the message](https://en.wikipedia.org/wiki/The_medium_is_the_message)
@@ -15,7 +17,7 @@ Humans are composed of instruments that cooperate to sense and action.
 
 The instruments for how we sense and action is embedded in how the message is perceived.
 
-For example: to watch a documentary is about how to sit on the couch and receive information. 
+For example: to watch a documentary is about how to sit on the couch and receive information.
 
 ## Creative muscle
 
@@ -29,7 +31,7 @@ Television is a way to receive sensory perception from a remote source. Televisi
 
 After not watchcing television for some years, now I find it too stimulating, overwhelming without control.
 
-Watching a television is like entering a car and going for a ride. 
+Watching a television is like entering a car and going for a ride.
 
 ## Relax
 

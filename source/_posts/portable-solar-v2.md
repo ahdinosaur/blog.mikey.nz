@@ -6,6 +6,7 @@ categories:
 tags:
   - project
   - solar
+excerpt: A new portable solar setup, the "right way"
 ---
 
 I made a new portable solar setup, with help from ["Mobile Solar Power - Made Easy" by William Errol Prowse IV](https://www.mobile-solarpower.com/the-book.html).

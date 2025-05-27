@@ -2,7 +2,7 @@
 title: EVERYTHING IS DEEPLY INTERTWINGLED
 date: 2023-06-01
 tags:
-description: I made a collection of videos to showcase the magic alchemy of computation. ✨
+excerpt: I made a collection of videos to showcase the magic alchemy of computation. ✨
 image: /everything-is-deeply-intertwingled/douglas-engelbart-keyboard.jpg
 ---
 

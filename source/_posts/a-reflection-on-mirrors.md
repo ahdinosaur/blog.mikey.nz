@@ -9,6 +9,8 @@ A few months ago, my co-worker Juliet planted a seed in my mind:
 
 I've been reflecting on who I really am, and the ways I receive more insight into who I really am.
 
+<!-- more -->
+
 ## What's a mirror?
 
 A mirror is something that reflects an image of you, so you can see yourself.
