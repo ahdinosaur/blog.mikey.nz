@@ -638,7 +638,7 @@ I found a decent LED controller available on AliExpress: [Gledopto GL-C-016WL-D]
 
 For this, I made a board support crate: [`gledopto`][gledopto].
 
-The board support crate provides a few macros to make your life easy, such as a `board!` macro to setup your board, or a `ws2812!` macro that sets up a WS2812 driver using the specific pins for that controller.
+The board support crate provides a few macros to make your life easy, such as a [`board!`][board!] macro to setup your board, or a [`ws2812!`][ws2812!] macro that sets up a WS2812 driver using the specific pins for that controller.
 
 **To make even easier, I made a quickstart project template: [`blinksy-quickstart-gledopto`][blinksy-quickstart-gledopto]**
 
