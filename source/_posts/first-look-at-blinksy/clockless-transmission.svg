@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 620 130"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    .title-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 16px;
+      text-anchor: middle;
+      font-weight: bold;
+      fill: #111;
+    }
+    .axis-line {
+      stroke: #999;
+      stroke-width: 1;
+      stroke-dasharray: 4 4;
+    }
+    .signal-line {
+      stroke: #0066cc;
+      stroke-width: 3;
+      fill: none;
+    }
+    .signal-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      dominant-baseline: middle;
+      fill: #333;
+    }
+    .level-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      fill: #333;
+    }
+    .bit-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+      font-weight: bold;
+      fill: #333;
+    }
+    .sample-line {
+      stroke: green;
+      stroke-width: 1;
+      stroke-dasharray: 2 2;
+    }
+  </style>
+
+  <title>Clockless Byte Example</title>
+
+  <text x="310" y="25" class="title-text">Clockless Byte Example</text>
+
+  <!-- Data Signal Label -->
+  <text x="40" y="75" class="signal-text" text-anchor="end">DATA</text>
+
+  <!-- Logic level labels -->
+  <text x="30" y="50" class="level-text" text-anchor="end">H</text>
+  <text x="30" y="100" class="level-text" text-anchor="end">L</text>
+
+  <g transform="translate(45, 50)">
+    <!-- Horizontal reference lines -->
+    <line x1="0" y1="0" x2="570" y2="0" class="axis-line" />
+    <line x1="0" y1="50" x2="570" y2="50" class="axis-line" />
+
+    <!-- Data Signal -->
+    <!--
+    [1, 0, 1, 0, 1, 0, 1, 0].map((bit, i) => {
+      let cycleWidth = (570 / 8)
+      let x = i * cycleWidth
+      if (bit) {
+        let t1H = (80/125) * cycleWidth
+        return `V 0 H ${x + t1H} V 50 H ${x + cycleWidth} V 0`
+      } else {
+        let t0H = (40/125) * cycleWidth
+        return `V 0 H ${x + t0H} V 50 H ${x + cycleWidth} V 0`
+      }
+    })
+    -->
+    <path
+      d="
+        M 0,50
+  V 0 H 45.6 V 50 H 71.25 V 0
+  V 0 H 94.05 V 50 H 142.5 V 0
+  V 0 H 188.1 V 50 H 213.75 V 0
+  V 0 H 236.55 V 50 H 285 V 0
+  V 0 H 330.6 V 50 H 356.25 V 0
+  V 0 H 379.05 V 50 H 427.5 V 0
+  V 0 H 473.1 V 50 H 498.75 V 0
+  V 0 H 521.55 V 50 H 570 V 0
+      "
+      class="signal-line" />
+
+
+    <!-- Bit labels for data -->
+    <text x="35.625" y="70" class="bit-text">1</text>
+    <text x="106.875" y="70" class="bit-text">0</text>
+    <text x="178.125" y="70" class="bit-text">1</text>
+    <text x="249.375" y="70" class="bit-text">0</text>
+    <text x="320.625" y="70" class="bit-text">1</text>
+    <text x="391.875" y="70" class="bit-text">0</text>
+    <text x="463.125" y="70" class="bit-text">1</text>
+    <text x="534.375" y="70" class="bit-text">0</text>
+
+    <!-- Sample boundaries -->
+    <!--
+    [...new Array(8).keys()].map(i => {
+      let x = i * (570/8)
+      return `<line x1="${x}" y1="0" x2="${x}" y2="70" class="sample-line" />`
+    })
+    -->
+    <line x1="0" y1="0" x2="0" y2="70" class="sample-line" />
+    <line x1="71.25" y1="0" x2="71.25" y2="70" class="sample-line" />
+    <line x1="142.5" y1="0" x2="142.5" y2="70" class="sample-line" />
+    <line x1="213.75" y1="0" x2="213.75" y2="70" class="sample-line" />
+    <line x1="285" y1="0" x2="285" y2="70" class="sample-line" />
+    <line x1="356.25" y1="0" x2="356.25" y2="70" class="sample-line" />
+    <line x1="427.5" y1="0" x2="427.5" y2="70" class="sample-line" />
+    <line x1="498.75" y1="0" x2="498.75" y2="70" class="sample-line" />
+    <line x1="570" y1="0" x2="570" y2="70" class="sample-line" />
+  </g>
+</svg>

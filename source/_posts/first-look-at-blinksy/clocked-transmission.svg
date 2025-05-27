@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 620 280"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    .title-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 16px;
+      text-anchor: middle;
+      font-weight: bold;
+      fill: #111;
+    }
+    .signal-line {
+      stroke: #0066cc;
+      stroke-width: 3;
+      fill: none;
+    }
+    .clock-line {
+      stroke: #cc0000;
+      stroke-width: 3;
+      fill: none;
+    }
+    .axis-line {
+      stroke: #999;
+      stroke-width: 1;
+      stroke-dasharray: 4 4;
+    }
+    .signal-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-anchor: end;
+      dominant-baseline: middle;
+      fill: #333;
+    }
+    .level-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      fill: #333;
+    }
+    .bit-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+      font-weight: bold;
+      fill: #333;
+    }
+    .sample-point {
+      fill: green;
+      stroke: none;
+    }
+    .sample-line {
+      stroke: green;
+      stroke-width: 1;
+      stroke-dasharray: 2 2;
+    }
+  </style>
+
+  <title>Clocked Byte Example</title>
+
+  <text x="310" y="25" class="title-text">Clocked Byte Example</text>
+
+  <!-- Data Signal Label -->
+  <text x="50" y="75" class="signal-text">DATA</text>
+
+  <!-- Clock Signal Label -->
+  <text x="50" y="175" class="signal-text">CLOCK</text>
+
+  <!-- Horizontal reference lines -->
+  <line x1="50" y1="50" x2="570" y2="50" class="axis-line" />
+  <line x1="50" y1="100" x2="570" y2="100" class="axis-line" />
+  <line x1="50" y1="150" x2="570" y2="150" class="axis-line" />
+  <line x1="50" y1="200" x2="570" y2="200" class="axis-line" />
+
+  <!-- Logic level labels -->
+  <text x="40" y="50" class="level-text" text-anchor="end">1</text>
+  <text x="40" y="100" class="level-text" text-anchor="end">0</text>
+  <text x="40" y="150" class="level-text" text-anchor="end">1</text>
+  <text x="40" y="200" class="level-text" text-anchor="end">0</text>
+
+  <!-- Data Signal -->
+  <path d="M 50,50
+           H 85 V 100 H 150 V 50 H 215 V 100 H 280 V 50 H 345 V 100 H 410 V 50 H 475 V 100 H 540 V 50 H 570"
+        class="signal-line" />
+
+  <!-- Clock Signal -->
+  <path d="M 50,200
+           H 65 V 150 H 100 V 200 H 130 V 150 H 165 V 200 H 195 V 150 H 230 V 200
+           H 260 V 150 H 295 V 200 H 325 V 150 H 360 V 200 H 390 V 150 H 425 V 200
+           H 455 V 150 H 490 V 200 H 520 V 150 H 555 V 200 H 570"
+        class="clock-line" />
+
+  <!-- Bit labels for data -->
+  <text x="65" y="250" class="bit-text">1</text>
+  <text x="130" y="250" class="bit-text">0</text>
+  <text x="195" y="250" class="bit-text">1</text>
+  <text x="260" y="250" class="bit-text">0</text>
+  <text x="325" y="250" class="bit-text">1</text>
+  <text x="390" y="250" class="bit-text">0</text>
+  <text x="455" y="250" class="bit-text">1</text>
+  <text x="520" y="250" class="bit-text">0</text>
+
+  <!-- Sample points on the data line at rising clock edges -->
+  <circle cx="65" cy="50" r="4" class="sample-point" />
+  <circle cx="130" cy="100" r="4" class="sample-point" />
+  <circle cx="195" cy="50" r="4" class="sample-point" />
+  <circle cx="260" cy="100" r="4" class="sample-point" />
+  <circle cx="325" cy="50" r="4" class="sample-point" />
+  <circle cx="390" cy="100" r="4" class="sample-point" />
+  <circle cx="455" cy="50" r="4" class="sample-point" />
+  <circle cx="520" cy="100" r="4" class="sample-point" />
+
+  <!-- Sample point connections -->
+  <line x1="65" y1="50" x2="65" y2="220" class="sample-line" />
+  <line x1="130" y1="100" x2="130" y2="220" class="sample-line" />
+  <line x1="195" y1="50" x2="195" y2="220" class="sample-line" />
+  <line x1="260" y1="100" x2="260" y2="220" class="sample-line" />
+  <line x1="325" y1="50" x2="325" y2="220" class="sample-line" />
+  <line x1="390" y1="100" x2="390" y2="220" class="sample-line" />
+  <line x1="455" y1="50" x2="455" y2="220" class="sample-line" />
+  <line x1="520" y1="100" x2="520" y2="220" class="sample-line" />
+</svg>

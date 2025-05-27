@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 600 360"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    .title {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .brightness-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 14px;
+      text-anchor: end;
+      font-weight: bold;
+    }
+    .axis-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 14px;
+      text-anchor: middle;
+    }
+
+    .state-indicator {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 9px;
+      text-anchor: end;
+    }
+
+    .grid-line {
+      stroke: #ddd;
+      stroke-width: 1;
+    }
+    .axis-line {
+      stroke: #000;
+      stroke-width: 1;
+    }
+    .tick {
+      stroke: #000;
+      stroke-width: 1;
+    }
+
+    .wave {
+      fill: none;
+      stroke: #cc0000;
+      stroke-width: 3;
+    }
+  </style>
+
+  <!-- Grid -->
+  <g>
+    <!-- Vertical grid lines -->
+    <line x1="100" y1="40" x2="100" y2="320" class="grid-line" />
+    <line x1="200" y1="40" x2="200" y2="320" class="grid-line" />
+    <line x1="300" y1="40" x2="300" y2="320" class="grid-line" />
+    <line x1="400" y1="40" x2="400" y2="320" class="grid-line" />
+    <line x1="500" y1="40" x2="500" y2="320" class="grid-line" />
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="30" class="title">LED PWM (Pulse-Width Modulation)</text>
+
+
+  <text x="35" y="40" class="axis-text">Duty cycle</text>
+
+  <!-- 100% Brightness -->
+  <g class="brightness-level">
+    <text x="50" y="90" class="brightness-text">100%</text>
+    <polyline points="100,70 550,70" class="wave" />
+  </g>
+
+  <!-- 50% Brightness -->
+  <g class="brightness-level">
+    <text x="50" y="180" class="brightness-text">50%</text>
+    <polyline points="100,160 150,160 150,200 200,200 200,160 250,160 250,200 300,200 300,160 350,160 350,200 400,200 400,160 450,160 450,200 500,200 500,160 550,160" class="wave" />
+  </g>
+
+  <!-- 25% Brightness -->
+  <g class="brightness-level">
+    <text x="50" y="270" class="brightness-text">25%</text>
+    <polyline points="100,250 125,250 125,290 200,290 200,250 225,250 225,290 300,290 300,250 325,250 325,290 400,290 400,250 425,250 425,290 500,290 500,250 525,250 525,290 550,290" class="wave" />
+  </g>
+
+  <!-- Time axis -->
+  <g class="axis">
+    <line x1="100" y1="320" x2="550" y2="320" class="axis-line" />
+    <text x="300" y="345" class="axis-text">Time</text>
+
+    <!-- Period indicators -->
+    <line x1="100" y1="315" x2="100" y2="325" class="tick" />
+    <line x1="200" y1="315" x2="200" y2="325" class="tick" />
+    <line x1="300" y1="315" x2="300" y2="325" class="tick" />
+    <line x1="400" y1="315" x2="400" y2="325" class="tick" />
+    <line x1="500" y1="315" x2="500" y2="325" class="tick" />
+  </g>
+
+  <!-- High/Low indicators -->
+  <g class="state-indicators">
+    <text x="90" y="70" class="state-indicator">HIGH</text>
+    <text x="90" y="110" class="state-indicator">LOW</text>
+    <text x="90" y="160" class="state-indicator">HIGH</text>
+    <text x="90" y="200" class="state-indicator">LOW</text>
+    <text x="90" y="250" class="state-indicator">HIGH</text>
+    <text x="90" y="290" class="state-indicator">LOW</text>
+  </g>
+</svg>

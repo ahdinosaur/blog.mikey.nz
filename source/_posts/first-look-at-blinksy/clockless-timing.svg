@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 165 180"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    .title-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+      font-weight: bold;
+      fill: #111;
+    }
+    .signal-line {
+      stroke: #0066cc;
+      stroke-width: 3;
+      fill: none;
+    }
+    .timing-bracket {
+      stroke: #333;
+      stroke-width: 1.5;
+      fill: none;
+      marker-start: url(#arrow-head);
+      marker-end: url(#arrow-head);
+    }
+    .timing-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 14px;
+      text-anchor: middle;
+      fill: #333;
+    }
+    .timing-text-high {
+      dominant-baseline: top;
+    }
+    .timing-text-low {
+      dominant-baseline: bottom;
+    }
+    .bit-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-anchor: end;
+      dominant-baseline: middle;
+      fill: #333;
+    }
+  </style>
+
+  <defs>
+    <marker
+      id='arrow-head'
+      orient="auto-start-reverse"
+      markerWidth='3'
+      markerHeight='4'
+      refX='0.1'
+      refY='2'
+    >
+      <path d='M0,0 V4 L2,2 Z' fill="black" />
+    </marker>
+  </defs>
+
+  <title>Clockless Bit Timing</title>
+
+  <text x="82.5" y="15" class="title-text">Clockless Bit Timing</text>
+
+  <g transform="translate(20, 40)">
+    <!-- 0 Label -->
+    <text x="-10" y="25" class="bit-text">0</text>
+
+    <!-- 0 Signal  -->
+    <path d="M 0,50 V 0 H 40 V 50 H 125 V 0" class="signal-line" />
+
+    <!-- TOH labels -->
+    <path d="M 5,25 H 35" class="timing-bracket" />
+    <text x="20" y="50" class="timing-text timing-text-high" >T0H</text>
+
+    <!-- TOL arrows -->
+    <path d="M 45,25 H 120" class="timing-bracket" />
+    <text x="85" y="0" class="timing-text timing-text-low">T0L</text>
+  </g>
+
+  <g transform="translate(20, 120)">
+    <!-- 1 Label -->
+    <text x="-10" y="25" class="bit-text">1</text>
+
+    <!-- 1 Signal -->
+    <path d="M 0,50 V 0 H 80 V 50 H 125 V 0" class="signal-line" />
+
+    <!-- T1H arrows -->
+    <path d="M 5,25 H 75" class="timing-bracket" />
+    <text x="42.5" y="50" class="timing-text timing-text-high">T1H</text>
+
+    <!-- T1L arrows -->
+    <path d="M 85,25 H 120" class="timing-bracket" />
+    <text x="105" y="0" class="timing-text timing-text-low">T1L</text>
+  </g>
+</svg>
