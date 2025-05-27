@@ -44,20 +44,21 @@ Oops I went down a rabbit hole and discovered this: [Blinksy](https://github.com
 
 ## Backstory
 
-Using learnings from my personal journey with LED pixels:
+I wanted to make a LED control library that could do the following:
+
+- Like [FastLED](https://fastled.io/), support all the most common LED pixel chipsets such as WS2812, APA102, and more.
+- Like [WLED](https://kno.wled.ge), have a library of beautiful visual patterns.
+- Unlike anything before, support not just strips and grids, but any 1D, 2D, or even 3D spatial layout.
+- By using Rust, have an modern and delightful developer experience.
+
+I had some previous learnings with LED pixels:
 
 - [PIXELS FOR THE PIXEL GOD](/pixels-for-the-pixel-god/)
 - [A Burn Dance](/a-burn-dance/)
 - [Polyledra V1: LED Tetrahedron](/polyledra-v1-led-tetrahedron/)
 - [Polyledra V2: LED Tensegrity](/polyledra-v2-led-tensegrity/)
 
-And new learnings with [advanced generics for no-std no-alloc embedded Rust](/how-to-dance-with-embedded-rust-generics/),
-
-I wanted to make a LED control library that could do the following:
-
-- Like [FastLED](https://fastled.io/), support all the most common LED pixel chipsets such as WS2812, APA102, and more.
-- Like [WLED](https://kno.wled.ge), have a library of beautiful visual patterns.
-- Unlike anything before, support not just strips and grids, but any 1D, 2D, or even 3D layout.
+And learnings with [advanced generics for no-std no-alloc embedded Rust](/how-to-dance-with-embedded-rust-generics/).
 
 ## Announcing: Blinksy
 
@@ -228,7 +229,7 @@ fn main() -> ! {
   - The pattern will compute colors for each LED based on its position
 - Setup a [`driver`][driver] to send each frame of colors to your LEDs, using our built-in [`drivers`][drivers] library.
 
-This is possible without the Rust standard library (_no-std_) and without any memory allocations to the heap (_no-alloc_), so we can play with LEDs on embedded devices.
+To best support embedded devices, this is possible without the Rust standard library (_no-std_) and without any memory allocations to the heap (_no-alloc_).
 
 [layout]: https://docs.rs/blinksy/0.4/blinksy/layout/index.html
 [pattern]: https://docs.rs/blinksy/0.4/blinksy/pattern/index.html
@@ -240,24 +241,18 @@ This is possible without the Rust standard library (_no-std_) and without any me
 
 A [layout][layout] defines the physical or logical positions of the LEDs in your setup, as arrangements in 1D, 2D, and 3D space.
 
-[layout]: https://docs.rs/blinksy/0.4/blinksy/layout/index.html
+To define a layout, we must define a struct that implement either the [`Layout1d`][Layout1d], [`Layout2d`][Layout2d], or soon `Layout3d` traits. To make this easy, we use either the [`layout1d`][layout1d], [`layout2d`][layout2d], or soon `layout3d` macro, respectively. These traits provide a `PIXEL_COUNT` constant, which is the number of LEDs, and a `.points()` method, which maps each LED pixel into a 1D, 2D, or 3D space between -1.0 and 1.0.
 
-To define a layout, we must define a struct that implement either the [`Layout1d`][Layout1d], [`Layout2d`][Layout2d], or soon `Layout3d` traits.
-
-(For any Rust beginners, a [struct][struct] is a definition of a type of object, like a class in other languages, and a [trait][trait] is a definition of an abstract behavior that an object might implement, like an interface in other languages.)
-
-[struct]: https://doc.rust-lang.org/book/ch05-01-defining-structs.html
-[trait]: https://doc.rust-lang.org/book/ch10-02-traits.html
-
-To make this easy, we use either the [`layout1d`][layout1d], [`layout2d`][layout2d], or soon `layout3d` macro, respectively.
-
-These traits provide a `PIXEL_COUNT` constant, which is the number of LEDs, and a `.points()` method, which maps each LED pixel into a 1D, 2D, or 3D space between -1.0 and 1.0.
+(For any Rust beginners: A [struct] is a definition of a type of object, like a class in other languages. A [trait] is a definition of an abstract behavior that an object might implement, like an interface in other languages. A [macro] is code that generates code, like a function that you call during compilation to return code, rather than call during runtime to return a value.)
 
 [layout]: https://docs.rs/blinksy/0.4/blinksy/layout/index.html
 [Layout1d]: https://docs.rs/blinksy/0.4/blinksy/layout/trait.Layout1d.html
 [Layout2d]: https://docs.rs/blinksy/0.4/blinksy/layout/trait.Layout2d.html
 [layout1d]: https://docs.rs/blinksy/0.4/blinksy/macro.layout1d.html
 [layout2d]: https://docs.rs/blinksy/0.4/blinksy/macro.layout2d.html
+[struct]: https://doc.rust-lang.org/book/ch05-01-defining-structs.html
+[trait]: https://doc.rust-lang.org/book/ch10-02-traits.html
+[macro]: https://doc.rust-lang.org/book/ch20-05-macros.html
 
 #### 1D layouts
 
@@ -354,9 +349,7 @@ While there is one [`Pattern`][Pattern] trait, it may be implemented for any dim
 [Layout1d]: https://docs.rs/blinksy/0.4/blinksy/layout/trait.Layout1d.html
 [Layout2d]: https://docs.rs/blinksy/0.4/blinksy/layout/trait.Layout2d.html
 
-On initialization, the pattern is given configuration parameters.
-
-On every update, the pattern is given the current time in milliseconds, and must return an iterator that provides a color for every LED in the layout.
+On initialization, the pattern is given configuration parameters. On every update, the pattern is given the current time in milliseconds, and must return an iterator that provides a color for every LED in the layout.
 
 The [color types][color types] in Blinksy are inspired by the [`palette`][palette] crate, where they implement [`FromColor`][FromColor] and [`IntoColor`][IntoColor]. Like FastLED we have [`Hsv`][Hsv] (which uses [FastLED's rainbow hues][FastLED HSV]), or for a [more modern][more modern] color space we have [`Okhsv`][Okhsv].
 
