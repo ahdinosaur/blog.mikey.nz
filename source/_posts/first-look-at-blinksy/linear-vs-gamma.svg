@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 800 400"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+>
 <!--
 (function() {
   let gamma = 2.2
@@ -45,8 +51,15 @@
     .axis { stroke: #000; stroke-width: 1; }
     .curve { fill: none; stroke-width: 2.5; }
     .reference { stroke: #888; stroke-width: 1; stroke-dasharray: 4 2; }
-    .label { font-family: Arial; font-size: 12px; }
-    .title { font-family: Arial; font-size: 16px; font-weight: bold; }
+    .label {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 12px;
+    }
+    .title {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+    }
   </style>
 
   <!-- Left Graph: Gamma Encoding (γ=2.2) -->
