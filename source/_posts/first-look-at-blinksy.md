@@ -436,7 +436,7 @@ LEDs are generally 3 smaller LEDs, red + green + blue, each controlled via [puls
   <img
     src="/first-look-at-blinksy/led-pwm.svg"
     alt="LED PWM (Pulse-Width Modulation)"
-    style="max-width: 80%;"
+    style="max-width: 768px;"
   >
 </div>
 
@@ -448,7 +448,7 @@ This mismatch between physics and perception is why the "RGB" you think you know
   <img
     src="/first-look-at-blinksy/gamma-correction.svg"
     alt="Gamma Correction"
-    style="max-width: 80%;"
+    style="max-width: 512px;"
   >
 </div>
 
@@ -461,7 +461,7 @@ So anyways, why red, green, and blue? These correspond to the 3 light receptors 
     <img
       src="/first-look-at-blinksy/human-eye-cones.svg"
       alt="Normalized responsivity spectra of human cone cells, S, M, and L types (SMJ data based on Stiles and Burch RGB color-matching, linear scale, weighted for equal energy)"
-      style="max-width: 70%; width: 100%;"
+      style="max-width: 512px; width: 100%;"
     >
   </div>
 </a>
@@ -496,7 +496,6 @@ For every bit we want to send from the controller to the LEDs:
   <img
     src="/first-look-at-blinksy/clocked-transmission.svg"
     alt="Clocked byte example"
-    style="max-width: 100%;"
   >
 </div>
 
@@ -530,7 +529,6 @@ With these timings in mind, we can send some bits without a clock.
   <img
     src="/first-look-at-blinksy/clockless-transmission.svg"
     alt="Clockless byte example"
-    style="max-width: 100%;"
   >
 </div>
 
