@@ -853,6 +853,6 @@ If you want to otherwise support the project, please:
 
 - Star the project on GitHub: [ahdinosaur/blinksy](https://github.com/ahdinosaur/blinksy)
 - Sponsor me on GitHub: [@ahdinosaur](https://github.com/sponsors/ahdinosaur)
-- Subscribe to me on YouTube, to encourage me to live-code Blinksy: [@Make_with_Mikey](https://www.youtube.com/channel/UCRNri_xZGzROcxGcAYkOhpA)
+- Subscribe to me on YouTube, to encourage me to live-code Blinksy: [@JoyOfTinkering](https://www.youtube.com/channel/UCRNri_xZGzROcxGcAYkOhpA)
 
 Thanks for sharing your attention with me. Have a good one. 💜
