@@ -1,6 +1,8 @@
-import { Box, Link, Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
+import { siteConfig } from '@/lib/config'
 
 export function AppFooter() {
+  const year = new Date().getUTCFullYear()
   return (
     <Box
       as="footer"
@@ -14,14 +16,7 @@ export function AppFooter() {
       backgroundColor="brand.footerBg"
     >
       <Text margin={0} padding="3px" fontStyle="italic">
-        Powered by{' '}
-        <Link href="https://nextjs.org" color="brand.footerFg">
-          Next.js
-        </Link>{' '}
-        and{' '}
-        <Link href="https://chakra-ui.com" color="brand.footerFg">
-          Chakra UI
-        </Link>
+        © {year} {siteConfig.author}
       </Text>
     </Box>
   )

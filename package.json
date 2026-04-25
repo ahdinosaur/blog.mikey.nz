@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^3.35.0",
+    "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "feed": "^5.2.1",
     "gray-matter": "^4.0.3",

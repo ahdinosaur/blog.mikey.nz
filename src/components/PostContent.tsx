@@ -158,9 +158,4 @@ export function PostContent({
   )
 }
 
-export function VideoEmbedScript() {
-  // hydrates <div class="video-embed" data-src=...> elements with iframes,
-  // matching the original Hexo theme behaviour (lazy-loaded iframes).
-  const code = `(function(){function load(){var els=document.querySelectorAll('.video-embed[data-src]');for(var i=0;i<els.length;i++){var v=els[i];if(v.dataset.loaded)continue;var src=v.dataset.src,title=v.dataset.title||'';if(v.dataset.type==='vimeo'){v.innerHTML='<iframe src="'+src+'" title="'+title+'" frameborder="0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';}else if(v.dataset.type==='youtube'){v.innerHTML='<iframe src="'+src+'" title="'+title+'" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';}v.dataset.loaded='1';}}window.addEventListener('DOMContentLoaded',load);window.addEventListener('resize',load);})();`
-  return <script dangerouslySetInnerHTML={{ __html: code }} />
-}
+export { VideoEmbedHydrator as VideoEmbedScript } from './VideoEmbedHydrator'
