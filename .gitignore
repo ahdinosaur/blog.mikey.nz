@@ -1,4 +1,5 @@
 /node_modules
-/db.json
-/public
-/.deploy_git
+/.next
+/out
+/.vercel
+/tsconfig.tsbuildinfo
