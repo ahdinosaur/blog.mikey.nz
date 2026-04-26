@@ -96,19 +96,19 @@ async function loadPost(
   const tags = normalizeList(fm.tags)
   const categories = normalizeList(fm.categories)
 
-  const md = createRenderer()
+  const render = createRenderer()
   const source = preprocessMarkdown(content)
   const split = source.split(EXCERPT_MARK)
   const excerptSource = split.length > 1 ? split[0] : null
   const fullSource = split.join('\n\n')
 
   const contentHtml = await fingerprintAssets(
-    postprocessHtml(md.render(fullSource)),
+    postprocessHtml(await render(fullSource)),
     hashCache,
   )
   const excerptHtml = excerptSource
     ? await fingerprintAssets(
-        postprocessHtml(md.render(excerptSource)),
+        postprocessHtml(await render(excerptSource)),
         hashCache,
       )
     : null
