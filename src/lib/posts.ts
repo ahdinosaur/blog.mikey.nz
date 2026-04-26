@@ -39,15 +39,12 @@ export type PostListItem = Pick<
 
 const POSTS_DIR = path.join(process.cwd(), 'src', 'posts')
 
-let cache: Promise<Post[]> | null = null
-
 export function postsDir(): string {
   return POSTS_DIR
 }
 
 export async function getAllPosts(): Promise<Post[]> {
-  if (!cache) cache = loadAllPosts()
-  return cache
+  return loadAllPosts()
 }
 
 export async function getPostList(): Promise<PostListItem[]> {
@@ -86,8 +83,8 @@ async function loadPost(filePath: string): Promise<Post> {
 
   const fm = data as Partial<PostFrontmatter> & { date?: unknown; updated?: unknown }
   const title = typeof fm.title === 'string' ? fm.title : slug
-  const date = normalizeDate(fm.date)
-  const updated = fm.updated ? normalizeDate(fm.updated) : undefined
+  const date = normalizeDate(fm.date, `${slug}: date`)
+  const updated = fm.updated ? normalizeDate(fm.updated, `${slug}: updated`) : undefined
   const image = typeof fm.image === 'string' ? fm.image : undefined
   const tags = normalizeList(fm.tags)
   const categories = normalizeList(fm.categories)
@@ -137,13 +134,15 @@ function normalizeFrontmatter(raw: string): string {
   return `---\n${trimmed}`
 }
 
-function normalizeDate(value: unknown): string {
-  if (value instanceof Date) return value.toISOString()
+function normalizeDate(value: unknown, context: string): string {
+  if (value instanceof Date && !Number.isNaN(value.getTime())) {
+    return value.toISOString()
+  }
   if (typeof value === 'string' || typeof value === 'number') {
     const d = new Date(value)
     if (!Number.isNaN(d.getTime())) return d.toISOString()
   }
-  return new Date(0).toISOString()
+  throw new Error(`Invalid date for ${context}: ${JSON.stringify(value)}`)
 }
 
 function normalizeList(value: unknown): string[] {
