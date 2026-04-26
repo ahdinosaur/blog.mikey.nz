@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Box, Container, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, Text, VisuallyHidden } from '@chakra-ui/react'
 import { AppFooter } from '@/components/AppFooter'
 import { AppNav } from '@/components/AppNav'
 import { RouteLink } from '@/components/RouteLink'
@@ -16,6 +16,7 @@ export default async function ArchivePage() {
     <>
       <AppNav activePath="/archives" />
       <Container as="main" maxW="archiveContent" pt="90px" px="15px">
+        <VisuallyHidden as="h1">Archive</VisuallyHidden>
         {posts.map((post) => (
           <Flex
             as="article"
@@ -24,7 +25,7 @@ export default async function ArchivePage() {
             align="center"
           >
             <Heading
-              as="h1"
+              as="h2"
               flex={1}
               margin={0}
               fontSize="1.2rem"

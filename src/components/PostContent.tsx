@@ -81,12 +81,12 @@ const sx = {
   },
   '& tr': {
     borderTopWidth: '1px',
-    borderColor: '#ccc',
-    backgroundColor: '#fff',
+    borderColor: 'brand.tableBorder',
+    backgroundColor: 'brand.tableRowBg',
   },
   '& th, & td': {
     borderWidth: '1px',
-    borderColor: '#ddd',
+    borderColor: 'brand.tableCellBorder',
     padding: '6px 13px',
   },
   '& .image-wrapper, & .video-wrapper, & .video-embed': {

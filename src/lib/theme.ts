@@ -48,6 +48,9 @@ const config = defineConfig({
           sharingBorder: { value: '#dddddd' },
           sharingSubtitle: { value: '#999999' },
           avatarBorder: { value: '#ffffff' },
+          tableBorder: { value: '#cccccc' },
+          tableCellBorder: { value: '#dddddd' },
+          tableRowBg: { value: '#ffffff' },
         },
       },
       fonts: {

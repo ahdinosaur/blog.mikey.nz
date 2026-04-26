@@ -17,7 +17,7 @@ export default async function HomePage() {
         {posts.map((post) => (
           <Box as="article" key={post.slug} mt="45px">
             <Heading
-              as="h1"
+              as="h2"
               margin={0}
               paddingTop="30px"
               textTransform="capitalize"

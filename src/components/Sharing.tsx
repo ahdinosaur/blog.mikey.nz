@@ -1,4 +1,5 @@
-import { Box, Flex, Image, Link, Text } from '@chakra-ui/react'
+import { Box, Flex, Image, Text } from '@chakra-ui/react'
+import { RouteLink } from '@/components/RouteLink'
 import { siteConfig } from '@/lib/config'
 
 export function Sharing() {
@@ -15,7 +16,7 @@ export function Sharing() {
       borderColor="brand.sharingBorder"
     >
       <Flex align="center" gap={3} flex={1}>
-        <Link href="/">
+        <RouteLink href="/">
           <Image
             src={siteConfig.avatar}
             alt="avatar"
@@ -24,13 +25,13 @@ export function Sharing() {
             borderRadius="50%"
             padding="15px"
           />
-        </Link>
+        </RouteLink>
         <Box flex={1}>
-          <Link href="/">
+          <RouteLink href="/">
             <Text fontStyle="italic" fontSize="1rem" margin={0}>
               {siteConfig.title}
             </Text>
-          </Link>
+          </RouteLink>
           <Text
             fontSize="0.8rem"
             fontStyle="italic"
