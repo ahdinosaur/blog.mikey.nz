@@ -48,6 +48,7 @@ export type PostListItem = Pick<
 >
 
 const POSTS_DIR = path.join(process.cwd(), 'src', 'posts')
+const RESERVED_SLUGS = new Set(['assets', 'archives', 'atom.xml'])
 
 export function postsDir(): string {
   return POSTS_DIR
@@ -94,6 +95,9 @@ async function loadPost(
   hashCache: Map<string, Promise<string | null>>,
 ): Promise<Post> {
   const slug = path.basename(filePath, '.md')
+  if (RESERVED_SLUGS.has(slug)) {
+    throw new Error(`Post slug "${slug}" collides with a reserved route`)
+  }
   const raw = await fs.readFile(filePath, 'utf8')
   const { data, content } = matter(normalizeFrontmatter(raw))
 
