@@ -9,7 +9,7 @@ Action items from the `refresh-next` review.
 
 ## Correctness / hardening
 
-- [ ] HTML-escape attribute values in `attrsToString` (`src/lib/posts.ts:245-249`) — at minimum replace `"` with `&quot;` to make the round-trip safe if a value ever contains a literal quote.
+- [x] HTML-escape attribute values in `attrsToString` (`src/lib/posts.ts:245-249`) — at minimum replace `"` with `&quot;` to make the round-trip safe if a value ever contains a literal quote.
 - [ ] Handle the `/[slug]/[asset]` vs `/assets/[asset]` slug collision. Reject reserved slugs (`assets`, `archives`, `atom.xml`) in `loadPost`.
 - [ ] `parseAssetUrl` (`src/lib/posts.ts:269-270`) silently ignores URLs with more than 2 path segments. Assert in `loadPost` when an in-post asset link doesn't fingerprint
 - [ ] Delete `normalizeFrontmatter` (`src/lib/posts.ts:303-309`) and fix the legacy posts that need it

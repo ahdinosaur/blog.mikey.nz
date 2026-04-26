@@ -244,7 +244,7 @@ function parseAttrs(attrString: string): Record<string, string> {
 
 function attrsToString(attrs: Record<string, string>): string {
   return Object.entries(attrs)
-    .map(([k, v]) => ` ${k}="${v}"`)
+    .map(([k, v]) => ` ${k}="${v.replace(/"/g, '&quot;')}"`)
     .join('')
 }
 
