@@ -86,7 +86,7 @@ export function preprocessMarkdown(source: string): string {
 }
 
 const VIDEO_OPEN = /<video([^>]*)>/gi
-const IMG_TAG = /<img([^>]*)\/?>/gi
+const IMG_TAG = /<img\b([^>]*?)\s*\/?>/gi
 
 export function postprocessHtml(html: string): string {
   let out = html
