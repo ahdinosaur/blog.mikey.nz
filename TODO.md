@@ -5,7 +5,7 @@ Action items from the `refresh-next` review.
 ## Bugs
 
 - [x] Fix `<img/>` regex in `src/lib/markdown.ts:89`. `/<img([^>]*)\/?>/gi` is greedy and on input `<img src="x"/>` produces the malformed `<img src="x"/ loading="lazy" />`. Use the same conservative form as `src/lib/posts.ts:156` — `/<img\b([^>]*?)\s*\/?>/gi`.
-- [ ] Add `"sharp": "^0.34.5"` to `dependencies` in `package.json`. `src/lib/images.ts:4` imports it directly but it currently only resolves as a transitive dep of `next`.
+- [x] Add `"sharp": "^0.34.5"` to `dependencies` in `package.json`. `src/lib/images.ts:4` imports it directly but it currently only resolves as a transitive dep of `next`.
 
 ## Correctness / hardening
 
