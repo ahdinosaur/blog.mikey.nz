@@ -13,7 +13,12 @@ export function AppHeader() {
       />
       <Flex direction="column" align="center" width="100%">
         <Box mt="-50px">
-          <Link href={siteConfig.homepage} display="block">
+          <Link
+            href={siteConfig.homepage}
+            display="block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src={siteConfig.avatar}
               alt="avatar"
@@ -60,13 +65,27 @@ export function AppHeader() {
         justify="center"
       >
         <Box as="li" display="inline">
-          <Link href={siteConfig.homepage} px={3} py={2} color="brand.anchor">
+          <Link
+            href={siteConfig.homepage}
+            px={3}
+            py={2}
+            color="brand.anchor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Website
           </Link>
         </Box>
         {Object.entries(siteConfig.social).map(([label, href]) => (
           <Box as="li" display="inline" key={label}>
-            <Link href={href} px={3} py={2} color="brand.anchor">
+            <Link
+              href={href}
+              px={3}
+              py={2}
+              color="brand.anchor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {label}
             </Link>
           </Box>

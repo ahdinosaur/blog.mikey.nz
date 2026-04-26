@@ -8,6 +8,8 @@ import { ReactNode, useState } from 'react'
 export function EmotionRegistry({ children }: { children: ReactNode }) {
   const [{ cache, flush }] = useState(() => {
     const cache = createCache({ key: 'mk' })
+    // Note(cc): `compat = true` is from older Chakra/emotion integrations.
+    // Verify whether this is still needed on the next Chakra UI major upgrade.
     cache.compat = true
 
     const prevInsert = cache.insert
