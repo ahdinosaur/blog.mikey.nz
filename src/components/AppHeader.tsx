@@ -1,15 +1,22 @@
-import { Box, Flex, Heading, Image, Link, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, Link } from '@chakra-ui/react'
+import { ResponsivePicture } from '@/components/ResponsivePicture'
 import { siteConfig } from '@/lib/config'
 
 export function AppHeader() {
   return (
     <Flex as="header" direction="column" align="center" textAlign="center">
-      <Image
+      <ResponsivePicture
         src={siteConfig.banner}
         alt="banner"
-        width="100%"
-        height="50vh"
-        objectFit="cover"
+        loading="eager"
+        fetchPriority="high"
+        style={{ display: 'block', width: '100%', lineHeight: 0 }}
+        imgStyle={{
+          display: 'block',
+          width: '100%',
+          height: '50vh',
+          objectFit: 'cover',
+        }}
       />
       <Flex direction="column" align="center" width="100%">
         <Box mt="-50px">
@@ -19,15 +26,18 @@ export function AppHeader() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <ResponsivePicture
               src={siteConfig.avatar}
               alt="avatar"
-              width="100px"
-              height="100px"
-              borderRadius="50%"
-              borderWidth="4px"
-              borderStyle="solid"
-              borderColor="brand.avatarBorder"
+              loading="eager"
+              imgStyle={{
+                display: 'block',
+                width: '100px',
+                height: '100px',
+                borderRadius: '50%',
+                border: '4px solid #ffffff',
+                objectFit: 'cover',
+              }}
             />
           </Link>
         </Box>

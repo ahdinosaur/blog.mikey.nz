@@ -6,7 +6,7 @@ import { BackToHome } from '@/components/BackToHome'
 import { PostContent, VideoEmbedScript } from '@/components/PostContent'
 import { Sharing } from '@/components/Sharing'
 import { siteConfig } from '@/lib/config'
-import { formatPostDate, getPost, getPostSlugs } from '@/lib/posts'
+import { formatPostDate, getPost, getPostSlugs, ogVariantUrl } from '@/lib/posts'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = await getPost(slug)
   if (!post) return {}
+  const ogPath = ogVariantUrl(post.image) ?? post.image
   return {
     title: post.title,
     description: post.description || undefined,
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       title: post.title,
       description: post.description || undefined,
-      images: post.image ? [`${siteConfig.url}${post.image}`] : undefined,
+      images: ogPath ? [`${siteConfig.url}${ogPath}`] : undefined,
       url: `${siteConfig.url}/${post.slug}/`,
       publishedTime: post.date,
       modifiedTime: post.updated,

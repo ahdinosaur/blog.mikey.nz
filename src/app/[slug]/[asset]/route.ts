@@ -1,19 +1,18 @@
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
 import { NextResponse } from 'next/server'
-import { getPostSlugs, postsDir } from '@/lib/posts'
+import {
+  OG_WIDTH,
+  enumerateResponsiveVariants,
+  getMimeType,
+  isTransformable,
+  parseVariantFilename,
+  transform,
+  variantFilename,
+} from '@/lib/images'
+import { getAllPosts, postsDir } from '@/lib/posts'
 
-const MIME_TYPES: Record<string, string> = {
-  '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg',
-  '.png': 'image/png',
-  '.gif': 'image/gif',
-  '.svg': 'image/svg+xml',
-  '.webp': 'image/webp',
-  '.mp4': 'video/mp4',
-  '.webm': 'video/webm',
-  '.pdf': 'application/pdf',
-}
+const SOURCE_EXT_PRIORITY = ['.jpg', '.jpeg', '.png'] as const
 
 export async function GET(
   _req: Request,
@@ -24,18 +23,33 @@ export async function GET(
     return new NextResponse('Not found', { status: 404 })
   }
 
-  const ext = path.extname(asset).toLowerCase()
-  if (!(ext in MIME_TYPES)) {
-    return new NextResponse('Not found', { status: 404 })
+  const variant = parseVariantFilename(asset)
+  if (variant && variant.spec.kind !== 'favicon') {
+    const sourcePath = await findSource(slug, variant.base)
+    if (!sourcePath) return new NextResponse('Not found', { status: 404 })
+    try {
+      const { data, contentType } = await transform(sourcePath, variant.spec)
+      return new NextResponse(new Uint8Array(data), {
+        status: 200,
+        headers: {
+          'Content-Type': contentType,
+          'Cache-Control': 'public, max-age=31536000, immutable',
+        },
+      })
+    } catch {
+      return new NextResponse('Not found', { status: 404 })
+    }
   }
 
-  const filePath = path.join(postsDir(), slug, asset)
+  const ext = path.extname(asset).toLowerCase()
+  const contentType = getMimeType(ext)
+  if (!contentType) return new NextResponse('Not found', { status: 404 })
   try {
-    const data = await fs.readFile(filePath)
+    const data = await fs.readFile(path.join(postsDir(), slug, asset))
     return new NextResponse(new Uint8Array(data), {
       status: 200,
       headers: {
-        'Content-Type': MIME_TYPES[ext],
+        'Content-Type': contentType,
         'Cache-Control': 'public, max-age=31536000, immutable',
       },
     })
@@ -45,9 +59,11 @@ export async function GET(
 }
 
 export async function generateStaticParams(): Promise<{ slug: string; asset: string }[]> {
-  const slugs = await getPostSlugs()
+  const posts = await getAllPosts()
   const all: { slug: string; asset: string }[] = []
-  for (const slug of slugs) {
+
+  for (const post of posts) {
+    const slug = post.slug
     const dir = path.join(postsDir(), slug)
     let entries: string[] = []
     try {
@@ -57,12 +73,65 @@ export async function generateStaticParams(): Promise<{ slug: string; asset: str
     }
     for (const name of entries) {
       const ext = path.extname(name).toLowerCase()
-      if (ext in MIME_TYPES) {
-        all.push({ slug, asset: name })
+      if (!getMimeType(ext)) continue
+      all.push({ slug, asset: name })
+
+      if (!isTransformable(ext)) continue
+      const sourcePath = path.join(dir, name)
+      const base = name.slice(0, name.length - ext.length)
+      const variants = await enumerateResponsiveVariants(sourcePath)
+      for (const v of variants) {
+        all.push({
+          slug,
+          asset: variantFilename(base, {
+            kind: 'responsive',
+            width: v.width,
+            format: v.format,
+          }),
+        })
       }
     }
   }
+
+  for (const post of posts) {
+    const og = parseSameDirImageRef(post.slug, post.image)
+    if (!og) continue
+    all.push({
+      slug: post.slug,
+      asset: variantFilename(og.base, { kind: 'og', width: OG_WIDTH, format: 'jpeg' }),
+    })
+  }
+
   return all
+}
+
+function parseSameDirImageRef(
+  slug: string,
+  ref: string | undefined,
+): { base: string } | null {
+  if (!ref) return null
+  const stripped = ref.replace(/^\/+/, '').split(/[?#]/)[0]
+  const parts = stripped.split('/')
+  if (parts.length !== 2) return null
+  const [refSlug, file] = parts
+  if (refSlug !== slug) return null
+  const ext = path.extname(file).toLowerCase()
+  if (!isTransformable(ext)) return null
+  const base = file.slice(0, file.length - ext.length)
+  return { base }
+}
+
+async function findSource(slug: string, base: string): Promise<string | null> {
+  for (const ext of SOURCE_EXT_PRIORITY) {
+    const candidate = path.join(postsDir(), slug, `${base}${ext}`)
+    try {
+      await fs.access(candidate)
+      return candidate
+    } catch {
+      // try next
+    }
+  }
+  return null
 }
 
 export const dynamicParams = false

@@ -4,6 +4,15 @@ import path from 'node:path'
 import matter from 'gray-matter'
 import { convert as htmlToText } from 'html-to-text'
 import {
+  IMAGE_FORMATS,
+  IMAGE_SIZES_ATTR,
+  OG_WIDTH,
+  enumerateResponsiveVariants,
+  getImageDimensions,
+  isTransformable,
+  variantFilename,
+} from './images'
+import {
   EXCERPT_MARK,
   createRenderer,
   postprocessHtml,
@@ -102,12 +111,12 @@ async function loadPost(
   const excerptSource = split.length > 1 ? split[0] : null
   const fullSource = split.join('\n\n')
 
-  const contentHtml = await fingerprintAssets(
+  const contentHtml = await rewriteAssets(
     postprocessHtml(await render(fullSource)),
     hashCache,
   )
   const excerptHtml = excerptSource
-    ? await fingerprintAssets(
+    ? await rewriteAssets(
         postprocessHtml(await render(excerptSource)),
         hashCache,
       )
@@ -144,26 +153,111 @@ const ASSET_EXTS = new Set([
 ])
 
 const URL_ATTR = /(?<=\s)(src|href)="([^"]+)"/g
+const IMG_TAG = /<img\b([^>]*?)\s*\/?>/gi
+const ATTR_RE = /([\w-]+)\s*=\s*"([^"]*)"/g
 
-async function fingerprintAssets(
+async function rewriteAssets(
   html: string,
   hashCache: Map<string, Promise<string | null>>,
 ): Promise<string> {
-  const replacements = new Map<string, string>()
-  for (const m of html.matchAll(URL_ATTR)) {
+  const pictureReplacements = new Map<string, string>()
+
+  for (const m of html.matchAll(IMG_TAG)) {
+    const fullTag = m[0]
+    if (pictureReplacements.has(fullTag)) continue
+    const attrs = parseAttrs(m[1])
+    const src = attrs.src
+    if (!src) continue
+    const parsed = parseAssetUrl(src)
+    if (!parsed) continue
+    const ext = path.extname(parsed.asset).toLowerCase()
+    if (!isTransformable(ext)) continue
+
+    const sourcePath = path.join(POSTS_DIR, parsed.slug, parsed.asset)
+    const hash = await getAssetHash(parsed.slug, parsed.asset, hashCache)
+    if (!hash) continue
+
+    let dims: { width: number; height: number }
+    let variants: { width: number; format: 'avif' | 'webp' }[]
+    try {
+      dims = await getImageDimensions(sourcePath)
+      variants = await enumerateResponsiveVariants(sourcePath)
+    } catch {
+      continue
+    }
+    if (variants.length === 0) continue
+
+    const baseDir = `/${parsed.slug}`
+    const fileBase = parsed.asset.slice(0, parsed.asset.length - ext.length)
+
+    const sourceTags: string[] = []
+    for (const fmt of IMAGE_FORMATS) {
+      const entries = variants
+        .filter((v) => v.format === fmt)
+        .map((v) => {
+          const file = variantFilename(fileBase, { kind: 'responsive', width: v.width, format: fmt })
+          return `${baseDir}/${file}?v=${hash} ${v.width}w`
+        })
+      if (entries.length === 0) continue
+      sourceTags.push(
+        `<source type="image/${fmt}" srcset="${entries.join(', ')}" sizes="${IMAGE_SIZES_ATTR}" />`,
+      )
+    }
+
+    const newAttrs: Record<string, string> = { ...attrs }
+    if (newAttrs.width == null) newAttrs.width = String(dims.width)
+    if (newAttrs.height == null) newAttrs.height = String(dims.height)
+    const newImg = `<img${attrsToString(newAttrs)} />`
+
+    pictureReplacements.set(fullTag, `<picture>${sourceTags.join('')}${newImg}</picture>`)
+  }
+
+  let out = html
+  if (pictureReplacements.size > 0) {
+    out = out.replace(IMG_TAG, (full) => pictureReplacements.get(full) ?? full)
+  }
+
+  const urlReplacements = new Map<string, string>()
+  for (const m of out.matchAll(URL_ATTR)) {
     const url = m[2]
-    if (replacements.has(url)) continue
+    if (urlReplacements.has(url)) continue
     const parsed = parseAssetUrl(url)
     if (!parsed) continue
     const hash = await getAssetHash(parsed.slug, parsed.asset, hashCache)
     if (!hash) continue
-    replacements.set(url, addVersion(url, hash))
+    urlReplacements.set(url, addVersion(url, hash))
   }
-  if (replacements.size === 0) return html
-  return html.replace(URL_ATTR, (full, attr, url) => {
-    const replaced = replacements.get(url)
+  if (urlReplacements.size === 0) return out
+  return out.replace(URL_ATTR, (full, attr, url) => {
+    const replaced = urlReplacements.get(url)
     return replaced ? `${attr}="${replaced}"` : full
   })
+}
+
+function parseAttrs(attrString: string): Record<string, string> {
+  const out: Record<string, string> = {}
+  for (const m of attrString.matchAll(ATTR_RE)) {
+    out[m[1].toLowerCase()] = m[2]
+  }
+  return out
+}
+
+function attrsToString(attrs: Record<string, string>): string {
+  return Object.entries(attrs)
+    .map(([k, v]) => ` ${k}="${v}"`)
+    .join('')
+}
+
+export function ogVariantUrl(image: string | undefined): string | null {
+  if (!image) return null
+  const stripped = image.replace(/^\/+/, '').split(/[?#]/)[0]
+  const parts = stripped.split('/')
+  if (parts.length !== 2) return null
+  const [slug, file] = parts
+  const ext = path.extname(file).toLowerCase()
+  if (!isTransformable(ext)) return null
+  const base = file.slice(0, file.length - ext.length)
+  return `/${slug}/${variantFilename(base, { kind: 'og', width: OG_WIDTH, format: 'jpeg' })}`
 }
 
 function parseAssetUrl(url: string): { slug: string; asset: string } | null {

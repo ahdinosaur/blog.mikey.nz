@@ -1,8 +1,9 @@
-import { Box, Container, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, Text } from '@chakra-ui/react'
 import { AppFooter } from '@/components/AppFooter'
 import { AppHeader } from '@/components/AppHeader'
 import { AppNav } from '@/components/AppNav'
 import { PostContent, VideoEmbedScript } from '@/components/PostContent'
+import { ResponsivePicture } from '@/components/ResponsivePicture'
 import { RouteLink } from '@/components/RouteLink'
 import { formatPostDate, getPostList } from '@/lib/posts'
 
@@ -34,15 +35,17 @@ export default async function HomePage() {
             {post.image && (
               <Flex justify="center" align="center" my="1em">
                 <Box className="thumbnail">
-                  <Image
+                  <ResponsivePicture
                     src={post.image}
                     alt={post.title}
-                    objectFit="contain"
-                    width="auto"
-                    maxW="100%"
-                    height="auto"
-                    maxH="33.33vh"
-                    loading="lazy"
+                    imgStyle={{
+                      display: 'block',
+                      objectFit: 'contain',
+                      width: 'auto',
+                      maxWidth: '100%',
+                      height: 'auto',
+                      maxHeight: '33.33vh',
+                    }}
                   />
                 </Box>
               </Flex>

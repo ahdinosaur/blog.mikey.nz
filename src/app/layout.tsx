@@ -1,33 +1,59 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import path from 'node:path'
 import { ReactNode } from 'react'
 import { siteConfig } from '@/lib/config'
+import {
+  OG_WIDTH,
+  enumerateFaviconVariants,
+  variantFilename,
+} from '@/lib/images'
 import { Providers } from './providers'
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: siteConfig.favicon,
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: siteConfig.url,
-    siteName: siteConfig.title,
-    title: siteConfig.title,
-    description: siteConfig.subtitle,
-    images: [siteConfig.banner],
-  },
-  alternates: {
-    types: {
-      'application/atom+xml': '/atom.xml',
+const FAVICON_SOURCE = path.join(process.cwd(), 'src', 'assets', 'favicon.png')
+const BANNER_OG_URL = `/assets/${variantFilename('banner', { kind: 'og', width: OG_WIDTH, format: 'jpeg' })}`
+
+export async function generateMetadata(): Promise<Metadata> {
+  const faviconSizes = await enumerateFaviconVariants(FAVICON_SOURCE)
+  const iconLinks = faviconSizes.map((size) => ({
+    url: `/assets/${variantFilename('favicon', { kind: 'favicon', size, format: 'png' })}`,
+    sizes: `${size}x${size}`,
+    type: 'image/png',
+  }))
+  const appleIcons = faviconSizes
+    .filter((size) => size === 180)
+    .map((size) => ({
+      url: `/assets/${variantFilename('favicon', { kind: 'favicon', size, format: 'png' })}`,
+      sizes: `${size}x${size}`,
+      type: 'image/png',
+    }))
+
+  return {
+    metadataBase: new URL(siteConfig.url),
+    title: {
+      default: siteConfig.title,
+      template: `%s | ${siteConfig.title}`,
     },
-  },
+    description: siteConfig.description,
+    icons: {
+      icon: iconLinks,
+      apple: appleIcons.length > 0 ? appleIcons : undefined,
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: siteConfig.url,
+      siteName: siteConfig.title,
+      title: siteConfig.title,
+      description: siteConfig.subtitle,
+      images: [BANNER_OG_URL],
+    },
+    alternates: {
+      types: {
+        'application/atom+xml': '/atom.xml',
+      },
+    },
+  }
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

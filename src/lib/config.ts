@@ -7,9 +7,9 @@ export const siteConfig = {
   language: 'en',
   url: 'https://blog.mikey.nz',
   homepage: 'https://mikey.nz',
-  favicon: '/images/favicon.ico',
-  avatar: '/images/avatar.jpg',
-  banner: '/images/banner.jpg',
+  favicon: '/assets/favicon.png',
+  avatar: '/assets/avatar.jpg',
+  banner: '/assets/banner.jpg',
   social: {
     GitHub: 'https://github.com/ahdinosaur',
     Mastodon: 'https://cloudisland.nz/@dinosaur',

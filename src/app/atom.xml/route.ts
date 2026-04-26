@@ -1,6 +1,9 @@
 import { Feed } from 'feed'
 import { siteConfig } from '@/lib/config'
-import { getAllPosts } from '@/lib/posts'
+import { OG_WIDTH, variantFilename } from '@/lib/images'
+import { getAllPosts, ogVariantUrl } from '@/lib/posts'
+
+const BANNER_OG_URL = `/assets/${variantFilename('banner', { kind: 'og', width: OG_WIDTH, format: 'jpeg' })}`
 
 export const dynamic = 'force-static'
 
@@ -12,7 +15,7 @@ export async function GET(): Promise<Response> {
     id: `${siteConfig.url}/`,
     link: `${siteConfig.url}/`,
     language: siteConfig.language,
-    image: `${siteConfig.url}${siteConfig.banner}`,
+    image: `${siteConfig.url}${BANNER_OG_URL}`,
     favicon: `${siteConfig.url}${siteConfig.favicon}`,
     copyright: `All rights reserved ${new Date().getUTCFullYear()}, ${siteConfig.author}`,
     feedLinks: {
@@ -34,7 +37,9 @@ export async function GET(): Promise<Response> {
       description: post.description || undefined,
       content: post.contentHtml,
       date: new Date(post.date),
-      image: post.image ? `${siteConfig.url}${post.image}` : undefined,
+      image: post.image
+        ? `${siteConfig.url}${ogVariantUrl(post.image) ?? post.image}`
+        : undefined,
       author: [
         {
           name: siteConfig.author,

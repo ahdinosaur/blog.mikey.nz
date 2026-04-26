@@ -1,4 +1,5 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react'
+import { Box, Flex, Text } from '@chakra-ui/react'
+import { ResponsivePicture } from '@/components/ResponsivePicture'
 import { RouteLink } from '@/components/RouteLink'
 import { siteConfig } from '@/lib/config'
 
@@ -17,13 +18,18 @@ export function Sharing() {
     >
       <Flex align="center" gap={3} flex={1}>
         <RouteLink href="/">
-          <Image
+          <ResponsivePicture
             src={siteConfig.avatar}
             alt="avatar"
-            width="70px"
-            height="70px"
-            borderRadius="50%"
-            padding="15px"
+            imgStyle={{
+              display: 'block',
+              width: '70px',
+              height: '70px',
+              borderRadius: '50%',
+              padding: '15px',
+              boxSizing: 'content-box',
+              objectFit: 'cover',
+            }}
           />
         </RouteLink>
         <Box flex={1}>
