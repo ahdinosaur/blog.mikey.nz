@@ -28,17 +28,20 @@ export function createRenderer() {
       class: 'header-anchor',
       symbol: '§',
     }),
-    slugify: hexoSlugify,
+    slugify,
   })
 
   return md
 }
 
-function hexoSlugify(s: string): string {
+function slugify(s: string): string {
   return s
+    .toLowerCase()
     .trim()
     .replace(/\s+/g, '-')
-    .replace(/[^A-Za-z0-9\-_]/g, '')
+    .replace(/[^\p{L}\p{N}\-_]/gu, '')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '')
 }
 
 const TWITTER_TAG = /\{%\s*twitter\s+(\S+)\s*%\}/g
