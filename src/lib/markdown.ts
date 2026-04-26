@@ -14,7 +14,9 @@ export function createRenderer() {
     langPrefix: 'language-',
   })
 
-  md.use(attrs)
+  md.use(attrs, {
+    allowedAttributes: ['class', 'id', 'width', 'height', /^data-/],
+  })
   md.use(emoji)
   md.use(anchor, {
     level: 1,
