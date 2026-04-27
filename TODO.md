@@ -47,7 +47,7 @@ Action items from the second `refresh-next` review.
 
   `src/app/page.tsx:37` sets `<Box className="thumbnail">`, but the matching `& .thumbnail img { maxHeight: '33.33vh' }` rule (`src/components/PostContent.tsx:126`) is scoped to descendants of `<PostContent>` — the home-page thumbnail is a sibling, not a descendant. The actual sizing comes from the inline `imgStyle`. No markdown asset uses `class="thumbnail"` either, so both the className and the css rule can go.
 
-- [ ] Silence (or fix) the Turbopack NFT warning from `src/app/[slug]/[asset]/route.ts`.
+- [x] Silence (or fix) the Turbopack NFT warning from `src/app/[slug]/[asset]/route.ts`.
 
   Build logs `Encountered unexpected file in NFT list … the whole project was traced unintentionally` because of the `path.join(process.cwd(), 'src', 'posts', …)` / `fs.readFile` calls. With `dynamicParams = false` these never run on a deployed host, so it's cosmetic, but it does mean any deploy that uses NFT tracing would bundle more than necessary. Either:
   - Add `/*turbopackIgnore: true*/` next to the `process.cwd()` calls, or

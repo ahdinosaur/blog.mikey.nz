@@ -10,7 +10,7 @@ import {
   transform,
   variantFilename,
 } from '@/lib/images'
-import { getAllPosts, postsDir } from '@/lib/posts'
+import { getAllPosts, postsPath } from '@/lib/posts'
 
 const SOURCE_EXT_PRIORITY = ['.jpg', '.jpeg', '.png'] as const
 
@@ -45,7 +45,7 @@ export async function GET(
   const contentType = getMimeType(ext)
   if (!contentType) return new NextResponse('Not found', { status: 404 })
   try {
-    const data = await fs.readFile(path.join(postsDir(), slug, asset))
+    const data = await fs.readFile(postsPath(slug, asset))
     return new NextResponse(new Uint8Array(data), {
       status: 200,
       headers: {
@@ -64,7 +64,7 @@ export async function generateStaticParams(): Promise<{ slug: string; asset: str
 
   for (const post of posts) {
     const slug = post.slug
-    const dir = path.join(postsDir(), slug)
+    const dir = postsPath(slug)
     let entries: string[] = []
     try {
       entries = await fs.readdir(dir)
@@ -123,7 +123,7 @@ function parseSameDirImageRef(
 
 async function findSource(slug: string, base: string): Promise<string | null> {
   for (const ext of SOURCE_EXT_PRIORITY) {
-    const candidate = path.join(postsDir(), slug, `${base}${ext}`)
+    const candidate = postsPath(slug, `${base}${ext}`)
     try {
       await fs.access(candidate)
       return candidate

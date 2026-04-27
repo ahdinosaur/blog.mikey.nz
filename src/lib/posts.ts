@@ -48,13 +48,15 @@ export type PostListItem = Pick<
   'slug' | 'title' | 'date' | 'updated' | 'image' | 'tags' | 'categories' | 'excerptHtml' | 'description'
 >
 
-const POSTS_DIR = process.env.POSTS_DIR
-  ? path.resolve(process.env.POSTS_DIR)
-  : path.join(process.cwd(), 'src', 'posts')
+const POSTS_DIR_OVERRIDE =
+  process.env.NODE_ENV !== 'production' ? (process.env.POSTS_DIR ?? null) : null
 const RESERVED_SLUGS = new Set(['assets', 'archives', 'atom.xml'])
 
-export function postsDir(): string {
-  return POSTS_DIR
+export function postsPath(...parts: string[]): string {
+  if (POSTS_DIR_OVERRIDE != null) {
+    return path.join(POSTS_DIR_OVERRIDE, ...parts)
+  }
+  return path.join(process.cwd(), 'src', 'posts', ...parts)
 }
 
 export const getAllPosts = cache((): Promise<Post[]> => loadAllPosts())
@@ -75,7 +77,7 @@ export async function getPost(slug: string): Promise<Post | undefined> {
 }
 
 async function loadAllPosts(): Promise<Post[]> {
-  const entries = await fs.readdir(POSTS_DIR, { withFileTypes: true })
+  const entries = await fs.readdir(postsPath(), { withFileTypes: true })
   const markdownFiles = entries.filter(
     (e) => e.isFile() && e.name.endsWith('.md'),
   )
@@ -83,7 +85,7 @@ async function loadAllPosts(): Promise<Post[]> {
   const hashCache = new Map<string, Promise<string | null>>()
   const posts = await Promise.all(
     markdownFiles.map((file) =>
-      loadPost(path.join(POSTS_DIR, file.name), hashCache),
+      loadPost(postsPath(file.name), hashCache),
     ),
   )
 
@@ -197,7 +199,7 @@ async function rewriteAssets(
     candidates.push({
       fullTag,
       parsed,
-      sourcePath: path.join(POSTS_DIR, parsed.slug, parsed.asset),
+      sourcePath: postsPath(parsed.slug, parsed.asset),
       ext,
       attrs,
     })
@@ -335,7 +337,7 @@ function getAssetHash(
   const cached = hashCache.get(key)
   if (cached) return cached
   const promise = fs
-    .readFile(path.join(POSTS_DIR, slug, asset))
+    .readFile(postsPath(slug, asset))
     .then((data) => crypto.createHash('sha256').update(data).digest('hex').slice(0, 8))
     .catch(() => null)
   hashCache.set(key, promise)
