@@ -187,7 +187,14 @@ async function rewriteAssets(
     const src = attrs.src
     if (!src) continue
     const parsed = parseAssetUrl(src)
-    if (!parsed) continue
+    if (!parsed) {
+      if (isLocalAssetCandidate(src)) {
+        throw new Error(
+          `Post "${postSlug}": <img> src "${src}" did not fingerprint — expected /<slug>/<asset>`,
+        )
+      }
+      continue
+    }
     const ext = path.extname(parsed.asset).toLowerCase()
     if (!isTransformable(ext)) continue
     candidates.push({

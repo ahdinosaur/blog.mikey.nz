@@ -51,12 +51,12 @@ Here are the available ways to interface with the controller:
 
 ## Showcase
 
-![](./a-burn-dance/IMG_20180817_141408.jpg)
-![](./a-burn-dance/IMG_20180817_141417.jpg)
-![](./a-burn-dance/IMG_20180817_144718.jpg)
-![](./a-burn-dance/IMG_20180817_163534.jpg)
-![](./a-burn-dance/IMG_20180817_195256.jpg)
-![](./a-burn-dance/IMG_20180819_152242.jpg)
+![](/a-burn-dance/IMG_20180817_141408.jpg)
+![](/a-burn-dance/IMG_20180817_141417.jpg)
+![](/a-burn-dance/IMG_20180817_144718.jpg)
+![](/a-burn-dance/IMG_20180817_163534.jpg)
+![](/a-burn-dance/IMG_20180817_195256.jpg)
+![](/a-burn-dance/IMG_20180819_152242.jpg)
 
 <div class="video-embed" data-ratio="2:3" data-type="vimeo" data-src="https://player.vimeo.com/video/795749915?h=768bef89b0" data-title="(2018) A Burn Dance: Demo"></div>
 

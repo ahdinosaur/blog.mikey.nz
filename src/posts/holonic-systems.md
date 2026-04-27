@@ -5,17 +5,17 @@ date: 2015-01-04T00:47:24.135Z
 updated: 2015-04-21T12:46:17.906Z
 ---
 
-[Holons](./life-as-a-holon) are fractal networks of agents, with some beautiful and powerful properties.
+[Holons](/life-as-a-holon/) are fractal networks of agents, with some beautiful and powerful properties.
 
 ## Definitions
 
 ### What is a holon
 
-[Holons](./life-as-a-holon) in a [multi-agent system](https://en.wikipedia.org/wiki/Multi-agent_system) are defined as follows:
+[Holons](/life-as-a-holon/) in a [multi-agent system](https://en.wikipedia.org/wiki/Multi-agent_system) are defined as follows:
 
 - Every holon is a superholon of a set of subholons.
 
-![](./holonic-systems/super-sub-3.svg)
+![](/holonic-systems/super-sub-3.svg)
 
 TODO: need to automate the creation of holon diagrams
 
@@ -36,7 +36,7 @@ A holon is observed by its environment like any other agent. Only at closer insp
 - Active holons are divided into manifest and latent holons. If the sub-holons committed to participate in the holon, and are committed to dedicate, or actually have dedicated resources to it, or are performing actions specifically in pursuit of the holons goals, the holon is called manifest. If the holon is not terminated and is not currently influencing a subholon’s actions, it is called latent. In contrast to passive holons, latent holons can be activated instantaneously as there is still a commitment of the subholons to participate in the holon in principle.
 - Finally, a holon that is not atomic is called a holarchy. A holarchy of which all nested subholons have only a single head holon, i.e. a holarchy with a tree-like structure, is called a hierarchical holarchy.  The advantages of the holonic concept are threefold. First, this technology preserves compatibility to multiagent systems by addressing every holon as an agent, whether this agent represents a set of agents or not, is encapsulated. Second, as every agent may or may not represent a larger holon, holonic multiagent systems are a way of introducing recursion to the modelling of multiagent systems, which has proven to be a powerful mechanism in software design to deal with complexity. Third, the concept does not restrict us to a specified type of association between the agents, so it leaves room to introduce organisational concepts at this point. To depict a system of holons, we choose to define a novel type of diagram called holon diagram. A holon diagram is similar to a Venn diagram in that it highlights 122 6. FORM - A Framework for Multiagent Organisation and Agent Autonomy the relationships between the sets of subholons, but it also includes some annotations that clarify names, resources and holon goals.
 
-![An example for a holon diagram](./holonic-systems/holon-diagram.png)
+![An example for a holon diagram](/holonic-systems/holon-diagram.png)
 
 ## Spectrum of holons
 
