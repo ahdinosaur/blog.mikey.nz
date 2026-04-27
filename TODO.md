@@ -16,7 +16,7 @@ Action items from the `refresh-next` review.
 
 ## Cleanup
 
-- [ ] Update `README.md:28` — it claims `public/images/` for site-wide assets, but they live at `src/assets/` and are served via `src/app/assets/[asset]/route.ts`.
+- [x] Update `README.md:28` — it claims `public/images/` for site-wide assets, but they live at `src/assets/` and are served via `src/app/assets/[asset]/route.ts`.
 - [ ] Drop the redundant traversal checks `slug.includes('/')` / `asset.includes('/')` in `src/app/[slug]/[asset]/route.ts:22` (Next dynamic params can't contain `/`). Keep the `..` check.
 - [ ] Simplify `appleIcons` in `src/app/layout.tsx:23-29` — `faviconSizes.includes(180) ? [{ ...180... }] : []` instead of filter+map.
 - [ ] Consider extracting the inline Matomo loader from `src/app/layout.tsx:64-66` into a small file or `<script src=...>`.

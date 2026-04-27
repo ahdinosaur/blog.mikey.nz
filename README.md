@@ -25,7 +25,7 @@ npm run build
 - `src/app/` — Next.js App Router routes
 - `src/components/` — reusable view components
 - `src/lib/` — site config, theme, markdown pipeline, post loader
-- `public/images/` — site-wide assets (avatar, banner, favicon)
+- `src/assets/` — site-wide assets (avatar, banner, favicon), served via `src/app/assets/[asset]/route.ts`
 - `archive/` — pre-migration Hexo source kept for reference
 
 Per-post asset folders live alongside the markdown (e.g. `src/posts/being-charitable.md` and `src/posts/being-charitable/`). They are served by a Next.js route handler at `/<slug>/<asset>` so existing markdown links keep working.
