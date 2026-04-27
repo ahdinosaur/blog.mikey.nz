@@ -15,12 +15,4 @@ are better than
 
 <!-- more -->
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube-nocookie.com/embed/EBM8RTlu6lU?si=nRm084DEqsleTAgf"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen
-></iframe>
+<div class="video-embed" data-ratio="16:9" data-type="youtube" data-src="https://www.youtube-nocookie.com/embed/EBM8RTlu6lU?si=nRm084DEqsleTAgf" data-title="YouTube video player"></div>
