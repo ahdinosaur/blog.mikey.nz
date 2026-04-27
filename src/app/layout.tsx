@@ -20,13 +20,13 @@ export async function generateMetadata(): Promise<Metadata> {
     sizes: `${size}x${size}`,
     type: 'image/png',
   }))
-  const appleIcons = faviconSizes
-    .filter((size) => size === 180)
-    .map((size) => ({
-      url: `/assets/${variantFilename('favicon', { kind: 'favicon', size, format: 'png' })}`,
-      sizes: `${size}x${size}`,
-      type: 'image/png',
-    }))
+  const appleIcon = faviconSizes.includes(180)
+    ? {
+        url: `/assets/${variantFilename('favicon', { kind: 'favicon', size: 180, format: 'png' })}`,
+        sizes: '180x180',
+        type: 'image/png',
+      }
+    : undefined
 
   return {
     metadataBase: new URL(siteConfig.url),
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: siteConfig.description,
     icons: {
       icon: iconLinks,
-      apple: appleIcons.length > 0 ? appleIcons : undefined,
+      apple: appleIcon,
     },
     openGraph: {
       type: 'website',
