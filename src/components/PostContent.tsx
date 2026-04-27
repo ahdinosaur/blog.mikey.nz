@@ -123,9 +123,6 @@ const sx = {
     width: '100%',
     height: '100%',
   },
-  '& .thumbnail img, & .thumbnail video, & .thumbnail iframe': {
-    maxHeight: '33.33vh',
-  },
   '& details': {
     margin: '1rem 0',
     padding: '0.5rem 1rem',

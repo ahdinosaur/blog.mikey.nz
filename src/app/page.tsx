@@ -34,20 +34,18 @@ export default async function HomePage() {
 
             {post.image && (
               <Flex justify="center" align="center" my="1em">
-                <Box className="thumbnail">
-                  <ResponsivePicture
-                    src={post.image}
-                    alt={post.title}
-                    imgStyle={{
-                      display: 'block',
-                      objectFit: 'contain',
-                      width: 'auto',
-                      maxWidth: '100%',
-                      height: 'auto',
-                      maxHeight: '33.33vh',
-                    }}
-                  />
-                </Box>
+                <ResponsivePicture
+                  src={post.image}
+                  alt={post.title}
+                  imgStyle={{
+                    display: 'block',
+                    objectFit: 'contain',
+                    width: 'auto',
+                    maxWidth: '100%',
+                    height: 'auto',
+                    maxHeight: '33.33vh',
+                  }}
+                />
               </Flex>
             )}
 

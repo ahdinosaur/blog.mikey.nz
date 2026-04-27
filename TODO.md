@@ -43,7 +43,7 @@ Action items from the second `refresh-next` review.
 
 ## Cleanup
 
-- [ ] Drop the dead `.thumbnail` className from the home page.
+- [x] Drop the dead `.thumbnail` className from the home page.
 
   `src/app/page.tsx:37` sets `<Box className="thumbnail">`, but the matching `& .thumbnail img { maxHeight: '33.33vh' }` rule (`src/components/PostContent.tsx:126`) is scoped to descendants of `<PostContent>` — the home-page thumbnail is a sibling, not a descendant. The actual sizing comes from the inline `imgStyle`. No markdown asset uses `class="thumbnail"` either, so both the className and the css rule can go.
 
