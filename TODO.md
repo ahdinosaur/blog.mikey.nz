@@ -53,7 +53,7 @@ Action items from the second `refresh-next` review.
   - Add `/*turbopackIgnore: true*/` next to the `process.cwd()` calls, or
   - Pin `POSTS_DIR` and `ASSETS_DIR` once at module top so the trace sees a single static path.
 
-- [ ] Fold `isLocalAssetCandidate` (`src/lib/posts.ts:304-312`) into `parseAssetUrl`.
+- [x] Fold `isLocalAssetCandidate` (`src/lib/posts.ts:304-312`) into `parseAssetUrl`.
 
   They duplicate the protocol/`//`/`#`/`?` and extension checks. One function returning `{ kind: 'asset', slug, asset } | { kind: 'local-candidate' } | { kind: 'external' }` covers both call sites without the duplication.
 

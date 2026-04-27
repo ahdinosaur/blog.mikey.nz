@@ -170,7 +170,7 @@ async function rewriteAssets(
 ): Promise<string> {
   type ImgCandidate = {
     fullTag: string
-    parsed: { slug: string; asset: string }
+    parsed: { kind: 'asset'; slug: string; asset: string }
     sourcePath: string
     ext: string
     attrs: Record<string, string>
@@ -186,13 +186,11 @@ async function rewriteAssets(
     const src = attrs.src
     if (!src) continue
     const parsed = parseAssetUrl(src)
-    if (!parsed) {
-      if (isLocalAssetCandidate(src)) {
-        throw new Error(
-          `Post "${postSlug}": <img> src "${src}" did not fingerprint — expected /<slug>/<asset>`,
-        )
-      }
-      continue
+    if (parsed.kind === 'external') continue
+    if (parsed.kind === 'local-candidate') {
+      throw new Error(
+        `Post "${postSlug}": <img> src "${src}" did not fingerprint — expected /<slug>/<asset>`,
+      )
     }
     const ext = path.extname(parsed.asset).toLowerCase()
     if (!isTransformable(ext)) continue
@@ -258,13 +256,11 @@ async function rewriteAssets(
     const url = m[2]
     if (urlReplacements.has(url)) continue
     const parsed = parseAssetUrl(url)
-    if (!parsed) {
-      if (isLocalAssetCandidate(url)) {
-        throw new Error(
-          `Post "${postSlug}": asset URL "${url}" did not fingerprint — expected /<slug>/<asset>`,
-        )
-      }
-      continue
+    if (parsed.kind === 'external') continue
+    if (parsed.kind === 'local-candidate') {
+      throw new Error(
+        `Post "${postSlug}": asset URL "${url}" did not fingerprint — expected /<slug>/<asset>`,
+      )
     }
     const hash = await getAssetHash(parsed.slug, parsed.asset, hashCache)
     if (!hash) {
@@ -307,30 +303,27 @@ export function ogVariantUrl(image: string | undefined): string | null {
   return `/${slug}/${variantFilename(base, { kind: 'og', width: OG_WIDTH, format: 'jpeg' })}`
 }
 
-function isLocalAssetCandidate(url: string): boolean {
-  if (url.startsWith('//') || url.startsWith('#') || url.startsWith('?')) return false
-  if (/^[a-z][a-z0-9+.-]*:/i.test(url)) return false
-  const stripped = url.replace(/^(?:\.\/|\/)/, '')
-  const [pathPart] = stripped.split(/[?#]/)
-  if (!pathPart) return false
-  const ext = path.extname(pathPart).toLowerCase()
-  return ASSET_EXTS.has(ext)
-}
+type ParsedAssetUrl =
+  | { kind: 'asset'; slug: string; asset: string }
+  | { kind: 'local-candidate' }
+  | { kind: 'external' }
 
-function parseAssetUrl(url: string): { slug: string; asset: string } | null {
-  if (url.startsWith('//') || url.startsWith('#') || url.startsWith('?')) return null
-  if (/^[a-z][a-z0-9+.-]*:/i.test(url)) return null
+function parseAssetUrl(url: string): ParsedAssetUrl {
+  if (url.startsWith('//') || url.startsWith('#') || url.startsWith('?')) return { kind: 'external' }
+  if (/^[a-z][a-z0-9+.-]*:/i.test(url)) return { kind: 'external' }
 
   const stripped = url.replace(/^(?:\.\/|\/)/, '')
   const [pathPart] = stripped.split(/[?#]/)
   const parts = pathPart.split('/')
-  if (parts.length !== 2) return null
-  const [slug, asset] = parts
-  if (!slug || !asset || slug === '..' || asset === '..') return null
+  const tail = parts[parts.length - 1]
+  const ext = path.extname(tail).toLowerCase()
+  if (!ASSET_EXTS.has(ext)) return { kind: 'external' }
 
-  const ext = path.extname(asset).toLowerCase()
-  if (!ASSET_EXTS.has(ext)) return null
-  return { slug, asset }
+  if (parts.length !== 2) return { kind: 'local-candidate' }
+  const [slug, asset] = parts
+  if (!slug || slug === '..' || asset === '..') return { kind: 'local-candidate' }
+
+  return { kind: 'asset', slug, asset }
 }
 
 function getAssetHash(
