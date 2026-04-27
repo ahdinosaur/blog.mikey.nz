@@ -20,7 +20,7 @@ Action items from the `refresh-next` review.
 - [x] Drop the redundant traversal checks `slug.includes('/')` / `asset.includes('/')` in `src/app/[slug]/[asset]/route.ts:22` (Next dynamic params can't contain `/`). Keep the `..` check.
 - [x] Simplify `appleIcons` in `src/app/layout.tsx:23-29` — `faviconSizes.includes(180) ? [{ ...180... }] : []` instead of filter+map.
 - [x] Consider extracting the inline Matomo loader from `src/app/layout.tsx:64-66` into a small file or `<script src=...>`.
-- [ ] Add a comment at `src/components/PostContent.tsx:155` noting the trust boundary for `dangerouslySetInnerHTML` (HTML is produced by our own remark/rehype pipeline).
+- [x] Add a comment at `src/components/PostContent.tsx:155` noting the trust boundary for `dangerouslySetInnerHTML` (HTML is produced by our own remark/rehype pipeline).
 
 ## Performance
 

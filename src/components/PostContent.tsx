@@ -152,6 +152,7 @@ export function PostContent({
     <Box
       className={className ?? 'article-entry'}
       css={sx}
+      // Trusted: html is produced by our remark/rehype pipeline in src/lib/markdown.ts.
       dangerouslySetInnerHTML={{ __html: html }}
       {...rest}
     />
