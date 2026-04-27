@@ -22,7 +22,7 @@ export async function GET(
   { params }: { params: Promise<{ asset: string }> },
 ): Promise<Response> {
   const { asset } = await params
-  if (asset.includes('/') || asset.includes('..')) {
+  if (asset.includes('..')) {
     return new NextResponse('Not found', { status: 404 })
   }
 

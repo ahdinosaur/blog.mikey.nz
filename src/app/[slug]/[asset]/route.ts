@@ -19,7 +19,7 @@ export async function GET(
   { params }: { params: Promise<{ slug: string; asset: string }> },
 ): Promise<Response> {
   const { slug, asset } = await params
-  if (slug.includes('/') || slug.includes('..') || asset.includes('/') || asset.includes('..')) {
+  if (slug.includes('..') || asset.includes('..')) {
     return new NextResponse('Not found', { status: 404 })
   }
 
