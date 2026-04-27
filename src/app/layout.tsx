@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import path from 'node:path'
 import { ReactNode } from 'react'
+import { MatomoScript } from '@/components/MatomoScript'
 import { siteConfig } from '@/lib/config'
 import {
   OG_WIDTH,
@@ -61,9 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang={siteConfig.language} suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
-        <Script id="matomo" strategy="afterInteractive">
-          {`var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']);_paq.push(['enableLinkTracking']);(function(){var u='${siteConfig.matomo.url}/';_paq.push(['setTrackerUrl',u+'matomo.php']);_paq.push(['setSiteId','${siteConfig.matomo.siteId}']);var d=document,g=d.createElement('script'),s=d.getElementsByTagName('script')[0];g.async=true;g.src=u+'matomo.js';s.parentNode.insertBefore(g,s);})();`}
-        </Script>
+        <MatomoScript url={siteConfig.matomo.url} siteId={siteConfig.matomo.siteId} />
       </body>
     </html>
   )
