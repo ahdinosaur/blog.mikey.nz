@@ -17,9 +17,7 @@ Action items from the second `refresh-next` review.
     - `src/posts/workers-of-open-source-unite.md:29,63` — `./workers-of-open-source-unite/...png`.
     - `src/posts/a-burn-dance.md:54-59` — `./a-burn-dance/...jpg`.
 
-  Two ways out:
-  1. Rewrite the legacy markdown to use absolute `/<slug>/<asset>` like the rest of the corpus (matches what frontmatter `image:` already does, keeps the codebase invariant clean, doesn't grow the regex pipeline).
-  2. Or fix in code: when `parseAssetUrl` resolves, emit `/${slug}/${asset}?v=${hash}` rather than `addVersion(originalUrl, hash)`; emit `/${parsed.slug}/${parsed.asset}` for the picture's inner `<img src>`; add a same-folder branch for non-asset relative links (`./life-as-a-holon` → `/life-as-a-holon/`).
+  Action: Rewrite the legacy markdown to use absolute `/<slug>/<asset>` like the rest of the corpus (matches what frontmatter `image:` already does, keeps the codebase invariant clean, doesn't grow the regex pipeline).
 
   While here, make `rewriteAssets` throw when an inner-`<img>` src can't be normalised (currently silent), the same way it already throws when a fingerprint can't be found.
 
@@ -35,17 +33,9 @@ Action items from the second `refresh-next` review.
   - `src/posts/natures-best-practices-for-distributed-systems.md:18-26` — YouTube iframe at 560×315.
 
   Neither is wrapped in `.video-embed`/`.video-wrapper`. Chakra v3's reset (and the old SCSS reset) sets `max-width: 100%` only on `img`/`video`, not `iframe`, so these overflow on viewports narrower than their hardcoded width. Same in the old theme, so not strictly a regression, but easy to fix:
-  - Convert to the `<div class="video-embed" data-type="youtube" data-src=…>` pattern used elsewhere (also picks up the lazy hydrator), or
-  - Add `'& iframe': { maxWidth: '100%' }` to `PostContent` `sx`.
+  - Convert to the `<div class="video-embed" data-type="youtube" data-src=…>` pattern used elsewhere (also picks up the lazy hydrator)
 
 ## Performance
-
-- [ ] Cut AVIF transcoding cost.
-
-  `next build` took ~9.1 min for 1,039 routes, with multiple `Failed to build /[slug]/[asset]/route: …1984.avif (attempt 1 of 3) because it took more than 60 seconds. Retrying again shortly.` warnings — sharp's AVIF encoder is the bottleneck on the 1984w variants. Layout caps at 992px, so 1984w only matters for retina full-bleed. Options:
-  - Drop the 1984w variant for AVIF specifically (split widths per format in `IMAGE_WIDTHS`/`IMAGE_FORMATS`).
-  - Lower sharp's AVIF `effort` (default 4) and/or `quality` (currently 80).
-  - Both.
 
 - [ ] Memoise `getAllPosts()` per build.
 
@@ -56,10 +46,6 @@ Action items from the second `refresh-next` review.
 - [ ] Drop the dead `.thumbnail` className from the home page.
 
   `src/app/page.tsx:37` sets `<Box className="thumbnail">`, but the matching `& .thumbnail img { maxHeight: '33.33vh' }` rule (`src/components/PostContent.tsx:126`) is scoped to descendants of `<PostContent>` — the home-page thumbnail is a sibling, not a descendant. The actual sizing comes from the inline `imgStyle`. No markdown asset uses `class="thumbnail"` either, so both the className and the css rule can go.
-
-- [ ] gitignore `db.json`.
-
-  1.4 MB Hexo cache leftover sitting untracked in the working tree. Add to `.gitignore` (and any other Hexo runtime artefacts like `public/`) so it doesn't sneak into a future commit.
 
 - [ ] Silence (or fix) the Turbopack NFT warning from `src/app/[slug]/[asset]/route.ts`.
 
