@@ -17,9 +17,7 @@ Over this journey, I've developed some opinions. Make of these opinions as you w
 
 ## My Parenting School of Thought
 
-As I became a parent, I realized there are so many schools of thought when it comes to parenting styles.
-
-They all have something to offer, they each come from a good place, but still I'm not sure I'm on board with how I see them used.
+As I became a parent, I realized there are so many schools of thought when it comes to parenting styles: "gentle parenting", "attachment parenting", and so on. They all have something to offer, they each come from a good place, but still I'm not sure I'm on board with how I see them used.
 
 I often joke that I'm not a gentle parent, because I see those who I belive subscribe to the school of "gentle parenting", doing things I wouldn't do, and not doing things I do. But I might be incorrect in my understanding, and it's all just labels anyway.
 
@@ -63,6 +61,95 @@ I learned this term only recently, by reading [a comment on Reddit](https://www.
 >
 > "Want to shake it out? Shake your arms and legs, shake it out shake it out. Shake that anger out."
 
+In my experience, children appreciate clear boundaries. But also they are new to the world and still figuring things out, one tantrum at a time. Our role as parents is to be consistent and safe.
+
+When they act out, they are testing where the line is. To me, the best thing you can do is re-inforce the line, to re-inforce their trust in you and your trust in them.
+
+### Baby-led vs parent-led
+
+### Forcing a blocked loop
+
+However, I will say, there often comes a time when you'll get into an empathy loop, a cycle where the same behaviors repeat again and again and again. My personal approach is, in this case, to skip to authority, rather than continue looping in empathy.
+
+In my opinion, not every tantrum needs a conversation before proceeding, sometimes it's better to force a blocked situation to get to the next stage, where you're better able to achieve resolution. It's akin to ripping the band-aid off, a little pain now for a better time later.
+
+What does this look like in practice? Well a common experience is when it's time to leave the playground. I've given the 5 minute warning, I've given the 2 minute warning, I've given the extra "one more thing", and yet there's still a tantrum. No judgement, but rather than circle the drain with endless moderate cries, I prefer to have a more sharp immediate cry, so we can move on to our next adventure.
+
+### Routine and consistency
+
+TODO: routine and consistency
+
+consistency. doing the same thing again and again. sing the same songs. "momma puts you to bed for daytime nap, dadda puts you to bed for nighttime."
+
+### Agency isn't always good
+
+TODO: also agency isn't always good for kids. too much choice is bad. when we were growing up, we couldn't control what was on tv. now with tv or tablets today, kids have too much agency. so i try to intentionally limit that.
+
+## Your child will learn everything from you
+
+TODO: lead by example, be a role model. my theory is when they're young, they don't even know the difference between you and them, so you can use that to your advantage by acting for them in the way you want them to in a year's time. saying please, saying thank you, saying hi to neighbors,  saying i love you to your partner, being kind to friends and strangers.
+
+
+### Talk to yourself
+
+TODO
+
+- Narrate everything you do
+-
+
+### Reading books
+
+TODO: Reading books is great
+
+### Baby sign language
+
+TODO:
+
+### Exposure therapy
+
+TODO: exposure therapy. exposure to new things, pushing their limits gently. and if something has a negative association, then expose them a little bit every day, calmly and consistently, e.g. washing hair in the bath.
+
+### Dangerous Play
+
+TODO: dangerous play. when young probably more about being confident for them, not being anxious.
+
+
+### Screen time
+
+TODO: screen time and Cocomelon
+
+## What I learned in biology as a parent
+
+### Anatomy of why kids are born early
+
+TODO
+
+Also did you know, human menstration is unique to humans? Due to our evolved intelligence (complexity), there's a higher chance of error, so human menstration evolved as an error correction system: we grow and flush every cycle, so if our body detects that a zygote (proto-baby) has a bad mutation, it can be deleted from the system. Nature is lit. But also, I'm not the one who has to live through this experience, I just get to nerd out as the observer, thank goodness for women.
+
+### Atropic march
+
+TODO: eczema and cream
+
+### Hygeine Hypothesis
+
+TODO: hygiene hypothesis, auto-immune theory, exposure to dirt is good
+
+Their body is also learning how to exist in the world of microbes.
+
+## You will be challenged
+
+### No wrong answers
+
+
+TODO: being confident in yourself as a parent, not taking things personally. "no wrong answers".
+
+
+### Relationship turmoil
+
+TODO: the challenge on relationships: finding common ground
+
+---
+
 What I've learned is about
 So many terms: gentle parenting, attachment parenting
 
@@ -80,44 +167,9 @@ So many terms: gentle parenting, attachment parenting
 
 ## Conclusion
 
-Every kid is different, every parent is different. I believe if you truly are doing your best, there are no wrong answers. Don't aim for perfection, just good enough. Be yourself, be confident in yourself.
+At the beginning, is just survival. Every kid is different, every parent is different. I believe if you truly are doing your best, there are no wrong answers. Don't aim for perfection, just good enough. Be yourself, be confident in yourself.
 
 
 # NOTES
 
-
-blog post: my parenting learnings. authorative parenting is best (find Reddit comment in post on random gentle parenting post in other subreddit). but when in a loop, skip to authority, avoid looping in empathy. reading books is great. baby sign is great. narrate everything.
-
-authoritarian vs permissive. gentle (empathetic) vs not.
-
-baby-led vs parent-led
-
-Today
-
-routine and consistency
-
-the challenge on relationships: finding common ground
-
-exposure therapy. exposure to new things, pushing their limits gently. and if something has a negative association, then expose them a little bit every day, calmly and consistently, e.g. washing hair in the bath.
-
-dangerous play. when young probably more about being confident for them, not being anxious.
-
-screen time and Cocomelon
-
-baby signs and narration
-
-being confident in yourself as a parent, not taking things personally. "no wrong answers".
-
-eczema and cream
-
-hygiene hypothesis, auto-immune theory, exposure to dirt is good
-
 i am always bad cop. good to be a team. as broad strokes: mum's as empathetic, dads as active play.
-
-lead by example, be a role model. my theory is when they're young, they don't even know the difference between you and them, so you can use that to your advantage by acting for them in the way you want them to in a year's time. saying please, saying thank you, saying hi to neighbors,  saying i love you to your partner, being kind to friends and strangers.
-
-at the beginning, is just survival.
-
-consistency. doing the same thing again and again. sing the same songs. "momma puts you to bed for daytime nap, dadda puts you to bed for nighttime."
-
-also agency isn't always good for kids. too much choice is bad. when we were growing up, we couldn't control what was on tv. now with tv or tablets today, kids have too much agency. so i try to intentionally limit that.
