@@ -1,3 +1,4 @@
+import type { Element, ElementContent, Root as HastRoot } from 'hast'
 import type { Image, Root as MdastRoot } from 'mdast'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeRaw from 'rehype-raw'
@@ -17,6 +18,49 @@ const ATTR_BLOCK = /^\{([^}]+)\}/
 
 function isAllowedKey(key: string): boolean {
   return ALLOWED_ATTR_KEYS.has(key) || key.startsWith('data-')
+}
+
+function isWhitespaceText(node: ElementContent): boolean {
+  return node.type === 'text' && /^\s*$/.test(node.value)
+}
+
+function findLiftableChild(node: ElementContent): Element | null {
+  if (node.type !== 'element') return null
+  if (node.tagName === 'img') return node
+  if (node.tagName === 'a') {
+    const meaningful = node.children.filter((c) => !isWhitespaceText(c))
+    if (
+      meaningful.length === 1 &&
+      meaningful[0].type === 'element' &&
+      meaningful[0].tagName === 'img'
+    ) {
+      return node
+    }
+  }
+  return null
+}
+
+const rehypeImageWrapper: Plugin<[], HastRoot> = () => (tree) => {
+  visit(tree, 'element', (node: Element) => {
+    if (node.tagName !== 'img') return
+    const props = (node.properties ??= {})
+    if (props.loading == null) props.loading = 'lazy'
+  })
+
+  visit(tree, 'element', (node: Element, index, parent) => {
+    if (node.tagName !== 'p' || index == null || parent == null) return
+    const meaningful = node.children.filter((c) => !isWhitespaceText(c))
+    if (meaningful.length !== 1) return
+    const liftable = findLiftableChild(meaningful[0])
+    if (liftable == null) return
+    const wrapper: Element = {
+      type: 'element',
+      tagName: 'div',
+      properties: { className: ['image-wrapper'] },
+      children: [liftable],
+    }
+    parent.children[index] = wrapper
+  })
 }
 
 const remarkImageAttrs: Plugin<[], MdastRoot> = () => (tree) => {
@@ -63,6 +107,7 @@ export function createRenderer(): (source: string) => Promise<string> {
       properties: { className: 'header-anchor', ariaLabel: 'Permalink' },
       content: { type: 'text', value: '§' },
     })
+    .use(rehypeImageWrapper)
     .use(rehypeStringify)
 
   return async (source) => String(await processor.process(source))
@@ -86,16 +131,9 @@ export function preprocessMarkdown(source: string): string {
 }
 
 const VIDEO_OPEN = /<video([^>]*)>/gi
-const IMG_TAG = /<img\b([^>]*?)\s*\/?>/gi
 
 export function postprocessHtml(html: string): string {
   let out = html
-
-  out = out.replace(IMG_TAG, (_match, attrs) => {
-    const hasLazy = /loading\s*=/i.test(attrs)
-    const next = hasLazy ? attrs : `${attrs} loading="lazy"`
-    return `<div class="image-wrapper"><img${next} /></div>`
-  })
 
   out = out.replace(VIDEO_OPEN, (_match, attrs) => {
     return `<div class="video-wrapper"><video${attrs}>`
