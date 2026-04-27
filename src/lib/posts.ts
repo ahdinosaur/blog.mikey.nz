@@ -118,11 +118,13 @@ async function loadPost(
   const contentHtml = await rewriteAssets(
     postprocessHtml(await render(fullSource)),
     hashCache,
+    slug,
   )
   const excerptHtml = excerptSource
     ? await rewriteAssets(
         postprocessHtml(await render(excerptSource)),
         hashCache,
+        slug,
       )
     : null
 
@@ -163,6 +165,7 @@ const ATTR_RE = /([\w-]+)\s*=\s*"([^"]*)"/g
 async function rewriteAssets(
   html: string,
   hashCache: Map<string, Promise<string | null>>,
+  postSlug: string,
 ): Promise<string> {
   const pictureReplacements = new Map<string, string>()
 
@@ -226,9 +229,20 @@ async function rewriteAssets(
     const url = m[2]
     if (urlReplacements.has(url)) continue
     const parsed = parseAssetUrl(url)
-    if (!parsed) continue
+    if (!parsed) {
+      if (isLocalAssetCandidate(url)) {
+        throw new Error(
+          `Post "${postSlug}": asset URL "${url}" did not fingerprint — expected /<slug>/<asset>`,
+        )
+      }
+      continue
+    }
     const hash = await getAssetHash(parsed.slug, parsed.asset, hashCache)
-    if (!hash) continue
+    if (!hash) {
+      throw new Error(
+        `Post "${postSlug}": asset "${parsed.slug}/${parsed.asset}" referenced but file not found`,
+      )
+    }
     urlReplacements.set(url, addVersion(url, hash))
   }
   if (urlReplacements.size === 0) return out
@@ -262,6 +276,16 @@ export function ogVariantUrl(image: string | undefined): string | null {
   if (!isTransformable(ext)) return null
   const base = file.slice(0, file.length - ext.length)
   return `/${slug}/${variantFilename(base, { kind: 'og', width: OG_WIDTH, format: 'jpeg' })}`
+}
+
+function isLocalAssetCandidate(url: string): boolean {
+  if (url.startsWith('//') || url.startsWith('#') || url.startsWith('?')) return false
+  if (/^[a-z][a-z0-9+.-]*:/i.test(url)) return false
+  const stripped = url.replace(/^(?:\.\/|\/)/, '')
+  const [pathPart] = stripped.split(/[?#]/)
+  if (!pathPart) return false
+  const ext = path.extname(pathPart).toLowerCase()
+  return ASSET_EXTS.has(ext)
 }
 
 function parseAssetUrl(url: string): { slug: string; asset: string } | null {
