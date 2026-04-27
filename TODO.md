@@ -37,7 +37,7 @@ Action items from the second `refresh-next` review.
 
 ## Performance
 
-- [ ] Memoise `getAllPosts()` per build.
+- [x] Memoise `getAllPosts()` per build.
 
   No module-level cache (deliberately dropped to avoid stale data). Each of the ~28 page renders re-reads + re-renders all 25 posts → ~700 markdown renders per build. Not the current bottleneck (AVIF is), but cheap to fix and won't reintroduce the old hazard: wrap with `React.cache(getAllPosts)` so dedup is request-scoped.
 
