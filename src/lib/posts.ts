@@ -167,11 +167,20 @@ async function rewriteAssets(
   hashCache: Map<string, Promise<string | null>>,
   postSlug: string,
 ): Promise<string> {
-  const pictureReplacements = new Map<string, string>()
+  type ImgCandidate = {
+    fullTag: string
+    parsed: { slug: string; asset: string }
+    sourcePath: string
+    ext: string
+    attrs: Record<string, string>
+  }
 
+  const candidates: ImgCandidate[] = []
+  const seen = new Set<string>()
   for (const m of html.matchAll(IMG_TAG)) {
     const fullTag = m[0]
-    if (pictureReplacements.has(fullTag)) continue
+    if (seen.has(fullTag)) continue
+    seen.add(fullTag)
     const attrs = parseAttrs(m[1])
     const src = attrs.src
     if (!src) continue
@@ -179,45 +188,57 @@ async function rewriteAssets(
     if (!parsed) continue
     const ext = path.extname(parsed.asset).toLowerCase()
     if (!isTransformable(ext)) continue
-
-    const sourcePath = path.join(POSTS_DIR, parsed.slug, parsed.asset)
-    const hash = await getAssetHash(parsed.slug, parsed.asset, hashCache)
-    if (!hash) continue
-
-    let dims: { width: number; height: number }
-    let variants: { width: number; format: 'avif' | 'webp' }[]
-    try {
-      dims = await getImageDimensions(sourcePath)
-      variants = await enumerateResponsiveVariants(sourcePath)
-    } catch {
-      continue
-    }
-    if (variants.length === 0) continue
-
-    const baseDir = `/${parsed.slug}`
-    const fileBase = parsed.asset.slice(0, parsed.asset.length - ext.length)
-
-    const sourceTags: string[] = []
-    for (const fmt of IMAGE_FORMATS) {
-      const entries = variants
-        .filter((v) => v.format === fmt)
-        .map((v) => {
-          const file = variantFilename(fileBase, { kind: 'responsive', width: v.width, format: fmt })
-          return `${baseDir}/${file}?v=${hash} ${v.width}w`
-        })
-      if (entries.length === 0) continue
-      sourceTags.push(
-        `<source type="image/${fmt}" srcset="${entries.join(', ')}" sizes="${IMAGE_SIZES_ATTR}" />`,
-      )
-    }
-
-    const newAttrs: Record<string, string> = { ...attrs }
-    if (newAttrs.width == null) newAttrs.width = String(dims.width)
-    if (newAttrs.height == null) newAttrs.height = String(dims.height)
-    const newImg = `<img${attrsToString(newAttrs)} />`
-
-    pictureReplacements.set(fullTag, `<picture>${sourceTags.join('')}${newImg}</picture>`)
+    candidates.push({
+      fullTag,
+      parsed,
+      sourcePath: path.join(POSTS_DIR, parsed.slug, parsed.asset),
+      ext,
+      attrs,
+    })
   }
+
+  const built = await Promise.all(
+    candidates.map(async (c): Promise<[string, string] | null> => {
+      const [hash, dimsAndVariants] = await Promise.all([
+        getAssetHash(c.parsed.slug, c.parsed.asset, hashCache),
+        Promise.all([
+          getImageDimensions(c.sourcePath),
+          enumerateResponsiveVariants(c.sourcePath),
+        ]).catch(() => null),
+      ])
+      if (!hash || !dimsAndVariants) return null
+      const [dims, variants] = dimsAndVariants
+      if (variants.length === 0) return null
+
+      const baseDir = `/${c.parsed.slug}`
+      const fileBase = c.parsed.asset.slice(0, c.parsed.asset.length - c.ext.length)
+
+      const sourceTags: string[] = []
+      for (const fmt of IMAGE_FORMATS) {
+        const entries = variants
+          .filter((v) => v.format === fmt)
+          .map((v) => {
+            const file = variantFilename(fileBase, { kind: 'responsive', width: v.width, format: fmt })
+            return `${baseDir}/${file}?v=${hash} ${v.width}w`
+          })
+        if (entries.length === 0) continue
+        sourceTags.push(
+          `<source type="image/${fmt}" srcset="${entries.join(', ')}" sizes="${IMAGE_SIZES_ATTR}" />`,
+        )
+      }
+
+      const newAttrs: Record<string, string> = { ...c.attrs }
+      if (newAttrs.width == null) newAttrs.width = String(dims.width)
+      if (newAttrs.height == null) newAttrs.height = String(dims.height)
+      const newImg = `<img${attrsToString(newAttrs)} />`
+
+      return [c.fullTag, `<picture>${sourceTags.join('')}${newImg}</picture>`]
+    }),
+  )
+
+  const pictureReplacements = new Map<string, string>(
+    built.filter((entry): entry is [string, string] => entry !== null),
+  )
 
   let out = html
   if (pictureReplacements.size > 0) {

@@ -24,7 +24,7 @@ Action items from the `refresh-next` review.
 
 ## Performance
 
-- [ ] Parallelise the per-image work in `rewriteAssets` (`src/lib/posts.ts:165-213`). Today each `<img>` awaits hash + dims + variants sequentially; collect into an array and `Promise.all`. Only matters for `next build`.
+- [x] Parallelise the per-image work in `rewriteAssets` (`src/lib/posts.ts:165-213`). Today each `<img>` awaits hash + dims + variants sequentially; collect into an array and `Promise.all`. Only matters for `next build`.
 
 ## Testing
 
