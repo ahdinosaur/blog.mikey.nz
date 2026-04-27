@@ -47,7 +47,9 @@ export type PostListItem = Pick<
   'slug' | 'title' | 'date' | 'updated' | 'image' | 'tags' | 'categories' | 'excerptHtml' | 'description'
 >
 
-const POSTS_DIR = path.join(process.cwd(), 'src', 'posts')
+const POSTS_DIR = process.env.POSTS_DIR
+  ? path.resolve(process.env.POSTS_DIR)
+  : path.join(process.cwd(), 'src', 'posts')
 const RESERVED_SLUGS = new Set(['assets', 'archives', 'atom.xml'])
 
 export function postsDir(): string {

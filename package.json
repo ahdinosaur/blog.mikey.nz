@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "tsx --test test/markdown.test.ts"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.35.0",
@@ -38,6 +39,7 @@
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }

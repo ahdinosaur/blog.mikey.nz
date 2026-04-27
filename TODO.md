@@ -28,7 +28,7 @@ Action items from the `refresh-next` review.
 
 ## Testing
 
-- [ ] Add a small snapshot test for the markdown pipeline: one representative post in, expected HTML out (covers `<picture>` wrapping, fingerprinting, image attrs, video embeds).
+- [x] Add a small snapshot test for the markdown pipeline: one representative post in, expected HTML out (covers `<picture>` wrapping, fingerprinting, image attrs, video embeds).
 
 
 ## Manual test plan (before merging)
