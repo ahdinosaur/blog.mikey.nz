@@ -1,6 +1,7 @@
 import crypto from 'node:crypto'
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
+import { cache } from 'react'
 import matter from 'gray-matter'
 import { convert as htmlToText } from 'html-to-text'
 import {
@@ -56,9 +57,7 @@ export function postsDir(): string {
   return POSTS_DIR
 }
 
-export async function getAllPosts(): Promise<Post[]> {
-  return loadAllPosts()
-}
+export const getAllPosts = cache((): Promise<Post[]> => loadAllPosts())
 
 export async function getPostList(): Promise<PostListItem[]> {
   const posts = await getAllPosts()
