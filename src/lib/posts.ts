@@ -1,22 +1,16 @@
-import crypto from 'node:crypto'
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
 import { cache } from 'react'
 import matter from 'gray-matter'
 import { convert as htmlToText } from 'html-to-text'
 import {
-  IMAGE_FORMATS,
-  IMAGE_SIZES_ATTR,
   OG_WIDTH,
-  enumerateResponsiveVariants,
-  getImageDimensions,
   isTransformable,
   variantFilename,
 } from './images'
 import {
   EXCERPT_MARK,
   createRenderer,
-  postprocessHtml,
   preprocessMarkdown,
 } from './markdown'
 
@@ -82,21 +76,15 @@ async function loadAllPosts(): Promise<Post[]> {
     (e) => e.isFile() && e.name.endsWith('.md'),
   )
 
-  const hashCache = new Map<string, Promise<string | null>>()
   const posts = await Promise.all(
-    markdownFiles.map((file) =>
-      loadPost(postsPath(file.name), hashCache),
-    ),
+    markdownFiles.map((file) => loadPost(postsPath(file.name))),
   )
 
   posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
   return posts
 }
 
-async function loadPost(
-  filePath: string,
-  hashCache: Map<string, Promise<string | null>>,
-): Promise<Post> {
+async function loadPost(filePath: string): Promise<Post> {
   const slug = path.basename(filePath, '.md')
   if (RESERVED_SLUGS.has(slug)) {
     throw new Error(`Post slug "${slug}" collides with a reserved route`)
@@ -112,24 +100,17 @@ async function loadPost(
   const tags = normalizeList(fm.tags)
   const categories = normalizeList(fm.categories)
 
-  const render = createRenderer()
+  const render = createRenderer({
+    postSlug: slug,
+    resolveSourcePath: (s, a) => postsPath(s, a),
+  })
   const source = preprocessMarkdown(content)
   const split = source.split(EXCERPT_MARK)
   const excerptSource = split.length > 1 ? split[0] : null
   const fullSource = split.join('\n\n')
 
-  const contentHtml = await rewriteAssets(
-    postprocessHtml(await render(fullSource)),
-    hashCache,
-    slug,
-  )
-  const excerptHtml = excerptSource
-    ? await rewriteAssets(
-        postprocessHtml(await render(excerptSource)),
-        hashCache,
-        slug,
-      )
-    : null
+  const contentHtml = await render(fullSource)
+  const excerptHtml = excerptSource ? await render(excerptSource) : null
 
   const description = typeof fm.excerpt === 'string' && fm.excerpt.length > 0
     ? fm.excerpt
@@ -157,142 +138,6 @@ async function loadPost(
   }
 }
 
-const ASSET_EXTS = new Set([
-  '.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp', '.mp4', '.webm', '.pdf',
-])
-
-const URL_ATTR = /(?<=\s)(src|href)="([^"]+)"/g
-const IMG_TAG = /<img\b([^>]*?)\s*\/?>/gi
-const ATTR_RE = /([\w-]+)\s*=\s*"([^"]*)"/g
-
-async function rewriteAssets(
-  html: string,
-  hashCache: Map<string, Promise<string | null>>,
-  postSlug: string,
-): Promise<string> {
-  type ImgCandidate = {
-    fullTag: string
-    parsed: { kind: 'asset'; slug: string; asset: string }
-    sourcePath: string
-    ext: string
-    attrs: Record<string, string>
-  }
-
-  const candidates: ImgCandidate[] = []
-  const seen = new Set<string>()
-  for (const m of html.matchAll(IMG_TAG)) {
-    const fullTag = m[0]
-    if (seen.has(fullTag)) continue
-    seen.add(fullTag)
-    const attrs = parseAttrs(m[1])
-    const src = attrs.src
-    if (!src) continue
-    const parsed = parseAssetUrl(src)
-    if (parsed.kind === 'external') continue
-    if (parsed.kind === 'local-candidate') {
-      throw new Error(
-        `Post "${postSlug}": <img> src "${src}" did not fingerprint — expected /<slug>/<asset>`,
-      )
-    }
-    const ext = path.extname(parsed.asset).toLowerCase()
-    if (!isTransformable(ext)) continue
-    candidates.push({
-      fullTag,
-      parsed,
-      sourcePath: postsPath(parsed.slug, parsed.asset),
-      ext,
-      attrs,
-    })
-  }
-
-  const built = await Promise.all(
-    candidates.map(async (c): Promise<[string, string] | null> => {
-      const [hash, dimsAndVariants] = await Promise.all([
-        getAssetHash(c.parsed.slug, c.parsed.asset, hashCache),
-        Promise.all([
-          getImageDimensions(c.sourcePath),
-          enumerateResponsiveVariants(c.sourcePath),
-        ]).catch(() => null),
-      ])
-      if (!hash || !dimsAndVariants) return null
-      const [dims, variants] = dimsAndVariants
-      if (variants.length === 0) return null
-
-      const baseDir = `/${c.parsed.slug}`
-      const fileBase = c.parsed.asset.slice(0, c.parsed.asset.length - c.ext.length)
-
-      const sourceTags: string[] = []
-      for (const fmt of IMAGE_FORMATS) {
-        const entries = variants
-          .filter((v) => v.format === fmt)
-          .map((v) => {
-            const file = variantFilename(fileBase, { kind: 'responsive', width: v.width, format: fmt })
-            return `${baseDir}/${file}?v=${hash} ${v.width}w`
-          })
-        if (entries.length === 0) continue
-        sourceTags.push(
-          `<source type="image/${fmt}" srcset="${entries.join(', ')}" sizes="${IMAGE_SIZES_ATTR}" />`,
-        )
-      }
-
-      const newAttrs: Record<string, string> = { ...c.attrs }
-      if (newAttrs.width == null) newAttrs.width = String(dims.width)
-      if (newAttrs.height == null) newAttrs.height = String(dims.height)
-      const newImg = `<img${attrsToString(newAttrs)} />`
-
-      return [c.fullTag, `<picture>${sourceTags.join('')}${newImg}</picture>`]
-    }),
-  )
-
-  const pictureReplacements = new Map<string, string>(
-    built.filter((entry): entry is [string, string] => entry !== null),
-  )
-
-  let out = html
-  if (pictureReplacements.size > 0) {
-    out = out.replace(IMG_TAG, (full) => pictureReplacements.get(full) ?? full)
-  }
-
-  const urlReplacements = new Map<string, string>()
-  for (const m of out.matchAll(URL_ATTR)) {
-    const url = m[2]
-    if (urlReplacements.has(url)) continue
-    const parsed = parseAssetUrl(url)
-    if (parsed.kind === 'external') continue
-    if (parsed.kind === 'local-candidate') {
-      throw new Error(
-        `Post "${postSlug}": asset URL "${url}" did not fingerprint — expected /<slug>/<asset>`,
-      )
-    }
-    const hash = await getAssetHash(parsed.slug, parsed.asset, hashCache)
-    if (!hash) {
-      throw new Error(
-        `Post "${postSlug}": asset "${parsed.slug}/${parsed.asset}" referenced but file not found`,
-      )
-    }
-    urlReplacements.set(url, addVersion(url, hash))
-  }
-  if (urlReplacements.size === 0) return out
-  return out.replace(URL_ATTR, (full, attr, url) => {
-    const replaced = urlReplacements.get(url)
-    return replaced ? `${attr}="${replaced}"` : full
-  })
-}
-
-function parseAttrs(attrString: string): Record<string, string> {
-  const out: Record<string, string> = {}
-  for (const m of attrString.matchAll(ATTR_RE)) {
-    out[m[1].toLowerCase()] = m[2]
-  }
-  return out
-}
-
-function attrsToString(attrs: Record<string, string>): string {
-  return Object.entries(attrs)
-    .map(([k, v]) => ` ${k}="${v.replace(/"/g, '&quot;')}"`)
-    .join('')
-}
-
 export function ogVariantUrl(image: string | undefined): string | null {
   if (!image) return null
   const stripped = image.replace(/^\/+/, '').split(/[?#]/)[0]
@@ -303,53 +148,6 @@ export function ogVariantUrl(image: string | undefined): string | null {
   if (!isTransformable(ext)) return null
   const base = file.slice(0, file.length - ext.length)
   return `/${slug}/${variantFilename(base, { kind: 'og', width: OG_WIDTH, format: 'jpeg' })}`
-}
-
-type ParsedAssetUrl =
-  | { kind: 'asset'; slug: string; asset: string }
-  | { kind: 'local-candidate' }
-  | { kind: 'external' }
-
-function parseAssetUrl(url: string): ParsedAssetUrl {
-  if (url.startsWith('//') || url.startsWith('#') || url.startsWith('?')) return { kind: 'external' }
-  if (/^[a-z][a-z0-9+.-]*:/i.test(url)) return { kind: 'external' }
-
-  const stripped = url.replace(/^(?:\.\/|\/)/, '')
-  const [pathPart] = stripped.split(/[?#]/)
-  const parts = pathPart.split('/')
-  const tail = parts[parts.length - 1]
-  const ext = path.extname(tail).toLowerCase()
-  if (!ASSET_EXTS.has(ext)) return { kind: 'external' }
-
-  if (parts.length !== 2) return { kind: 'local-candidate' }
-  const [slug, asset] = parts
-  if (!slug || slug === '..' || asset === '..') return { kind: 'local-candidate' }
-
-  return { kind: 'asset', slug, asset }
-}
-
-function getAssetHash(
-  slug: string,
-  asset: string,
-  hashCache: Map<string, Promise<string | null>>,
-): Promise<string | null> {
-  const key = `${slug}/${asset}`
-  const cached = hashCache.get(key)
-  if (cached) return cached
-  const promise = fs
-    .readFile(postsPath(slug, asset))
-    .then((data) => crypto.createHash('sha256').update(data).digest('hex').slice(0, 8))
-    .catch(() => null)
-  hashCache.set(key, promise)
-  return promise
-}
-
-function addVersion(url: string, hash: string): string {
-  const fragIdx = url.indexOf('#')
-  const base = fragIdx === -1 ? url : url.slice(0, fragIdx)
-  const fragment = fragIdx === -1 ? '' : url.slice(fragIdx)
-  const sep = base.includes('?') ? '&' : '?'
-  return `${base}${sep}v=${hash}${fragment}`
 }
 
 function normalizeDate(value: unknown, context: string): string {

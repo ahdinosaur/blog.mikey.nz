@@ -5,11 +5,11 @@ date: 2024-01-01T00:00:00.000Z
 
 A picture with explicit attrs:
 
-![photo](sample-post/photo.png){class="hero" id="main"}
+![photo](/sample-post/photo.png){class="hero" id="main"}
 
 A second reference to the same picture without attrs:
 
-![photo again](sample-post/photo.png)
+![photo again](/sample-post/photo.png)
 
 A YouTube link on its own line:
 

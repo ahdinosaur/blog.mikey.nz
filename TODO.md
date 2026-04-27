@@ -59,7 +59,7 @@ Action items from the second `refresh-next` review.
 
 ## Architecture
 
-- [ ] Replace `postprocessHtml` + the regex parts of `rewriteAssets` with a rehype plugin chain.
+- [x] Replace `postprocessHtml` + the regex parts of `rewriteAssets` with a rehype plugin chain.
 
   This is no longer just a "if it grows" cleanup — bug #2 above is *caused* by wrapping on stringified HTML, and bug #1's silent broken inner-`<img>` fallback exists because the regex pass can't see structural context. A single rehype visitor over `<img>` nodes can:
   - Lift the `<img>` out of any wrapping `<p>` (fixes invalid HTML).
@@ -69,7 +69,7 @@ Action items from the second `refresh-next` review.
 
   After this, `rewriteAssets` either disappears or shrinks to a small `<a href>` fingerprinter (and `postprocessHtml` shrinks to just the video-wrapper rule, or moves into the same plugin).
 
-- [ ] Unify `<picture>` construction between `ResponsivePicture` and the rehype plugin.
+- [x] Unify `<picture>` construction between `ResponsivePicture` and the rehype plugin.
 
   Both compute hash + dims + variants and emit the same `<picture>` shape. Once the plugin exists, both should call a single `buildPicture(sourcePath, src)` helper returning `{ sources, dims, hash, fingerprintedSrc }`. Without this, every change to the srcset format has to be made in two places.
 
