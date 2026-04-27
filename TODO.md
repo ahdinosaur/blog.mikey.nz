@@ -4,7 +4,7 @@ Action items from the second `refresh-next` review.
 
 ## Bugs
 
-- [ ] Fix `./<slug>/asset` markdown paths that 404 with `trailingSlash: true`.
+- [x] Fix `./<slug>/asset` markdown paths that 404 with `trailingSlash: true`.
 
   `rewriteAssets` (`src/lib/posts.ts:251-275`) only appends `?v=<hash>` to matched URLs — it does not normalize `./<slug>/asset` to `/<slug>/asset`, and the picture builder copies the original `src` verbatim into the inner `<img>` (`src/lib/posts.ts:232-235`). With trailing slashes on, the browser at `/<slug>/` resolves `./<slug>/asset` to `/<slug>/<slug>/asset`. Confirmed live: `/holonic-systems/holonic-systems/super-sub-3.svg` 404s while `/holonic-systems/super-sub-3.svg` 200s.
 
@@ -21,13 +21,13 @@ Action items from the second `refresh-next` review.
 
   While here, make `rewriteAssets` throw when an inner-`<img>` src can't be normalised (currently silent), the same way it already throws when a fingerprint can't be found.
 
-- [ ] Stop emitting `<p><div class="image-wrapper">...</div></p>`.
+- [x] Stop emitting `<p><div class="image-wrapper">...</div></p>`.
 
   remark-rehype produces `<p><img></p>` for an image alone on a line; `postprocessHtml` (`src/lib/markdown.ts:91-105`) then wraps the `<img>` in a `<div>`, which is illegal inside `<p>`. Browsers auto-close the `<p>` on the `<div>`, leaving a stray empty `<p>` that picks up `& p { marginBottom: '1rem' }` from `PostContent`'s scoped css — visible extra whitespace before every wrapped image. Confirmed in `test/fixtures/sample-post.expected.html:2,4` and in the live build (`/being-charitable/` has 5 occurrences of `<p><a href=…><div class="image-wrapper">`).
 
   Right fix: do the wrapping in a rehype plugin that lifts `<img>` out of its `<p>` parent (or replaces the `<p>` with the wrapper), instead of regexing stringified HTML. See the architecture entry below — same plugin can do the picture build and URL rewrite.
 
-- [ ] Make bare `<iframe>` responsive in two posts.
+- [x] Make bare `<iframe>` responsive in two posts.
 
   - `src/posts/life-as-a-holon.md:24` — `<iframe class="video" width="853" height="480" …>`
   - `src/posts/natures-best-practices-for-distributed-systems.md:18-26` — YouTube iframe at 560×315.
