@@ -1,14 +1,7 @@
 import path from 'node:path'
 import type { CSSProperties } from 'react'
-import {
-  IMAGE_FORMATS,
-  IMAGE_SIZES_ATTR,
-  enumerateResponsiveVariants,
-  getImageDimensions,
-  getSourceHash,
-  isTransformable,
-  variantFilename,
-} from '@/lib/images'
+import { IMAGE_SIZES_ATTR, isTransformable } from '@/lib/images'
+import { buildPicture } from '@/lib/picture'
 
 export type ResponsivePictureProps = {
   src: string
@@ -48,30 +41,7 @@ export async function ResponsivePicture({
     )
   }
 
-  const [dims, hash, variants] = await Promise.all([
-    getImageDimensions(sourcePath),
-    getSourceHash(sourcePath),
-    enumerateResponsiveVariants(sourcePath),
-  ])
-
-  const baseUrl = src.split(/[?#]/)[0]
-  const lastSlash = baseUrl.lastIndexOf('/')
-  const baseDir = lastSlash === -1 ? '' : baseUrl.slice(0, lastSlash)
-  const filename = baseUrl.slice(lastSlash + 1)
-  const dot = filename.lastIndexOf('.')
-  const fileBase = dot === -1 ? filename : filename.slice(0, dot)
-
-  const sources: { format: string; srcSet: string }[] = []
-  for (const fmt of IMAGE_FORMATS) {
-    const entries = variants
-      .filter((v) => v.format === fmt)
-      .map((v) => {
-        const file = variantFilename(fileBase, { kind: 'responsive', width: v.width, format: fmt })
-        return `${baseDir}/${file}?v=${hash} ${v.width}w`
-      })
-    if (entries.length === 0) continue
-    sources.push({ format: fmt, srcSet: entries.join(', ') })
-  }
+  const { sources, dims, fingerprintedSrc } = await buildPicture(sourcePath, src)
 
   return (
     <picture className={className} style={style}>
@@ -79,7 +49,7 @@ export async function ResponsivePicture({
         <source key={format} type={`image/${format}`} srcSet={srcSet} sizes={sizes} />
       ))}
       <img
-        src={withFingerprint(src, hash)}
+        src={fingerprintedSrc}
         alt={alt}
         width={dims.width}
         height={dims.height}
@@ -103,12 +73,4 @@ function urlToSourcePath(url: string): string | null {
     return path.join(process.cwd(), 'src', 'assets', file)
   }
   return path.join(process.cwd(), 'src', 'posts', first, file)
-}
-
-function withFingerprint(url: string, hash: string): string {
-  const fragIdx = url.indexOf('#')
-  const base = fragIdx === -1 ? url : url.slice(0, fragIdx)
-  const fragment = fragIdx === -1 ? '' : url.slice(fragIdx)
-  const sep = base.includes('?') ? '&' : '?'
-  return `${base}${sep}v=${hash}${fragment}`
 }
