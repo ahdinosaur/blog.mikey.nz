@@ -96,7 +96,12 @@ async function loadPost(filePath: string): Promise<Post> {
   const title = typeof fm.title === 'string' ? fm.title : slug
   const date = normalizeDate(fm.date, `${slug}: date`)
   const updated = fm.updated ? normalizeDate(fm.updated, `${slug}: updated`) : undefined
-  const image = typeof fm.image === 'string' ? fm.image : undefined
+  const image =
+    typeof fm.image === 'string' && fm.image.length > 0
+      ? fm.image.startsWith('/')
+        ? fm.image
+        : `/${fm.image}`
+      : undefined
   const tags = normalizeList(fm.tags)
   const categories = normalizeList(fm.categories)
 

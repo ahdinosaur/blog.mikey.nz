@@ -15,13 +15,17 @@ import { getAllPosts, postsPath } from '@/lib/posts'
 const SOURCE_EXT_PRIORITY = ['.jpg', '.jpeg', '.png'] as const
 
 export async function GET(
-  _req: Request,
+  req: Request,
   { params }: { params: Promise<{ slug: string; asset: string }> },
 ): Promise<Response> {
   const { slug, asset } = await params
   if (slug.includes('..') || asset.includes('..')) {
     return new NextResponse('Not found', { status: 404 })
   }
+
+  const cacheControl = new URL(req.url).searchParams.has('v')
+    ? 'public, max-age=31536000, immutable'
+    : 'public, max-age=3600'
 
   const variant = parseVariantFilename(asset)
   if (variant && variant.spec.kind !== 'favicon') {
@@ -33,7 +37,7 @@ export async function GET(
         status: 200,
         headers: {
           'Content-Type': contentType,
-          'Cache-Control': 'public, max-age=31536000, immutable',
+          'Cache-Control': cacheControl,
         },
       })
     } catch {
@@ -50,7 +54,7 @@ export async function GET(
       status: 200,
       headers: {
         'Content-Type': contentType,
-        'Cache-Control': 'public, max-age=31536000, immutable',
+        'Cache-Control': cacheControl,
       },
     })
   } catch {
