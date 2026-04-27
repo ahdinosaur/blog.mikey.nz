@@ -1,3 +1,4 @@
+---
 layout: post
 title: Holonic systems
 date: 2015-01-04T00:47:24.135Z

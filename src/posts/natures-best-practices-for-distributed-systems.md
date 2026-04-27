@@ -1,3 +1,4 @@
+---
 title: "Nature's Best Practices for Distributed Systems"
 date: 2016-07-17T09:17:53.710Z
 tags: talk

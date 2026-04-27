@@ -1,4 +1,3 @@
-
 ---
 title: "The Lost Cause: Blue Helmet Modular Systems"
 date: 2024-10-15 12:00:00

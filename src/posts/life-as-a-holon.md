@@ -1,3 +1,4 @@
+---
 layout: post
 title: Life as a holon
 date: 2014-10-25T09:01:00.000Z

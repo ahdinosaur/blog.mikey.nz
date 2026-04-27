@@ -99,7 +99,7 @@ async function loadPost(
     throw new Error(`Post slug "${slug}" collides with a reserved route`)
   }
   const raw = await fs.readFile(filePath, 'utf8')
-  const { data, content } = matter(normalizeFrontmatter(raw))
+  const { data, content } = matter(raw)
 
   const fm = data as Partial<PostFrontmatter> & { date?: unknown; updated?: unknown }
   const title = typeof fm.title === 'string' ? fm.title : slug
@@ -326,14 +326,6 @@ function addVersion(url: string, hash: string): string {
   const fragment = fragIdx === -1 ? '' : url.slice(fragIdx)
   const sep = base.includes('?') ? '&' : '?'
   return `${base}${sep}v=${hash}${fragment}`
-}
-
-function normalizeFrontmatter(raw: string): string {
-  const trimmed = raw.replace(/^\s+/, '')
-  if (trimmed.startsWith('---')) return trimmed
-  const fmEnd = trimmed.indexOf('\n---')
-  if (fmEnd === -1) return trimmed
-  return `---\n${trimmed}`
 }
 
 function normalizeDate(value: unknown, context: string): string {

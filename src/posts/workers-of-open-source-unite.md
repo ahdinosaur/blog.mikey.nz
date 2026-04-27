@@ -1,3 +1,4 @@
+---
 layout: post
 title: Workers of open source, unite!
 date: 2014-10-10T21:04:44.980Z

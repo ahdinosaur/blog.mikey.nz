@@ -1,3 +1,4 @@
+---
 layout: post
 title: A reflection on mirrors
 date: 2018-02-25T10:29:41.174Z

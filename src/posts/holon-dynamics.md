@@ -1,3 +1,4 @@
+---
 layout: post
 title: Holon dynamics
 date: 2014-10-26T20:28:27.552Z

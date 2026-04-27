@@ -1,3 +1,4 @@
+---
 layout: post
 title: Hi friend
 date: 2014-09-12T23:40:00.000Z

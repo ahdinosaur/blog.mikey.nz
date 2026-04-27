@@ -1,3 +1,4 @@
+---
 layout: post
 title: Global vs local trust networks
 date: 2015-04-20T01:59:36.601Z
