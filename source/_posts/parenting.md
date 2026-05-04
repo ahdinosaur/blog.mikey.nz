@@ -141,18 +141,75 @@ Further, I have a theory: when they're young, they don't know the difference bet
 
 ### Talk to yourself
 
-TODO
+An easy teaching method is to talk to yourself.
 
-- Narrate everything you do
-- Talk them like you would a normal person
+Narrate everything you do, everything you see, everything you think about.
+
+"Oh hey look there's a cat on the street, maybe we should go up and say hi to the cat, oh yay the cat is rubbing against me, I like cats."
+
+### Talk to them
+
+Since children are sponges, the learnings they soak up now, are learning for the future.
+
+While they might be just a baby, you should still talk to them like you would a normal person.
+
+Now there's two caveats to mention:
+
+One, we understand that babies can hear higher pitched voices better than lower pitched voices. My voice is on the lower end, I'm not gonna imitate a voice that isn't mine, but it's not weird to slightly pitch up your voice, and at the very least you don't need to judge people with training in childhood development like Ms. Rachel who does pitch up her voice.
+
+#### Baby sign language
+
+Second, baby sign language!
+
+So while babies are always listening to what you say, it's takes a while before they can learn how to use their vocal chords and mouth to make the sounds we hear as words.
+
+In the meantime, they understand more than they can say with their voice. So to expedite the process, you can use a minimal sign language to communicate with your kiddo, starting from around 1 year of age.
+
+I highly recommend this. The principles are the same as before, just say what you're doing when you do it, use the sign for something when you say it.
+
+- "Do you want **more**?"
+- "Are you **hungry**?"
+- "Are you **thirsty**?"
+- "Can I change your **nappy**?"
+
+In our experience, when you use these signs enough, first your kiddo will pick up on what's being said, then they will learn that they can respond to you with their own signs.
+
+When they learn that _they can communicate to you_, something magical happens. They don't need much, once our kid could point and could sign **more**, now she could tell us: "I want _that_" (more of whatever she was pointing at). So since by then she had learned where the apples lived, she could tell us "I want an apple". This communication was a great way for her to develop her voice and her confidence in the world, while accelerating her learning.
 
 ### Reading books
 
-TODO: Reading books is great
+Books are an excellent way to squeeze out some good learning juice for kiddos to soak up.
 
-### Baby sign language
+Reading a book is an age-dependent activity. So far I've learned it helps to follow the cues from the little one on what they are engaged with. You don't need to read the actual words, you could just talk about the pictures on the page, see how they respond and make it up as you go.
 
-TODO:
+Our favorite books so far
+
+- Dr Suess, always a classic
+- Author Julia Donaldson and illustrator Axel Scheffler
+  - Together they made "The Gruffalo" and so many other great books
+  - Axel Scheffler also illustrates a great series: "Pip and Posy"
+
+Now, with our almost 3-year-old, we're at the point where we can bring her to libraries, she can choose her own books, we can support her own curiousity. Lately this means she loves books about dinosaurs and pre-historic beasts, who she says she wants to invite to our house for a cup of tea.
+
+### Screen time
+
+I like screen time, but also yes screen time can be bad.
+
+How I think about screen time: quality is very important, quantity is less important.
+
+The most popular show for kids is Cocomelon, which has been studied to have negative development effects on children. In my mind, there's no question that Cocomelon is bad for kids, and I will never want my kiddo to watch Cocomelon. But there's lots of great shows that aren't Cocomelon.
+
+If we use screens when we want a break, when we want to do a task without our kiddos, when we want a screen to co-parent on our behalf, then we should trust the shows we choose to be a co-parent. (Some parents have said they only use screens when in the presence of their kids, well I'm a parent who appreciates the external help.)
+
+We avoided screens before 1 year old, then started with Ms Rachel, now I'm happy for my almost 3-year-old kid to watch:
+
+- Ms Rachel
+- Mr Rogers' Neighborhood
+- Daniel Tiger's Neighborhood
+- Bear and the Big Blue House
+- Numberblocks
+- Alphablocks
+- Bluey
 
 ### Exposure therapy
 
@@ -161,11 +218,6 @@ TODO: exposure therapy. exposure to new things, pushing their limits gently. and
 ### Dangerous Play
 
 TODO: dangerous play. when young probably more about being confident for them, not being anxious.
-
-
-### Screen time
-
-TODO: screen time and Cocomelon
 
 ## What I learned in biology as a parent
 
@@ -202,6 +254,10 @@ TODO: the challenge on relationships: finding common ground
 
 TODO: I'm bad cop, my partner is good cop. This works for us.
 
+## Conclusion
+
+At the beginning, parenting is just survival. Every kid is different, every parent is different. I believe if you truly are doing your best, there are no wrong answers. Don't aim for perfection, just aim for good enough. Be yourself, be confident in yourself. You are / will be a great parent.
+
 ---
 
 What I've learned is about
@@ -226,4 +282,7 @@ At the beginning, is just survival. Every kid is different, every parent is diff
 
 # NOTES
 
-i am always bad cop. good to be a team. as broad strokes: mum's as empathetic, dads as active play.
+- i am always bad cop. good to be a team. as broad strokes: mum's as empathetic, dads as active play.
+- add section about "Hunt Gather Parent"
+  - best way to help kids want to eat new food is to let them cook with you.
+  - same with reading books.
