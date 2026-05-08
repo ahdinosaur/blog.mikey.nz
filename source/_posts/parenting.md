@@ -87,6 +87,8 @@ I have a belief that agency isn't always good for kids. Too much choice is bad.
 
 For example, when my generation was growing up, we couldn't control what was on the television. Even if we could control the channel, we couldn't control what was on each channel. Compare with today, where kids can control EXACTLY what to watch. I think this agency is bad for their developing minds, so I try to intentionally limit this, where possible.
 
+The YouTube algorithm recently happened to show me a video, specifically about limiting television as if it were the 90's: https://www.youtube.com/shorts/wTKgaTSli4A
+
 ### Routine and consistency
 
 In my experience, children love routine and consistency. Lucky for me, so do I!
