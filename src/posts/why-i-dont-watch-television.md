@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why I don't watch television
-date: 19 August 2017
+date: 2017-08-19
 image: /why-i-dont-watch-television/leunig-tv-splash.jpg
 ---
 
