@@ -62,7 +62,7 @@ export default async function PostPage({ params }: Props) {
             <Text
               as="span"
               textTransform="uppercase"
-              letterSpacing="2px"
+              letterSpacing="widest"
               color="brand.accent"
             >
               {formatPostDate(post.date, { withDay: true })}

@@ -45,7 +45,7 @@ export function AppHeader() {
           as="h1"
           fontSize="1.875rem"
           fontWeight={600}
-          letterSpacing="1px"
+          letterSpacing="wide"
           color="brand.title"
           margin={0}
           padding={4}
@@ -56,7 +56,7 @@ export function AppHeader() {
           as="h3"
           fontSize="0.9rem"
           fontWeight="normal"
-          letterSpacing="1px"
+          letterSpacing="wider"
           color="brand.accent"
           margin={0}
           paddingBottom={4}
