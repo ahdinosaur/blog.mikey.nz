@@ -33,13 +33,13 @@ export type Post = {
   tags: string[]
   categories: string[]
   contentHtml: string
-  description: string
+  excerptText: string
   excerptHtml: string | null
 }
 
 export type PostListItem = Pick<
   Post,
-  'slug' | 'title' | 'date' | 'updated' | 'image' | 'tags' | 'categories' | 'excerptHtml' | 'description'
+  'slug' | 'title' | 'date' | 'updated' | 'image' | 'tags' | 'categories' | 'excerptText' | 'excerptHtml'
 >
 
 const POSTS_DIR_OVERRIDE =
@@ -144,7 +144,7 @@ async function loadPost(filePath: string): Promise<Post> {
     tags,
     categories,
     contentHtml,
-    description: excerptText,
+    excerptText,
     excerptHtml,
   }
 }

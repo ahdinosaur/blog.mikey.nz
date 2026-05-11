@@ -34,7 +34,7 @@ export async function GET(): Promise<Response> {
       title: post.title,
       id: url,
       link: url,
-      description: post.description || undefined,
+      description: post.excerptText || undefined,
       content: post.contentHtml,
       date: new Date(post.date),
       image: post.image

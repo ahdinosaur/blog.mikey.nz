@@ -24,11 +24,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ogPath = ogVariantUrl(post.image) ?? post.image
   return {
     title: post.title,
-    description: post.description || undefined,
+    description: post.excerptText || undefined,
     openGraph: {
       type: 'article',
       title: post.title,
-      description: post.description || undefined,
+      description: post.excerptText || undefined,
       images: ogPath ? [`${siteConfig.url}${ogPath}`] : undefined,
       url: `${siteConfig.url}/${post.slug}/`,
       publishedTime: post.date,
