@@ -47,14 +47,14 @@ export default async function PostPage({ params }: Props) {
   return (
     <>
       <BackToHome />
-      <Container as="main" maxW="mainContent" px="15px">
-        <Box as="article" pt="45px" lineHeight={1.7}>
+      <Container as="main" maxW="mainContent" px={4}>
+        <Box as="article" pt={11} lineHeight={1.7}>
           <Heading
             as="h1"
             margin={0}
             textAlign="center"
             textTransform="capitalize"
-            paddingTop="30px"
+            paddingTop={8}
           >
             {post.title}
           </Heading>
@@ -68,7 +68,7 @@ export default async function PostPage({ params }: Props) {
               {formatPostDate(post.date, { withDay: true })}
             </Text>
           </Box>
-          <Box mt="75px">
+          <Box mt={20}>
             <PostContent html={post.contentHtml} />
           </Box>
         </Box>

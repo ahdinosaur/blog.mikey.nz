@@ -14,20 +14,20 @@ export default async function HomePage() {
     <>
       <AppNav activePath="/" />
       <AppHeader />
-      <Container as="main" maxW="mainContent" px="15px">
+      <Container as="main" maxW="mainContent" px={4}>
         {posts.map((post) => (
-          <Box as="article" key={post.slug} mt="45px">
+          <Box as="article" key={post.slug} mt={11}>
             <Heading
               as="h2"
               margin={0}
-              paddingTop="30px"
+              paddingTop={8}
               textTransform="capitalize"
             >
               <RouteLink href={`/${post.slug}`}>{post.title}</RouteLink>
             </Heading>
 
             {post.excerptHtml && (
-              <Box pt="15px" pb="30px">
+              <Box pt={4} pb={8}>
                 <PostContent html={post.excerptHtml} />
               </Box>
             )}

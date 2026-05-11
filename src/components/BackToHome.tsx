@@ -8,9 +8,9 @@ export function BackToHome() {
       position="absolute"
       top={0}
       right={0}
-      m="15px"
-      px="12px"
-      py="8px"
+      m={4}
+      px={3}
+      py={2}
       backgroundColor="brand.anchor"
       color="white"
       textAlign="center"

@@ -9,9 +9,9 @@ export function Sharing() {
       className="sharing"
       align="center"
       gap={4}
-      mt="90px"
-      mb="90px"
-      py="15px"
+      mt={24}
+      mb={24}
+      py={4}
       borderTopWidth="1px"
       borderBottomWidth="1px"
       borderColor="brand.sharingBorder"
@@ -23,10 +23,10 @@ export function Sharing() {
             alt="avatar"
             imgStyle={{
               display: 'block',
-              width: '70px',
-              height: '70px',
+              width: '4rem',
+              height: '4rem',
               borderRadius: '50%',
-              padding: '15px',
+              padding: '1rem',
               boxSizing: 'content-box',
               objectFit: 'cover',
             }}
@@ -43,7 +43,7 @@ export function Sharing() {
             fontStyle="italic"
             color="brand.sharingSubtitle"
             margin={0}
-            paddingY="5px"
+            paddingY={1.5}
           >
             {siteConfig.subtitle}
           </Text>
@@ -51,7 +51,7 @@ export function Sharing() {
       </Flex>
       <Box>
         <Text
-          margin="15px"
+          margin={4}
           color="brand.accent"
           fontStyle="italic"
           textTransform="capitalize"

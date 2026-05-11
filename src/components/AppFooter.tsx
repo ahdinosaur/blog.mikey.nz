@@ -6,16 +6,16 @@ export function AppFooter() {
   return (
     <Box
       as="footer"
-      mt="45px"
-      px="15px"
-      py="15px"
-      minH="80px"
+      mt={11}
+      px={4}
+      py={4}
+      minH={20}
       textAlign="center"
       color="brand.footerFg"
       fontSize="0.9rem"
       backgroundColor="brand.footerBg"
     >
-      <Text margin={0} padding="3px" fontStyle="italic">
+      <Text margin={0} padding={1} fontStyle="italic">
         © {year} {siteConfig.author}
       </Text>
     </Box>

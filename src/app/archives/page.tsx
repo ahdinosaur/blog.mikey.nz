@@ -15,13 +15,13 @@ export default async function ArchivePage() {
   return (
     <>
       <AppNav activePath="/archives" />
-      <Container as="main" maxW="archiveContent" pt="90px" px="15px">
+      <Container as="main" maxW="archiveContent" pt={24} px={4}>
         <VisuallyHidden as="h1">Archive</VisuallyHidden>
         {posts.map((post) => (
           <Flex
             as="article"
             key={post.slug}
-            mt="30px"
+            mt={8}
             align="center"
           >
             <Heading
@@ -33,7 +33,7 @@ export default async function ArchivePage() {
             >
               <RouteLink href={`/${post.slug}`}>{post.title}</RouteLink>
             </Heading>
-            <Box pl="30px">
+            <Box pl={8}>
               <Text as="span" color="brand.accent">
                 {formatPostDate(post.date)}
               </Text>

@@ -19,7 +19,7 @@ export function AppHeader() {
         }}
       />
       <Flex direction="column" align="center" width="100%">
-        <Box mt="-50px">
+        <Box mt={-12}>
           <Link
             href={siteConfig.homepage}
             display="block"
@@ -48,7 +48,7 @@ export function AppHeader() {
           letterSpacing="1px"
           color="brand.title"
           margin={0}
-          padding="15px"
+          padding={4}
         >
           {siteConfig.title}
         </Heading>
@@ -59,7 +59,7 @@ export function AppHeader() {
           letterSpacing="1px"
           color="brand.accent"
           margin={0}
-          paddingBottom="15px"
+          paddingBottom={4}
         >
           {siteConfig.subtitle}
         </Heading>
@@ -69,7 +69,7 @@ export function AppHeader() {
         as="ul"
         listStyleType="none"
         margin={0}
-        marginTop="15px"
+        marginTop={4}
         padding={0}
         wrap="wrap"
         justify="center"

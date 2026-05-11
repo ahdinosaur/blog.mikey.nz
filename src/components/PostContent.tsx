@@ -43,8 +43,8 @@ const sx = {
     fontFamily: 'mono',
     background: 'brand.codeBg',
     color: 'brand.accent',
-    padding: '2px 3px',
-    borderRadius: '2px',
+    padding: '0.125rem 0.25rem',
+    borderRadius: '0.125rem',
   },
   '& pre': {
     fontFamily: 'mono',
@@ -67,7 +67,7 @@ const sx = {
   '& blockquote': {
     color: 'brand.quote',
     margin: '2.5rem 1rem',
-    padding: '0 0 0 30px',
+    padding: '0 0 0 2rem',
     borderLeftWidth: '4px',
     borderLeftStyle: 'solid',
     borderLeftColor: 'brand.quoteBorder',
@@ -76,7 +76,7 @@ const sx = {
     margin: 0,
   },
   '& table': {
-    margin: '15px 0',
+    margin: '1rem 0',
     borderCollapse: 'collapse',
   },
   '& tr': {
@@ -87,7 +87,7 @@ const sx = {
   '& th, & td': {
     borderWidth: '1px',
     borderColor: 'brand.tableCellBorder',
-    padding: '6px 13px',
+    padding: '0.375rem 0.75rem',
   },
   '& .image-wrapper, & .video-wrapper, & .video-embed': {
     width: '100%',

@@ -9,7 +9,7 @@ const NAV_LINKS: { label: string; href: string }[] = [
 
 export function AppNav({ activePath }: { activePath: string }) {
   return (
-    <Box as="nav" position="absolute" top={0} right={0} m="15px" zIndex={2}>
+    <Box as="nav" position="absolute" top={0} right={0} m={4} zIndex={2}>
       <HStack gap={1}>
         {NAV_LINKS.map(({ label, href }) => {
           const isActive = activePath === href
@@ -17,8 +17,8 @@ export function AppNav({ activePath }: { activePath: string }) {
             <RouteLink
               key={href}
               href={href}
-              px="10px"
-              py="6px"
+              px={2.5}
+              py={1.5}
               textTransform="capitalize"
               color={isActive ? 'white' : 'brand.anchor'}
               backgroundColor={isActive ? 'brand.anchor' : 'brand.bg'}
