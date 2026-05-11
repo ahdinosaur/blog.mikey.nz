@@ -38,7 +38,7 @@ const config = defineConfig({
           title: { value: '#004c4c' },
           accent: { value: '#EB298C' },
           anchor: { value: '#49386d' },
-          footerBg: { value: '#abcdef' },
+          footerBg: { value: '#f4f0fb' },
           footerFg: { value: '#666666' },
           quote: { value: '#595959' },
           quoteBorder: { value: '#aaaaaa' },

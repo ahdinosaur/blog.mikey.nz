@@ -32,9 +32,9 @@ export type Post = {
   image?: string
   tags: string[]
   categories: string[]
-  excerptHtml: string | null
-  description: string
   contentHtml: string
+  description: string
+  excerptHtml: string | null
 }
 
 export type PostListItem = Pick<
@@ -110,24 +110,30 @@ async function loadPost(filePath: string): Promise<Post> {
     resolveSourcePath: (s, a) => postsPath(s, a),
   })
   const source = preprocessMarkdown(content)
-  const split = source.split(EXCERPT_MARK)
-  const excerptSource = split.length > 1 ? split[0] : null
-  const fullSource = split.join('\n\n')
+  const sourceSplit = source.split(EXCERPT_MARK)
 
-  const contentHtml = await render(fullSource)
-  const excerptHtml = excerptSource ? await render(excerptSource) : null
+  const contentText = sourceSplit.join('\n\n')
+  const contentHtml = await render(contentText)
 
-  const description = typeof fm.excerpt === 'string' && fm.excerpt.length > 0
-    ? fm.excerpt
-    : excerptHtml
-      ? htmlToText(excerptHtml, {
-          wordwrap: false,
-          selectors: [
-            { selector: 'a', options: { ignoreHref: true } },
-            { selector: 'img', format: 'skip' },
-          ],
-        })
-      : ''
+  const sourceExcerpt = sourceSplit.length > 1 ? sourceSplit[0] : null
+
+  let excerptText, excerptHtml
+  if (typeof fm.excerpt === 'string' && fm.excerpt.length > 0) {
+    excerptText = fm.excerpt
+    excerptHtml = await render(fm.excerpt)
+  } else if (sourceExcerpt != null) {
+    excerptHtml = await render(sourceExcerpt)
+    excerptText = htmlToText(excerptHtml, {
+      wordwrap: false,
+      selectors: [
+        { selector: 'a', options: { ignoreHref: true } },
+        { selector: 'img', format: 'skip' },
+      ],
+    })
+  } else {
+    excerptText = ''
+    excerptHtml = null
+  }
 
   return {
     slug,
@@ -137,9 +143,9 @@ async function loadPost(filePath: string): Promise<Post> {
     image,
     tags,
     categories,
-    excerptHtml,
-    description,
     contentHtml,
+    description: excerptText,
+    excerptHtml,
   }
 }
 
