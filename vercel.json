@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "redirects": [
+    {
+      "source": "/gifts-of-a-charitable-interpretation",
+      "destination": "/being-charitable",
+      "permanent": true
+    }
+  ]
+}
