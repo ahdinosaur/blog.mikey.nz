@@ -43,8 +43,6 @@ const config = defineConfig({
           quote: { value: '#595959' },
           quoteBorder: { value: '#aaaaaa' },
           codeBg: { value: 'rgba(0,0,0,0.07)' },
-          codeBlockBg: { value: '#2d2d2d' },
-          codeBlockFg: { value: '#cccccc' },
           sharingBorder: { value: '#dddddd' },
           sharingSubtitle: { value: '#999999' },
           avatarBorder: { value: '#ffffff' },

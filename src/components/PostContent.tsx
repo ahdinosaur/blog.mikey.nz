@@ -49,30 +49,31 @@ const sx = {
   '& li': {
     marginBottom: '0.25rem',
   },
-  '& code': {
+  '& :not(pre) > code': {
     fontFamily: 'mono',
     background: 'brand.codeBg',
     color: 'brand.accent',
     padding: '0.125rem 0.25rem',
     borderRadius: '0.125rem',
   },
+  '& figure[data-rehype-pretty-code-figure]': {
+    margin: '1.6rem 0',
+  },
   '& pre': {
     fontFamily: 'mono',
-    background: 'brand.codeBlockBg',
-    color: 'brand.codeBlockFg',
-    margin: '1.6rem 0',
-    padding: '3rem 1.8rem',
-    borderTopWidth: '1px',
-    borderBottomWidth: '1px',
-    borderColor: 'brand.codeBlockBg',
+    margin: 0,
+    padding: '1.5rem 0',
     overflow: 'auto',
     lineHeight: '1.25rem',
   },
   '& pre code': {
+    fontFamily: 'inherit',
     background: 'none',
-    color: 'inherit',
     padding: 0,
-    textShadow: 'none',
+    display: 'grid',
+  },
+  '& pre [data-line]': {
+    padding: '0 1.8rem',
   },
   '& blockquote': {
     color: 'brand.quote',

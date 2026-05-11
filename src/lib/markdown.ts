@@ -2,6 +2,7 @@ import path from 'node:path'
 import type { Element, ElementContent, Root as HastRoot } from 'hast'
 import type { Image, Root as MdastRoot } from 'mdast'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypePrettyCode, { type Options as RehypePrettyCodeOptions } from 'rehype-pretty-code'
 import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
 import rehypeStringify from 'rehype-stringify'
@@ -277,6 +278,11 @@ const remarkImageAttrs: Plugin<[], MdastRoot> = () => (tree) => {
   })
 }
 
+const prettyCodeOptions: RehypePrettyCodeOptions = {
+  theme: 'catppuccin-mocha',
+  keepBackground: true,
+}
+
 export function createRenderer(ctx: AssetUrlContext): (source: string) => Promise<string> {
   const processor = unified()
     .use(remarkParse)
@@ -287,6 +293,7 @@ export function createRenderer(ctx: AssetUrlContext): (source: string) => Promis
     .use(remarkGemoji)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
+    .use(rehypePrettyCode, prettyCodeOptions)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {
       behavior: 'append',
