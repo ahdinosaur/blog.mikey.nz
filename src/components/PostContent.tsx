@@ -4,11 +4,19 @@ const sx = {
   lineHeight: 1.7,
   '& h1, & h2, & h3, & h4, & h5, & h6': {
     fontFamily: 'heading',
+    fontWeight: 'bold',
     marginBottom: '1rem',
   },
+  '& h1': { textStyle: '3xl' },
+  '& h2': { textStyle: '2xl' },
+  '& h3': { textStyle: 'xl' },
+  '& h4': { textStyle: 'lg' },
+  '& h5': { textStyle: 'sm' },
+  '& h6': { textStyle: 'xs' },
   '& > h2': { marginTop: '3rem' },
   '& > h3': { marginTop: '2rem' },
   '& > h4': { marginTop: '1.5rem' },
+  '& em, & i': { fontStyle: 'italic' },
   '& a': { color: 'brand.anchor' },
   '& a.header-anchor': {
     marginLeft: '0.5rem',
@@ -36,6 +44,8 @@ const sx = {
     paddingLeft: '1.5rem',
     marginBottom: '1rem',
   },
+  '& ul': { listStyle: 'disc' },
+  '& ol': { listStyle: 'decimal' },
   '& li': {
     marginBottom: '0.25rem',
   },
