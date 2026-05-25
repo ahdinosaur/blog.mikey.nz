@@ -31,6 +31,8 @@ At a high-level, I find it useful to think in terms of boundaries and empathy:
 
 The best, in my opinion but also backed by study (TODO), is authoritative parenting.
 
+TODO: Add Punnett square diagram.
+
 I learned this term only recently, by reading [a comment on Reddit](https://www.reddit.com/r/AITAH/s/iIXkpzIsbn) which nearly described a situation exactly like I'd parent:
 
 > "Before we put on Bluey we need to remember something honey. We can only watch 1, 2 or 3 episodes. How many are we going to watch?"
@@ -133,6 +135,8 @@ In my opinion, not every tantrum needs a conversation before proceeding, sometim
 
 What does this look like in practice? Well a common experience is when it's time to leave the playground. I've given the 5 minute warning, I've given the 2 minute warning, I've given the extra "one more thing", and yet there's still a tantrum. No judgement, but rather than circle the drain with endless moderate cries, I prefer to have a more sharp immediate cry, so we can move on to our next adventure.
 
+TODO: mention how other associations help continue the state forward.
+
 ## Your child will learn everything from you
 
 Children are sponges, they soak up everything. They are always listening, even when you don't think they are paying attention they are. Everything you do will eventually come back to you in the form of their behavior.
@@ -141,6 +145,23 @@ So I think parenting is an opportunity to practice being your best self, to be a
 
 Further, I have a theory: when they're young, they don't know the difference between you and them. You can use this to your advantage by acting for them in the way you want them to in a year's time. E.g. saying please, saying thank you, saying "I love you" to your partner, saying hi to neighbors, being kind to friends and strangers. This can even be used when they are upset (or especially when unsure), you just continue to act on their behalf, speaking for them in the way you want them to.
 
+### Being a team
+
+Of the parenting books I got before becoming a parent, one that I found which I most enjoyed was "Hunt, Gather, Parent".
+
+The main premise (what I understood from the book) is: In Western cultures, children are told to "play" in an artificial environment using fake tools. Meanwhile you the parent separately does the grown-up work in the real environment using proper tools. Children notice what you're doing and want to do what you're doing! It might not be easy at first, but encourage (and maybe even expect) children to help you with the real work.
+
+This resonated strongly with me because I already had a mental model of our family being a team, with our kiddos being new members of the team. So this became a primary principle of how we thought about parenting and thought about our children.
+
+TODO: http://www.lunarbaboon.com/comics/tools.html
+
+Supporting small kiddos to help is not the easiest, but it's very worthwhile. I have lots of patience for many things as a parent, but at the same time I'm kinda like a sysadmin dad, I try to find the laziest way to do my job, luckily my partner (who is less patient for situations I have infinite patience) is much better at this.
+
+This started with helping with laundry, helping hang up things to dry, help moving things from the washer into the basket, etc. Then helping with cooking or baking, helping to cut carrots (using a special kid friendly cutter), helping mix a bowl of ingredients. At almost 3 years old, we're almost at the point where the help adds a neutral overhead, however the benefits are very worthwhile: the best way to help a kid want to eat new food is to let them cook that food with you.
+
+If we do anything, our kid will always ask "Can I help!?". She truly loves to help. And in many cases, her help means you get to combine the role of entertaining her with the role of doing chores, for example she loves to help us weed the plants outside.
+
+Also, we're thinking as they grow up, our mindset for how we think about our family will mean, for example, allowance is a guaranteed basic income for being part of the family, but at the same time doing chores is an expectation for being part of the family.
 
 ### Talk to yourself
 
@@ -149,6 +170,8 @@ An easy teaching method, especially for young children, is to talk to yourself.
 Narrate everything you do, everything you see, everything you think about.
 
 "Oh hey look there's a cat on the street, maybe we should go up and say hi to the cat, oh yay the cat is rubbing against me, I like cats."
+
+TODO: modeling behavior
 
 ### Talk to them
 
@@ -185,14 +208,14 @@ Books are an excellent way to squeeze out some good learning juice for kiddos to
 
 Reading a book is an age-dependent activity. So far I've learned it helps to follow the cues from the little one on what they are engaged with. You don't need to read the actual words, you could just talk about the pictures on the page, see how they respond and make it up as you go.
 
-Our favorite books so far
+Our favorite books so far:
 
 - Dr Suess, always a classic
 - Author Julia Donaldson and illustrator Axel Scheffler
   - Together they made "The Gruffalo" and so many other great books
   - Axel Scheffler also illustrates a great series: "Pip and Posy"
 
-Now, with our almost 3-year-old, we're at the point where we can bring her to libraries, she can choose her own books, we can support her own curiousity. Lately this means she loves books about dinosaurs and pre-historic beasts, who she says she wants to invite to our house for a cup of tea.
+Now, with our almost 3-year-old, we're at the point where we can bring her to libraries, she can choose her own books (sometimes reaching the maximum limit of 20 books checked out at a time), we can support her own curiousity. Lately this means she loves books about dinosaurs and pre-historic beasts, who she says she wants to invite to our house for a cup of tea.
 
 ### Screen time
 
@@ -214,13 +237,21 @@ We avoided screens before 1 year old, then started with Ms Rachel, now I'm happy
 - Alphablocks
 - Bluey
 
+In Daniel Tiger for example, every episode has a short memorable song that teaches a specific lesson about good behavior. "When something feels bad. Turn it around. And find something good."
+
+After watching Numberblocks for a few months, our 2.5yo little one surprised us by being able to read any number from 0 to 9. "What's that road sign say? - 5 and 0 - **shocked face**"
+
 I do this with a dedicated cheap tablet, where I've pre-downloaded all the shows on an SD card, and have it setup (at the moment with a human process I've taught, eventually keen to replace with software) such that the tablet can only be used to watch these pre-downloaded shows. I don't believe in children have unfettered access to the internet, even if through a restricted Google or Apple "Kids mode", but that's just me.
 
 ### Exposure therapy
 
-TODO: exposure therapy. exposure to new things, pushing their limits gently. and if something has a negative association, then expose them a little bit every day, calmly and consistently, e.g. washing hair in the bath.
+I notice I practice exposure therapy on my kiddo: I expose them to new things, I push their limits with care. If they have a negative association to something, I expose them to that thing a little bit every day, calmly and consistently.
 
-### Risky Play
+For example, with the daily bath, they've had a few phases of not enjoying having their face wiped. When this happens, even if they're screaming at me, I'm still gonna wipe their face, I'm still gonna do it calmly and consistently, and if the opportunity is there I might even do an extra wipe to push their limits just a little.
+
+From my perspective, this approach has been helpful for introducing new things, such that now many common things that used to incur meltdowns are no big deal. In this situation I can only speak from my experience, your situation and your approach may vary, in the meantime you might be interested in the general approach of [exposure therapy](https://en.wikipedia.org/wiki/Exposure_therapy).
+
+### Risky play
 
 Over the course of the last few decades, there's been a trend towards trying to make playgrounds safer for children. There's been a recent counter-trend of studies about the benefits of risky outdoor play with regards to early childhood development.
 
@@ -234,7 +265,7 @@ What helped me be more relaxed was thinking about what the actual worst cases of
 
 So let them play, enable and support them to push their learning abilities! Because if you're anxious, they will learn to be anxious too.
 
-### Natural Consequences
+### Natural consequences
 
 As much as we might want to avoid this, sometimes it's best to let children experience the natural consequences of their own behavior. This helps them learn: actions have consequences, they are resonsible for their actions because they will be affected by the consequences.
 
@@ -257,31 +288,94 @@ As much as we might want to avoid this, sometimes it's best to let children expe
 
 ## What I learned in biology as a parent
 
+Since becoming a parent, I've learned some interesting things about humans!
+
+Think about this as an info dump of special interests of mine.
+
 ### Anatomy of why kids are born early
 
-TODO
+We've probably all seen the videos of the other mammals giving birth, where the child is born and immediately starts running off. Why are humans so useless when we are born?
 
-Also did you know, human menstration is unique to humans? Due to our evolved intelligence (complexity), there's a higher chance of error, so human menstration evolved as an error correction system: we grow and flush every cycle, so if our body detects that a zygote (proto-baby) has a bad mutation, it can be deleted from the system. Nature is lit. But also, I'm not the one who has to live through this experience, I just get to nerd out as the observer, thank goodness for women.
+Turns out, if humans could be in utero for the proper amount of time they need to develop, it'd probably be at least 12 months. However, the anatomy of the human mother's pelvic bones and the human baby's head means there's an upper limit on how long the baby can stay in the womb. This is why we call the 3 months after birth the "fourth trimester", it's when the baby is so useless because they should have stayed in the womb.
+
+
+Also did you know, human menstration is unique to humans? Due to our evolved intelligence (complexity), there's a higher chance of error, so human menstration evolved as an error correction system: we grow and flush every cycle, so if our body detects that a zygote (proto-baby) has a bad mutation, it can be deleted from the system.
+
+Nature is lit!
+
+But also, I'm not the one who has to live through this experience, I just get to nerd out as the observer, thank goodness for women.
 
 ### Atropic march
 
-TODO: eczema and cream
+Our kiddo, like many kiddos, had eczema when she was smaller. Her eczema got bad, and particularly during a time when I was solo parenting, got really bad, that during a time when I should have been taking her to the hospital (much to my partner's chagrin upon arriving back), I did a deep dive of research into eczema and what's called the "atopic march".
 
-### Hygeine Hypothesis
+The atropic march is a term to describe a common progression of allergy / auto-immune disorders:
 
-TODO: hygiene hypothesis, auto-immune theory, exposure to dirt is good
+1. Eczema is young infants
+2. Hay fever in toddlers
+3. Asthma in adulthood
 
-Their body is also learning how to exist in the world of microbes.
+Said another way, children with eczema are as much as 6 times more likely to develop a food allergy compared to their healthy peers. Or, 20% of children with mild eczema develop asthma, or over 60% with severe eczema develop asthma.
+
+Once I learned this, thinking that my child was having severe ezcema, I kept learning to see what could be done to stop the progression.
+
+The theory I read goes, as I understand it, that eczema is caused by a defect in our skin, which allows particles to pass through the normal shields. Our body, not knowing what these particles are, becomes hyper-sensitized to these particles, activating an intense auto-immune response. Auto-immune means your body attacks itself, because it thinks something in your body is a threat, when it's not actually a threat.
+
+So if one is able to fix the skin defect, one might be able to fix the hyper-sensitization and thus the auto-immune response. We had been using the skin treatments provided by the New Zealand healthcare system, and not trying to say anything bad about the healthcare system which is lovely, the treatment wasn't working.
+
+This one paper, advocating for a US-based pharmaceutical cream, said the key to a good eczema cream was "skin barrier repair" using the ingredients already found in our skin: ceramides, cholestrol, and fatty acids, in the same ratio as found in our skin. And in this particular cream, extra cermadies in a 1:1 ratio.
+
+I searched around, in a usual manic rabbit hole I might find myself in sometimes, looking for a cream that met these requirements, until I stumbled upon the fact that the [standard adult eczema cream](https://www.qvskincare.com/sg/en/products/qv-dermcare-eczema-daily-cream-with-ceramides.html) available in affordable 1L quantities from our local chemist, is exactly what we needed. So I bought this, and I still can't believe it, but our kiddo's eczema went from really bad, to pretty much non-existent immediately.
+
+Maybe our situation was just good luck and my takeaway a misunderstanding of random timing, but if anyone else was in this situation I'd at least recommend trying this.
+
+TODO: Find papers.
+
+### Hygeine hypothesis
+
+There's something called the "[hygiene hypothesis](https://en.wikipedia.org/wiki/Hygiene_hypothesis)".
+
+The question is: why are allergies and auto-immune disorders on the rise in developed countries over the last 100 years, yet almost non-existent in undeveloped countries?
+
+What happened in the last 200 years? Improved sanitation and water quality.
+
+Because we are less exposed to microbes in our childhood, our bodies don't know what is friend or foe, so over-compensates by attacking friend as foe.
+
+To be clear, the hygiene hypothesis does not say that being unclean is good for your health.
+
+Instead, the main theory of the current hygiene hypothesis is also known as the "old friends hypothesis": the microbal exposures we are missing now are not new-age colds, flu, measles, or other relatively recent childhood infections. Instead, we are missing the microbes that were present for all of human evolution, basically the microbes found in healthy dirt.
+
+The evidence is interesting: even within developed countries, children who grow up on farms are much less likely to have allergies. Amish children who grow up, living in environments where dirt can even be found in their beds, are also much less likely to have allergies.
+
+So in this way, there's hypothetically a real benefit to letting your kid play in the dirt, maybe even to eat the dirt. Their body is learning how to exist in the world of microbes. Or maybe science will find other explanations for the situation, who knows.
+
+TODO: Find papers.
 
 ## You will be challenged
 
+Being a parent is incredibly challenging, even if incredibly worthwhile. How do we survive?
+
 ### No wrong answers
 
+A parenting mantra I made up and believe in is: "no wrong answers".
 
-TODO: being confident in yourself as a parent, not taking things personally. "no wrong answers".
+At least for myself and anyone I know, probably anyone reading this, I don't think we are at risk of being negligent parents. At the same time, yes we might make honest mistakes, but why should we beat ourselves up over those?
 
+So I think you should be confident in yourself as a parent, not taking things too personally. You are doing your best, you should believe in that and trust yourself.
+
+Not sure what to do about a situation? Just pick a way, it's gonna be okay, no wrong answers.
 
 ### Relationship turmoil
+
+This might have been the hardest part about becoming a parent: the negative impact it caused on my relationship with my partner. And our situation is not uncommon.
+
+Going into parenthood, I thought my relationship with my partner was strong and resilient. We communicated well, we resolved conflicts together, we were on the same page about things, we complemented each other. I didn't realize what we didn't know.
+
+Once our kiddo was born, my partner, in a surprise to both of us, developed a strong maternal instinct to protect the child at all costs. Everything was a possible threat to the child, only herself the mother could be trusted to protect the child. Even if I followed the mum's instructions, exactly, in her eyes I was still doing it wrong.
+
+We later learned this was postpartum anxiety, and then even later learned this was happening in the context of undiagnosed OCD of my partner: unhelpful behavior that was managable in her previous life, was no longer able to be managed as a parent. And I received the brunt of the damage.
+
+It probably took us 2 years to re-stabalize, and are still practicing good behavior to ourselves.
 
 TODO: the challenge on relationships: finding common ground
 
@@ -289,6 +383,16 @@ TODO: the challenge on relationships: finding common ground
 ### Play into your strengths
 
 TODO: I'm bad cop, my partner is good cop. This works for us.
+
+## Other
+
+Here's some other bits I wasn't sure how to organize.
+
+### Baby wearing
+
+We loved baby wearing! As we live at the top of a hill, up many zig zagging paths plus multiple sets of stairs, we couldn't really use a buggy/stroller to carry our baby around, so out of necessity we used baby wearing.
+
+Baby wearing is great to help your baby experience the world directly, while being connected with you. It's very adaptable, helps at home and on the go.
 
 ## Conclusion
 
@@ -322,3 +426,5 @@ At the beginning, is just survival. Every kid is different, every parent is diff
 - add section about "Hunt Gather Parent"
   - best way to help kids want to eat new food is to let them cook with you.
   - same with reading books.
+- sleep deprivation: warning it will fuck you up.
+- 
