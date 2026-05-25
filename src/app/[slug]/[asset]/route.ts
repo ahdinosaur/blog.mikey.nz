@@ -138,4 +138,5 @@ async function findSource(slug: string, base: string): Promise<string | null> {
   return null
 }
 
+export const dynamic = 'force-static'
 export const dynamicParams = false
