@@ -15,6 +15,8 @@ I'm only 3 years into this journey, with a nearly 3-year-old and another soon to
 
 Over this journey, I've developed some opinions. I want to write them down, in case this is useful to anyone, and also so I can look to this snapshot to see what else I learn after a second kiddo and as life continues. Make of these opinions as you will. I'm not saying they are the correct opinions, but they are mine.
 
+http://www.lunarbaboon.com/comics/dress.html
+
 ## My Parenting School of Thought
 
 As I became a parent, I realized there are so many schools of thought when it comes to parenting styles: "gentle parenting", "attachment parenting", and so on.
@@ -69,6 +71,8 @@ In my experience, children appreciate clear boundaries. But also they are new to
 
 When they act out, they are testing where the line is. To me, the best thing you can do is re-inforce the line, to re-inforce their trust in you and your trust in them.
 
+TODO: http://www.lunarbaboon.com/comics/luck.html
+
 ### Baby-led vs parent-led
 
 I believe some of the divide in parenting opinions is whether to be "baby-led" or "parent-led".
@@ -83,6 +87,8 @@ With this framing, we could think of Montessori education as baby-led education,
 
 My opinion is that both baby-led and parent-led methodologies are useful, in different situations, and sometimes overlapping. If we want to inspire learning, it makes sense to allow the learner to be an active participant in the practice. At the same time, we shouldn't expect this new human to know what is best for themselves, we shouldn't trust their reactions as being based on a higher order truth, that's where parents are best to lead and adapt based on feedback.
 
+TODO: http://www.lunarbaboon.com/comics/build.html
+
 ### Agency isn't always good
 
 I have a belief that agency isn't always good for kids. Too much choice is bad.
@@ -92,6 +98,8 @@ For example, when my generation was growing up, we couldn't control what was on 
 The YouTube algorithm recently happened to show me a video, specifically about limiting television as if it were the 90's: https://www.youtube.com/shorts/wTKgaTSli4A
 
 When kids grow up to the phase where they want to exercise their agency for everything, I think it's great to let them choose what to wear (which might include [natural consequences](#Natural-Consequences). At the same time, not everything needs to be a choice, if you're trying to find a stool to buy for them or a coloring sheet to print out for them, they probably won't benefit from the agency.
+
+TODO: http://www.lunarbaboon.com/comics/shh.html
 
 ### Routine and consistency
 
@@ -117,6 +125,8 @@ One thing to know: if you do something ONCE, then plan to do it FOREVER. Be very
 
 "Can I have another lullaby?" - "No, we already had our two lullabies, time for bed, good night I love you"
 
+TODO: http://www.lunarbaboon.com/comics/control-1.html
+
 #### Tip: Remind them of upcoming transitions
 
 Transitions are hard for kiddos.
@@ -136,6 +146,8 @@ In my opinion, not every tantrum needs a conversation before proceeding, sometim
 What does this look like in practice? Well a common experience is when it's time to leave the playground. I've given the 5 minute warning, I've given the 2 minute warning, I've given the extra "one more thing", and yet there's still a tantrum. No judgement, but rather than circle the drain with endless moderate cries, I prefer to have a more sharp immediate cry, so we can move on to our next adventure.
 
 TODO: mention how other associations help continue the state forward.
+
+TODO: http://www.lunarbaboon.com/comics/bluff.html
 
 ## Your child will learn everything from you
 
@@ -163,6 +175,8 @@ If we do anything, our kid will always ask "Can I help!?". She truly loves to he
 
 Also, we're thinking as they grow up, our mindset for how we think about our family will mean, for example, allowance is a guaranteed basic income for being part of the family, but at the same time doing chores is an expectation for being part of the family.
 
+TODO: http://www.lunarbaboon.com/comics/box.html
+
 ### Talk to yourself
 
 An easy teaching method, especially for young children, is to talk to yourself.
@@ -173,6 +187,8 @@ Narrate everything you do, everything you see, everything you think about.
 
 TODO: modeling behavior
 
+TODO: http://www.lunarbaboon.com/comics/swear.html
+
 ### Talk to them
 
 Since children are sponges, the learnings they soak up now, are learning for the future.
@@ -182,6 +198,9 @@ While they might be just a baby, you should still talk to them like you would a 
 Now there's two caveats to mention:
 
 One, we understand that babies can hear higher pitched voices better than lower pitched voices. My voice is on the lower end, I'm not gonna imitate a voice that isn't mine, but it's not weird to slightly pitch up your voice, and at the very least you don't need to judge people with training in childhood development like Ms. Rachel who does pitch up her voice. (I say this to myself, because I didn't initially understand this and maybe was judgemental.)
+
+TODO: http://www.lunarbaboon.com/comics/repress.html
+
 
 #### Baby sign language
 
@@ -202,6 +221,8 @@ In our experience, when you use these signs enough, first your kiddo will pick u
 
 When they learn that _they can communicate to you_, something magical happens. They don't need much, once our kid could point and could sign **more**, now she could tell us: "I want _that_" (more of whatever she was pointing at). So since by then she had learned where the apples lived, she could tell us "I want an apple". This communication was a great way for her to develop her voice and her confidence in the world, while accelerating her learning.
 
+TODO: http://www.lunarbaboon.com/comics/constant.html
+
 ### Reading books
 
 Books are an excellent way to squeeze out some good learning juice for kiddos to soak up.
@@ -214,6 +235,8 @@ Our favorite books so far:
 - Author Julia Donaldson and illustrator Axel Scheffler
   - Together they made "The Gruffalo" and so many other great books
   - Axel Scheffler also illustrates a great series: "Pip and Posy"
+
+TODO: http://www.lunarbaboon.com/comics/daughter.html
 
 Now, with our almost 3-year-old, we're at the point where we can bring her to libraries, she can choose her own books (sometimes reaching the maximum limit of 20 books checked out at a time), we can support her own curiousity. Lately this means she loves books about dinosaurs and pre-historic beasts, who she says she wants to invite to our house for a cup of tea.
 
@@ -243,6 +266,8 @@ After watching Numberblocks for a few months, our 2.5yo little one surprised us 
 
 I do this with a dedicated cheap tablet, where I've pre-downloaded all the shows on an SD card, and have it setup (at the moment with a human process I've taught, eventually keen to replace with software) such that the tablet can only be used to watch these pre-downloaded shows. I don't believe in children have unfettered access to the internet, even if through a restricted Google or Apple "Kids mode", but that's just me.
 
+TODO: http://www.lunarbaboon.com/comics/gun.html
+
 ### Exposure therapy
 
 I notice I practice exposure therapy on my kiddo: I expose them to new things, I push their limits with care. If they have a negative association to something, I expose them to that thing a little bit every day, calmly and consistently.
@@ -257,6 +282,8 @@ Over the course of the last few decades, there's been a trend towards trying to 
 
 Turns out, it's very good to allow children to engage in managed risk-taking activites. Basically, how are they supposed to learn how to assess risk and develop confidence in risky situations, if we remove all the risky situations from their environment.
 
+TODO: http://www.lunarbaboon.com/comics/scan.html
+
 As a new parent, this can sometimes be difficult, as you are protecting this small fragile being in a big dangerous world. But in my experience, if you trust their risk assessments, they can learn to be trustworthy, if you are confident in them, they can learn to be confident.
 
 This is related to a bad parenting approach, "snowplow parenting": where you remove all obstacles from your kids lives to prevent them from feeling failure or discomfort.
@@ -264,6 +291,8 @@ This is related to a bad parenting approach, "snowplow parenting": where you rem
 What helped me be more relaxed was thinking about what the actual worst cases of some situations were: If they fall of the stairs at a playground, they might bump their head, but playgrounds are designed with this in mind (e.g. not the same as falling down a complete set of stairs in your house). Maybe in some cases the worst case is they break a bone, but that's different from the worst case being fatal.
 
 So let them play, enable and support them to push their learning abilities! Because if you're anxious, they will learn to be anxious too.
+
+TODO: http://www.lunarbaboon.com/comics/pirate.html
 
 ### Natural consequences
 
@@ -286,6 +315,8 @@ As much as we might want to avoid this, sometimes it's best to let children expe
 
 - ["Consequences: positive behavior strategy" by Raising Children Network](https://raisingchildren.net.au/preschoolers/behaviour/rules-consequences/consequences)
 
+TODO: http://www.lunarbaboon.com/comics/decision.html
+
 ## What I learned in biology as a parent
 
 Since becoming a parent, I've learned some interesting things about humans!
@@ -304,6 +335,8 @@ Also did you know, human menstration is unique to humans? Due to our evolved int
 Nature is lit!
 
 But also, I'm not the one who has to live through this experience, I just get to nerd out as the observer, thank goodness for women.
+
+TODO: http://www.lunarbaboon.com/comics/her.html
 
 ### Atropic march
 
@@ -329,6 +362,8 @@ I searched around, in a usual manic rabbit hole I might find myself in sometimes
 
 Maybe our situation was just good luck and my takeaway a misunderstanding of random timing, but if anyone else was in this situation I'd at least recommend trying this.
 
+TODO: http://www.lunarbaboon.com/comics/curriculum.html
+
 TODO: Find papers.
 
 ### Hygeine hypothesis
@@ -351,9 +386,13 @@ So in this way, there's hypothetically a real benefit to letting your kid play i
 
 TODO: Find papers.
 
+TODO: http://www.lunarbaboon.com/comics/shuffle.html
+
 ## You will be challenged
 
 Being a parent is incredibly challenging, even if incredibly worthwhile. How do we survive?
+
+TODO: http://www.lunarbaboon.com/comics/mighty.html
 
 ### No wrong answers
 
@@ -364,6 +403,8 @@ At least for myself and anyone I know, probably anyone reading this, I don't thi
 So I think you should be confident in yourself as a parent, not taking things too personally. You are doing your best, you should believe in that and trust yourself.
 
 Not sure what to do about a situation? Just pick a way, it's gonna be okay, no wrong answers.
+
+TODO: http://www.lunarbaboon.com/comics/saber.html
 
 ### Relationship turmoil
 
@@ -379,10 +420,15 @@ It probably took us 2 years to re-stabalize, and are still practicing good behav
 
 TODO: the challenge on relationships: finding common ground
 
+TODO: http://www.lunarbaboon.com/comics/favorite.html
 
 ### Play into your strengths
 
 TODO: I'm bad cop, my partner is good cop. This works for us.
+
+TODO: http://www.lunarbaboon.com/comics/acting.html
+
+TODO: http://www.lunarbaboon.com/comics/dads.html
 
 ## Other
 
@@ -419,6 +465,8 @@ So many terms: gentle parenting, attachment parenting
 
 At the beginning, is just survival. Every kid is different, every parent is different. I believe if you truly are doing your best, there are no wrong answers. Don't aim for perfection, just good enough. Be yourself, be confident in yourself.
 
+TODO: http://www.lunarbaboon.com/comics/stop.html
+
 
 # NOTES
 
@@ -427,4 +475,15 @@ At the beginning, is just survival. Every kid is different, every parent is diff
   - best way to help kids want to eat new food is to let them cook with you.
   - same with reading books.
 - sleep deprivation: warning it will fuck you up.
-- 
+- babies: survial mode
+  - http://www.lunarbaboon.com/comics/babies.html
+- comics:
+  - again: http://www.lunarbaboon.com/comics/again.html
+  - immortality: http://www.lunarbaboon.com/comics/immortality.html
+  - club: http://www.lunarbaboon.com/comics/club.html
+  - bargain: http://www.lunarbaboon.com/comics/bargain-1.html
+  - attention: http://www.lunarbaboon.com/comics/attention.html
+  - dial: http://www.lunarbaboon.com/comics/dial.html
+  - puddle: http://www.lunarbaboon.com/comics/puddle.html
+  - timer: http://www.lunarbaboon.com/comics/timer.html
+  - parents: http://www.lunarbaboon.com/comics/parents.html
