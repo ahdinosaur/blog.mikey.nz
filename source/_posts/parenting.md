@@ -5,7 +5,7 @@ tags:
 image: /being-charitable/charitable-opening.jpg
 ---
 
-Before I became a parent, I felt I had plateued with personal development. I wanted a new challenge. Parenting a new child was the most challenging thing I've ever done.
+Before I became a parent, I felt I had plateued with personal development. I wanted a new challenge. Parenting a new child was the most challenging thing I've ever done. I recommend for anyone interested.
 
 <!-- more -->
 
@@ -13,7 +13,7 @@ I went all-in on being a parent, I gave my 100%. I'm very proud of who I've beco
 
 I'm only 3 years into this journey, with a nearly 3-year-old and another soon to be born.
 
-Over this journey, I've developed some opinions. I want to write them down, in case this is useful to anyone, and also so I can look to this snapshot to see what else I learn after a second kiddo and as life continues. Make of these opinions as you will. I'm not saying they are the correct opinions, but they are mine, and I stand by them.
+Over this journey, I've developed some opinions. I want to write them down, in case this is useful to anyone, and also so I can look to this snapshot to see what else I learn after a second kiddo and as life continues. Make of these opinions as you will. I'm not saying they are the correct opinions, but they are mine.
 
 ## My Parenting School of Thought
 
@@ -77,7 +77,7 @@ In "baby-led weaning", once you want your baby to start weaning off breast milk 
 
 In comparison, we could imagine the alternative as "parent-led weaning": the parent spoon-feeds the baby with pre-mushed food. Much easier, much less messy. I think is also useful in cases as a supplement to the above practice.
 
-With this framing, we could think of Montessori as baby-led, sleep-training as parent-led sleeping, and so on.
+With this framing, we could think of Montessori education as baby-led education, sleep-training as parent-led sleeping, and so on.
 
 My opinion is that both baby-led and parent-led methodologies are useful, in different situations, and sometimes overlapping. If we want to inspire learning, it makes sense to allow the learner to be an active participant in the practice. At the same time, we shouldn't expect this new human to know what is best for themselves, we shouldn't trust their reactions as being based on a higher order truth, that's where parents are best to lead and adapt based on feedback.
 
@@ -88,6 +88,8 @@ I have a belief that agency isn't always good for kids. Too much choice is bad.
 For example, when my generation was growing up, we couldn't control what was on the television. Even if we could control the channel, we couldn't control what was on each channel. Compare with today, where kids can control EXACTLY what to watch. I think this agency is bad for their developing minds, so I try to intentionally limit this, where possible.
 
 The YouTube algorithm recently happened to show me a video, specifically about limiting television as if it were the 90's: https://www.youtube.com/shorts/wTKgaTSli4A
+
+When kids grow up to the phase where they want to exercise their agency for everything, I think it's great to let them choose what to wear (which might include [natural consequences](#Natural-Consequences). At the same time, not everything needs to be a choice, if you're trying to find a stool to buy for them or a coloring sheet to print out for them, they probably won't benefit from the agency.
 
 ### Routine and consistency
 
@@ -101,19 +103,19 @@ A great place to start with routines is with a bed-time routine.
 2. We have a bath
 3. We change into our bed-time clothes
 4. We brush our teeth
-4. We read a book
-5. We sing a song
+4. We read 2 books
+5. We sing 2 songs
 6. We go to bed
 
 Now this routine might change over time, as the children's age changes, as preferences change, but in general the pattern remains consistent.
 
 When a kiddo complains, you defer to the pattern you've established: "Momma puts you to bed for daytime naps, Dadda puts you to bed for nighttime sleeps."
 
-One thing to know: if you do something ONCE, then plan to do it FOREVER. Be very careful about breaking the established patterns due to feedback. Not to say you can't adapt, but remember everything is a game, kids are good at playing this game.
+One thing to know: if you do something ONCE, then plan to do it FOREVER. Be very careful about breaking the established patterns due to feedback. Not to say you can't adapt, but remember everything is a game, kids are very good at playing this game.
 
 "Can I have another lullaby?" - "No, we already had our two lullabies, time for bed, good night I love you"
 
-#### Tip: Remind the expectations
+#### Tip: Remind them of upcoming transitions
 
 Transitions are hard for kiddos.
 
@@ -131,7 +133,6 @@ In my opinion, not every tantrum needs a conversation before proceeding, sometim
 
 What does this look like in practice? Well a common experience is when it's time to leave the playground. I've given the 5 minute warning, I've given the 2 minute warning, I've given the extra "one more thing", and yet there's still a tantrum. No judgement, but rather than circle the drain with endless moderate cries, I prefer to have a more sharp immediate cry, so we can move on to our next adventure.
 
-
 ## Your child will learn everything from you
 
 Children are sponges, they soak up everything. They are always listening, even when you don't think they are paying attention they are. Everything you do will eventually come back to you in the form of their behavior.
@@ -143,7 +144,7 @@ Further, I have a theory: when they're young, they don't know the difference bet
 
 ### Talk to yourself
 
-An easy teaching method is to talk to yourself.
+An easy teaching method, especially for young children, is to talk to yourself.
 
 Narrate everything you do, everything you see, everything you think about.
 
@@ -157,7 +158,7 @@ While they might be just a baby, you should still talk to them like you would a 
 
 Now there's two caveats to mention:
 
-One, we understand that babies can hear higher pitched voices better than lower pitched voices. My voice is on the lower end, I'm not gonna imitate a voice that isn't mine, but it's not weird to slightly pitch up your voice, and at the very least you don't need to judge people with training in childhood development like Ms. Rachel who does pitch up her voice.
+One, we understand that babies can hear higher pitched voices better than lower pitched voices. My voice is on the lower end, I'm not gonna imitate a voice that isn't mine, but it's not weird to slightly pitch up your voice, and at the very least you don't need to judge people with training in childhood development like Ms. Rachel who does pitch up her voice. (I say this to myself, because I didn't initially understand this and maybe was judgemental.)
 
 #### Baby sign language
 
@@ -199,7 +200,7 @@ I like screen time, but also yes screen time can be bad.
 
 How I think about screen time: quality is very important, quantity is less important.
 
-The most popular show for kids is Cocomelon, which has been studied to have negative development effects on children. In my mind, there's no question that Cocomelon is bad for kids, and I will never want my kiddo to watch Cocomelon. But there's lots of great shows that aren't Cocomelon.
+The most popular show for kids is Cocomelon, which has been studied (TODO) to have negative development effects on children. In my mind, there's no question that Cocomelon is bad for kids, and I will never want my kiddo to watch Cocomelon. But there's lots of great shows that aren't Cocomelon.
 
 If we use screens when we want a break, when we want to do a task without our kiddos, when we want a screen to co-parent on our behalf, then we should trust the shows we choose to be a co-parent. (Some parents have said they only use screens when in the presence of their kids, well I'm a parent who appreciates the external help.)
 
@@ -213,13 +214,46 @@ We avoided screens before 1 year old, then started with Ms Rachel, now I'm happy
 - Alphablocks
 - Bluey
 
+I do this with a dedicated cheap tablet, where I've pre-downloaded all the shows on an SD card, and have it setup (at the moment with a human process I've taught, eventually keen to replace with software) such that the tablet can only be used to watch these pre-downloaded shows. I don't believe in children have unfettered access to the internet, even if through a restricted Google or Apple "Kids mode", but that's just me.
+
 ### Exposure therapy
 
 TODO: exposure therapy. exposure to new things, pushing their limits gently. and if something has a negative association, then expose them a little bit every day, calmly and consistently, e.g. washing hair in the bath.
 
-### Dangerous Play
+### Risky Play
 
-TODO: dangerous play. when young probably more about being confident for them, not being anxious.
+Over the course of the last few decades, there's been a trend towards trying to make playgrounds safer for children. There's been a recent counter-trend of studies about the benefits of risky outdoor play with regards to early childhood development.
+
+Turns out, it's very good to allow children to engage in managed risk-taking activites. Basically, how are they supposed to learn how to assess risk and develop confidence in risky situations, if we remove all the risky situations from their environment.
+
+As a new parent, this can sometimes be difficult, as you are protecting this small fragile being in a big dangerous world. But in my experience, if you trust their risk assessments, they can learn to be trustworthy, if you are confident in them, they can learn to be confident.
+
+This is related to a bad parenting approach, "snowplow parenting": where you remove all obstacles from your kids lives to prevent them from feeling failure or discomfort.
+
+What helped me be more relaxed was thinking about what the actual worst cases of some situations were: If they fall of the stairs at a playground, they might bump their head, but playgrounds are designed with this in mind (e.g. not the same as falling down a complete set of stairs in your house). Maybe in some cases the worst case is they break a bone, but that's different from the worst case being fatal.
+
+So let them play, enable and support them to push their learning abilities! Because if you're anxious, they will learn to be anxious too.
+
+### Natural Consequences
+
+As much as we might want to avoid this, sometimes it's best to let children experience the natural consequences of their own behavior. This helps them learn: actions have consequences, they are resonsible for their actions because they will be affected by the consequences.
+
+> Here are examples of natural consequences that encourage behaviour:
+> - If your child keeps their room tidy, they can find their toys easily.
+> - If your child waits for their turn in a game, the game goes more smoothly.
+> - If your child puts on their shoes, their feet stay clean and dry.
+>
+> Here are examples of natural consequences that discourage behaviour:
+>
+> - If your child refuses to put on a coat, your child feels cold.
+> - If your child won’t eat now, your child feels hungry later.
+> - If your child doesn’t complete their homework, your child fails the assignment.
+>
+> Although natural consequences can be a useful way to guide your child’s behaviour, not all behaviour has a natural consequence.
+>
+> Also, natural consequences aren’t always appropriate. For example, dangerous or antisocial behaviour could lead to your child or someone else getting hurt. Likewise, regularly not doing schoolwork isn’t good for your child’s learning. In these situations, you can’t just ignore your child’s behaviour. You need to step in to guide your child, which might involve using a different type of consequence.
+
+- ["Consequences: positive behavior strategy" by Raising Children Network](https://raisingchildren.net.au/preschoolers/behaviour/rules-consequences/consequences)
 
 ## What I learned in biology as a parent
 
